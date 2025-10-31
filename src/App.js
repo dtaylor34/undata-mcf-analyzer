@@ -4,6 +4,7 @@ import DiffViewer from './components/DiffViewer';
 import CodeDisplay from './components/CodeDisplay';
 import ChartPreview from './components/ChartPreview';
 import { CodeEditor } from './components/CodeEditor';
+import { ChartFilter } from './components/ChartFilter';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Switch } from './components/ui/switch';
 import { Sun, Moon, Database } from 'lucide-react';
@@ -284,6 +285,13 @@ export default function App() {
   const [statEditContent, setStatEditContent] = useState('');
   const [datacommonsEditContent, setDatacommonsEditContent] = useState('');
   const [cachedEditContent, setCachedEditContent] = useState('');
+  
+  // Edit mode chart preview states
+  const [showEditPreview, setShowEditPreview] = useState(false);
+  const [editPreviewData, setEditPreviewData] = useState([]);
+  
+  // Chart filtering states
+  const [selectedCharts, setSelectedCharts] = useState([]);
 
   // Load real catalog data
   const [catalogStats, setCatalogStats] = useState(null);
@@ -508,44 +516,100 @@ export default function App() {
               
               {/* Content Display */}
               {rawViewMode === 'chart' ? (
-                <ChartPreview
-                  data={(() => {
-                    const nodes = parseMCF(currentMCF);
-                    const observations = extractObservations(nodes);
-                    return observationsToChartData(observations);
-                  })()}
-                  title="MCF Data Visualization"
-                />
+                (() => {
+                  const nodes = parseMCF(currentMCF);
+                  const observations = extractObservations(nodes);
+                  const chartDataArray = observationsToChartData(observations);
+                  return (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-medium">Chart Visualization</h3>
+                        <ChartFilter
+                          charts={chartDataArray.map((chart, i) => ({ id: `chart-${i}`, name: chart.title, title: chart.title }))}
+                          selectedCharts={selectedCharts}
+                          onSelectionChange={setSelectedCharts}
+                        />
+                      </div>
+                      {chartDataArray.map((chart, index) => {
+                        const chartId = `chart-${index}`;
+                        if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                        }
+                        return null;
+                      })}
+                    </div>
+                  );
+                })()
               ) : rawViewMode === 'edit' ? (
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <CodeEditor
                     value={rawEditContent || generateFormattedCode(currentMCF)}
                     onChange={setRawEditContent}
                     language="mcf"
                     placeholder="Edit MCF content..."
                   />
-                  <div className="flex gap-2 justify-end">
+                  <div className="flex gap-2 justify-between">
                     <button
                       onClick={() => {
-                        setRawEditContent(generateFormattedCode(currentMCF));
+                        const content = rawEditContent || generateFormattedCode(currentMCF);
+                        const nodes = parseMCF(content);
+                        const observations = extractObservations(nodes);
+                        const chartData = observationsToChartData(observations);
+                        setEditPreviewData(chartData);
+                        setShowEditPreview(true);
                       }}
-                      className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors"
+                      className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors"
                     >
-                      Reset
+                      Preview Chart
                     </button>
-                    <button
-                      onClick={() => {
-                        const confirmed = window.confirm('Save changes? This will update the current view with your edits.');
-                        if (confirmed) {
-                          setCurrentMCFContent(rawEditContent);
-                          setRawViewMode('formatted');
-                        }
-                      }}
-                      className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
-                    >
-                      Apply Changes
-                    </button>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => {
+                          setRawEditContent(generateFormattedCode(currentMCF));
+                          setShowEditPreview(false);
+                        }}
+                        className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors"
+                      >
+                        Reset
+                      </button>
+                      <button
+                        onClick={() => {
+                          const confirmed = window.confirm('Save changes? This will update the current view with your edits.');
+                          if (confirmed) {
+                            setCurrentMCFContent(rawEditContent);
+                            setRawViewMode('formatted');
+                            setShowEditPreview(false);
+                          }
+                        }}
+                        className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+                      >
+                        Apply Changes
+                      </button>
+                    </div>
                   </div>
+                  
+                  {/* Chart Preview */}
+                  {showEditPreview && editPreviewData.length > 0 && (
+                    <div className="border border-border rounded-lg p-4 bg-card">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg font-medium">Chart Preview</h3>
+                        <ChartFilter
+                          charts={editPreviewData.map((data, i) => ({ id: `chart-${i}`, name: data.title || `Chart ${i + 1}`, title: data.title }))}
+                          selectedCharts={selectedCharts}
+                          onSelectionChange={setSelectedCharts}
+                        />
+                      </div>
+                      <div className="space-y-4">
+                        {editPreviewData.map((chart, index) => {
+                          const chartId = `chart-${index}`;
+                          if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                          }
+                          return null;
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <CodeDisplay

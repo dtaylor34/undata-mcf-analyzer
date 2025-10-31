@@ -86,6 +86,7 @@ export function groupObservationsByVariable(observations) {
 
 /**
  * Convert observations to chart data format
+ * Returns array of chart objects for multiple charts
  */
 export function observationsToChartData(observations) {
   if (!observations || observations.length === 0) {
@@ -96,32 +97,27 @@ export function observationsToChartData(observations) {
   const grouped = groupObservationsByVariable(observations);
   const variables = Object.keys(grouped);
   
-  // If only one variable, simple time series
+  // If only one variable, return single chart
   if (variables.length === 1) {
-    return grouped[variables[0]].map(obs => ({
+    return [{
+      title: variables[0],
+      data: grouped[variables[0]].map(obs => ({
+        name: obs.date || 'N/A',
+        value: obs.value,
+        label: obs.date || 'N/A'
+      }))
+    }];
+  }
+  
+  // Multiple variables - create separate chart for each variable
+  return variables.map(variable => ({
+    title: variable,
+    data: grouped[variable].map(obs => ({
       name: obs.date || 'N/A',
       value: obs.value,
       label: obs.date || 'N/A'
-    }));
-  }
-  
-  // Multiple variables - create multi-series data
-  // Build union of all dates
-  const allDates = new Set();
-  observations.forEach(obs => {
-    if (obs.date) allDates.add(obs.date);
-  });
-  
-  const sortedDates = Array.from(allDates).sort();
-  
-  return sortedDates.map(date => {
-    const dataPoint = { name: date };
-    variables.forEach(variable => {
-      const obs = grouped[variable].find(o => o.date === date);
-      dataPoint[variable] = obs ? obs.value : null;
-    });
-    return dataPoint;
-  });
+    }))
+  }));
 }
 
 /**
