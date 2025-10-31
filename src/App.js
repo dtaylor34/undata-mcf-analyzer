@@ -239,6 +239,26 @@ const generateYAMLView = (mcf) => {
   return yaml;
 };
 
+const generateStatYAML = (mcf) => {
+  const statContent = generateStatView(mcf);
+  return `# STAT Format (YAML)\n---\nstat_format:\n  content: |\n${statContent.split('\n').map(l => '    ' + l).join('\n')}`;
+};
+
+const generateDataCommonsYAML = (mcf) => {
+  const jsonContent = generateDataCommonsView(mcf);
+  try {
+    const parsed = JSON.parse(jsonContent);
+    return `# DataCommons (YAML)\n---\n${JSON.stringify(parsed, null, 2).split('\n').map((l, i) => i === 0 ? l : '  ' + l).join('\n')}`;
+  } catch {
+    return '# Error converting to YAML';
+  }
+};
+
+const generateCachedYAML = (mcf) => {
+  const cachedContent = generateCachedVersion(mcf);
+  return `# Cached Version (YAML)\n---\ncached:\n  timestamp: "${new Date().toISOString()}"\n  content: |\n${cachedContent.split('\n').map(l => '    ' + l).join('\n')}`;
+};
+
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   
@@ -252,8 +272,11 @@ export default function App() {
   const [compareMCFContent, setCompareMCFContent] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
-  // Raw view mode state
+  // View mode states for each tab
   const [rawViewMode, setRawViewMode] = useState('formatted'); // 'formatted' | 'raw' | 'yaml'
+  const [statViewMode, setStatViewMode] = useState('formatted');
+  const [datacommonsViewMode, setDatacommonsViewMode] = useState('formatted');
+  const [cachedViewMode, setCachedViewMode] = useState('formatted');
 
   // Load real catalog data
   const [catalogStats, setCatalogStats] = useState(null);
@@ -468,39 +491,168 @@ export default function App() {
 
           <TabsContent value="stat" className="mt-4">
             <div className="space-y-2">
-              <p className="text-sm text-muted-foreground">
-                .STAT format representation of the MCF data
-              </p>
+              {/* View Mode Buttons */}
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-muted-foreground">
+                  {statViewMode === 'formatted' && '.STAT format representation of the MCF data'}
+                  {statViewMode === 'raw' && 'Raw .STAT format without formatting'}
+                  {statViewMode === 'yaml' && 'YAML representation of .STAT data'}
+                </p>
+                <div className="flex gap-1 bg-muted rounded-lg p-1">
+                  <button
+                    onClick={() => setStatViewMode('formatted')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      statViewMode === 'formatted'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Formatted
+                  </button>
+                  <button
+                    onClick={() => setStatViewMode('raw')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      statViewMode === 'raw'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Raw
+                  </button>
+                  <button
+                    onClick={() => setStatViewMode('yaml')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      statViewMode === 'yaml'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    YAML
+                  </button>
+                </div>
+              </div>
+              
+              {/* Code Display */}
               <CodeDisplay
-                code={generateStatView(currentMCF)}
-                language="STAT (Formatted)"
-                formatted={true}
+                code={
+                  statViewMode === 'yaml'
+                    ? generateStatYAML(currentMCF)
+                    : generateStatView(currentMCF)
+                }
+                language={statViewMode === 'yaml' ? 'yaml' : 'stat'}
+                formatted={statViewMode !== 'raw'}
               />
             </div>
           </TabsContent>
 
           <TabsContent value="datacommons" className="mt-4">
             <div className="space-y-2">
-              <p className="text-sm text-muted-foreground">
-                DataCommons JSON representation
-              </p>
+              {/* View Mode Buttons */}
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-muted-foreground">
+                  {datacommonsViewMode === 'formatted' && 'DataCommons JSON representation'}
+                  {datacommonsViewMode === 'raw' && 'Raw DataCommons JSON without formatting'}
+                  {datacommonsViewMode === 'yaml' && 'YAML representation of DataCommons data'}
+                </p>
+                <div className="flex gap-1 bg-muted rounded-lg p-1">
+                  <button
+                    onClick={() => setDatacommonsViewMode('formatted')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      datacommonsViewMode === 'formatted'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Formatted
+                  </button>
+                  <button
+                    onClick={() => setDatacommonsViewMode('raw')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      datacommonsViewMode === 'raw'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Raw
+                  </button>
+                  <button
+                    onClick={() => setDatacommonsViewMode('yaml')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      datacommonsViewMode === 'yaml'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    YAML
+                  </button>
+                </div>
+              </div>
+              
+              {/* Code Display */}
               <CodeDisplay
-                code={generateDataCommonsView(currentMCF)}
-                language="JSON (Formatted)"
-                formatted={true}
+                code={
+                  datacommonsViewMode === 'yaml'
+                    ? generateDataCommonsYAML(currentMCF)
+                    : generateDataCommonsView(currentMCF)
+                }
+                language={datacommonsViewMode === 'yaml' ? 'yaml' : 'json'}
+                formatted={datacommonsViewMode !== 'raw'}
               />
             </div>
           </TabsContent>
 
           <TabsContent value="cached" className="mt-4">
             <div className="space-y-2">
-              <p className="text-sm text-muted-foreground">
-                Cached version optimized for local website use
-              </p>
+              {/* View Mode Buttons */}
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-muted-foreground">
+                  {cachedViewMode === 'formatted' && 'Cached version optimized for local website use'}
+                  {cachedViewMode === 'raw' && 'Raw cached version without formatting'}
+                  {cachedViewMode === 'yaml' && 'YAML representation of cached data'}
+                </p>
+                <div className="flex gap-1 bg-muted rounded-lg p-1">
+                  <button
+                    onClick={() => setCachedViewMode('formatted')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      cachedViewMode === 'formatted'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Formatted
+                  </button>
+                  <button
+                    onClick={() => setCachedViewMode('raw')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      cachedViewMode === 'raw'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Raw
+                  </button>
+                  <button
+                    onClick={() => setCachedViewMode('yaml')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      cachedViewMode === 'yaml'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    YAML
+                  </button>
+                </div>
+              </div>
+              
+              {/* Code Display */}
               <CodeDisplay
-                code={generateCachedVersion(currentMCF)}
-                language="MCF (Formatted)"
-                formatted={true}
+                code={
+                  cachedViewMode === 'yaml'
+                    ? generateCachedYAML(currentMCF)
+                    : generateCachedVersion(currentMCF)
+                }
+                language={cachedViewMode === 'yaml' ? 'yaml' : 'mcf'}
+                formatted={cachedViewMode !== 'raw'}
               />
             </div>
           </TabsContent>
