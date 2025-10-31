@@ -8,8 +8,63 @@ import { Switch } from './components/ui/switch';
 import { Sun, Moon, Database } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
+import { getAllFiles, getComparableVersions } from './mcf-file-index';
+import { parseMCF, extractObservations, observationsToChartData } from './mcf-parser';
 
-// Sample MCF data for demonstration (use real data from your catalog)
+// Dynamic MCF file loader
+async function loadMCFFile(fileId) {
+  try {
+    // Map file ID to actual file path
+    const allFiles = getAllFiles();
+    const fileInfo = allFiles.find(f => f.id === fileId);
+    
+    if (!fileInfo) {
+      console.error('File not found:', fileId);
+      return null;
+    }
+    
+    // For demo: Generate sample content based on file
+    // TODO: Replace with actual file loading when build system supports it
+    return generateSampleMCF(fileInfo);
+  } catch (error) {
+    console.error('Error loading MCF file:', error);
+    return null;
+  }
+}
+
+// Generate sample MCF content (placeholder until file loading is implemented)
+function generateSampleMCF(fileInfo) {
+  return `Node: ${fileInfo.id.replace(/\//g, '_')}
+typeOf: dcs:StatisticalVariable
+name: "${fileInfo.name}"
+populationType: dcs:Person
+measuredProperty: dcs:count
+statType: dcs:measuredValue
+description: "MCF file from ${fileInfo.orgName}"
+
+Node: Observation_${fileInfo.id.replace(/\//g, '_')}_2020
+typeOf: dcs:StatVarObservation
+variableMeasured: ${fileInfo.id.replace(/\//g, '_')}
+observationAbout: dcid:country/USA
+observationDate: "2020"
+value: 100
+
+Node: Observation_${fileInfo.id.replace(/\//g, '_')}_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: ${fileInfo.id.replace(/\//g, '_')}
+observationAbout: dcid:country/USA
+observationDate: "2021"
+value: 120
+
+Node: Observation_${fileInfo.id.replace(/\//g, '_')}_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: ${fileInfo.id.replace(/\//g, '_')}
+observationAbout: dcid:country/USA
+observationDate: "2022"
+value: 150`;
+}
+
+// Sample MCF data for demonstration (will be replaced by dynamic loading)
 const mockMCFData = {
   'unemployment_rate.mcf': {
     'v1.0.0': `Node: UnemploymentRate
@@ -174,10 +229,17 @@ const generateChartData = (mcf) => {
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [selectedFile, setSelectedFile] = useState('unemployment_rate.mcf');
-  const [selectedVersion, setSelectedVersion] = useState('v1.2.0');
-  const [compareVersion, setCompareVersion] = useState('v1.0.0');
+  
+  // File selection state
+  const [selectedFile, setSelectedFile] = useState('ilo/schema/schema.mcf'); // Default to ILO schema
+  const [selectedVersion, setSelectedVersion] = useState('');
+  const [compareVersion, setCompareVersion] = useState('');
   const [showDiff, setShowDiff] = useState(false);
+  
+  // MCF content state
+  const [currentMCFContent, setCurrentMCFContent] = useState('');
+  const [compareMCFContent, setCompareMCFContent] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Load real catalog data
   const [catalogStats, setCatalogStats] = useState(null);
@@ -192,6 +254,49 @@ export default function App() {
     console.log('📊 Real Catalog Loaded:', stats);
     console.log('🏢 Organizations:', orgs);
   }, []);
+  
+  // Load MCF file when selection changes
+  useEffect(() => {
+    async function loadFile() {
+      if (!selectedFile) return;
+      
+      setIsLoading(true);
+      try {
+        const fileId = selectedVersion || selectedFile;
+        const content = await loadMCFFile(fileId);
+        setCurrentMCFContent(content || '');
+        console.log('📄 Loaded file:', fileId);
+      } catch (error) {
+        console.error('Error loading file:', error);
+        setCurrentMCFContent('');
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    
+    loadFile();
+  }, [selectedFile, selectedVersion]);
+  
+  // Load compare version when diff is shown
+  useEffect(() => {
+    async function loadCompareFile() {
+      if (!showDiff || !compareVersion) {
+        setCompareMCFContent('');
+        return;
+      }
+      
+      try {
+        const content = await loadMCFFile(compareVersion);
+        setCompareMCFContent(content || '');
+        console.log('📄 Loaded compare file:', compareVersion);
+      } catch (error) {
+        console.error('Error loading compare file:', error);
+        setCompareMCFContent('');
+      }
+    }
+    
+    loadCompareFile();
+  }, [showDiff, compareVersion]);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -201,8 +306,16 @@ export default function App() {
     }
   }, [isDarkMode]);
 
-  const currentMCF = mockMCFData[selectedFile]?.[selectedVersion] || '';
-  const compareMCF = mockMCFData[selectedFile]?.[compareVersion] || '';
+  // Use loaded content (or fallback to empty)
+  const currentMCF = currentMCFContent;
+  const compareMCF = compareMCFContent;
+  
+  // Parse MCF and extract chart data
+  const chartData = currentMCF ? (() => {
+    const nodes = parseMCF(currentMCF);
+    const observations = extractObservations(nodes);
+    return observationsToChartData(observations);
+  })() : [];
 
   return (
     <div className="min-h-screen bg-background">
@@ -247,8 +360,15 @@ export default function App() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-6">
+        {/* Loading indicator */}
+        {isLoading && (
+          <div className="mb-4 text-center py-4 text-muted-foreground">
+            Loading MCF file...
+          </div>
+        )}
+        
         {/* Diff Viewer */}
-        {showDiff && (
+        {showDiff && !isLoading && (
           <DiffViewer
             oldVersion={compareMCF}
             newVersion={currentMCF}
@@ -350,10 +470,18 @@ export default function App() {
               <p className="text-sm text-muted-foreground">
                 Visual representation of the data
               </p>
-              <ChartPreview
-                data={generateChartData(currentMCF)}
-                title="Unemployment Rate Over Time"
-              />
+              {isLoading ? (
+                <div className="text-center py-8 text-muted-foreground">Loading chart data...</div>
+              ) : chartData.length > 0 ? (
+                <ChartPreview
+                  data={chartData}
+                  title="Data Visualization"
+                />
+              ) : (
+                <div className="text-center py-8 text-muted-foreground">
+                  No observation data available for charting
+                </div>
+              )}
             </div>
           </TabsContent>
         </Tabs>
