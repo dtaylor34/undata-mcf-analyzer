@@ -1,3 +1,11 @@
+/**
+ * FILE: src/index.js
+ * PURPOSE: Entry point for React application
+ * 
+ * This is the standard Create React App entry point.
+ * It mounts the App component to the DOM.
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -9,3 +17,7 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
