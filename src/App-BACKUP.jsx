@@ -1,35 +1,42 @@
 /**
- * FILE: src/App.jsx
- * PURPOSE: Main application component - FIXED VERSION
- * CHANGES: Removed DataLayer initialization (not needed), simplified state management
+ * Main App Component - COMPLETE
  * 
- * The data-layer.js exports functions directly, not a class to instantiate.
- * Components call functions like getData(), getIndicatorList(), etc. directly.
+ * Location: src/App.jsx
+ * 
+ * Integrates DatasetSelector, IndicatorPreview, and architecture visualization
+ * Shows complete data pipeline: RAW → MCF → .STAT → LIVE DC → Cached → Chart → Table
  */
 
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import IndicatorPreview from './components/IndicatorPreview';
 import DatasetSelector from './components/DatasetSelector';
-import { getCatalogStats, getPerformanceMetrics } from './undata-integration/data-layer';
+import * as DataLayer from './undata-integration/data-layer';
+import config from './undata-integration/config.dev';
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [dataLayer, setDataLayer] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [selectedDataset, setSelectedDataset] = useState(null);
-  const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    // Load catalog stats on mount
-    const loadStats = async () => {
+    const initDataLayer = async () => {
       try {
-        const catalogStats = getCatalogStats();
-        setStats(catalogStats);
+        console.log('Initializing data layer...');
+        const dl = new DataLayer(config);
+        await dl.initialize();
+        setDataLayer(dl);
+        setLoading(false);
+        console.log('Data layer initialized successfully');
       } catch (err) {
-        console.error('Failed to load stats:', err);
+        console.error('Failed to initialize data layer:', err);
+        setError(err.message);
+        setLoading(false);
       }
     };
     
-    loadStats();
+    initDataLayer();
   }, []);
 
   const handleDatasetSelect = (dataset) => {
@@ -54,8 +61,36 @@ function App() {
           margin: '0 auto 20px'
         }}></div>
         <h2>Loading UN Data Commons...</h2>
-        <p>Please wait while we load the catalog</p>
+        <p>Please wait while we initialize the data layer</p>
         <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="App" style={{ 
+        padding: '40px', 
+        textAlign: 'center',
+        fontFamily: 'sans-serif'
+      }}>
+        <h2 style={{ color: '#d32f2f' }}>Error Loading Data Layer</h2>
+        <p>{error}</p>
+        <p style={{ color: '#666', fontSize: '14px' }}>
+          Check the console for more details
+        </p>
+      </div>
+    );
+  }
+
+  if (!dataLayer) {
+    return (
+      <div className="App" style={{ 
+        padding: '40px', 
+        textAlign: 'center',
+        fontFamily: 'sans-serif'
+      }}>
+        <h2>Data layer not available</h2>
       </div>
     );
   }
@@ -171,9 +206,9 @@ function App() {
                   Currently Viewing
                 </div>
                 <div style={{ fontSize: '14px', color: '#666' }}>
-                  {selectedDataset.orgEmoji} {selectedDataset.orgName}
+                  {selectedDataset.organizationName} 
                   {selectedDataset.quarter && ` • ${selectedDataset.quarter}`}
-                  {selectedDataset.indicatorName && ` • ${selectedDataset.indicatorName}`}
+                  {selectedDataset.indicator && ` • ${selectedDataset.indicator.name}`}
                 </div>
               </div>
               <button
@@ -196,8 +231,14 @@ function App() {
         )}
 
         {/* Indicator Preview */}
-        {selectedDataset && (
-          <IndicatorPreview selection={selectedDataset} />
+        {selectedDataset && selectedDataset.indicator && (
+          <IndicatorPreview 
+            indicatorId={selectedDataset.indicator.id}
+            dataLayer={dataLayer}
+            defaultLocation="country/USA"
+            defaultStartYear={2015}
+            defaultEndYear={2023}
+          />
         )}
 
         {/* Empty State */}
@@ -218,72 +259,61 @@ function App() {
         )}
 
         {/* Performance Statistics */}
-        {stats && (
-          <div style={{
-            marginTop: '32px',
-            padding: '24px',
-            background: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-          }}>
-            <h3 style={{ marginTop: 0, marginBottom: '16px', color: '#333' }}>
-              Real MCF Catalog Statistics
-            </h3>
-            <PerformanceStats stats={stats} />
-          </div>
-        )}
+        <div style={{
+          marginTop: '32px',
+          padding: '24px',
+          background: 'white',
+          borderRadius: '12px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        }}>
+          <h3 style={{ marginTop: 0, marginBottom: '16px', color: '#333' }}>
+            Performance Statistics
+          </h3>
+          <PerformanceStats dataLayer={dataLayer} />
+        </div>
 
         {/* Available Datasets Overview */}
-        {stats && (
-          <div style={{
-            marginTop: '32px',
-            padding: '24px',
-            background: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        <div style={{
+          marginTop: '32px',
+          padding: '24px',
+          background: 'white',
+          borderRadius: '12px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        }}>
+          <h3 style={{ marginTop: 0, marginBottom: '16px', color: '#333' }}>
+            Available Datasets
+          </h3>
+          <div style={{ 
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '16px'
           }}>
-            <h3 style={{ marginTop: 0, marginBottom: '16px', color: '#333' }}>
-              Available Datasets
-            </h3>
-            <div style={{ 
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '16px'
-            }}>
-              {stats.organizations.map((org, idx) => (
-                <div key={idx} style={{
-                  padding: '20px',
-                  background: '#f9f9f9',
-                  borderRadius: '8px',
-                  border: `2px solid ${getOrgColor(org.id)}20`
-                }}>
-                  <div style={{ fontSize: '36px', marginBottom: '12px' }}>{getOrgEmoji(org.id)}</div>
-                  <div style={{ fontSize: '16px', fontWeight: '600', color: '#333', marginBottom: '4px' }}>
-                    {org.name}
-                  </div>
-                  <div style={{ fontSize: '14px', color: '#666', marginBottom: '4px' }}>
-                    {org.count.toLocaleString()} indicators
-                  </div>
-                  <div style={{ fontSize: '12px', color: '#999' }}>
-                    Real data from MCF files
-                  </div>
+            {[
+              { icon: '🎯', name: 'SDG (UNSD)', count: '7 indicators', releases: 'Q4-2024, Q1-2025, Q2-2025', color: '#1976d2' },
+              { icon: '👷', name: 'ILO', count: '4 indicators', releases: 'Latest release', color: '#f57c00' },
+              { icon: '👶', name: 'UNICEF', count: '4 indicators', releases: 'Latest release', color: '#00bcd4' },
+              { icon: '🏥', name: 'WHO', count: '4 indicators', releases: 'Latest release', color: '#4caf50' }
+            ].map((dataset, idx) => (
+              <div key={idx} style={{
+                padding: '20px',
+                background: '#f9f9f9',
+                borderRadius: '8px',
+                border: `2px solid ${dataset.color}20`
+              }}>
+                <div style={{ fontSize: '36px', marginBottom: '12px' }}>{dataset.icon}</div>
+                <div style={{ fontSize: '16px', fontWeight: '600', color: '#333', marginBottom: '4px' }}>
+                  {dataset.name}
                 </div>
-              ))}
-            </div>
-            
-            <div style={{
-              marginTop: '20px',
-              padding: '16px',
-              background: '#e8f5e9',
-              borderRadius: '8px',
-              textAlign: 'center'
-            }}>
-              <strong style={{ color: '#2e7d32' }}>
-                ✅ Total: {stats.totalIndicators.toLocaleString()} real indicators loaded from MCF catalog
-              </strong>
-            </div>
+                <div style={{ fontSize: '14px', color: '#666', marginBottom: '4px' }}>
+                  {dataset.count}
+                </div>
+                <div style={{ fontSize: '12px', color: '#999' }}>
+                  {dataset.releases}
+                </div>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </main>
 
       <footer style={{
@@ -306,21 +336,22 @@ function App() {
 /**
  * Performance Statistics Component
  */
-function PerformanceStats({ stats }) {
-  const metrics = getPerformanceMetrics();
-  
+function PerformanceStats({ dataLayer }) {
+  const stats = dataLayer.getStats();
+  const cacheStats = dataLayer.getCacheStats();
+
   return (
     <div style={{ 
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
       gap: '16px'
     }}>
-      <StatCard label="Total Indicators" value={stats.totalIndicators.toLocaleString()} icon="📊" />
-      <StatCard label="Organizations" value={stats.organizations.length} icon="🏢" />
-      <StatCard label="Cache Hits" value={metrics.cacheHits} icon="⚡" color="#4caf50" />
-      <StatCard label="Cache Misses" value={metrics.cacheMisses} icon="🔍" color="#ff9800" />
-      <StatCard label="Hit Rate" value={metrics.cacheHitRate} icon="📈" color="#2196f3" />
-      <StatCard label="Avg Response" value={metrics.avgResponseTime} icon="⏱️" />
+      <StatCard label="Total Queries" value={stats.totalQueries} icon="📊" />
+      <StatCard label="Cache Hits" value={stats.cacheHits} icon="⚡" color="#4caf50" />
+      <StatCard label="Cache Misses" value={stats.cacheMisses} icon="🔍" color="#ff9800" />
+      <StatCard label="Hit Rate" value={stats.cacheHitRate} icon="📈" color="#2196f3" />
+      <StatCard label="Cached Items" value={cacheStats.size} icon="💾" />
+      <StatCard label="API Requests" value={stats.statRequests} icon="🌐" />
     </div>
   );
 }
@@ -345,29 +376,6 @@ function StatCard({ label, value, icon, color = '#1976d2' }) {
       </div>
     </div>
   );
-}
-
-/**
- * Helper functions
- */
-function getOrgEmoji(orgId) {
-  const emojis = {
-    'sdg': '🎯',
-    'ilo': '🏆',
-    'unicef': '👶',
-    'who': '🏥'
-  };
-  return emojis[orgId] || '📊';
-}
-
-function getOrgColor(orgId) {
-  const colors = {
-    'sdg': '#1976d2',
-    'ilo': '#f57c00',
-    'unicef': '#00bcd4',
-    'who': '#4caf50'
-  };
-  return colors[orgId] || '#1976d2';
 }
 
 export default App;
