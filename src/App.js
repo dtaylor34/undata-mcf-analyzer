@@ -214,6 +214,31 @@ const generateChartData = (mcf) => {
   });
 };
 
+const generateYAMLView = (mcf) => {
+  // Convert MCF to YAML format
+  const nodes = mcf.split('\n\n').filter(n => n.trim());
+  
+  let yaml = '# MCF to YAML conversion\n---\n';
+  
+  nodes.forEach((node, idx) => {
+    const lines = node.split('\n').filter(l => l.trim());
+    if (lines.length === 0) return;
+    
+    yaml += `\nnode_${idx + 1}:\n`;
+    
+    lines.forEach(line => {
+      const colonIndex = line.indexOf(':');
+      if (colonIndex > -1) {
+        const key = line.substring(0, colonIndex).trim();
+        const value = line.substring(colonIndex + 1).trim().replace(/^"|"$/g, '');
+        yaml += `  ${key}: "${value}"\n`;
+      }
+    });
+  });
+  
+  return yaml;
+};
+
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   
@@ -226,6 +251,9 @@ export default function App() {
   const [currentMCFContent, setCurrentMCFContent] = useState('');
   const [compareMCFContent, setCompareMCFContent] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  
+  // Raw view mode state
+  const [rawViewMode, setRawViewMode] = useState('formatted'); // 'formatted' | 'raw' | 'yaml'
 
   // Load real catalog data
   const [catalogStats, setCatalogStats] = useState(null);
@@ -360,12 +388,9 @@ export default function App() {
 
         {/* Tabs */}
         <Tabs defaultValue="raw" className="w-full">
-          <TabsList className="grid w-full grid-cols-6 h-auto">
+          <TabsList className="grid w-full grid-cols-5 h-auto">
             <TabsTrigger value="raw" className="text-xs sm:text-sm">
               Raw
-            </TabsTrigger>
-            <TabsTrigger value="formatted" className="text-xs sm:text-sm">
-              Formatted
             </TabsTrigger>
             <TabsTrigger value="stat" className="text-xs sm:text-sm">
               .STAT
@@ -383,26 +408,60 @@ export default function App() {
 
           <TabsContent value="raw" className="mt-4">
             <div className="space-y-2">
-              <p className="text-sm text-muted-foreground">
-                Raw MCF file content without formatting
-              </p>
+              {/* View Mode Buttons */}
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-muted-foreground">
+                  {rawViewMode === 'formatted' && 'Formatted MCF with proper indentation'}
+                  {rawViewMode === 'raw' && 'Raw MCF file content without formatting'}
+                  {rawViewMode === 'yaml' && 'YAML representation of MCF data'}
+                </p>
+                <div className="flex gap-1 bg-muted rounded-lg p-1">
+                  <button
+                    onClick={() => setRawViewMode('formatted')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      rawViewMode === 'formatted'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Formatted
+                  </button>
+                  <button
+                    onClick={() => setRawViewMode('raw')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      rawViewMode === 'raw'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Raw
+                  </button>
+                  <button
+                    onClick={() => setRawViewMode('yaml')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      rawViewMode === 'yaml'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    YAML
+                  </button>
+                </div>
+              </div>
+              
+              {/* Code Display */}
               <CodeDisplay
-                code={generateRawCode(currentMCF)}
-                language="MCF"
-                formatted={false}
-              />
-            </div>
-          </TabsContent>
-
-          <TabsContent value="formatted" className="mt-4">
-            <div className="space-y-2">
-              <p className="text-sm text-muted-foreground">
-                Formatted MCF file with proper indentation
-              </p>
-              <CodeDisplay
-                code={generateFormattedCode(currentMCF)}
-                language="MCF (Formatted)"
-                formatted={true}
+                code={
+                  rawViewMode === 'formatted' 
+                    ? generateFormattedCode(currentMCF)
+                    : rawViewMode === 'yaml'
+                    ? generateYAMLView(currentMCF)
+                    : generateRawCode(currentMCF)
+                }
+                language={
+                  rawViewMode === 'yaml' ? 'yaml' : 'MCF'
+                }
+                formatted={rawViewMode !== 'raw'}
               />
             </div>
           </TabsContent>
