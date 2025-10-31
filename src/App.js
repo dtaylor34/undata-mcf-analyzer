@@ -360,13 +360,6 @@ export default function App() {
   // Use loaded content (or fallback to empty)
   const currentMCF = currentMCFContent;
   const compareMCF = compareMCFContent;
-  
-  // Parse MCF and extract chart data
-  const chartData = currentMCF ? (() => {
-    const nodes = parseMCF(currentMCF);
-    const observations = extractObservations(nodes);
-    return observationsToChartData(observations);
-  })() : [];
 
   return (
     <div className="min-h-screen bg-background">
@@ -426,7 +419,7 @@ export default function App() {
 
         {/* Tabs */}
         <Tabs defaultValue="raw" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 h-auto">
+          <TabsList className="grid w-full grid-cols-4 h-auto">
             <TabsTrigger value="raw" className="text-xs sm:text-sm">
               Raw
             </TabsTrigger>
@@ -438,9 +431,6 @@ export default function App() {
             </TabsTrigger>
             <TabsTrigger value="cached" className="text-xs sm:text-sm">
               Cached
-            </TabsTrigger>
-            <TabsTrigger value="chart" className="text-xs sm:text-sm">
-              Chart
             </TabsTrigger>
           </TabsList>
 
@@ -651,14 +641,53 @@ export default function App() {
               
               {/* Content Display */}
               {statViewMode === 'chart' ? (
-                <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title=".STAT Data Visualization" />
+                (() => {
+                  const nodes = parseMCF(currentMCF);
+                  const observations = extractObservations(nodes);
+                  const chartDataArray = observationsToChartData(observations);
+                  return (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-medium">.STAT Chart Visualization</h3>
+                        <ChartFilter charts={chartDataArray.map((chart, i) => ({ id: `chart-${i}`, name: chart.title, title: chart.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                      </div>
+                      {chartDataArray.map((chart, index) => {
+                        const chartId = `chart-${index}`;
+                        if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                        }
+                        return null;
+                      })}
+                    </div>
+                  );
+                })()
               ) : statViewMode === 'edit' ? (
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <CodeEditor value={statEditContent || generateStatView(currentMCF)} onChange={setStatEditContent} language="mcf" placeholder="Edit .STAT content..." />
-                  <div className="flex gap-2 justify-end">
-                    <button onClick={() => setStatEditContent(generateStatView(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
-                    <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                  <div className="flex gap-2 justify-between">
+                    <button onClick={() => { const content = statEditContent || generateStatView(currentMCF); const nodes = parseMCF(content); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <div className="flex gap-2">
+                      <button onClick={() => { setStatEditContent(generateStatView(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
+                      <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                    </div>
                   </div>
+                  {showEditPreview && editPreviewData.length > 0 && (
+                    <div className="border border-border rounded-lg p-4 bg-card">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg font-medium">Chart Preview</h3>
+                        <ChartFilter charts={editPreviewData.map((data, i) => ({ id: `chart-${i}`, name: data.title || `Chart ${i + 1}`, title: data.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                      </div>
+                      <div className="space-y-4">
+                        {editPreviewData.map((chart, index) => {
+                          const chartId = `chart-${index}`;
+                          if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                          }
+                          return null;
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <CodeDisplay code={statViewMode === 'yaml' ? generateStatYAML(currentMCF) : generateStatView(currentMCF)} language={statViewMode === 'yaml' ? 'yaml' : 'stat'} formatted={statViewMode !== 'raw'} />
@@ -688,14 +717,53 @@ export default function App() {
               
               {/* Content Display */}
               {datacommonsViewMode === 'chart' ? (
-                <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title="DataCommons Visualization" />
+                (() => {
+                  const nodes = parseMCF(currentMCF);
+                  const observations = extractObservations(nodes);
+                  const chartDataArray = observationsToChartData(observations);
+                  return (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-medium">DataCommons Chart Visualization</h3>
+                        <ChartFilter charts={chartDataArray.map((chart, i) => ({ id: `chart-${i}`, name: chart.title, title: chart.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                      </div>
+                      {chartDataArray.map((chart, index) => {
+                        const chartId = `chart-${index}`;
+                        if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                        }
+                        return null;
+                      })}
+                    </div>
+                  );
+                })()
               ) : datacommonsViewMode === 'edit' ? (
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <CodeEditor value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={setDatacommonsEditContent} language="json" placeholder="Edit DataCommons JSON..." />
-                  <div className="flex gap-2 justify-end">
-                    <button onClick={() => setDatacommonsEditContent(generateDataCommonsView(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
-                    <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                  <div className="flex gap-2 justify-between">
+                    <button onClick={() => { const content = datacommonsEditContent || generateDataCommonsView(currentMCF); const nodes = parseMCF(content); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <div className="flex gap-2">
+                      <button onClick={() => { setDatacommonsEditContent(generateDataCommonsView(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
+                      <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                    </div>
                   </div>
+                  {showEditPreview && editPreviewData.length > 0 && (
+                    <div className="border border-border rounded-lg p-4 bg-card">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg font-medium">Chart Preview</h3>
+                        <ChartFilter charts={editPreviewData.map((data, i) => ({ id: `chart-${i}`, name: data.title || `Chart ${i + 1}`, title: data.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                      </div>
+                      <div className="space-y-4">
+                        {editPreviewData.map((chart, index) => {
+                          const chartId = `chart-${index}`;
+                          if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                          }
+                          return null;
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <CodeDisplay code={datacommonsViewMode === 'yaml' ? generateDataCommonsYAML(currentMCF) : generateDataCommonsView(currentMCF)} language={datacommonsViewMode === 'yaml' ? 'yaml' : 'json'} formatted={datacommonsViewMode !== 'raw'} />
@@ -725,37 +793,56 @@ export default function App() {
               
               {/* Content Display */}
               {cachedViewMode === 'chart' ? (
-                <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title="Cached Data Visualization" />
+                (() => {
+                  const nodes = parseMCF(currentMCF);
+                  const observations = extractObservations(nodes);
+                  const chartDataArray = observationsToChartData(observations);
+                  return (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-medium">Cached Chart Visualization</h3>
+                        <ChartFilter charts={chartDataArray.map((chart, i) => ({ id: `chart-${i}`, name: chart.title, title: chart.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                      </div>
+                      {chartDataArray.map((chart, index) => {
+                        const chartId = `chart-${index}`;
+                        if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                        }
+                        return null;
+                      })}
+                    </div>
+                  );
+                })()
               ) : cachedViewMode === 'edit' ? (
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <CodeEditor value={cachedEditContent || generateCachedVersion(currentMCF)} onChange={setCachedEditContent} language="mcf" placeholder="Edit cached content..." />
-                  <div className="flex gap-2 justify-end">
-                    <button onClick={() => setCachedEditContent(generateCachedVersion(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
-                    <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                  <div className="flex gap-2 justify-between">
+                    <button onClick={() => { const content = cachedEditContent || generateCachedVersion(currentMCF); const nodes = parseMCF(content); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <div className="flex gap-2">
+                      <button onClick={() => { setCachedEditContent(generateCachedVersion(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
+                      <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                    </div>
                   </div>
+                  {showEditPreview && editPreviewData.length > 0 && (
+                    <div className="border border-border rounded-lg p-4 bg-card">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg font-medium">Chart Preview</h3>
+                        <ChartFilter charts={editPreviewData.map((data, i) => ({ id: `chart-${i}`, name: data.title || `Chart ${i + 1}`, title: data.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                      </div>
+                      <div className="space-y-4">
+                        {editPreviewData.map((chart, index) => {
+                          const chartId = `chart-${index}`;
+                          if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
+                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                          }
+                          return null;
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <CodeDisplay code={cachedViewMode === 'yaml' ? generateCachedYAML(currentMCF) : generateCachedVersion(currentMCF)} language={cachedViewMode === 'yaml' ? 'yaml' : 'mcf'} formatted={cachedViewMode !== 'raw'} />
-              )}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="chart" className="mt-4">
-            <div className="space-y-2">
-              <p className="text-sm text-muted-foreground">
-                Visual representation of the data
-              </p>
-              {isLoading ? (
-                <div className="text-center py-8 text-muted-foreground">Loading chart data...</div>
-              ) : chartData.length > 0 ? (
-                <ChartPreview
-                  data={chartData}
-                  title="Data Visualization"
-                />
-              ) : (
-                <div className="text-center py-8 text-muted-foreground">
-                  No observation data available for charting
-                </div>
               )}
             </div>
           </TabsContent>
