@@ -440,7 +440,7 @@ export default function App() {
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
                   {rawViewMode === 'formatted' && 'Formatted MCF with proper indentation'}
-                  {rawViewMode === 'raw' && 'Raw MCF file content without formatting'}
+                  {rawViewMode === 'raw' && 'Unformatted single-line MCF as seen online'}
                   {rawViewMode === 'yaml' && 'YAML representation of MCF data'}
                   {rawViewMode === 'chart' && 'Visual chart representation of the data'}
                   {rawViewMode === 'edit' && 'Edit and modify MCF content - changes are local'}
@@ -624,8 +624,8 @@ export default function App() {
               {/* View Mode Buttons */}
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
-                  {statViewMode === 'formatted' && '.STAT format representation of the MCF data'}
-                  {statViewMode === 'raw' && 'Raw .STAT format without formatting'}
+                  {statViewMode === 'formatted' && '.STAT format representation with proper indentation'}
+                  {statViewMode === 'raw' && 'Unformatted single-line .STAT as seen online'}
                   {statViewMode === 'yaml' && 'YAML representation of .STAT data'}
                   {statViewMode === 'chart' && 'Visual chart from .STAT data'}
                   {statViewMode === 'edit' && 'Edit .STAT content - changes are local'}
@@ -700,8 +700,8 @@ export default function App() {
               {/* View Mode Buttons */}
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
-                  {datacommonsViewMode === 'formatted' && 'DataCommons JSON representation'}
-                  {datacommonsViewMode === 'raw' && 'Raw DataCommons JSON without formatting'}
+                  {datacommonsViewMode === 'formatted' && 'DataCommons JSON with proper indentation'}
+                  {datacommonsViewMode === 'raw' && 'Unformatted single-line JSON as seen online'}
                   {datacommonsViewMode === 'yaml' && 'YAML representation of DataCommons data'}
                   {datacommonsViewMode === 'chart' && 'Visual chart from DataCommons data'}
                   {datacommonsViewMode === 'edit' && 'Edit DataCommons JSON - changes are local'}
@@ -776,8 +776,8 @@ export default function App() {
               {/* View Mode Buttons */}
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
-                  {cachedViewMode === 'formatted' && 'Cached version optimized for local website use'}
-                  {cachedViewMode === 'raw' && 'Raw cached version without formatting'}
+                  {cachedViewMode === 'formatted' && 'Cached version with proper indentation'}
+                  {cachedViewMode === 'raw' && 'Unformatted single-line cached content as seen online'}
                   {cachedViewMode === 'yaml' && 'YAML representation of cached data'}
                   {cachedViewMode === 'chart' && 'Visual chart from cached data'}
                   {cachedViewMode === 'edit' && 'Edit cached content - changes are local'}
