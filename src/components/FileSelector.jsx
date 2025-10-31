@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Button } from './ui/button';
 import { FileText, GitCompare } from 'lucide-react';
-import { getUniqueFileTypes, getVersionsForFileType } from '../mcf-file-index';
+import { getOrganizations, getFileTypesForOrg, getVersionsForOrgAndFileType } from '../mcf-file-index';
 
 export function FileSelector({
   onFileSelected,
@@ -10,31 +10,48 @@ export function FileSelector({
   showDiff,
   onToggleDiff,
 }) {
-  const [selectedFileType, setSelectedFileType] = useState('schema.mcf');
+  const [selectedOrg, setSelectedOrg] = useState('ilo');
+  const [selectedFileType, setSelectedFileType] = useState('');
   const [selectedVersion, setSelectedVersion] = useState('');
   const [compareVersion, setCompareVersion] = useState('');
   
-  const fileTypes = getUniqueFileTypes();
-  const versions = selectedFileType ? getVersionsForFileType(selectedFileType) : [];
+  const organizations = getOrganizations();
+  const fileTypes = selectedOrg ? getFileTypesForOrg(selectedOrg) : [];
+  const versions = selectedOrg && selectedFileType ? getVersionsForOrgAndFileType(selectedOrg, selectedFileType) : [];
   
-  // Initialize with first version when file type changes
+  // Initialize file type when org changes
   useEffect(() => {
-    if (versions.length > 0 && !selectedVersion) {
-      setSelectedVersion(versions[0].fileId);
-      onFileSelected(versions[0].fileId);
+    if (selectedOrg) {
+      const types = getFileTypesForOrg(selectedOrg);
+      if (types.length > 0) {
+        setSelectedFileType(types[0]);
+      }
     }
-  }, [versions, selectedVersion, onFileSelected]);
+  }, [selectedOrg]);
+  
+  // Initialize version when file type changes
+  useEffect(() => {
+    if (selectedOrg && selectedFileType) {
+      const vers = getVersionsForOrgAndFileType(selectedOrg, selectedFileType);
+      if (vers.length > 0) {
+        setSelectedVersion(vers[0].fileId);
+        onFileSelected(vers[0].fileId);
+      }
+    }
+  }, [selectedOrg, selectedFileType, onFileSelected]);
+  
+  // Handle org change
+  const handleOrgChange = (orgId) => {
+    setSelectedOrg(orgId);
+    setCompareVersion('');
+    onCompareFileSelected('');
+  };
   
   // Handle file type change
   const handleFileTypeChange = (fileType) => {
     setSelectedFileType(fileType);
-    const newVersions = getVersionsForFileType(fileType);
-    if (newVersions.length > 0) {
-      setSelectedVersion(newVersions[0].fileId);
-      onFileSelected(newVersions[0].fileId);
-      setCompareVersion('');
-      onCompareFileSelected('');
-    }
+    setCompareVersion('');
+    onCompareFileSelected('');
   };
   
   // Handle version change
@@ -49,7 +66,8 @@ export function FileSelector({
     onCompareFileSelected(fileId);
   };
   
-  // Get display name for selected version
+  // Get display names
+  const selectedOrgData = organizations.find(o => o.id === selectedOrg);
   const selectedVersionDisplay = versions.find(v => v.fileId === selectedVersion)?.displayName || '';
 
   return (
@@ -58,34 +76,59 @@ export function FileSelector({
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-2">
             <FileText className="h-5 w-5 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">File Type:</span>
+            <span className="text-sm text-muted-foreground">Organization:</span>
           </div>
 
-          {/* File Type Selector */}
-          <Select value={selectedFileType} onValueChange={handleFileTypeChange}>
-            <SelectTrigger className="w-[200px] bg-input border-border text-foreground hover:bg-input/80">
-              <SelectValue placeholder="Select file type" />
+          {/* Organization Selector */}
+          <Select value={selectedOrg} onValueChange={handleOrgChange}>
+            <SelectTrigger className="w-[180px] bg-input border-border text-foreground hover:bg-input/80">
+              <SelectValue>
+                {selectedOrgData && `${selectedOrgData.emoji} ${selectedOrgData.name}`}
+              </SelectValue>
             </SelectTrigger>
-            <SelectContent className="bg-card border-border max-h-[400px]">
-              {fileTypes.map((fileType) => (
+            <SelectContent className="bg-card border-border">
+              {organizations.map((org) => (
                 <SelectItem 
-                  key={fileType} 
-                  value={fileType} 
+                  key={org.id} 
+                  value={org.id} 
                   className="text-foreground hover:bg-accent focus:bg-accent"
                 >
-                  {fileType}
+                  {org.emoji} {org.name}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
 
-          {/* Version Selector */}
-          {versions.length > 0 && (
+          {/* File Type Selector */}
+          {fileTypes.length > 0 && (
+            <>
+              <span className="text-sm text-muted-foreground">File:</span>
+              <Select value={selectedFileType} onValueChange={handleFileTypeChange}>
+                <SelectTrigger className="w-[200px] bg-input border-border text-foreground hover:bg-input/80">
+                  <SelectValue placeholder="Select file type" />
+                </SelectTrigger>
+                <SelectContent className="bg-card border-border max-h-[400px]">
+                  {fileTypes.map((fileType) => (
+                    <SelectItem 
+                      key={fileType} 
+                      value={fileType} 
+                      className="text-foreground hover:bg-accent focus:bg-accent"
+                    >
+                      {fileType}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </>
+          )}
+
+          {/* Version Selector (only show if multiple versions) */}
+          {versions.length > 1 && (
             <>
               <span className="text-sm text-muted-foreground">Version:</span>
               <Select value={selectedVersion} onValueChange={handleVersionChange}>
-                <SelectTrigger className="w-[200px] bg-input border-border text-foreground hover:bg-input/80">
-                  <SelectValue placeholder="Select version">
+                <SelectTrigger className="w-[160px] bg-input border-border text-foreground hover:bg-input/80">
+                  <SelectValue>
                     {selectedVersionDisplay}
                   </SelectValue>
                 </SelectTrigger>
@@ -110,6 +153,7 @@ export function FileSelector({
               variant={showDiff ? 'default' : 'outline'}
               size="sm"
               onClick={onToggleDiff}
+              disabled={versions.length <= 1}
               className={`gap-2 transition-all ${
                 showDiff
                   ? 'bg-primary text-primary-foreground border-primary hover:bg-primary/90'
@@ -124,8 +168,8 @@ export function FileSelector({
               <>
                 <span className="text-sm text-muted-foreground">vs</span>
                 <Select value={compareVersion} onValueChange={handleCompareVersionChange}>
-                  <SelectTrigger className="w-[200px] bg-input border-border text-foreground hover:bg-input/80">
-                    <SelectValue placeholder="Select version to compare" />
+                  <SelectTrigger className="w-[160px] bg-input border-border text-foreground hover:bg-input/80">
+                    <SelectValue placeholder="Select version" />
                   </SelectTrigger>
                   <SelectContent className="bg-card border-border">
                     {versions

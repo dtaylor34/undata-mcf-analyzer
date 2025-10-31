@@ -147,92 +147,77 @@ export function getAllFiles() {
 }
 
 /**
- * Get all unique file types (e.g., schema.mcf, sv.mcf, series.mcf)
+ * Get all organizations
  */
-export function getUniqueFileTypes() {
+export function getOrganizations() {
+  return [
+    { id: 'ilo', name: MCF_FILE_INDEX.ilo.name, emoji: MCF_FILE_INDEX.ilo.emoji },
+    { id: 'sdg', name: MCF_FILE_INDEX.sdg.name, emoji: MCF_FILE_INDEX.sdg.emoji },
+    { id: 'unicef', name: MCF_FILE_INDEX.unicef.name, emoji: MCF_FILE_INDEX.unicef.emoji },
+    { id: 'who', name: MCF_FILE_INDEX.who.name, emoji: MCF_FILE_INDEX.who.emoji },
+  ];
+}
+
+/**
+ * Get file types available for an organization
+ */
+export function getFileTypesForOrg(orgId) {
   const fileTypes = new Set();
   
-  // Collect from ILO
-  MCF_FILE_INDEX.ilo.files.forEach(file => fileTypes.add(file.name));
-  
-  // Collect from SDG versions
-  Object.values(MCF_FILE_INDEX.sdg.versions).forEach(version => {
-    version.files.forEach(file => fileTypes.add(file.name));
-  });
-  
-  // Collect from UNICEF
-  MCF_FILE_INDEX.unicef.files.forEach(file => fileTypes.add(file.name));
-  
-  // Collect from WHO
-  MCF_FILE_INDEX.who.files.forEach(file => fileTypes.add(file.name));
+  if (orgId === 'ilo') {
+    MCF_FILE_INDEX.ilo.files.forEach(file => fileTypes.add(file.name));
+  } else if (orgId === 'sdg') {
+    // Get all unique file types across all SDG versions
+    Object.values(MCF_FILE_INDEX.sdg.versions).forEach(version => {
+      version.files.forEach(file => fileTypes.add(file.name));
+    });
+  } else if (orgId === 'unicef') {
+    MCF_FILE_INDEX.unicef.files.forEach(file => fileTypes.add(file.name));
+  } else if (orgId === 'who') {
+    MCF_FILE_INDEX.who.files.forEach(file => fileTypes.add(file.name));
+  }
   
   return Array.from(fileTypes).sort();
 }
 
 /**
- * Get all versions for a specific file type
- * Returns array of { org, version, versionName, emoji, fileId, displayName }
+ * Get versions for a specific org and file type
+ * Returns array of { version, versionName, fileId, displayName } for SDG
+ * Returns single item for non-versioned orgs
  */
-export function getVersionsForFileType(fileType) {
-  const versions = [];
-  
-  // ILO files (no version, just org)
-  const iloFile = MCF_FILE_INDEX.ilo.files.find(f => f.name === fileType);
-  if (iloFile) {
-    versions.push({
-      org: 'ilo',
-      orgName: MCF_FILE_INDEX.ilo.name,
-      emoji: MCF_FILE_INDEX.ilo.emoji,
-      fileId: iloFile.id,
-      displayName: `${MCF_FILE_INDEX.ilo.emoji} ILO`,
-      sortKey: 'ilo-default'
-    });
+export function getVersionsForOrgAndFileType(orgId, fileType) {
+  if (orgId === 'ilo') {
+    const file = MCF_FILE_INDEX.ilo.files.find(f => f.name === fileType);
+    return file ? [{ fileId: file.id, displayName: 'Default' }] : [];
   }
   
-  // SDG files (with versions)
-  Object.entries(MCF_FILE_INDEX.sdg.versions).forEach(([versionKey, version]) => {
-    const sdgFile = version.files.find(f => f.name === fileType);
-    if (sdgFile) {
-      versions.push({
-        org: 'sdg',
-        version: versionKey,
-        versionName: version.name,
-        orgName: MCF_FILE_INDEX.sdg.name,
-        emoji: MCF_FILE_INDEX.sdg.emoji,
-        fileId: sdgFile.id,
-        displayName: `${MCF_FILE_INDEX.sdg.emoji} SDG ${version.name}`,
-        sortKey: `sdg-${versionKey}`
-      });
-    }
-  });
-  
-  // UNICEF files
-  const unicefFile = MCF_FILE_INDEX.unicef.files.find(f => f.name === fileType);
-  if (unicefFile) {
-    versions.push({
-      org: 'unicef',
-      orgName: MCF_FILE_INDEX.unicef.name,
-      emoji: MCF_FILE_INDEX.unicef.emoji,
-      fileId: unicefFile.id,
-      displayName: `${MCF_FILE_INDEX.unicef.emoji} UNICEF`,
-      sortKey: 'unicef-default'
+  if (orgId === 'sdg') {
+    const versions = [];
+    Object.entries(MCF_FILE_INDEX.sdg.versions).forEach(([versionKey, version]) => {
+      const file = version.files.find(f => f.name === fileType);
+      if (file) {
+        versions.push({
+          version: versionKey,
+          versionName: version.name,
+          fileId: file.id,
+          displayName: version.name
+        });
+      }
     });
+    return versions;
   }
   
-  // WHO files
-  const whoFile = MCF_FILE_INDEX.who.files.find(f => f.name === fileType);
-  if (whoFile) {
-    versions.push({
-      org: 'who',
-      orgName: MCF_FILE_INDEX.who.name,
-      emoji: MCF_FILE_INDEX.who.emoji,
-      fileId: whoFile.id,
-      displayName: `${MCF_FILE_INDEX.who.emoji} WHO`,
-      sortKey: 'who-default'
-    });
+  if (orgId === 'unicef') {
+    const file = MCF_FILE_INDEX.unicef.files.find(f => f.name === fileType);
+    return file ? [{ fileId: file.id, displayName: 'Default' }] : [];
   }
   
-  return versions.sort((a, b) => a.sortKey.localeCompare(b.sortKey));
+  if (orgId === 'who') {
+    const file = MCF_FILE_INDEX.who.files.find(f => f.name === fileType);
+    return file ? [{ fileId: file.id, displayName: 'Default' }] : [];
+  }
+  
+  return [];
 }
 
 /**
