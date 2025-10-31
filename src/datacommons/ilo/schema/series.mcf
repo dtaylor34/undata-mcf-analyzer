@@ -1,0 +1,510 @@
+
+Node: dcid:UNDATA_ILO_EAP_5EAP_NB
+name: "Labour force (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAP_5EAP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EAP_5WAP_RT
+name: "Labour force participation rate (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAP_5WAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EAP_DWA1_RT
+name: "Labour force participation rate, seasonally adjusted series (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAP_DWA1_SEX_AGE_RT_Q"
+
+Node: dcid:UNDATA_ILO_EAP_DWAP_RT
+name: "Labour force participation rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAP_DWAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EAP_TEA1_NB
+name: "Labour force, seasonally adjusted series (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAP_TEA1_SEX_AGE_NB_Q"
+
+Node: dcid:UNDATA_ILO_EAP_TEAP_NB
+name: "Labour force (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAP_TEAP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4HRL_NB
+name: "Average hourly earnings of employees"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4HRL_SEX_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4HRL_NB_PPP
+name: "Average hourly earnings of employees in international dollars at Purchasing Power Parity rates (PPP)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4HRL_SEX_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4HRL_NB_USD
+name: "Average hourly earnings of employees in US dollars"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4HRL_SEX_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4MMN_NB
+name: "Monthly minimum wage"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4MMN_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4MMN_NB_PPP
+name: "Monthly minimum wage in international dollars at Purchasing Power Parity rates (PPP)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4MMN_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4MMN_NB_USD
+name: "Monthly minimum wage in US dollars"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4MMN_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4MTH_NB
+name: "Average monthly earnings of employees"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4MTH_SEX_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4MTH_NB_PPP
+name: "Average monthly earnings of employees in international dollars at Purchasing Power Parity rates (PPP)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4MTH_SEX_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_4MTH_NB_USD
+name: "Average monthly earnings of employees in US dollars"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_4MTH_SEX_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_EAR_GGAP_RT
+name: "Gender pay gap"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_GGAP_OCU_RT_A"
+
+Node: dcid:UNDATA_ILO_EAR_XFLS_RT
+name: "Female share of low pay earners"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_XFLS_NOC_RT_A"
+
+Node: dcid:UNDATA_ILO_EAR_XTLP_RT
+name: "Low pay rate"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EAR_XTLP_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EES_TEES_NB
+name: "Number of employees"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EES_TEES_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EES_XPLV_RT
+name: "Share of employees with access to parental leave"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EES_XPLV_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EES_XTMP_RT
+name: "Share of temporary employees"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EES_XTMP_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EIP_5EET_NB
+name: "Youth not in employment, education or training (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_5EET_SEX_NB_A"
+
+Node: dcid:UNDATA_ILO_EIP_5EET_RT
+name: "Share of youth not in employment, education or training (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_5EET_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EIP_5EIP_NB
+name: "Persons outside the labour force (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_5EIP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EIP_5PLF_NB
+name: "Potential labour force (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_5PLF_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EIP_5WAP_RT
+name: "Inactivity rate (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_5WAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EIP_DWAP_RT
+name: "Inactivity rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_DWAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EIP_NEET_NB
+name: "Youth not in employment, education or training (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_NEET_SEX_NB_A"
+
+Node: dcid:UNDATA_ILO_EIP_NEET_RT
+name: "Share of youth not in employment, education or training (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_NEET_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EIP_TEIP_NB
+name: "Persons outside the labour force (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_TEIP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EIP_WDIS_NB
+name: "Number of discouraged job-seekers (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_WDIS_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EIP_WPLF_NB
+name: "Potential labour force (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EIP_WPLF_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_5EMP_NB
+name: "Employment (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_5EMP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_5NIF_NB
+name: "Informal employment (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_5NIF_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_5NIF_RT
+name: "Informal employment rate (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_5NIF_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_5PIF_NB
+name: "Employment outside the formal sector (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_5PIF_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_5PIF_RT
+name: "Share of employment outside the formal sector (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_5PIF_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_5WAP_RT
+name: "Employment-to-population ratio (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_5WAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_CARE_NB
+name: "Care employment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_CARE_SEX_CAT_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_CNIF_RT
+name: "Informal care employment rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_CNIF_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_CPIF_RT
+name: "Share of care employment outside the formal sector (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_CPIF_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_DWA1_RT
+name: "Employment-to-population ratio, seasonally adjusted series (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_DWA1_SEX_AGE_RT_Q"
+
+Node: dcid:UNDATA_ILO_EMP_DWAP_RT
+name: "Employment-to-population ratio (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_DWAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_NIFL_NB
+name: "Informal employment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_NIFL_SEX_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_NIFL_RT
+name: "Informal employment rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_NIFL_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_NORM_NB
+name: "Employment by educational mismatch (using normative approach) (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_NORM_SEX_STE_EDU_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_PIFL_NB
+name: "Employment outside the formal sector (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_PIFL_SEX_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_PIFL_RT
+name: "Share of employment outside the formal sector (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_PIFL_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_PTER_RT
+name: "Part-time (defined as less than 35 actual weekly hours) employment rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_PTER_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_PUBL_NB
+name: "Public sector employment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_PUBL_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_SNIF_RT
+name: "Informal employment in STEM occupations rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_SNIF_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_SPIF_RT
+name: "Share of employment in STEM occupations outside the formal sector (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_SPIF_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_STAT_NB
+name: "Employment by educational mismatch (using statistical approach) (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_STAT_SEX_STE_EDU_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_STEM_NB
+name: "Employment in STEM occupations (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_STEM_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_TEM1_NB
+name: "Employment, seasonally adjusted series (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_TEM1_SEX_AGE_NB_Q"
+
+Node: dcid:UNDATA_ILO_EMP_TEMP_NB
+name: "Employment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_TEMP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_TNIF_RT
+name: "Informal tourism sector employment rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_TNIF_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_EMP_TOUR_NB
+name: "Tourism sector employment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_TOUR_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_EMP_TPIF_RT
+name: "Share of tourism sector employment outside the formal sector (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=EMP_TPIF_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_FOW_5SFP_NB
+name: "Subsistence foodstuff producers (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=FOW_5SFP_SEX_NB_A"
+
+Node: dcid:UNDATA_ILO_FOW_5SFP_RT
+name: "Subsistence foodstuff production rate (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=FOW_5SFP_SEX_RT_A"
+
+Node: dcid:UNDATA_ILO_GDP_211P_NB
+name: "Output per worker (GDP in constant 2017 international dollars at Purchasing Power Parity rates) (ILO modelled estimates)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=GDP_211P_NOC_NB_A"
+
+Node: dcid:UNDATA_ILO_GDP_2HRW_NB
+name: "Output per hour worked (GDP in constant 2017 international dollars at Purchasing Power Parity rates) (ILO modelled estimates)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=GDP_2HRW_NOC_NB_A"
+
+Node: dcid:UNDATA_ILO_GED_2LFP_RT
+name: "Prime-age labour force participation rate (ILO modelled estimates)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=GED_2LFP_SEX_HHT_RT_A"
+
+Node: dcid:UNDATA_ILO_HOW_TEMP_NB
+name: "Mean weekly hours actually worked per employed person"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=HOW_TEMP_SEX_AGE_ECO_NB_A"
+
+Node: dcid:UNDATA_ILO_ILR_CBCT_RT
+name: "Collective bargaining coverage rate"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=ILR_CBCT_NOC_RT_A"
+
+Node: dcid:UNDATA_ILO_ILR_TUMT_RT
+name: "Trade union density rate"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=ILR_TUMT_NOC_RT_A"
+
+Node: dcid:UNDATA_ILO_INJ_DAYS_NB
+name: "Days lost due to cases of occupational injury with temporary incapacity for work"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=INJ_DAYS_SEX_MIG_NB_A"
+
+Node: dcid:UNDATA_ILO_INJ_FATL_NB
+name: "Cases of fatal occupational injury"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=INJ_FATL_SEX_MIG_NB_A"
+
+Node: dcid:UNDATA_ILO_INJ_FATL_RT
+name: "Fatal occupational injuries per 100'000 workers"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=INJ_FATL_SEX_MIG_RT_A"
+
+Node: dcid:UNDATA_ILO_INJ_NFTL_NB
+name: "Cases of non-fatal occupational injury"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=INJ_NFTL_SEX_MIG_NB_A"
+
+Node: dcid:UNDATA_ILO_INJ_NFTL_RT
+name: "Non-fatal occupational injuries per 100'000 workers"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=INJ_NFTL_SEX_MIG_RT_A"
+
+Node: dcid:UNDATA_ILO_LAC_4HRL_NB
+name: "Hourly labour cost per employee"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAC_4HRL_ECO_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_LAC_4HRL_NB_PPP
+name: "Hourly labour cost per employee in international dollars at Purchasing Power Parity rates (PPP)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAC_4HRL_ECO_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_LAC_4HRL_NB_USD
+name: "Hourly labour cost per employee in US dollars"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAC_4HRL_ECO_CUR_NB_A"
+
+Node: dcid:UNDATA_ILO_LAI_INDE_RT
+name: "Inspectors per 10'000 employed persons"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAI_INDE_NOC_RT_A"
+
+Node: dcid:UNDATA_ILO_LAI_INSP_NB
+name: "Number of labour inspectors"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAI_INSP_SEX_NB_A"
+
+Node: dcid:UNDATA_ILO_LAI_VDIN_RT
+name: "Labour inspection visits per inspector"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAI_VDIN_NOC_RT_A"
+
+Node: dcid:UNDATA_ILO_LAI_VIST_NB
+name: "Number of labour inspection visits"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAI_VIST_NOC_NB_A"
+
+Node: dcid:UNDATA_ILO_LAI_WOPL_NB
+name: "Number of registered workplaces that could be selected for labour inspection"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAI_WOPL_NOC_NB_A"
+
+Node: dcid:UNDATA_ILO_LAP_2GDP_RT
+name: "Labour income share (ILO modelled estimates)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAP_2GDP_NOC_RT_A"
+
+Node: dcid:UNDATA_ILO_LAP_2LID_RT
+name: "Labour income distribution (ILO modelled estimates)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LAP_2LID_QTL_RT_A"
+
+Node: dcid:UNDATA_ILO_LUU_5LU2_RT
+name: "LU2: Combined rate of time-related underemployment and unemployment (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LUU_5LU2_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_LUU_5LU3_RT
+name: "LU3: Combined rate of unemployment and potential labour force (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LUU_5LU3_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_LUU_5LU4_RT
+name: "LU4: Composite rate of labour underutilization (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LUU_5LU4_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_LUU_XLU2_RT
+name: "LU2: Combined rate of time-related underemployment and unemployment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LUU_XLU2_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_LUU_XLU3_RT
+name: "LU3: Combined rate of unemployment and potential labour force (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LUU_XLU3_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_LUU_XLU4_RT
+name: "LU4: Composite rate of labour underutilization (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=LUU_XLU4_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_POP_XWAP_NB
+name: "Working-age population (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=POP_XWAP_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_STR_DAYS_NB
+name: "Days not worked due to strikes and lockouts"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=STR_DAYS_ECO_NB_A"
+
+Node: dcid:UNDATA_ILO_STR_DAYS_RT
+name: "Days not worked per 1000 workers due to strikes and lockouts"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=STR_DAYS_ECO_RT_A"
+
+Node: dcid:UNDATA_ILO_STR_TSTR_NB
+name: "Number of strikes and lockouts"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=STR_TSTR_ECO_NB_A"
+
+Node: dcid:UNDATA_ILO_STR_WORK_NB
+name: "Number of workers involved in strikes and lockouts"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=STR_WORK_ECO_NB_A"
+
+Node: dcid:UNDATA_ILO_TRU_DEMP_RT
+name: "Time-related underemployment rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=TRU_DEMP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_TRU_TTRU_NB
+name: "Time-related underemployment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=TRU_TTRU_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_UNE_5EAP_RT
+name: "Unemployment rate (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=UNE_5EAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_UNE_5UNE_NB
+name: "Unemployment (current ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=UNE_5UNE_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_UNE_DEA1_RT
+name: "Unemployment rate, seasonally adjusted series (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=UNE_DEA1_SEX_AGE_RT_Q"
+
+Node: dcid:UNDATA_ILO_UNE_DEAP_RT
+name: "Unemployment rate (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=UNE_DEAP_SEX_AGE_RT_A"
+
+Node: dcid:UNDATA_ILO_UNE_TUN1_NB
+name: "Unemployment, seasonally adjusted series (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=UNE_TUN1_SEX_AGE_NB_Q"
+
+Node: dcid:UNDATA_ILO_UNE_TUNE_NB
+name: "Unemployment (previous ILO definition)"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=UNE_TUNE_SEX_AGE_NB_A"
+
+Node: dcid:UNDATA_ILO_WBL_TWBL_RT
+name: "Participation rate in work-based learning"
+typeOf: dcs:UNDATA_ILO_Series
+source: "https://rshiny.ilo.org/dataexplorer/?lang=en&id=WBL_TWBL_SEX_AGE_WBL_RT_A"

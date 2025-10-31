@@ -1,0 +1,1105 @@
+
+Node: dcid:UNDATA_UNICEF_CME_ARR
+name: "Annual rate of reduction in mortality rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_ARR_10T19/"
+
+Node: dcid:UNDATA_UNICEF_CME_ARR_SBR
+name: "Annual rate of reduction in stillbirth rate over previous 20 years"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_ARR_SBR/"
+
+Node: dcid:UNDATA_UNICEF_CME_ARR_U5MR
+name: "Annual rate of reduction in under-five mortality rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_ARR_U5MR/"
+
+Node: dcid:UNDATA_UNICEF_CME_MR
+name: "Child mortality rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_MRM0/"
+
+Node: dcid:UNDATA_UNICEF_CME_PND
+name: "Neonatal deaths as a proportion of under-five deaths"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_PND/"
+
+Node: dcid:UNDATA_UNICEF_CME_SB
+name: "Stillbirths"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_SB/"
+
+Node: dcid:UNDATA_UNICEF_CME_SBR
+name: "Stillbirth rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_SBR/"
+
+Node: dcid:UNDATA_UNICEF_CME_TM
+name: "Total child mortality"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/CME_TMM0/"
+
+Node: dcid:UNDATA_UNICEF_DM_BRTS
+name: "Number of births"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_BRTS/"
+
+Node: dcid:UNDATA_UNICEF_DM_DPR_CHD
+name: "Child dependency ratio"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_DPR_CHD/"
+
+Node: dcid:UNDATA_UNICEF_DM_DPR_OLD
+name: "Old age dependency ratio"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_DPR_OLD/"
+
+Node: dcid:UNDATA_UNICEF_DM_DPR_TOT
+name: "Total dependency ratio"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_DPR_TOT/"
+
+Node: dcid:UNDATA_UNICEF_DM_FRATE_TOT
+name: "Total fertility rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_FRATE_TOT/"
+
+Node: dcid:UNDATA_UNICEF_DM_LIFE_EXP
+name: "Life expectancy"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_LIFE_EXP/"
+
+Node: dcid:UNDATA_UNICEF_DM_NET_MG_RATE
+name: "Net migration rate (per 1,000 population)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_NET_MG_RATE/"
+
+Node: dcid:UNDATA_UNICEF_DM_POP
+name: "Total population"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_POP_15TO24/"
+
+Node: dcid:UNDATA_UNICEF_DM_POP_GRT
+name: "Population annual growth rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_POP_GRT/"
+
+Node: dcid:UNDATA_UNICEF_DM_POP_PROP
+name: "Distribution of total population by age"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_POP_ADLCNT_PROP/"
+
+Node: dcid:UNDATA_UNICEF_DM_POP_URBN
+name: "Share of urban population"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/DM_POP_URBN/"
+
+Node: dcid:UNDATA_UNICEF_ECD_CHLD_ADLT_SRC
+name: "Proportion of children with whom any adult household member has engaged in 4 or more activities to provide early stimulation and responsive care in the last 3 days"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECD_CHLD_24-59M_ADLT_SRC"
+
+Node: dcid:UNDATA_UNICEF_ECD_CHLD_BKS_HM
+name: "Proportion of children who have 3 or more children's books"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECD_CHLD_U5_BKS-HM"
+
+Node: dcid:UNDATA_UNICEF_ECD_CHLD_EDU_PGM
+name: "Proportion of children attending an early childhood education programme"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECD_CHLD_36-59M_EDU-PGM"
+
+Node: dcid:UNDATA_UNICEF_ECD_CHLD_LFT_ALN
+name: "Proportion of children under left alone or under the supervision of another child younger than 10 years of age for more than 1 hour at least once in the last week"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECD_CHLD_U5_LFT-ALN"
+
+Node: dcid:UNDATA_UNICEF_ECD_CHLD_LMPSL
+name: "Proportion of children who are developmentally on track in health, learning and psychosocial well-being"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECD_CHLD_LMPSL"
+
+Node: dcid:UNDATA_UNICEF_ECD_CHLD_PLYTH_HM
+name: "Proportion of children who play with 2 or more types of playthings"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECD_CHLD_U5_PLYTH-HM"
+
+Node: dcid:UNDATA_UNICEF_ECON_GVT_EXP_PTEXP
+name: "Government expenditure by sector (as a percentage on government budget)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_GVT_EDU_EXP_PTEXP"
+
+Node: dcid:UNDATA_UNICEF_ECON_GVT_EXP_PTGDP
+name: "Government expenditure by sector (as a Proportion of GDP)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_GVT_EXP_PTGDP"
+
+Node: dcid:UNDATA_UNICEF_ECON_GVT_REV_PTGDP
+name: "Government revenue (as a Proportion of GDP)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_GVT_REV_PTGDP/"
+
+Node: dcid:UNDATA_UNICEF_ECON_ODA_INFLOW_PTGNI
+name: "Official Development Assitance (ODA) inflow as a Proportion of Gross National Income (GNI)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_ODA_INFLOW_PTGNI/"
+
+Node: dcid:UNDATA_UNICEF_ECON_ODA_INFLOW_USD
+name: "Official Development Assitance (ODA) inflow in US Dollars"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_ODA_INFLOW_USD/"
+
+Node: dcid:UNDATA_UNICEF_ECON_ODA_OUTFLOW_PTGNI
+name: "Official Development Assitance (ODA) outflow as a Proportion of Gross National Income (GNI)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_ODA_OUTFLOW_PTGNI/"
+
+Node: dcid:UNDATA_UNICEF_ECON_ODA_OUTFLOW_USD
+name: "Official Development Assitance (ODA) outflow in US Dollars"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ECON_ODA_OUTFLOW_USD/"
+
+Node: dcid:UNDATA_UNICEF_ED_CR
+name: "Schoold completion rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_CR_L1"
+
+Node: dcid:UNDATA_UNICEF_ED_LR
+name: "Literacy rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_15-24_LR"
+
+Node: dcid:UNDATA_UNICEF_ED_MAT
+name: "Proportion of students achieving at least a minimum proficiency level in mathematics"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_MAT_L1"
+
+Node: dcid:UNDATA_UNICEF_ED_READ
+name: "Proportion of students achieving at least a minimum proficiency level in reading"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_READ_L1"
+
+Node: dcid:UNDATA_UNICEF_ED_ROFST
+name: "Out-of-school rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_ROFST_L1"
+
+Node: dcid:UNDATA_UNICEF_ED_ROFST_ADM
+name: "Out-of-school rate (administrative data)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_ROFST_L1_ADM"
+
+Node: dcid:UNDATA_UNICEF_FD_ANAR
+name: "Adjusted net school attendance rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/ED_ANAR_L1"
+
+Node: dcid:UNDATA_UNICEF_GN_ANEMIA_ADOL_GRL
+name: "Adolescent girls with any anaemia"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_ANEMIA_ADOL_GRL/"
+
+Node: dcid:UNDATA_UNICEF_GN_ED_ATTN
+name: "Proportion of the populationthat completed at least upper secondary education (ISCED 3)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_ED_ATTN/"
+
+Node: dcid:UNDATA_UNICEF_GN_FB_BNK_ACCSS
+name: "Proportion of the population with an account at a financial institution or mobile money service provider"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_FB_BNK_ACCSS/"
+
+Node: dcid:UNDATA_UNICEF_GN_IDX
+name: "Social Institutions and Gender Index (SIGI)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_IDX/"
+
+Node: dcid:UNDATA_UNICEF_GN_IDX_CAT
+name: "Social Institutions and Gender Index Categorical (SIGI)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_IDX_CAT/"
+
+Node: dcid:UNDATA_UNICEF_GN_IT_MOB_OWN
+name: "Proportion of individuals who own a mobile telephone"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_IT_MOB_OWN/"
+
+Node: dcid:UNDATA_UNICEF_GN_LF_PTCPN
+name: "Labour force participation rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_LF_PTCPN/"
+
+Node: dcid:UNDATA_UNICEF_GN_PARENT_LV_BNFTS
+name: "Existence of parental leave benefits"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_MTNTY_LV_BNFTS"
+
+Node: dcid:UNDATA_UNICEF_GN_SG_LGL_GENARCH
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 1: Overarching legal frameworks and public life"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_SG_LGL_GENARCH/"
+
+Node: dcid:UNDATA_UNICEF_GN_SG_LGL_GENEQEMP
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 3: Employment and economic benefits"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_SG_LGL_GENEQEMP/"
+
+Node: dcid:UNDATA_UNICEF_GN_SG_LGL_GENMARFAM
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 4: Marriage and family"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_SG_LGL_GENMARFAM/"
+
+Node: dcid:UNDATA_UNICEF_GN_SG_LGL_GENVAW
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 2: Violence against women"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_SG_LGL_GENVAW/"
+
+Node: dcid:UNDATA_UNICEF_GN_STUNT_ADOL_GRL
+name: "Stunting among adolescent girls"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_STUNT_ADOL_GRL/"
+
+Node: dcid:UNDATA_UNICEF_GN_TIMEUSE
+name: "Time use"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_TIMEUSE/"
+
+Node: dcid:UNDATA_UNICEF_GN_UNMPLY
+name: "Labour force unemployment rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/GN_UNMPLY/"
+
+Node: dcid:UNDATA_UNICEF_HVA_ART_PED_ADOL
+name: "Reported number of children and adolescents receiving antiretroviral treatment (ART)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PED_ART_NUM"
+
+Node: dcid:UNDATA_UNICEF_HVA_ART_PED_ADOL_PT
+name: "Proportion of children and adolescents living with HIV and receiving antiretroviral therapy (ART)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PED_ART_CVG"
+
+Node: dcid:UNDATA_UNICEF_HVA_EPI_DTH_ANN
+name: "Estimated number of annual HIV/AIDS-related deaths"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_EPI_DTH_ANN/"
+
+Node: dcid:UNDATA_UNICEF_HVA_EPI_DTH_RT
+name: "Estimated rate of annual HIV/AIDS-related deaths (per 100,000 population)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_EPI_DTH_RT/"
+
+Node: dcid:UNDATA_UNICEF_HVA_EPI_INF_ANN
+name: "Estimated number of new HIV infections"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_EPI_INF_ANN/"
+
+Node: dcid:UNDATA_UNICEF_HVA_EPI_INF_RT
+name: "Estimated HIV incidence rate (new infections per 1,000 uninfected population)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_EPI_INF_RT/"
+
+Node: dcid:UNDATA_UNICEF_HVA_EPI_LHIV
+name: "Estimated number of children living with HIV"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_EPI_LHIV/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PED_EID_CVG
+name: "Proportion of infants born to pregnant women living with HIV who received a virological test for HIV within 2 months of birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PED_EID_CVG/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PED_EID_NUM
+name: "Reported number of infants born to pregnant women living with HIV who received a virological test for HIV within 2 months of birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PED_EID_NUM/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PED_LOST
+name: "Estimated number of children who have lost one or both parents due to all causes"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PED_LOST/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PED_LOST_AIDS
+name: "Estimated number of children who have lost one or both parents due to HIV/AIDS"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PED_LOST_AIDS/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PMTCT_ARV_CVG
+name: "Proportion of pregnant women living with HIV receiving effective ARVs for PMTCT (excludes single-dose nevirapine)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PMTCT_ARV_CVG/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PMTCT_ARV_NUM
+name: "Reported number of pregnant woment living with HIV receiving anitretroviral treatments (ARVs) for prevention of mother to child transmission programmes (PMTCT)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PMTCT_ARV_NUM/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PMTCT_MTCT
+name: "Mother-to-child HIV transmission rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PMTCT_MTCT/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PMTCT_STAT_CVG
+name: "Proportion of pregnant women presenting at ANC who were tested for HIV or already knew their HIV positive status"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PMTCT_STAT_CVG/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PMTCT_STAT_NUM
+name: "Reported number of pregnant women presenting at antenatal clinics (ANC) who were tested for HIV or already knew their HIV positive status"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PMTCT_STAT_NUM/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_CNDM_MULT
+name: "Proportion of young people who had more than one sexual partner in the past 12 months reporting the use of a condom during their last sexual intercourse"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_CNDM_MULT/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_CNDM_REG
+name: "Proportion of young people who had sex with a non-marital, non-cohabitating partner in the past 12 months reporting the use of a condom during their last sexual intercourse"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_CNDM_REG/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_KNOW
+name: "Proportion of young people with comprehensive, correct knowledge of HIV"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_KNOW/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_KNOW_TEST
+name: "Proportion of young people who know a place to get tested for HIV"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_KNOW_TEST/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_STIGMA
+name: "Proportion of people expressing discriminatory attitudes towards people living with HIV"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_STIGMA/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_TEST_RES
+name: "Proportion of young people who have ever been tested for HIV and received the result of the last test"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_TEST_RES/"
+
+Node: dcid:UNDATA_UNICEF_HVA_PREV_TEST_RES_12
+name: "Proportion of young people who were tested for HIV in the last 12 months and received the result of the last test"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/HVA_PREV_TEST_RES_12/"
+
+Node: dcid:UNDATA_UNICEF_IM_BCG
+name: "Proportion of live births who received bacille Calmette-Guerin (vaccine against tuberculosis)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_BCG/"
+
+Node: dcid:UNDATA_UNICEF_IM_HEPBB
+name: "Proportion of live births who received hepatitis-B-containing vaccine within 24 hours of birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_HEPBB/"
+
+Node: dcid:UNDATA_UNICEF_IM_HPV
+name: "Proportion of females who received the last dose of human papillomavirus (HPV) vaccine per national schedule"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_HPV/"
+
+Node: dcid:UNDATA_UNICEF_IM_MCV2
+name: "Proportion of children who received the 2nd dose of measles-containing vaccine, as per administered in the national schedule"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_MCV2/"
+
+Node: dcid:UNDATA_UNICEF_IM_PAB
+name: "Proportion of newborns protected at birth against tetanus with tetanus toxoid"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_PAB/"
+
+Node: dcid:UNDATA_UNICEF_IM_VACC
+name: "Proportion of surviving infants who are vaccinated"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_MCV1"
+
+Node: dcid:UNDATA_UNICEF_IM_YFV
+name: "Proportion of surviving infants who received yellow fever- containing vaccine (for countries at risk and where the vaccine is in the national schedule)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/IM_YFV/"
+
+Node: dcid:UNDATA_UNICEF_MG_INTERNAL_DISP_PERS
+name: "Internally displaced persons (IDPs)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_INTERNAL_DISP_PERS/"
+
+Node: dcid:UNDATA_UNICEF_MG_INTNL_MG_CNTRY_DEST
+name: "International migrants, by country of destination"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_INTNL_MG_CNTRY_DEST/"
+
+Node: dcid:UNDATA_UNICEF_MG_NEW_INTERNAL_DISP
+name: "New internal displacements"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_NEW_INTERNAL_DISP/"
+
+Node: dcid:UNDATA_UNICEF_MG_RFGS_CNTRY_ASYLM
+name: "Number of refugees, by host country"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_RFGS_CNTRY_ASYLM/"
+
+Node: dcid:UNDATA_UNICEF_MG_RFGS_CNTRY_ASYLM_PER1000
+name: "Refugees by host country, per 1000 population"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_RFGS_CNTRY_ASYLM_PER1000/"
+
+Node: dcid:UNDATA_UNICEF_MG_RFGS_CNTRY_ASYLM_PER_USD_GNI
+name: "Refugees by host country, per 1 USD GNI per capita"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_RFGS_CNTRY_ASYLM_PER_USD_GNI/"
+
+Node: dcid:UNDATA_UNICEF_MG_RFGS_CNTRY_ORIGIN
+name: "Number of refugees, by country of origin"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_RFGS_CNTRY_ORIGIN/"
+
+Node: dcid:UNDATA_UNICEF_MG_UNRWA_RFGS_CNTRY_ASYLM
+name: "Refugees under UNRWA mandate, by host country"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MG_UNRWA_RFGS_CNTRY_ASYLM/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ABR
+name: "Adolescent birth rate (number of live births to adolescent women per 1,000 adolescent women)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ABR/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ADO_TOBACCO
+name: "Proportion of adolescents who smoked cigarettes or used smoked or smokeless tobacco products at any time during the last month"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ADO_TOBACCO/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ANC1
+name: "Proportion of women attended at least once during pregnancy by skilled health personnel"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ANC1/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ANC4
+name: "Proportion of women attended at least four times during pregnancy by any provider"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ANC4/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_BIRTH18
+name: "Proportion of women who gave birth before age 18"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_BIRTH18/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_CSEC
+name: "Proportion of deliveries by cesarean section"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_CSEC/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_DEMAND_FP
+name: "Proportion of women whose demand for family planning is satisfied with modern methods"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_DEMAND_FP/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_DIARCARE
+name: "Proportion of children with diarrhoea for whom advice or treatment was sought from a health facility or provider"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_DIARCARE/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_DIARRHOEAT_TR
+name: "Proportion of children with diarrhoea who received treatment"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ORS"
+
+Node: dcid:UNDATA_UNICEF_MNCH_INFDEC
+name: "Proportion of women who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_INFDEC/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_INSTDEL
+name: "Institutional deliveries - Proportion of deliveries in a health facility"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_INSTDEL/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_IPTP
+name: "Proportion of women who received three or more doses of intermittent preventive treatment in pregnancy (ITPp) for malaria during antenatal care visits during their last pregnancy"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_IPTP/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ITN
+name: "Proportion of children who slept under an insecticide-treated mosquito net (ITN) the night prior to the survey"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ITN/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ITN2
+name: "Proportion of households with at least one insecticide treated mosquito net (ITN) for every two persons and/or indoor residual spraying (IRS) in the past 12 months"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ITN2/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ITNOWN
+name: "Proportion of households with at least one insecticide-treated mosquito net (ITN)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ITNOWN/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_ITNPREG
+name: "Proportion of pregnant women who slept under an insecticide-treated net (ITN) the previous night"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_ITNPREG/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_LIFE_EXPECTANCY
+name: "Life expectancy at birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_LIFE_EXPECTANCY/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_LTR_MATERNAL_DEATH
+name: "Lifetime risk of maternal death (probability that a 15-year-old girl will eventually die from a maternal cause)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_LTR_MATERNAL_DEATH/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_MATERNAL_DEATHS
+name: "Estimated number maternal deaths"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_MATERNAL_DEATHS/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_MLRACT
+name: "Proportion of febrile children receiving first-line antimalarial drug (ACT), among those receiving any antimalarial drugs"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_MLRACT/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_MLRCARE
+name: "Proportion of children with fever for whom advice or treatment was sought from a health facility or provider"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_MLRCARE/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_MLRDIAG
+name: "Proportion of febrile children who had a finger or heel stick for malaria testing"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_MLRDIAG/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_MMR
+name: "Maternal mortality ratio (number of maternal deaths per 100,000 live births)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_MMR/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_PNCMOM
+name: "Proportion of women who received postnatal care within 2 days of giving birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_PNCMOM/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_PNCNB
+name: "Proportion of newborns who have a postnatal contact with a health provider within 2 days of delivery"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_PNCNB/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_PNEUCARE
+name: "Proportion of children with acute respiratory infection (ARI) symptoms whom advice or treatment was sought from a health facility or provider"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_PNEUCARE/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_SAB
+name: "Proportion of deliveries attended by skilled health personnel"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_SAB/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_UHC
+name: "Coverage of essential health services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_UHC/"
+
+Node: dcid:UNDATA_UNICEF_MNCH_UHC_RMNCH
+name: "Universal health coverage index for reproductive, maternal, newborn and child-health interventions"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/MNCH_UHC_RMNCH/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANE
+name: "Prevalence of anaemia (Modeled Estimates)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANE_WOM_15_49_MOD/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_HAZ_NE2
+name: "Proportion of children with stunting"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_HAZ_NE2/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_HAZ_NE2_MOD
+name: "Proportion of children with stunting (modeled estimates)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_HAZ_NE2_MOD/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_HAZ_NE2_MOD_NUMTH
+name: "Number of children with stunting (modeled estimates)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_HAZ_NE2_MOD_NUMTH/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_WAZ_NE2
+name: "Proportion of children with underweight"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_WAZ_NE2/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_WHZ_NE2
+name: "Proportion of children with wasting"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_WHZ_NE2/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_WHZ_NE3
+name: "Proportion of children with sever wasting"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_WHZ_NE3/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_WHZ_PO2
+name: "Proportion of children with overweight"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_WHZ_PO2/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_WHZ_PO2_MOD
+name: "Proportion of children with overweight (modeled estimates)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_WHZ_PO2_MOD/"
+
+Node: dcid:UNDATA_UNICEF_NT_ANT_WHZ_PO2_MOD_NUMTH
+name: "Number of children with overweight (modeled estimates)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_ANT_WHZ_PO2_MOD_NUMTH/"
+
+Node: dcid:UNDATA_UNICEF_NT_BF_CBF
+name: "Children receiving coninued breastfeeding"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BF_CBF_12_23"
+
+Node: dcid:UNDATA_UNICEF_NT_BF_EBF
+name: "Proportion of children who were ever breastfed"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BF_EBF/"
+
+Node: dcid:UNDATA_UNICEF_NT_BF_EIBF
+name: "Proportion of children who were breastfed within one hour of birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BF_EIBF/"
+
+Node: dcid:UNDATA_UNICEF_NT_BF_EXBF
+name: "Proportion of children who are fed exclusively with breast milk"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BF_EXBF/"
+
+Node: dcid:UNDATA_UNICEF_NT_BF_EXBF_2D
+name: "Proportion of children who were fed exclusively with breast milk for the first two days after birth"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BF_EXBF_2D/"
+
+Node: dcid:UNDATA_UNICEF_NT_BF_MIXMF
+name: "Proportion of children who receive mixed milk feeding"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BF_MIXMF/"
+
+Node: dcid:UNDATA_UNICEF_NT_BW_LBW
+name: "Prevalence of low birth weight among new-borns"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BW_LBW/"
+
+Node: dcid:UNDATA_UNICEF_NT_BW_UNW
+name: "Proportion of births without a birth weight in the data source"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_BW_UNW/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_ASF
+name: "Proportion of children who consume egg and/or flesh foods"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_ASF/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_FG_0_T_2
+name: "Severe food poverty"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_FG_0_T_2/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_FG_3_T_4
+name: "Moderate food poverty"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_FG_3_T_4/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_ISSSF_FL
+name: "Proportion of infants who consume solid, semisolid or soft foods"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_ISSSF_FL/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_MAD
+name: "Proportion of children who consume a minimally acceptable diet"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_MAD/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_MDD
+name: "Proportion of children who consume a minimally diverse diet"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_MDD/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_MMF
+name: "Proportion of children who consume a solid, semin-solid or soft foods at least the minimum number of recommended times a day"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_MMF/"
+
+Node: dcid:UNDATA_UNICEF_NT_CF_ZEROFV
+name: "Proportion of children who do not consume any vegetables or fruit"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_CF_ZEROFV/"
+
+Node: dcid:UNDATA_UNICEF_NT_DANT_BMI_L18_MOD
+name: "Prevalence of underweight among adults, BMI < 18.5 (Age-standardized estimate)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_DANT_BMI_L18_MOD/"
+
+Node: dcid:UNDATA_UNICEF_NT_IOD_ANY_TH
+name: "Iodized salt consumption (>0 ppm) among all tested households"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_IOD_ANY_TH/"
+
+Node: dcid:UNDATA_UNICEF_NT_IOD_ANY_TS
+name: "Iodized salt consumption (>0 ppm) among all tested households with salt"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_IOD_ANY_TS/"
+
+Node: dcid:UNDATA_UNICEF_NT_SANT_BAZ_NE2_MOD
+name: "Percentage of thinness among children, BMI < -2 standard deviations below the median (crude estimate)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_NT_SANT_BAZ_PO1_MOD
+name: "Percentage of overweight among children, BMI > +1 standard deviations above the median (crude estimate)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_NT_VAS_S1
+name: "Proportion of children receiving a high-dose vitamin A supplement in the first half of the calendar year (January-June)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_VAS_S1/"
+
+Node: dcid:UNDATA_UNICEF_NT_VAS_S2
+name: "Proportion of children receiving a high-dose vitamin A supplement in the second half of the calendar year (July-December)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_VAS_S2/"
+
+Node: dcid:UNDATA_UNICEF_NT_VAS_TWODOSE
+name: "Proportion of children receiving two high-dose vitamin A supplements in a calendar year"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/NT_VAS_TWODOSE/"
+
+Node: dcid:UNDATA_UNICEF_PT_ADLS_LBR_HC
+name: "Percentage of adolescents engaged in household chores"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_ADLT_PS_NEC
+name: "Proportion of adults who think that physical punishment is necessary to raise/educate children"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_ADLT_PS_NEC/"
+
+Node: dcid:UNDATA_UNICEF_PT_CHLD_DN
+name: "Rate of children in detention"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CHLD_DN/"
+
+Node: dcid:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+name: "Proportion of children engaged in child labour (economic activities)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CHLD_5-17_LBR_ECON"
+
+Node: dcid:UNDATA_UNICEF_PT_CHLD_LBR_ECON_HC
+name: "Proportion of children engaged in child labour (economic activities and household chores)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CHLD_5-17_LBR_ECON-HC"
+
+Node: dcid:UNDATA_UNICEF_PT_CHLD_PS_PSY_V_CGVR
+name: "Proportion of children who experienced any physical punishment and/or psychological aggression by caregivers"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_CHLD_REG
+name: "Proportion of children whose births are registered"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CHLD_Y0T4_REG"
+
+Node: dcid:UNDATA_UNICEF_PT_CHLD_RES_CARE
+name: "Rate of children in residential care"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CHLD_RES-CARE"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_BANK
+name: "Proportion of women who have an account at a bank or other financial institution"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_BANK/"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_BIRTHS18
+name: "Proportion of women who gave birth before age 18"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_BIRTHS18/"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_BIRTHS20
+name: "Proportion of women who gave birth before age 20"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_BIRTHS20/"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_DEC_FAMILY
+name: "Proportion of women who usually decide (alone or with their spouses) about visits to the women's families"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_DEC_FAMILY/"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_EMPLOY_12M
+name: "Proportion of women who have had a job in the past 12 months"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_EMPLOY_12M/"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_IPV_12M
+name: "Proportion of women who experienced intimate partner violence in the past 12 months"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_IPV_12M/"
+
+Node: dcid:UNDATA_UNICEF_PT_CM_W_BTNG
+name: "Proportion of women who believe a husband is justified in beating his wife under certain circumstances"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_CM_W_BTNG/"
+
+Node: dcid:UNDATA_UNICEF_PT_FGM_ELIM
+name: "Proportion of persons who think that FGM should be eliminated"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_F_15-49_FGM_ELIM"
+
+Node: dcid:UNDATA_UNICEF_PT_F_FGM
+name: "Proportion of girls and women who have undergone female genital mutilation (FGM)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_F_0-14_FGM"
+
+Node: dcid:UNDATA_UNICEF_PT_F_MRD_U15
+name: "Proportion of women married or in union before age 15"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_F_20-24_MRD_U15"
+
+Node: dcid:UNDATA_UNICEF_PT_F_MRD_U15_TND
+name: "Proportion of women who were first married or in union before age 15 (UNICEF analysis, trend)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_F_20-24_MRD_U15_TND"
+
+Node: dcid:UNDATA_UNICEF_PT_F_MRD_U18_TND
+name: "Proportion of women who were first married or in union before age 18 (UNICEF analysis, trend)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_F_20-24_MRD_U18_TND"
+
+Node: dcid:UNDATA_UNICEF_PT_F_PS-SX_V_PTNR_12MNTH
+name: "Proportion of ever-partnered girls who have experienced physical and/or sexual violence by a current or former intimate partner in the last 12 months"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PT_F_PS-SX_V_PTNR_12MNTH/"
+
+Node: dcid:UNDATA_UNICEF_PT_F_TMRD15
+name: "Total number of girls and women who were first married or in union before age 15"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_MRD
+name: "Proportion of children and adolescents who are currently married or in union"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_MRD_U18
+name: "Proportion of persons married or in union before age 18"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_NMRD
+name: "Proportion of children and adolescents who were never married or in union"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_ST_BUL_30_DYS
+name: "Proportion of students who reported being bullied on 1 or more days in the past 30 days"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_SXV_AGE18
+name: "Proportion of persons who experienced sexual violence by age 18"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PT_W_BTNG
+name: "Proportion of persons who consider a husband to be justified in hitting or beating his wife for at least one of the specified reasons"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_ADOLESCENT
+name: "Adolescent poverty rate"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PV_ADOLESCENT/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_DEPRV_M
+name: "Proportion of children suffering deprivations according to homogeneous moderate standards"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_DEPRV_S
+name: "Percentage children suffering deprivations according to homogeneous severe standards"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_DPRV_AVG_HS
+name: "Average number of deprivations suffered per child according to homogeneous moderate standards"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_DPRV_AVG_POV_HS
+name: "Average number of deprivations for children suffering at least one deprivation according to homogeneous moderate standards"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_DPRV_AVG_POV_S_HS
+name: "Average number of deprivations for children suffering at least one deprivation according to homogeneous severe standards"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_DPRV_AVG_S_HS
+name: "Average number of deprivations suffered per child according to homogeneous severe standards"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_CHLD_INCM_PL
+name: "Proportion of children living in households with income below the national poverty line"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_PV_LEVEL
+name: "Poverty Level"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PV_LEVEL/"
+
+Node: dcid:UNDATA_UNICEF_PV_VMIR
+name: "Vast Majority Income Ratio"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/PV_VMIR/"
+
+Node: dcid:UNDATA_UNICEF_SPP_CHLD_POV_PROF
+name: "Child Poverty Profile"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_CHLD_POV_PROF/"
+
+Node: dcid:UNDATA_UNICEF_SPP_CHLD_SOC_PROT
+name: "Proportion of children covered by social protection"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_CHLD_SOC_PROT/"
+
+Node: dcid:UNDATA_UNICEF_SPP_DIST_SOC_PROT_BNFT
+name: "Distribution of Social Protection Benefits (percent)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_DIST_SOC_PROT_BNFT/"
+
+Node: dcid:UNDATA_UNICEF_SPP_GDPPC
+name: "Gross Domestic Product (GDP) per capita (current US$)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_GDPPC/"
+
+Node: dcid:UNDATA_UNICEF_SPP_GINI
+name: "Gini coefficient of income inequality"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_GINI/"
+
+Node: dcid:UNDATA_UNICEF_SPP_HSLD_INCOME_SHARE
+name: "Share of household income (percent)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_HSLD_INCOME_SHARE/"
+
+Node: dcid:UNDATA_UNICEF_SPP_MOTHERS_CASH_BNF
+name: "Proportion of mothers with newborns receiving cash benefit"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_MOTHERS_CASH_BNF/"
+
+Node: dcid:UNDATA_UNICEF_SPP_PALMA
+name: "Palma index of income inequality"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_PALMA/"
+
+Node: dcid:UNDATA_UNICEF_SPP_VMI
+name: "Vast majority index of income inequality (VMI)"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/SPP_VMI/"
+
+Node: dcid:UNDATA_UNICEF_WS_HCF_C
+name: "Proportion of health care facilities with cleaning services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_HCF_H
+name: "Proportion of health care facilities with hygiene services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_HCF_S
+name: "Proportion of health care facilities with sanitation services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_HCF_W
+name: "Proportion of health care facilities with water services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_HCF_WM
+name: "Proportion of health care facilities with waste management services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_HF_HANDWASH
+name: "Proportion of population with access to handwashing facilities"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_M_NPART
+name: "Proportion of adolescent girls who did not participate in school, work, or social activities during their last menstrual period"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_S
+name: "Proportion of population using sanitation services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_SF
+name: "Proportion of population using sanitation facilities"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_S_OD
+name: "Proportion of population practising open defecation"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_W_DW
+name: "Proportion of population using drinking water services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_W_DWSR
+name: "Proportion of population using various types of drinking water sources"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_PPL_W_SW
+name: "Proportion of population using surface water"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_SCH_H
+name: "Proportion of schools with hygiene services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_SCH_H-F
+name: "Proportion of schools with handwashing facilities"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/WS_SCH_H-F/"
+
+Node: dcid:UNDATA_UNICEF_WS_SCH_S
+name: "Proportion of schools with sanitation services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"
+
+Node: dcid:UNDATA_UNICEF_WS_SCH_S-I
+name: "Proportion of schools with improved sanitation facilities"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/WS_SCH_S-I/"
+
+Node: dcid:UNDATA_UNICEF_WS_SCH_W-I
+name: "Proportion of schools with improved drinking water sources"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/WS_SCH_W-I/"
+
+Node: dcid:UNDATA_UNICEF_WS_SCH_W_DW
+name: "Proportion of schools with drinking water services"
+typeOf: dcs:UNDATA_UNICEF_Series
+source: "https://data.unicef.org/indicator-profile/"

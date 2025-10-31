@@ -1,0 +1,17 @@
+
+## Custom schema
+
+Node: dcid:UNDATA_SDG_Series
+name: "UNDATA_SDG_Series"
+typeOf: schema:Class
+subClassOf: schema:Thing
+
+Node: dcid:UNDATA_SDG_MeasurementMethodEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "UNDATA_SDG_MeasurementMethodEnum"
+
+Node: dcid:UNDATA_SDG_UnitOfMeasure
+name: "UNDATA_SDG_UnitOfMeasure"
+typeOf: schema:Class
+subClassOf: dcs:UnitOfMeasure

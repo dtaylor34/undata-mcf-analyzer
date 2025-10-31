@@ -1,0 +1,2461 @@
+
+Node: dcid:UNDATA_UNICEF_AgeEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "AgeEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_G23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Gardes 2 and 3 age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_JUVENILE_ADOLESCENT
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Juvenile/adolescent"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_L02
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Pre-primary education age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_L1
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Primary school age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_L1_END
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "End of primary school age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_L2
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Lower secondary school age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_L2_END
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "End of secondary school age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_L3
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Upper secondary school age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M0
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 1 month old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M0T11
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 12 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M0T23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 24 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M0T5
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 6 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M10T11
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 to 11 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M12T13
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 13 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M12T15
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 15 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M12T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 17 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M12T23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 23 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M14T15
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "14 to 15 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M16T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "16 to 17 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M16T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "16 to 19 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M18T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "18 to 19 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M18T23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "18 to 23 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M1T11
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "1 to 11 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M1T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "1 to 59 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M20T21
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "20 to 21 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M20T23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "20 to 23 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M22T23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "22 to 23 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M24T29
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "24 to 29 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M24T35
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "24 to 35 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M24T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "24 to 59 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M30T35
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "30 to 35 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M36T41
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "36 to 41 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M36T47
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "36 to 47 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M36T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "36 to 59 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M42T47
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "42 to 47 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M48T53
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "48 to 53 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M48T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "48 to 59 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M54T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "54 to 59 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M6T11
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "6 to 11 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M6T23
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "6 to 23 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M6T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "6 to 59 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M6T7
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "6 to 7 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M6T8
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "6 to 8 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M8T9
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "8 to 9 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_M9T11
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "9 to 11 months old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 1 year old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T14
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 15 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T16
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 18 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T18
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 19 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 20 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T24
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 25 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T4
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 5 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y0T9
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "Under 10 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y10
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y10T14
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 to 14 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y10T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y10T18
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 to 18 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y10T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 to 19 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y10T21
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "10 to 21 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y11
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "11 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y11T16
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "11 to 16 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y12
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y12T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y12T18
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 18 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y12T21
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 21 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y12T24
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "12 to 24 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y13
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "13 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y13T15
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "13 to 15 years"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y13T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "13 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y13T18
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "13 to 18 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y13T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "13 to 19 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y14T15
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "14 to 15 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y14T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "14 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y14T20
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "14 to 20 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y14T21
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "14 to 21 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y15
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y15T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y15T18
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 to 18 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y15T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 to 19 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y15T24
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 to 24 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y15T49
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 to 49 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y16T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "16 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y18T29
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "18 to 29 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y1T14
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "1 to 14 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y1T4
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "1 to 4 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y2
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "2 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y20T24
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "20 to 24 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y25T34
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "25 to 34 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y25T39
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "25 to 39 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y3
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "3 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y35T49
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "35 to 49 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y4
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "4 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y40T59
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "40 to 59 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5T14
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 to 14 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5T18
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 to 18 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5T19
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 to 19 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5T24
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 to 24 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y5T9
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "5 to 9 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y6
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "6 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y7
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "7 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y7T16
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "7 to 16 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y7T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "7 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y8T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "8 to 17 years"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y9
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "9 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y9T17
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "9 to 17 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y_GE15
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "15 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y_GE25
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "25 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y_GE50
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "50 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_AgeEnum_Y_GE60
+typeOf: dcs:UNDATA_UNICEF_AgeEnum
+name: "60 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DataCollectionTimingEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "DataCollectionTimingEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DataCollectionTimingEnum_EOF
+typeOf: dcs:UNDATA_UNICEF_DataCollectionTimingEnum
+name: "End of fieldwork"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DataCollectionTimingEnum_MOF
+typeOf: dcs:UNDATA_UNICEF_DataCollectionTimingEnum
+name: "Middle of fieldwork"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DataCollectionTimingEnum_OTHER
+typeOf: dcs:UNDATA_UNICEF_DataCollectionTimingEnum
+name: "Other"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DiarrhoeaTreatmentEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "DiarrhoeaTreatmentEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DiarrhoeaTreatmentEnum_ORS
+typeOf: dcs:UNDATA_UNICEF_DiarrhoeaTreatmentEnum
+name: "Oral rehydration salts packets or pre-packaged fluids"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DiarrhoeaTreatmentEnum_ORSZINC
+typeOf: dcs:UNDATA_UNICEF_DiarrhoeaTreatmentEnum
+name: "Oral rehydration salts and zinc"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DiarrhoeaTreatmentEnum_ORT
+typeOf: dcs:UNDATA_UNICEF_DiarrhoeaTreatmentEnum
+name: "Oral rehydration salts or recommended homemade fluids or increased fluids and continued feeding"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_DiarrhoeaTreatmentEnum_ZINC
+typeOf: dcs:UNDATA_UNICEF_DiarrhoeaTreatmentEnum
+name: "Zinc"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EcdDomainEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "EcdDomainEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EcdDomainEnum_LN_D
+typeOf: dcs:UNDATA_UNICEF_EcdDomainEnum
+name: "Literacy-numeracy development"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EcdDomainEnum_LRN
+typeOf: dcs:UNDATA_UNICEF_EcdDomainEnum
+name: "Learning"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EcdDomainEnum_PHYS_DEVLP
+typeOf: dcs:UNDATA_UNICEF_EcdDomainEnum
+name: "Physical development"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EcdDomainEnum_SE_D
+typeOf: dcs:UNDATA_UNICEF_EcdDomainEnum
+name: "Social-emotional development"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "EducationLevelEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_AGG_0_1
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "None and Primary"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_AGG_3S_H
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Secondary and Higher"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_GRAD23
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Grade 2 or 3 of primary school"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_ISCED11A_01
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Never attended an education programme / No schooling"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_ISCED11_02
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Pre-primary education (ISCED11_02)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_ISCED11_1
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Primary education (ISCED11 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_ISCED11_2
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Lower secondary education (ISCED11 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_ISCED11_2T3
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Secondary education (ISCED11 - 2 and 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_ISCED11_3
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Upper secondary education (ISCED11 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_EducationLevelEnum_NSC
+typeOf: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Non-standard curriculum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_FreqCollEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "FreqCollEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_FreqCollEnum_0
+typeOf: dcs:UNDATA_UNICEF_FreqCollEnum
+name: "Not Known"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_FreqCollEnum_1
+typeOf: dcs:UNDATA_UNICEF_FreqCollEnum
+name: "nan"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_GovernmentFunctionEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "GovernmentFunctionEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_GovernmentFunctionEnum_COFOG_07
+typeOf: dcs:UNDATA_UNICEF_GovernmentFunctionEnum
+name: "Health"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_GovernmentFunctionEnum_COFOG_09
+typeOf: dcs:UNDATA_UNICEF_GovernmentFunctionEnum
+name: "Education"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_GovernmentFunctionEnum_COFOG_10
+typeOf: dcs:UNDATA_UNICEF_GovernmentFunctionEnum
+name: "Social protection"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_HealthCareFacilityEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "HealthCareFacilityEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_HealthCareFacilityEnum_HCF_GOV
+typeOf: dcs:UNDATA_UNICEF_HealthCareFacilityEnum
+name: "Government"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_HealthCareFacilityEnum_HCF_HOSPITAL
+typeOf: dcs:UNDATA_UNICEF_HealthCareFacilityEnum
+name: "Hospital"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_HealthCareFacilityEnum_HCF_NONGOV
+typeOf: dcs:UNDATA_UNICEF_HealthCareFacilityEnum
+name: "Non-government"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberChldEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "NumberChldEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "NumberOfDeprivationsEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_E1
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "Exactly one deprivation"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_E2
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "Exactly two deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_E3
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "Exactly three deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_E4
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "Exactly four deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_E5
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "Exactly five deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_L1
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "At least one deprivation"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_L2
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "At least two deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_L3
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "At least three deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_L4
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "At least four deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_NumberOfDeprivationsEnum_L5
+typeOf: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "At least five deprivations"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "SeriesEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_ARR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Annual rate of reduction in mortality rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_ARR_SBR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Annual rate of reduction in stillbirth rate over previous 20 years"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_ARR_U5MR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Annual rate of reduction in under-five mortality rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_MR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Child mortality rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_PND
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Neonatal deaths as a proportion of under-five deaths"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_SB
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Stillbirths"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_SBR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Stillbirth rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_CME_TM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Total child mortality"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_BRTS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Number of births"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_DPR_CHD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Child dependency ratio"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_DPR_OLD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Old age dependency ratio"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_DPR_TOT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Total dependency ratio"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_FRATE_TOT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Total fertility rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_LIFE_EXP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Life expectancy"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_NET_MG_RATE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Net migration rate (per 1,000 population)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_POP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Total population"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_POP_GRT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Population annual growth rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_POP_PROP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Distribution of total population by age"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_DM_POP_URBN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Share of urban population"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECD_CHLD_ADLT_SRC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with whom any adult household member has engaged in 4 or more activities to provide early stimulation and responsive care in the last 3 days"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECD_CHLD_BKS_HM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who have 3 or more children's books"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECD_CHLD_EDU_PGM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children attending an early childhood education programme"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECD_CHLD_LFT_ALN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children under left alone or under the supervision of another child younger than 10 years of age for more than 1 hour at least once in the last week"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECD_CHLD_LMPSL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who are developmentally on track in health, learning and psychosocial well-being"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECD_CHLD_PLYTH_HM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who play with 2 or more types of playthings"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_GVT_EXP_PTEXP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Government expenditure by sector (as a percentage on government budget)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_GVT_EXP_PTGDP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Government expenditure by sector (as a Proportion of GDP)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_GVT_REV_PTGDP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Government revenue (as a Proportion of GDP)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_ODA_INFLOW_PTGNI
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Official Development Assitance (ODA) inflow as a Proportion of Gross National Income (GNI)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_ODA_INFLOW_USD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Official Development Assitance (ODA) inflow in US Dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_ODA_OUTFLOW_PTGNI
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Official Development Assitance (ODA) outflow as a Proportion of Gross National Income (GNI)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ECON_ODA_OUTFLOW_USD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Official Development Assitance (ODA) outflow in US Dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ED_CR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Schoold completion rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ED_LR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Literacy rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ED_MAT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of students achieving at least a minimum proficiency level in mathematics"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ED_READ
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of students achieving at least a minimum proficiency level in reading"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ED_ROFST
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Out-of-school rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_ED_ROFST_ADM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Out-of-school rate (administrative data)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_FD_ANAR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Adjusted net school attendance rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_ANEMIA_ADOL_GRL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Adolescent girls with any anaemia"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_ED_ATTN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of the populationthat completed at least upper secondary education (ISCED 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_FB_BNK_ACCSS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of the population with an account at a financial institution or mobile money service provider"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_IDX
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Social Institutions and Gender Index (SIGI)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_IDX_CAT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Social Institutions and Gender Index Categorical (SIGI)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_IT_MOB_OWN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of individuals who own a mobile telephone"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_LF_PTCPN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Labour force participation rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_PARENT_LV_BNFTS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Existence of parental leave benefits"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_SG_LGL_GENARCH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 1: Overarching legal frameworks and public life"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_SG_LGL_GENEQEMP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 3: Employment and economic benefits"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_SG_LGL_GENMARFAM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 4: Marriage and family"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_SG_LGL_GENVAW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Legal frameworks that promote, enforce, and monitor gender equality- Area 2: Violence against women"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_STUNT_ADOL_GRL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Stunting among adolescent girls"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_TIMEUSE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Time use"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_GN_UNMPLY
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Labour force unemployment rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_ART_PED_ADOL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Reported number of children and adolescents receiving antiretroviral treatment (ART)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_ART_PED_ADOL_PT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children and adolescents living with HIV and receiving antiretroviral therapy (ART)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_EPI_DTH_ANN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated number of annual HIV/AIDS-related deaths"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_EPI_DTH_RT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated rate of annual HIV/AIDS-related deaths (per 100,000 population)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_EPI_INF_ANN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated number of new HIV infections"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_EPI_INF_RT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated HIV incidence rate (new infections per 1,000 uninfected population)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_EPI_LHIV
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated number of children living with HIV"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PED_EID_CVG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of infants born to pregnant women living with HIV who received a virological test for HIV within 2 months of birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PED_EID_NUM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Reported number of infants born to pregnant women living with HIV who received a virological test for HIV within 2 months of birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PED_LOST
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated number of children who have lost one or both parents due to all causes"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PED_LOST_AIDS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated number of children who have lost one or both parents due to HIV/AIDS"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PMTCT_ARV_CVG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of pregnant women living with HIV receiving effective ARVs for PMTCT (excludes single-dose nevirapine)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PMTCT_ARV_NUM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Reported number of pregnant woment living with HIV receiving anitretroviral treatments (ARVs) for prevention of mother to child transmission programmes (PMTCT)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PMTCT_MTCT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Mother-to-child HIV transmission rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PMTCT_STAT_CVG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of pregnant women presenting at ANC who were tested for HIV or already knew their HIV positive status"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PMTCT_STAT_NUM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Reported number of pregnant women presenting at antenatal clinics (ANC) who were tested for HIV or already knew their HIV positive status"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_CNDM_MULT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of young people who had more than one sexual partner in the past 12 months reporting the use of a condom during their last sexual intercourse"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_CNDM_REG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of young people who had sex with a non-marital, non-cohabitating partner in the past 12 months reporting the use of a condom during their last sexual intercourse"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_KNOW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of young people with comprehensive, correct knowledge of HIV"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_KNOW_TEST
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of young people who know a place to get tested for HIV"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_STIGMA
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of people expressing discriminatory attitudes towards people living with HIV"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_TEST_RES
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of young people who have ever been tested for HIV and received the result of the last test"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_HVA_PREV_TEST_RES_12
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of young people who were tested for HIV in the last 12 months and received the result of the last test"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_BCG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of live births who received bacille Calmette-Guerin (vaccine against tuberculosis)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_HEPBB
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of live births who received hepatitis-B-containing vaccine within 24 hours of birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_HPV
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of females who received the last dose of human papillomavirus (HPV) vaccine per national schedule"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_MCV2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who received the 2nd dose of measles-containing vaccine, as per administered in the national schedule"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_PAB
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of newborns protected at birth against tetanus with tetanus toxoid"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_VACC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of surviving infants who are vaccinated"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_IM_YFV
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of surviving infants who received yellow fever- containing vaccine (for countries at risk and where the vaccine is in the national schedule)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_INTERNAL_DISP_PERS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Internally displaced persons (IDPs)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_INTNL_MG_CNTRY_DEST
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "International migrants, by country of destination"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_NEW_INTERNAL_DISP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "New internal displacements"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_RFGS_CNTRY_ASYLM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Number of refugees, by host country"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_RFGS_CNTRY_ASYLM_PER1000
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Refugees by host country, per 1000 population"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_RFGS_CNTRY_ASYLM_PER_USD_GNI
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Refugees by host country, per 1 USD GNI per capita"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_RFGS_CNTRY_ORIGIN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Number of refugees, by country of origin"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MG_UNRWA_RFGS_CNTRY_ASYLM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Refugees under UNRWA mandate, by host country"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ABR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Adolescent birth rate (number of live births to adolescent women per 1,000 adolescent women)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ADO_TOBACCO
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of adolescents who smoked cigarettes or used smoked or smokeless tobacco products at any time during the last month"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ANC1
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women attended at least once during pregnancy by skilled health personnel"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ANC4
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women attended at least four times during pregnancy by any provider"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_BIRTH18
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who gave birth before age 18"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_CSEC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of deliveries by cesarean section"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_DEMAND_FP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women whose demand for family planning is satisfied with modern methods"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_DIARCARE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with diarrhoea for whom advice or treatment was sought from a health facility or provider"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_DIARRHOEAT_TR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with diarrhoea who received treatment"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_INFDEC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_INSTDEL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Institutional deliveries - Proportion of deliveries in a health facility"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_IPTP
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who received three or more doses of intermittent preventive treatment in pregnancy (ITPp) for malaria during antenatal care visits during their last pregnancy"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ITN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who slept under an insecticide-treated mosquito net (ITN) the night prior to the survey"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ITN2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of households with at least one insecticide treated mosquito net (ITN) for every two persons and/or indoor residual spraying (IRS) in the past 12 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ITNOWN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of households with at least one insecticide-treated mosquito net (ITN)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_ITNPREG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of pregnant women who slept under an insecticide-treated net (ITN) the previous night"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_LIFE_EXPECTANCY
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Life expectancy at birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_LTR_MATERNAL_DEATH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Lifetime risk of maternal death (probability that a 15-year-old girl will eventually die from a maternal cause)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_MATERNAL_DEATHS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Estimated number maternal deaths"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_MLRACT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of febrile children receiving first-line antimalarial drug (ACT), among those receiving any antimalarial drugs"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_MLRCARE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with fever for whom advice or treatment was sought from a health facility or provider"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_MLRDIAG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of febrile children who had a finger or heel stick for malaria testing"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_MMR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Maternal mortality ratio (number of maternal deaths per 100,000 live births)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_PNCMOM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who received postnatal care within 2 days of giving birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_PNCNB
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of newborns who have a postnatal contact with a health provider within 2 days of delivery"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_PNEUCARE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with acute respiratory infection (ARI) symptoms whom advice or treatment was sought from a health facility or provider"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_SAB
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of deliveries attended by skilled health personnel"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_UHC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Coverage of essential health services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_MNCH_UHC_RMNCH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Universal health coverage index for reproductive, maternal, newborn and child-health interventions"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Prevalence of anaemia (Modeled Estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_HAZ_NE2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with stunting"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_HAZ_NE2_MOD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with stunting (modeled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_HAZ_NE2_MOD_NUMTH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Number of children with stunting (modeled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_WAZ_NE2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with underweight"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_WHZ_NE2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with wasting"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_WHZ_NE3
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with sever wasting"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_WHZ_PO2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with overweight"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_WHZ_PO2_MOD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children with overweight (modeled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_ANT_WHZ_PO2_MOD_NUMTH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Number of children with overweight (modeled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BF_CBF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Children receiving coninued breastfeeding"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BF_EBF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who were ever breastfed"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BF_EIBF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who were breastfed within one hour of birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BF_EXBF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who are fed exclusively with breast milk"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BF_EXBF_2D
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who were fed exclusively with breast milk for the first two days after birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BF_MIXMF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who receive mixed milk feeding"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BW_LBW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Prevalence of low birth weight among new-borns"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_BW_UNW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of births without a birth weight in the data source"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_ASF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who consume egg and/or flesh foods"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_FG_0_T_2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Severe food poverty"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_FG_3_T_4
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Moderate food poverty"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_ISSSF_FL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of infants who consume solid, semisolid or soft foods"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_MAD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who consume a minimally acceptable diet"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_MDD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who consume a minimally diverse diet"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_MMF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who consume a solid, semin-solid or soft foods at least the minimum number of recommended times a day"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_CF_ZEROFV
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who do not consume any vegetables or fruit"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_DANT_BMI_L18_MOD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Prevalence of underweight among adults, BMI < 18.5 (Age-standardized estimate)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_IOD_ANY_TH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Iodized salt consumption (>0 ppm) among all tested households"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_IOD_ANY_TS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Iodized salt consumption (>0 ppm) among all tested households with salt"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_SANT_BAZ_NE2_MOD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Percentage of thinness among children, BMI < -2 standard deviations below the median (crude estimate)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_SANT_BAZ_PO1_MOD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Percentage of overweight among children, BMI > +1 standard deviations above the median (crude estimate)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_VAS_S1
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children receiving a high-dose vitamin A supplement in the first half of the calendar year (January-June)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_VAS_S2
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children receiving a high-dose vitamin A supplement in the second half of the calendar year (July-December)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_NT_VAS_TWODOSE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children receiving two high-dose vitamin A supplements in a calendar year"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_ADLS_LBR_HC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Percentage of adolescents engaged in household chores"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_ADLT_PS_NEC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of adults who think that physical punishment is necessary to raise/educate children"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CHLD_DN
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Rate of children in detention"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CHLD_LBR_ECON
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children engaged in child labour (economic activities)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CHLD_LBR_ECON_HC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children engaged in child labour (economic activities and household chores)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CHLD_PS_PSY_V_CGVR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children who experienced any physical punishment and/or psychological aggression by caregivers"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CHLD_REG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children whose births are registered"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CHLD_RES_CARE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Rate of children in residential care"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_BANK
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who have an account at a bank or other financial institution"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_BIRTHS18
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who gave birth before age 18"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_BIRTHS20
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who gave birth before age 20"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_DEC_FAMILY
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who usually decide (alone or with their spouses) about visits to the women's families"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_EMPLOY_12M
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who have had a job in the past 12 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_IPV_12M
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who experienced intimate partner violence in the past 12 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_CM_W_BTNG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who believe a husband is justified in beating his wife under certain circumstances"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_FGM_ELIM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of persons who think that FGM should be eliminated"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_F_FGM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of girls and women who have undergone female genital mutilation (FGM)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_F_MRD_U15
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women married or in union before age 15"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_F_MRD_U15_TND
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who were first married or in union before age 15 (UNICEF analysis, trend)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_F_MRD_U18_TND
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of women who were first married or in union before age 18 (UNICEF analysis, trend)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_F_PS-SX_V_PTNR_12MNTH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of ever-partnered girls who have experienced physical and/or sexual violence by a current or former intimate partner in the last 12 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_F_TMRD15
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Total number of girls and women who were first married or in union before age 15"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_MRD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children and adolescents who are currently married or in union"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_MRD_U18
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of persons married or in union before age 18"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_NMRD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children and adolescents who were never married or in union"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_ST_BUL_30_DYS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of students who reported being bullied on 1 or more days in the past 30 days"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_SXV_AGE18
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of persons who experienced sexual violence by age 18"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PT_W_BTNG
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of persons who consider a husband to be justified in hitting or beating his wife for at least one of the specified reasons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_ADOLESCENT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Adolescent poverty rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_DEPRV_M
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children suffering deprivations according to homogeneous moderate standards"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_DEPRV_S
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Percentage children suffering deprivations according to homogeneous severe standards"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_DPRV_AVG_HS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Average number of deprivations suffered per child according to homogeneous moderate standards"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_DPRV_AVG_POV_HS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Average number of deprivations for children suffering at least one deprivation according to homogeneous moderate standards"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_DPRV_AVG_POV_S_HS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Average number of deprivations for children suffering at least one deprivation according to homogeneous severe standards"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_DPRV_AVG_S_HS
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Average number of deprivations suffered per child according to homogeneous severe standards"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_CHLD_INCM_PL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children living in households with income below the national poverty line"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_LEVEL
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Poverty Level"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_PV_VMIR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Vast Majority Income Ratio"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_CHLD_POV_PROF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Child Poverty Profile"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_CHLD_SOC_PROT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of children covered by social protection"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_DIST_SOC_PROT_BNFT
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Distribution of Social Protection Benefits (percent)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_GDPPC
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Gross Domestic Product (GDP) per capita (current US$)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_GINI
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Gini coefficient of income inequality"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_HSLD_INCOME_SHARE
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Share of household income (percent)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_MOTHERS_CASH_BNF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of mothers with newborns receiving cash benefit"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_PALMA
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Palma index of income inequality"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_SPP_VMI
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Vast majority index of income inequality (VMI)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_HCF_C
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of health care facilities with cleaning services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_HCF_H
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of health care facilities with hygiene services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_HCF_S
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of health care facilities with sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_HCF_W
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of health care facilities with water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_HCF_WM
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of health care facilities with waste management services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_HF_HANDWASH
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population with access to handwashing facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_M_NPART
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of adolescent girls who did not participate in school, work, or social activities during their last menstrual period"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_S
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population using sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_SF
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population using sanitation facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_S_OD
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population practising open defecation"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_W_DW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population using drinking water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_W_DWSR
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population using various types of drinking water sources"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_PPL_W_SW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of population using surface water"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_SCH_H
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of schools with hygiene services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_SCH_H-F
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of schools with handwashing facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_SCH_S
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of schools with sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_SCH_S-I
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of schools with improved sanitation facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_SCH_W-I
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of schools with improved drinking water sources"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SeriesEnum_WS_SCH_W_DW
+typeOf: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Proportion of schools with drinking water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SexEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "SexEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SexEnum_F
+typeOf: dcs:UNDATA_UNICEF_SexEnum
+name: "Female"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_SexEnum_M
+typeOf: dcs:UNDATA_UNICEF_SexEnum
+name: "Male"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_UrbanizationEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "UrbanizationEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_UrbanizationEnum_R
+typeOf: dcs:UNDATA_UNICEF_UrbanizationEnum
+name: "Rural"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_UrbanizationEnum_U
+typeOf: dcs:UNDATA_UNICEF_UrbanizationEnum
+name: "Urban"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "VaccineEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_BCG
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Bacille calmette-guerin (tuberculosis)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_DTP1
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Diphtheria, tetanus, and pertussis first dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_DTP3
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Diphtheria, tetanus, and pertussis third dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_HEPB3
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Hepatitis B third dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_HEPBB
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Hepatitis B birth dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_HIB3
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Haemophilus influenzae type b third dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_HPV
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Human papillomavirus"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_IPV1
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Inactivated polio vaccine first dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_IPV2
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Inactivated polio vaccine second dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_IPV3
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Inactivated polio vaccine third dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_MCV1
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Measles first dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_MCV2
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Measles second dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_MENGA
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "MengA"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_PAB
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Tetanus protection at birth"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_PCV3
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Pneumococcal conjugate third dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_RCV1
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Rubella first dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_ROTAC
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Rotavirus last dose"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_VaccineEnum_YFV
+typeOf: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Yellow fever"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "WashServiceEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_CS_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Basic cleaning services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_CS_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited cleaning services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_CS_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No cleaning services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_I
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Improved drinking water sources"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_I_AVA
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Improved drinking water sources available when needed"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_I_NP
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Non-piped improved drinking water sources"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_I_P
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Piped drinking water sources"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_I_PRE
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Improved drinking water sources located on premises"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_I_QUA
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Improved drinking water sources free from faecal andd priority chemical contamination"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWSR_UI
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Unimproved drinking water sources"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWS_ALB
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "At least basic drinking water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWS_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Basic drinking water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWS_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited drinking water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWS_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No drinking water service"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_DWS_SM
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Safely managed drinking water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HCWMS_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Basic health care waste management services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HCWMS_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited health care waste management services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HCWMS_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No health care waste management services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HF
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Handwashing facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HF_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Handwashing facility with soap and water available at home"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HF_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited handwasing facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HF_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No handwashing facility"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HS_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Basic hygiene services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HS_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited hygiene services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HS_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No hygiene service"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_HYG
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Hygiene"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SAN
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Sanitation"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_I
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Improved sanitation facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_LAT
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Improved latrines and other improved sanitation facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_ONSITE_DIS
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "On-site sanitation facilities with human waste disposed in situ"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_ONSITE_FST
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "On-site sanitation facilities with human waste treated off-site"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_SEP
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Sanitation facilities connected to septic tanks"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_SEW
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Sanitation facilities connected to sewer networks"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_SEW_WWT
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Sanitation facilities connected to sewer networks and with sewage treated to at least secondary levels"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SF_UI
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Unimproved sanitation facilities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SS_ALB
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "At least basic sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SS_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Basic sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SS_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SS_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No sanitation service"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_SS_SM
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Safely managed sanitation services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_WAT
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Drinking water"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_WS_B
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Basic water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_WS_L
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Limited water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WashServiceEnum_WS_N
+typeOf: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "No water services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "WealthQuantileEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_B20
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Bottom 20%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_B40
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Bottom 40%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_B60
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Bottom 60%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_B80
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Bottom 80%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_M40
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Middle 40%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_Q1
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Lowest quintile"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_Q2
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Second quintile"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_Q3
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Middle quintile"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_Q4
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Fourth quintile"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_Q5
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Highest quintile"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_R20
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Richest 20%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_R40
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Richest 40%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_R60
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Richest 60%"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_UNICEF_WealthQuantileEnum_R80
+typeOf: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Richest 80%"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_dataCollectionTiming
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_DataCollectionTimingEnum
+name: "Data Collection Timing"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_diarrhoeaTreatment
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_DiarrhoeaTreatmentEnum
+name: "Diarrhoea Treatment"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_ecdDomain
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_EcdDomainEnum
+name: "Ecd Domain"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_educationLevel
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_EducationLevelEnum
+name: "Education Level"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_freqColl
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_FreqCollEnum
+name: "Freq Coll"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_governmentFunction
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_GovernmentFunctionEnum
+name: "Government Function"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_healthCareFacility
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_HealthCareFacilityEnum
+name: "Health Care Facility"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_numberChld
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_NumberChldEnum
+name: "Number Chld"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_numberOfDeprivations
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_NumberOfDeprivationsEnum
+name: "Number Of Deprivations"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_series
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_SeriesEnum
+name: "Series"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_sex
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_SexEnum
+name: "Sex"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_urbanization
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_UrbanizationEnum
+name: "Urbanization"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_vaccine
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_VaccineEnum
+name: "Vaccine"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_washService
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_WashServiceEnum
+name: "Wash Service"
+isProvisional: dcs:True
+
+Node: dcid:undata_unicef_wealthQuantile
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_UNICEF_WealthQuantileEnum
+name: "Wealth Quantile"
+isProvisional: dcs:True

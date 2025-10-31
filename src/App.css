@@ -1,0 +1,327 @@
+/* UN Data Commons Dashboard Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f5f7fa 0%, #ffffff 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styles */
+.App header {
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+  color: white;
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.App header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0 Q300,60 600,0 T1200,0 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat bottom;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.App header h1 {
+  margin: 0 0 12px 0;
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.App header p {
+  margin: 0;
+  font-size: 20px;
+  opacity: 0.95;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main Content */
+.App main {
+  padding: 0 20px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.App section {
+  margin-bottom: 60px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.App section h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Loading States */
+.App .loading,
+.App .error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px;
+  text-align: center;
+}
+
+.App .loading h2 {
+  color: #1976d2;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.App .error h2 {
+  color: #d32f2f;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.App .error p {
+  color: #666;
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Spinner Animation */
+.App .spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #1976d2;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(25, 118, 210, 0.3);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Card Styles for Indicators */
+.indicator-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.indicator-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.3);
+}
+
+.btn-secondary {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+  background: #e8e8e8;
+  border-color: #d0d0d0;
+}
+
+/* Footer */
+.App footer {
+  background: linear-gradient(135deg, #263238 0%, #37474f 100%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.App footer p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* SDG Color Scheme */
+.sdg-1 { color: #e5243b; }  /* No Poverty - Red */
+.sdg-2 { color: #dda63a; }  /* Zero Hunger - Yellow */
+.sdg-3 { color: #4c9f38; }  /* Good Health - Green */
+.sdg-4 { color: #c5192d; }  /* Quality Education - Dark Red */
+.sdg-5 { color: #ff3a21; }  /* Gender Equality - Orange Red */
+.sdg-6 { color: #26bde2; }  /* Clean Water - Light Blue */
+.sdg-7 { color: #fcc30b; }  /* Affordable Energy - Yellow */
+.sdg-8 { color: #a21942; }  /* Decent Work - Burgundy */
+.sdg-9 { color: #fd6925; }  /* Industry Innovation - Orange */
+.sdg-10 { color: #dd1367; } /* Reduced Inequalities - Pink */
+.sdg-11 { color: #fd9d24; } /* Sustainable Cities - Orange */
+.sdg-12 { color: #bf8b2e; } /* Responsible Consumption - Brown */
+.sdg-13 { color: #3f7e44; } /* Climate Action - Green */
+.sdg-14 { color: #0a97d9; } /* Life Below Water - Blue */
+.sdg-15 { color: #56c02b; } /* Life on Land - Light Green */
+.sdg-16 { color: #00689d; } /* Peace Justice - Dark Blue */
+.sdg-17 { color: #19486a; } /* Partnerships - Navy */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App header {
+    padding: 35px 15px;
+  }
+  
+  .App header h1 {
+    font-size: 32px;
+  }
+  
+  .App header p {
+    font-size: 16px;
+  }
+  
+  .App main {
+    padding: 0 15px 40px;
+  }
+  
+  .App section {
+    margin-bottom: 40px;
+  }
+  
+  .App section h2 {
+    font-size: 22px;
+  }
+  
+  .indicator-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App header h1 {
+    font-size: 28px;
+  }
+  
+  .App header p {
+    font-size: 14px;
+  }
+  
+  .App section h2 {
+    font-size: 20px;
+  }
+  
+  .indicator-card {
+    padding: 16px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .App header {
+    background: white;
+    color: black;
+    box-shadow: none;
+  }
+  
+  .indicator-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  .App footer {
+    background: white;
+    color: black;
+    border-top: 1px solid #ddd;
+  }
+}
+
+/* Accessibility */
+.btn:focus,
+.indicator-card:focus {
+  outline: 3px solid #1976d2;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background: #1976d2;
+  color: white;
+}
+
+::-moz-selection {
+  background: #1976d2;
+  color: white;
+}

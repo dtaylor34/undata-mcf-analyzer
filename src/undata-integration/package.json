@@ -1,0 +1,78 @@
+{
+  "name": "@undata/data-commons-integration",
+  "version": "1.0.0",
+  "description": "UN Data Commons Integration Layer - Cache → .STAT → Live DC with React components",
+  "main": "data-layer.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development nodemon server.js",
+    "build": "npm run build:cache && npm run build:docs",
+    "build:cache": "node scripts/build-cache.js",
+    "build:docs": "jsdoc -c jsdoc.json",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:integration": "jest --config jest.integration.config.js",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "diff": "node mcf-diff.js",
+    "diff:latest": "node mcf-diff.js $(ls -td datacommons/* | head -2 | tail -1) $(ls -td datacommons/* | head -1)",
+    "cache:rebuild": "node scripts/rebuild-cache.js",
+    "cache:clear": "rm -f catalog-ui-cache.json && echo 'Cache cleared'",
+    "cache:stats": "node scripts/cache-stats.js",
+    "deploy:staging": "npm run test && npm run build && pm2 start ecosystem.staging.config.js",
+    "deploy:prod": "npm run test && npm run build && pm2 start ecosystem.prod.config.js",
+    "monitor": "pm2 monit",
+    "logs": "pm2 logs",
+    "health": "curl http://localhost:8080/health"
+  },
+  "keywords": [
+    "un",
+    "data-commons",
+    "sdg",
+    "statistics",
+    "data-layer",
+    "cache",
+    "stat-api"
+  ],
+  "author": "UN Data Commons Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "redis": "^4.6.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "node-cache": "^5.1.2",
+    "lodash": "^4.17.21",
+    "date-fns": "^2.30.0",
+    "csv-stringify": "^6.4.5",
+    "csv-parse": "^5.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
+    "jsdoc": "^4.0.2",
+    "supertest": "^6.3.3",
+    "@types/node": "^20.10.5",
+    "pm2": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undata/data-commons-integration"
+  },
+  "bugs": {
+    "url": "https://github.com/undata/data-commons-integration/issues"
+  },
+  "homepage": "https://github.com/undata/data-commons-integration#readme"
+}

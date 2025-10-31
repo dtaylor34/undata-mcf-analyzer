@@ -1,0 +1,3466 @@
+
+spec {
+  pop_type: "SDG_AG_FLS_INDEX"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.3.1"
+}
+spec {
+  pop_type: "SDG_AG_FLS_PCT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.3.1"
+}
+spec {
+  pop_type: "SDG_AG_FOOD_WST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.3.1"
+}
+spec {
+  pop_type: "SDG_AG_FOOD_WST_PC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.3.1"
+}
+spec {
+  pop_type: "SDG_AG_FPA_CFPI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.c.1"
+}
+spec {
+  pop_type: "SDG_AG_FPA_COMM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.c.1"
+}
+spec {
+  pop_type: "SDG_AG_FPA_HMFP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.c.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_AGRBIO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_AGRWAG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_DGRD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.3.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FERTMG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FIES"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FOVH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.1.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRSTBIOPHA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.2.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRSTCERT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.2.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRSTCHG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.2.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRSTMGT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.2.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRSTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.1.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_FRSTPRCT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.2.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_H2OAVAIL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_LNDSTR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_NFI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_PSTCDSMG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_RMM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_SDGRD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_SUST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_SUST_PRXCSS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_SUST_PRXTS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.4.1"
+}
+spec {
+  pop_type: "SDG_AG_LND_TOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.1.1"
+}
+spec {
+  pop_type: "SDG_AG_PRD_AGVAS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.a.1"
+}
+spec {
+  pop_type: "SDG_AG_PRD_FIESMS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.1.2"
+}
+spec {
+  pop_type: "SDG_AG_PRD_FIESMSN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.1.2"
+}
+spec {
+  pop_type: "SDG_AG_PRD_FIESS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.1.2"
+}
+spec {
+  pop_type: "SDG_AG_PRD_FIESSN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.1.2"
+}
+spec {
+  pop_type: "SDG_AG_PRD_ORTIND"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.a.1"
+}
+spec {
+  pop_type: "SDG_AG_PRD_XSUBDY"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.b.1"
+}
+spec {
+  pop_type: "SDG_AG_XPD_AGSGB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.a.1"
+}
+spec {
+  pop_type: "SDG_BN_CAB_XOKA_GD_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_BN_KLT_PTXL_CD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_BX_KLT_DINV_WD_GD_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_BX_TRF_PWKR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.2"
+}
+spec {
+  pop_type: "SDG_DC_ENVTECH_EXP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.7.1"
+}
+spec {
+  pop_type: "SDG_DC_ENVTECH_IMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.7.1"
+}
+spec {
+  pop_type: "SDG_DC_ENVTECH_INV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.7.1"
+}
+spec {
+  pop_type: "SDG_DC_ENVTECH_REXP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.7.1"
+}
+spec {
+  pop_type: "SDG_DC_ENVTECH_RIMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.7.1"
+}
+spec {
+  pop_type: "SDG_DC_ENVTECH_TT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.7.1"
+}
+spec {
+  pop_type: "SDG_DC_FIN_CLIMB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.a.1"
+}
+spec {
+  pop_type: "SDG_DC_FIN_CLIMM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.a.1"
+}
+spec {
+  pop_type: "SDG_DC_FIN_CLIMT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.a.1"
+}
+spec {
+  pop_type: "SDG_DC_FIN_GEN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.a.1"
+}
+spec {
+  pop_type: "SDG_DC_FIN_TOT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.a.1"
+}
+spec {
+  pop_type: "SDG_DC_FTA_TOTAL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.9.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_BDVDL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.a.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_BDVL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.a.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_LDCG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_LDCS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_LLDC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_LLDCG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_POVDLG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_POVG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_POVLG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_SIDS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_SIDSG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_TOTG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_TOTGGE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_TOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_ODA_TOTLGE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.2.1"
+}
+spec {
+  pop_type: "SDG_DC_OSSD_GRT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.1"
+}
+spec {
+  pop_type: "SDG_DC_OSSD_MPF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.1"
+}
+spec {
+  pop_type: "SDG_DC_OSSD_OFFCL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.1"
+}
+spec {
+  pop_type: "SDG_DC_OSSD_OFFNL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.1"
+}
+spec {
+  pop_type: "SDG_DC_OSSD_PRVGRT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_AGRL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.a.2"
+}
+spec {
+  pop_type: "SDG_DC_TOF_HLTHL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.2"
+}
+spec {
+  pop_type: "SDG_DC_TOF_HLTHNT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.2"
+}
+spec {
+  pop_type: "SDG_DC_TOF_INFRAL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.a.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_SCHIPSL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.b.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_TRDCMDL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.a.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_TRDCML"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.a.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_TRDDBMDL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.a.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_TRDDBML"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.a.1"
+}
+spec {
+  pop_type: "SDG_DC_TOF_WASHL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.a.1"
+}
+spec {
+  pop_type: "SDG_DC_TRF_TFDV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.b.1"
+}
+spec {
+  pop_type: "SDG_DC_TRF_TOTDL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.b.1"
+}
+spec {
+  pop_type: "SDG_DC_TRF_TOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.b.1"
+}
+spec {
+  pop_type: "SDG_DI_ILL_IN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.4.1"
+}
+spec {
+  pop_type: "SDG_DI_ILL_OUT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.4.1"
+}
+spec {
+  pop_type: "SDG_DP_DOD_DLD2_CR_CG_Z1"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_DT_DOD_DECT_GN_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_DT_TDS_DECT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.4.1"
+}
+spec {
+  pop_type: "SDG_EG_ACS_ELEC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_7.1.1"
+}
+spec {
+  pop_type: "SDG_EG_EGY_CLEAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_7.1.2"
+}
+spec {
+  pop_type: "SDG_EG_EGY_PRIM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_7.3.1"
+}
+spec {
+  pop_type: "SDG_EG_EGY_RNEW"
+  obs_props { mprop: "value" }
+  vertical: "SDG_7.b.1"
+}
+spec {
+  pop_type: "SDG_EG_FEC_RNEW"
+  obs_props { mprop: "value" }
+  vertical: "SDG_7.2.1"
+}
+spec {
+  pop_type: "SDG_EG_IFF_RANDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_7.a.1"
+}
+spec {
+  pop_type: "SDG_EG_TBA_H2CO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.2"
+}
+spec {
+  pop_type: "SDG_EG_TBA_H2COAQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.2"
+}
+spec {
+  pop_type: "SDG_EG_TBA_H2CORL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.2"
+}
+spec {
+  pop_type: "SDG_EN_ACS_URB_OPENSP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.7.1"
+}
+spec {
+  pop_type: "SDG_EN_ADAP_COM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_ADAP_COM_DV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.b.1"
+}
+spec {
+  pop_type: "SDG_EN_ATM_CO2"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.4.1"
+}
+spec {
+  pop_type: "SDG_EN_ATM_CO2GDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.4.1"
+}
+spec {
+  pop_type: "SDG_EN_ATM_CO2MVA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.4.1"
+}
+spec {
+  pop_type: "SDG_EN_ATM_GHGT_AIP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.2"
+}
+spec {
+  pop_type: "SDG_EN_ATM_GHGT_NAIP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.2"
+}
+spec {
+  pop_type: "SDG_EN_ATM_PM25"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.6.2"
+}
+spec {
+  pop_type: "SDG_EN_BIUREP_AIP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_BIUREP_NAIP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_BIUREP_NAIP_DV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.b.1"
+}
+spec {
+  pop_type: "SDG_EN_EWT_COLLPCAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_EWT_COLLR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_EWT_COLLV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_EWT_GENPCAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_EWT_GENV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_EWT_RCYPCAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.5.1"
+}
+spec {
+  pop_type: "SDG_EN_EWT_RCYR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.5.1"
+}
+spec {
+  pop_type: "SDG_EN_EWT_RCYV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.5.1"
+}
+spec {
+  pop_type: "SDG_EN_H2O_GRAMBQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.2"
+}
+spec {
+  pop_type: "SDG_EN_H2O_OPAMBQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.2"
+}
+spec {
+  pop_type: "SDG_EN_H2O_RVAMBQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.2"
+}
+spec {
+  pop_type: "SDG_EN_H2O_WBAMBQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_EXP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_GENGDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_GENV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_IMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_PCAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_TREATV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_TRTDISR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_HAZ_TRTDISV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_LKRV_PWAC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKRV_PWAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKRV_PWAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKRV_SWAC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKRV_SWAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKRV_SWAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKW_QLTRB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LKW_QLTRST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_LND_CNSPOP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.3.1"
+}
+spec {
+  pop_type: "SDG_EN_LND_INDQTHSNG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.1.1"
+}
+spec {
+  pop_type: "SDG_EN_LND_SLUM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_BEALITSQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_BEALIT_BP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_BEALIT_BV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_BEALIT_EXP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_BEALIT_OP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_BEALIT_OV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_CHLANM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_CHLCONC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_CHLDEV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_COEUPO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_DSI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_DSI_MML"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_PLASDD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_TN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_TN_MML"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_TP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAR_TP_MML"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.1.1"
+}
+spec {
+  pop_type: "SDG_EN_MAT_DOMCMPC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MAT_DOMCMPG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MAT_DOMCMPT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MAT_FTPRPC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.4.1"
+}
+spec {
+  pop_type: "SDG_EN_MAT_FTPRPG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.4.1"
+}
+spec {
+  pop_type: "SDG_EN_MAT_FTPRTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.4.1"
+}
+spec {
+  pop_type: "SDG_EN_MWT_COLLV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MWT_EXP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MWT_GENV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MWT_IMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MWT_RCYR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.5.1"
+}
+spec {
+  pop_type: "SDG_EN_MWT_RCYV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.5.1"
+}
+spec {
+  pop_type: "SDG_EN_MWT_TREATR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_MWT_TREATV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_NAA_PLAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_NAA_PLAN_DV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.b.1"
+}
+spec {
+  pop_type: "SDG_EN_NACOM_AIP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_NACOM_NAIP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_NACOM_NAIP_DV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.b.1"
+}
+spec {
+  pop_type: "SDG_EN_NAD_CONTR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.2.1"
+}
+spec {
+  pop_type: "SDG_EN_NAD_CONTR_DV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_13.b.1"
+}
+spec {
+  pop_type: "SDG_EN_REF_WASCOL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.6.1"
+}
+spec {
+  pop_type: "SDG_EN_RSRV_MNWAC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_RSRV_MNWAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_RSRV_MNWAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_RSRV_MXWAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_RSRV_MXWAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_SCP_ECSYBA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.2.1"
+}
+spec {
+  pop_type: "SDG_EN_SCP_FRMN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.6.1"
+}
+spec {
+  pop_type: "SDG_EN_SCP_FSHGDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.7.1"
+}
+spec {
+  pop_type: "SDG_EN_TWT_GENV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.2"
+}
+spec {
+  pop_type: "SDG_EN_URB_OPENSP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.7.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_HMWTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_INWTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_MANGC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_MANGN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_NDQTGRW"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_NDQTRVR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_WTLN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WBE_WTLP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.6.1"
+}
+spec {
+  pop_type: "SDG_EN_WWT_GEN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.1"
+}
+spec {
+  pop_type: "SDG_EN_WWT_TREAT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.1"
+}
+spec {
+  pop_type: "SDG_EN_WWT_TREATR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.1"
+}
+spec {
+  pop_type: "SDG_EN_WWT_TREATR_SF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.1"
+}
+spec {
+  pop_type: "SDG_EN_WWT_TREAT_SF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.1"
+}
+spec {
+  pop_type: "SDG_EN_WWT_WWDS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.3.1"
+}
+spec {
+  pop_type: "SDG_ER_BDY_ABT2NP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.9.1"
+}
+spec {
+  pop_type: "SDG_ER_BDY_SEEA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.9.1"
+}
+spec {
+  pop_type: "SDG_ER_CBD_ABSCLRHS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.6.1"
+}
+spec {
+  pop_type: "SDG_ER_CBD_NAGOYA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.6.1"
+}
+spec {
+  pop_type: "SDG_ER_CBD_ORSPGRFA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.6.1"
+}
+spec {
+  pop_type: "SDG_ER_CBD_PTYPGRFA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.6.1"
+}
+spec {
+  pop_type: "SDG_ER_CBD_SMTA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.6.1"
+}
+spec {
+  pop_type: "SDG_ER_FFS_CMPT_CD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.c.1"
+}
+spec {
+  pop_type: "SDG_ER_FFS_CMPT_GDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.c.1"
+}
+spec {
+  pop_type: "SDG_ER_FFS_CMPT_PC_CD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.c.1"
+}
+spec {
+  pop_type: "SDG_ER_GRF_ANIMKPT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.1"
+}
+spec {
+  pop_type: "SDG_ER_GRF_ANIMKPT_TRB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.1"
+}
+spec {
+  pop_type: "SDG_ER_GRF_ANIMRCNTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.1"
+}
+spec {
+  pop_type: "SDG_ER_GRF_ANIMRCNTN_TRB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.1"
+}
+spec {
+  pop_type: "SDG_ER_GRF_PLNTSTOR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_FWTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.4.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_IWRMD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_IWRMD_EE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_IWRMD_FI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_IWRMD_IP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_IWRMD_MI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_IWRMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.5.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_PARTIC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_PRDU"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_PROCED"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_RURP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_H2O_STRESS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.4.2"
+}
+spec {
+  pop_type: "SDG_ER_H2O_WUEYST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.4.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_GLOFUN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_GLOFUNP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_LEGIS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_NATBUD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_NATBUDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_NBSAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_IAS_NBSAPP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.8.1"
+}
+spec {
+  pop_type: "SDG_ER_MRN_MPA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.5.1"
+}
+spec {
+  pop_type: "SDG_ER_MTN_DGRDA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.4.2"
+}
+spec {
+  pop_type: "SDG_ER_MTN_DGRDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.4.2"
+}
+spec {
+  pop_type: "SDG_ER_MTN_GRNCOV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.4.2"
+}
+spec {
+  pop_type: "SDG_ER_MTN_GRNCVI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.4.2"
+}
+spec {
+  pop_type: "SDG_ER_MTN_TOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.4.2"
+}
+spec {
+  pop_type: "SDG_ER_NOEX_LBREDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.2"
+}
+spec {
+  pop_type: "SDG_ER_OAW_MNACD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.3.1"
+}
+spec {
+  pop_type: "SDG_ER_PTD_FRHWTR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.1.2"
+}
+spec {
+  pop_type: "SDG_ER_PTD_MTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.4.1"
+}
+spec {
+  pop_type: "SDG_ER_PTD_TERR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.1.2"
+}
+spec {
+  pop_type: "SDG_ER_RDE_OSEX"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.a.1"
+}
+spec {
+  pop_type: "SDG_ER_REG_SSFRAR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.b.1"
+}
+spec {
+  pop_type: "SDG_ER_REG_UNFCIM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.6.1"
+}
+spec {
+  pop_type: "SDG_ER_RSK_LBREDS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.2"
+}
+spec {
+  pop_type: "SDG_ER_RSK_LST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.5.1"
+}
+spec {
+  pop_type: "SDG_ER_UNCLOS_IMPLE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.c.1"
+}
+spec {
+  pop_type: "SDG_ER_UNCLOS_RATACC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_14.c.1"
+}
+spec {
+  pop_type: "SDG_ER_UNK_LBREDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.5.2"
+}
+spec {
+  pop_type: "SDG_ER_WAT_PART"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_WAT_PARTIC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_WAT_PRDU"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_WAT_PROCED"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.b.1"
+}
+spec {
+  pop_type: "SDG_ER_WLD_TRPOACH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_15.7.1"
+}
+spec {
+  pop_type: "SDG_FB_ATM_TOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.10.1"
+}
+spec {
+  pop_type: "SDG_FB_BNK_ACCSS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.10.2"
+}
+spec {
+  pop_type: "SDG_FB_BNK_ACCSS_ILF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.10.2"
+}
+spec {
+  pop_type: "SDG_FB_BNK_ACCSS_OLF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.10.2"
+}
+spec {
+  pop_type: "SDG_FB_BNK_CAPA_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_FB_CBK_BRCH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.10.1"
+}
+spec {
+  pop_type: "SDG_FC_ACC_SSID"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.3.2"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSANL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSERA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSKA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSKNL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSKRTC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_FSI_FSSNO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.5.1"
+}
+spec {
+  pop_type: "SDG_FI_RES_TOTL_MO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_FM_LBL_BMNY_IR_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_FM_LBL_BMNY_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_FP_CPI_TOTL_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_GB_POP_SCIERD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.5.2"
+}
+spec {
+  pop_type: "SDG_GB_XPD_CULNAT_PB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.4.1"
+}
+spec {
+  pop_type: "SDG_GB_XPD_CULNAT_PBPV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.4.1"
+}
+spec {
+  pop_type: "SDG_GB_XPD_CULNAT_PV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.4.1"
+}
+spec {
+  pop_type: "SDG_GB_XPD_CUL_PBPV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.4.1"
+}
+spec {
+  pop_type: "SDG_GB_XPD_NAT_PBPV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.4.1"
+}
+spec {
+  pop_type: "SDG_GB_XPD_RSDV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.5.1"
+}
+spec {
+  pop_type: "SDG_GC_BAL_CASH_GD_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_GC_GOB_TAXD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.1.2"
+}
+spec {
+  pop_type: "SDG_GC_TAX_TOTL_GD_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_GF_COM_PPPI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.17.1"
+}
+spec {
+  pop_type: "SDG_GF_COM_PPPI_KD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.17.1"
+}
+spec {
+  pop_type: "SDG_GF_FRN_FDI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.3.1"
+}
+spec {
+  pop_type: "SDG_GF_XPD_GBPC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.1"
+}
+spec {
+  pop_type: "SDG_GR_G14_GDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.1.1"
+}
+spec {
+  pop_type: "SDG_GR_G14_XDC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.1.1"
+}
+spec {
+  pop_type: "SDG_IC_FRM_BRIB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.5.2"
+}
+spec {
+  pop_type: "SDG_IC_GEN_MGTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.2"
+}
+spec {
+  pop_type: "SDG_IC_GEN_MGTL_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.2"
+}
+spec {
+  pop_type: "SDG_IC_GEN_MGTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.2"
+}
+spec {
+  pop_type: "SDG_IC_GEN_MGTN_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.2"
+}
+spec {
+  pop_type: "SDG_IQ_SPI_PIL4"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.1"
+}
+spec {
+  pop_type: "SDG_IQ_SPI_PIL5"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.1"
+}
+spec {
+  pop_type: "SDG_IS_RDP_FRGVOL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.1.2"
+}
+spec {
+  pop_type: "SDG_IS_RDP_LULFRG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.1.2"
+}
+spec {
+  pop_type: "SDG_IS_RDP_PFVOL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.1.2"
+}
+spec {
+  pop_type: "SDG_IS_RDP_PORFVOL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.1.2"
+}
+spec {
+  pop_type: "SDG_IT_MOB_2GNTWK"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.c.1"
+}
+spec {
+  pop_type: "SDG_IT_MOB_3GNTWK"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.c.1"
+}
+spec {
+  pop_type: "SDG_IT_MOB_4GNTWK"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.c.1"
+}
+spec {
+  pop_type: "SDG_IT_MOB_OWN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.b.1"
+}
+spec {
+  pop_type: "SDG_IT_NET_BBND"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.6.1"
+}
+spec {
+  pop_type: "SDG_IT_NET_BBNDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.6.1"
+}
+spec {
+  pop_type: "SDG_IT_USE_ii99"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.8.1"
+}
+spec {
+  pop_type: "SDG_IU_COR_BRIB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.5.1"
+}
+spec {
+  pop_type: "SDG_IU_DMK_ICRS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.2"
+}
+spec {
+  pop_type: "SDG_IU_DMK_INCL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.2"
+}
+spec {
+  pop_type: "SDG_IU_DMK_RESP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.2"
+}
+spec {
+  pop_type: "SDG_NE_CON_GOVT_KD_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_NE_CON_PRVT_KD_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_NE_EXP_GNFS_KD_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_NE_GDI_TOTL_KD_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_NE_IMP_GNFS_KD_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_NV_IND_MANF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.2.1"
+}
+spec {
+  pop_type: "SDG_NV_IND_MANFPC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.2.1"
+}
+spec {
+  pop_type: "SDG_NV_IND_MANF_CD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.2.1"
+}
+spec {
+  pop_type: "SDG_NV_IND_SSIS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.3.1"
+}
+spec {
+  pop_type: "SDG_NV_IND_TECH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.b.1"
+}
+spec {
+  pop_type: "SDG_NY_GDP_MKTP_KD_ZG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_NY_GDP_PCAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.1.1"
+}
+spec {
+  pop_type: "SDG_PA_NUS_ATLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_PD_AGR_LSFP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.3.1"
+}
+spec {
+  pop_type: "SDG_PD_AGR_SSFP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.3.1"
+}
+spec {
+  pop_type: "SDG_SD_CPA_UPRDP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.a.1"
+}
+spec {
+  pop_type: "SDG_SD_MDP_ANDI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.2.2"
+}
+spec {
+  pop_type: "SDG_SD_MDP_ANDIHH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.2.2"
+}
+spec {
+  pop_type: "SDG_SD_MDP_CSMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.2.2"
+}
+spec {
+  pop_type: "SDG_SD_MDP_MUHC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.2.2"
+}
+spec {
+  pop_type: "SDG_SD_MDP_MUHHC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.2.2"
+}
+spec {
+  pop_type: "SDG_SD_XPD_ESED"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.2"
+}
+spec {
+  pop_type: "SDG_SD_XPD_MNPO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.b.1"
+}
+spec {
+  pop_type: "SDG_SE_ACC_HNDWSH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_ACS_CMPTR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_ACS_ELECT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_ACS_H2O"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_ACS_INTNT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_ACS_SANIT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_ADT_ACTS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.4.1"
+}
+spec {
+  pop_type: "SDG_SE_ADT_EDUCTRN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.3.1"
+}
+spec {
+  pop_type: "SDG_SE_ADT_FUNS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.6.1"
+}
+spec {
+  pop_type: "SDG_SE_AGP_CPRA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_ALP_CPLR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_AWP_CPRA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_DEV_ONTRK"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.2.1"
+}
+spec {
+  pop_type: "SDG_SE_GCEDESD_CUR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.7.1"
+}
+spec {
+  pop_type: "SDG_SE_GCEDESD_NEP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.7.1"
+}
+spec {
+  pop_type: "SDG_SE_GCEDESD_SAS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.7.1"
+}
+spec {
+  pop_type: "SDG_SE_GCEDESD_TED"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.7.1"
+}
+spec {
+  pop_type: "SDG_SE_GPI_ICTS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_GPI_PART"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_GPI_PTNPRE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_GPI_TCAQ"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_IMP_FPOF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_INF_DSBL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.a.1"
+}
+spec {
+  pop_type: "SDG_SE_LGP_ACHI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_NAP_ACHI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_PRE_PARTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.2.2"
+}
+spec {
+  pop_type: "SDG_SE_TOT_CPLR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.1.2"
+}
+spec {
+  pop_type: "SDG_SE_TOT_GPI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_TOT_GPI_FS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_TOT_PRFL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.1.1"
+}
+spec {
+  pop_type: "SDG_SE_TOT_RUPI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_TOT_SESPI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_TOT_SESPI_FS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.5.1"
+}
+spec {
+  pop_type: "SDG_SE_TRA_GRDL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_4.c.1"
+}
+spec {
+  pop_type: "SDG_SG_CPA_MIGRP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.7.2"
+}
+spec {
+  pop_type: "SDG_SG_CPA_MIGRS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.7.2"
+}
+spec {
+  pop_type: "SDG_SG_CPA_OFDI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.5.1"
+}
+spec {
+  pop_type: "SDG_SG_CPA_SDEVP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.14.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_JDC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_JDC_CNS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_JDC_HGR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_JDC_LWR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLCC_JC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLCC_LC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLCC_UC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLMP_LC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLMP_UC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLSP_LC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLSP_UC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLYN_LC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLYN_UC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLYP_LC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLYP_UC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLYR_LC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PARLYR_UC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DMK_PSRVC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.7.1"
+}
+spec {
+  pop_type: "SDG_SG_DSR_LGRGSR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.3"
+}
+spec {
+  pop_type: "SDG_SG_DSR_SFDRR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.3"
+}
+spec {
+  pop_type: "SDG_SG_DSR_SILN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.4"
+}
+spec {
+  pop_type: "SDG_SG_DSR_SILS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.4"
+}
+spec {
+  pop_type: "SDG_SG_GEN_EQPWN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.c.1"
+}
+spec {
+  pop_type: "SDG_SG_GEN_EQPWNN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.c.1"
+}
+spec {
+  pop_type: "SDG_SG_GEN_LOCGELS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.1"
+}
+spec {
+  pop_type: "SDG_SG_GEN_PARL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.1"
+}
+spec {
+  pop_type: "SDG_SG_GEN_PARLN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.1"
+}
+spec {
+  pop_type: "SDG_SG_GEN_PARLNT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.5.1"
+}
+spec {
+  pop_type: "SDG_SG_GOV_LOGV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.4"
+}
+spec {
+  pop_type: "SDG_SG_HAZ_CMRBASEL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.1"
+}
+spec {
+  pop_type: "SDG_SG_HAZ_CMRMNMT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.1"
+}
+spec {
+  pop_type: "SDG_SG_HAZ_CMRMNTRL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.1"
+}
+spec {
+  pop_type: "SDG_SG_HAZ_CMRROTDAM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.1"
+}
+spec {
+  pop_type: "SDG_SG_HAZ_CMRSTHOLM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.4.1"
+}
+spec {
+  pop_type: "SDG_SG_INF_ACCSS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.10.2"
+}
+spec {
+  pop_type: "SDG_SG_INT_MBRDEV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.6.1"
+}
+spec {
+  pop_type: "SDG_SG_INT_VRTDEV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.6.1"
+}
+spec {
+  pop_type: "SDG_SG_LGL_GENEQEMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.1.1"
+}
+spec {
+  pop_type: "SDG_SG_LGL_GENEQLFP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.1.1"
+}
+spec {
+  pop_type: "SDG_SG_LGL_GENEQMAR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.1.1"
+}
+spec {
+  pop_type: "SDG_SG_LGL_GENEQVAW"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.1.1"
+}
+spec {
+  pop_type: "SDG_SG_LGL_LNDFEMOD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.a.2"
+}
+spec {
+  pop_type: "SDG_SG_NHR_CMPLNC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.a.1"
+}
+spec {
+  pop_type: "SDG_SG_NHR_IMPL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.a.1"
+}
+spec {
+  pop_type: "SDG_SG_NHR_INTEXST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.a.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_MSTKSDG_P"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.16.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_MSTKSDG_R"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.16.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_PRPOLRES"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_PRVNDI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_PRVRICTRY"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_PRVRIMON"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_RECNDI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_RECRICTRY"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_RECRIMON"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_PLN_REPOLRES"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.15.1"
+}
+spec {
+  pop_type: "SDG_SG_REG_BRTH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.9.1"
+}
+spec {
+  pop_type: "SDG_SG_REG_BRTH90"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.2"
+}
+spec {
+  pop_type: "SDG_SG_REG_BRTH90N"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.2"
+}
+spec {
+  pop_type: "SDG_SG_REG_CENSUS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.2"
+}
+spec {
+  pop_type: "SDG_SG_REG_CENSUSN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.2"
+}
+spec {
+  pop_type: "SDG_SG_REG_DETH75"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.2"
+}
+spec {
+  pop_type: "SDG_SG_REG_DETH75N"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.2"
+}
+spec {
+  pop_type: "SDG_SG_SCP_CNTRY"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.1.1"
+}
+spec {
+  pop_type: "SDG_SG_SCP_POLINS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.1.1"
+}
+spec {
+  pop_type: "SDG_SG_SCP_PROCN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.7.1"
+}
+spec {
+  pop_type: "SDG_SG_SCP_PROCN_HS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.7.1"
+}
+spec {
+  pop_type: "SDG_SG_SCP_PROCN_LS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.7.1"
+}
+spec {
+  pop_type: "SDG_SG_SCP_TOTLN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.1.1"
+}
+spec {
+  pop_type: "SDG_SG_STT_CAPTY"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.19.1"
+}
+spec {
+  pop_type: "SDG_SG_STT_FPOS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.2"
+}
+spec {
+  pop_type: "SDG_SG_STT_NSDSFDDNR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.3"
+}
+spec {
+  pop_type: "SDG_SG_STT_NSDSFDGVT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.3"
+}
+spec {
+  pop_type: "SDG_SG_STT_NSDSFDOTHR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.3"
+}
+spec {
+  pop_type: "SDG_SG_STT_NSDSFND"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.3"
+}
+spec {
+  pop_type: "SDG_SG_STT_NSDSIMPL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.3"
+}
+spec {
+  pop_type: "SDG_SG_STT_ODIN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.18.1"
+}
+spec {
+  pop_type: "SDG_SG_XPD_EDUC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.2"
+}
+spec {
+  pop_type: "SDG_SG_XPD_ESSRV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.2"
+}
+spec {
+  pop_type: "SDG_SG_XPD_HLTH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.2"
+}
+spec {
+  pop_type: "SDG_SG_XPD_PROT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.a.2"
+}
+spec {
+  pop_type: "SDG_SH_AAP_ASMORT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.9.1"
+}
+spec {
+  pop_type: "SDG_SH_ACS_DTP3"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.1"
+}
+spec {
+  pop_type: "SDG_SH_ACS_HPV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.1"
+}
+spec {
+  pop_type: "SDG_SH_ACS_MCV2"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.1"
+}
+spec {
+  pop_type: "SDG_SH_ACS_PCV3"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.1"
+}
+spec {
+  pop_type: "SDG_SH_ACS_UNHC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.8.1"
+}
+spec {
+  pop_type: "SDG_SH_ALC_CONSPT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.5.2"
+}
+spec {
+  pop_type: "SDG_SH_BLD_ECOLI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.d.2"
+}
+spec {
+  pop_type: "SDG_SH_BLD_MRSA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.d.2"
+}
+spec {
+  pop_type: "SDG_SH_DTH_NCD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.4.1"
+}
+spec {
+  pop_type: "SDG_SH_DTH_NCOM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.4.1"
+}
+spec {
+  pop_type: "SDG_SH_DYN_IMRT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.2.1"
+}
+spec {
+  pop_type: "SDG_SH_DYN_IMRTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.2.1"
+}
+spec {
+  pop_type: "SDG_SH_DYN_MORT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.2.1"
+}
+spec {
+  pop_type: "SDG_SH_DYN_MORTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.2.1"
+}
+spec {
+  pop_type: "SDG_SH_DYN_NMRT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.2.2"
+}
+spec {
+  pop_type: "SDG_SH_DYN_NMRTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.2.2"
+}
+spec {
+  pop_type: "SDG_SH_FPL_INFM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.1"
+}
+spec {
+  pop_type: "SDG_SH_FPL_INFMCU"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.1"
+}
+spec {
+  pop_type: "SDG_SH_FPL_INFMRH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.1"
+}
+spec {
+  pop_type: "SDG_SH_FPL_INFMSR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.1"
+}
+spec {
+  pop_type: "SDG_SH_FPL_MTMM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.7.1"
+}
+spec {
+  pop_type: "SDG_SH_H2O_SAFE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.1.1"
+}
+spec {
+  pop_type: "SDG_SH_HAP_ASMORT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.9.1"
+}
+spec {
+  pop_type: "SDG_SH_HAP_HBSAG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.3.4"
+}
+spec {
+  pop_type: "SDG_SH_HIV_INCD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.3.1"
+}
+spec {
+  pop_type: "SDG_SH_HLF_EMED"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.b.3"
+}
+spec {
+  pop_type: "SDG_SH_IHR_CAPS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.d.1"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC1"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC10"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC11"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC12"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC13"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC2"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC3"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC4"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC5"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC6"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC7"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC8"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHEC9"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHES1"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHES2"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHES3"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_LGR_ACSRHES4"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.6.2"
+}
+spec {
+  pop_type: "SDG_SH_MED_DEN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.c.1"
+}
+spec {
+  pop_type: "SDG_SH_MED_HWRKDIS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.c.1"
+}
+spec {
+  pop_type: "SDG_SH_PRV_SMOK"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.a.1"
+}
+spec {
+  pop_type: "SDG_SH_SAN_DEFECT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.2.1"
+}
+spec {
+  pop_type: "SDG_SH_SAN_HNDWSH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.2.1"
+}
+spec {
+  pop_type: "SDG_SH_SAN_SAFE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_6.2.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_ANEM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.3"
+}
+spec {
+  pop_type: "SDG_SH_STA_ANEM_NPRG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.3"
+}
+spec {
+  pop_type: "SDG_SH_STA_ANEM_PREG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.3"
+}
+spec {
+  pop_type: "SDG_SH_STA_ASAIRP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.9.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_BRTC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.1.2"
+}
+spec {
+  pop_type: "SDG_SH_STA_FGMS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.3.2"
+}
+spec {
+  pop_type: "SDG_SH_STA_MALR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.3.3"
+}
+spec {
+  pop_type: "SDG_SH_STA_MORT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.1.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_POISN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.9.3"
+}
+spec {
+  pop_type: "SDG_SH_STA_SCIDE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.4.2"
+}
+spec {
+  pop_type: "SDG_SH_STA_SCIDEN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.4.2"
+}
+spec {
+  pop_type: "SDG_SH_STA_STNT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_STNTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_TRAF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.6.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_TRAFN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.6.1"
+}
+spec {
+  pop_type: "SDG_SH_STA_WASHARI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.9.2"
+}
+spec {
+  pop_type: "SDG_SH_STA_WAST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.2"
+}
+spec {
+  pop_type: "SDG_SH_STA_WASTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.2"
+}
+spec {
+  pop_type: "SDG_SH_SUD_ALCOL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.5.1"
+}
+spec {
+  pop_type: "SDG_SH_SUD_TREAT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.5.1"
+}
+spec {
+  pop_type: "SDG_SH_TBS_INCD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.3.2"
+}
+spec {
+  pop_type: "SDG_SH_TRP_INTVN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.3.5"
+}
+spec {
+  pop_type: "SDG_SH_XPD_EARN10"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.8.2"
+}
+spec {
+  pop_type: "SDG_SH_XPD_EARN25"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.8.2"
+}
+spec {
+  pop_type: "SDG_SI_AGR_LSFP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.3.2"
+}
+spec {
+  pop_type: "SDG_SI_AGR_SSFP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.3.2"
+}
+spec {
+  pop_type: "SDG_SI_COV_BENFTS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_CHLD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_DISAB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_LMKT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_MATNL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_PENSN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_POOR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_SOCAST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_SOCINS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_UEMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_VULN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_COV_WKINJRY"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.3.1"
+}
+spec {
+  pop_type: "SDG_SI_DST_FISP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.4.2"
+}
+spec {
+  pop_type: "SDG_SI_HEI_TOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.1.1"
+}
+spec {
+  pop_type: "SDG_SI_POV_50MI"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.2.1"
+}
+spec {
+  pop_type: "SDG_SI_POV_DAY1"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.1.1"
+}
+spec {
+  pop_type: "SDG_SI_POV_EMP1"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.1.1"
+}
+spec {
+  pop_type: "SDG_SI_POV_NAHC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.2.1"
+}
+spec {
+  pop_type: "SDG_SI_RMT_COST"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.c.1"
+}
+spec {
+  pop_type: "SDG_SI_RMT_COST_BC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.c.1"
+}
+spec {
+  pop_type: "SDG_SI_RMT_COST_SC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.c.1"
+}
+spec {
+  pop_type: "SDG_SI_RMT_COST_SND"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.c.1"
+}
+spec {
+  pop_type: "SDG_SL_CPA_YEMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.b.1"
+}
+spec {
+  pop_type: "SDG_SL_DOM_TSPD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.4.1"
+}
+spec {
+  pop_type: "SDG_SL_DOM_TSPDCW"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.4.1"
+}
+spec {
+  pop_type: "SDG_SL_DOM_TSPDDC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.4.1"
+}
+spec {
+  pop_type: "SDG_SL_EMP_EARN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.5.1"
+}
+spec {
+  pop_type: "SDG_SL_EMP_FTLINJUR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.8.1"
+}
+spec {
+  pop_type: "SDG_SL_EMP_GTOTL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.4.1"
+}
+spec {
+  pop_type: "SDG_SL_EMP_INJUR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.8.1"
+}
+spec {
+  pop_type: "SDG_SL_EMP_PCAP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.2.1"
+}
+spec {
+  pop_type: "SDG_SL_EMP_RCOST_MO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.7.1"
+}
+spec {
+  pop_type: "SDG_SL_ISV_IFEM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.3.1"
+}
+spec {
+  pop_type: "SDG_SL_ISV_IFEM_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.3.1"
+}
+spec {
+  pop_type: "SDG_SL_LBR_NTLCPL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.8.2"
+}
+spec {
+  pop_type: "SDG_SL_TLF_CHLDEA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.7.1"
+}
+spec {
+  pop_type: "SDG_SL_TLF_CHLDEC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.7.1"
+}
+spec {
+  pop_type: "SDG_SL_TLF_MANF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.2.2"
+}
+spec {
+  pop_type: "SDG_SL_TLF_MANF_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.2.2"
+}
+spec {
+  pop_type: "SDG_SL_TLF_NEET"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.6.1"
+}
+spec {
+  pop_type: "SDG_SL_TLF_NEET_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.6.1"
+}
+spec {
+  pop_type: "SDG_SL_TLF_UEM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.5.2"
+}
+spec {
+  pop_type: "SDG_SL_TLF_UEMDIS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.5.2"
+}
+spec {
+  pop_type: "SDG_SL_TLF_UEMDIS_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.5.2"
+}
+spec {
+  pop_type: "SDG_SL_TLF_UEM_19ICLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.5.2"
+}
+spec {
+  pop_type: "SDG_SM_DTH_MIGR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.7.3"
+}
+spec {
+  pop_type: "SDG_SM_POP_REFG_OR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.7.4"
+}
+spec {
+  pop_type: "SDG_SN_ITK_DEFC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.1.1"
+}
+spec {
+  pop_type: "SDG_SN_ITK_DEFCN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.1.1"
+}
+spec {
+  pop_type: "SDG_SN_STA_OVWGT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.2"
+}
+spec {
+  pop_type: "SDG_SN_STA_OVWGTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_2.2.2"
+}
+spec {
+  pop_type: "SDG_SP_ACS_BSRVH2O"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.4.1"
+}
+spec {
+  pop_type: "SDG_SP_ACS_BSRVSAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.4.1"
+}
+spec {
+  pop_type: "SDG_SP_DISP_RESOL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.3"
+}
+spec {
+  pop_type: "SDG_SP_DYN_ADKL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_3.7.2"
+}
+spec {
+  pop_type: "SDG_SP_DYN_MRBF15"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.3.1"
+}
+spec {
+  pop_type: "SDG_SP_DYN_MRBF18"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.3.1"
+}
+spec {
+  pop_type: "SDG_SP_GNP_WNOWNS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.a.1"
+}
+spec {
+  pop_type: "SDG_SP_LGL_LNDAGSEC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.a.1"
+}
+spec {
+  pop_type: "SDG_SP_LGL_LNDDOC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.4.2"
+}
+spec {
+  pop_type: "SDG_SP_LGL_LNDSEC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.4.2"
+}
+spec {
+  pop_type: "SDG_SP_LGL_LNDSTR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.4.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_OSATIS_GOV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_OSATIS_HLTH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_OSATIS_PRM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_OSATIS_SEC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_SATIS_GOV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_SATIS_HLTH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_SATIS_PRM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_PSR_SATIS_SEC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.6.2"
+}
+spec {
+  pop_type: "SDG_SP_ROD_R2KM"
+  obs_props { mprop: "value" }
+  vertical: "SDG_9.1.1"
+}
+spec {
+  pop_type: "SDG_SP_TRN_PUBL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.2.1"
+}
+spec {
+  pop_type: "SDG_ST_EEV_ACCSEEA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.b.1"
+}
+spec {
+  pop_type: "SDG_ST_EEV_ACCTSA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.b.1"
+}
+spec {
+  pop_type: "SDG_ST_EEV_STDACCT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_12.b.1"
+}
+spec {
+  pop_type: "SDG_ST_GDP_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_8.9.1"
+}
+spec {
+  pop_type: "SDG_TG_VAL_TOTL_GD_ZS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.13.1"
+}
+spec {
+  pop_type: "SDG_TM_TAX_DMFN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.12.1"
+}
+spec {
+  pop_type: "SDG_TM_TAX_DPRF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.12.1"
+}
+spec {
+  pop_type: "SDG_TM_TAX_WMFN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.10.1"
+}
+spec {
+  pop_type: "SDG_TM_TAX_WMPS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.10.1"
+}
+spec {
+  pop_type: "SDG_TM_TRF_ZERO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.a.1"
+}
+spec {
+  pop_type: "SDG_TX_EXP_GBMRCH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.11.1"
+}
+spec {
+  pop_type: "SDG_TX_EXP_GBSVR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.11.1"
+}
+spec {
+  pop_type: "SDG_TX_IMP_GBMRCH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.11.1"
+}
+spec {
+  pop_type: "SDG_TX_IMP_GBSVR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_17.11.1"
+}
+spec {
+  pop_type: "SDG_VC_ARM_SZTRACE"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.4.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_AFFCT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_AGLH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_BSDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_CDAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_CDYN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_CHLN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_CILN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_DAFF"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_DDPA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_EFDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_ESDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_GDPLS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_HFDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_HOLH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_HSDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_IJILN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_LSGP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.2"
+}
+spec {
+  pop_type: "SDG_VC_DSR_MISS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_MMHN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_MORT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_MTMP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_OBDN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.5.3"
+}
+spec {
+  pop_type: "SDG_VC_DSR_PDAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_PDLN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DSR_PDYN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_1.5.1"
+}
+spec {
+  pop_type: "SDG_VC_DTH_TOCVN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.2"
+}
+spec {
+  pop_type: "SDG_VC_DTH_TONCVN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.2"
+}
+spec {
+  pop_type: "SDG_VC_DTH_TOTN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.2"
+}
+spec {
+  pop_type: "SDG_VC_DTH_TOTPT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.2"
+}
+spec {
+  pop_type: "SDG_VC_DTH_TOTR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.2"
+}
+spec {
+  pop_type: "SDG_VC_DTH_TOUNN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVFL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVFLR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVOG"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVOGR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVOP"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVOPR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVSX"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_HTF_DETVSXR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.2"
+}
+spec {
+  pop_type: "SDG_VC_IHR_PSRC"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.1"
+}
+spec {
+  pop_type: "SDG_VC_IHR_PSRCN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.1"
+}
+spec {
+  pop_type: "SDG_VC_PRR_PHYV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.1"
+}
+spec {
+  pop_type: "SDG_VC_PRR_PHY_VIO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.1"
+}
+spec {
+  pop_type: "SDG_VC_PRR_PSYCHV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.1"
+}
+spec {
+  pop_type: "SDG_VC_PRR_ROBB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.1"
+}
+spec {
+  pop_type: "SDG_VC_PRR_SEXV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.1"
+}
+spec {
+  pop_type: "SDG_VC_PRR_SEX_VIO"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.1"
+}
+spec {
+  pop_type: "SDG_VC_PRS_UNSNT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.3.2"
+}
+spec {
+  pop_type: "SDG_VC_SNS_WALN_DRK"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.4"
+}
+spec {
+  pop_type: "SDG_VC_VAW_MARR"
+  obs_props { mprop: "value" }
+  vertical: "SDG_5.2.1"
+}
+spec {
+  pop_type: "SDG_VC_VAW_MTUHRA"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.10.1"
+}
+spec {
+  pop_type: "SDG_VC_VAW_MTUHRAN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.10.1"
+}
+spec {
+  pop_type: "SDG_VC_VAW_PHYPYV"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.1"
+}
+spec {
+  pop_type: "SDG_VC_VAW_SXVLN"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.2.3"
+}
+spec {
+  pop_type: "SDG_VC_VOC_ENFDIS"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.10.1"
+}
+spec {
+  pop_type: "SDG_VC_VOH_SXPH"
+  obs_props { mprop: "value" }
+  vertical: "SDG_11.7.2"
+}
+spec {
+  pop_type: "SDG_VC_VOV_GDSD"
+  obs_props { mprop: "value" }
+  vertical: "SDG_10.3.1"
+}
+spec {
+  pop_type: "SDG_VC_VOV_PHYL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.3"
+}
+spec {
+  pop_type: "SDG_VC_VOV_PHY_ASLT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.3"
+}
+spec {
+  pop_type: "SDG_VC_VOV_PSYCHL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.3"
+}
+spec {
+  pop_type: "SDG_VC_VOV_ROBB"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.3"
+}
+spec {
+  pop_type: "SDG_VC_VOV_SEXL"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.3"
+}
+spec {
+  pop_type: "SDG_VC_VOV_SEX_ASLT"
+  obs_props { mprop: "value" }
+  vertical: "SDG_16.1.3"
+}

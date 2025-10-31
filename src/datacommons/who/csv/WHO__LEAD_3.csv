@@ -1,0 +1,9 @@
+SERIES,GEOGRAPHY,TIME_PERIOD,OBS_VALUE
+dcs:who/LEAD_3,dcid:Earth,2004,0.42
+dcs:who/LEAD_3,dcid:undata-geo/G00100100,2004,0.06
+dcs:who/LEAD_3,dcid:undata-geo/G00101200,2004,0.38
+dcs:who/LEAD_3,dcid:undata-geo/G00121200,2004,0.2
+dcs:who/LEAD_3,dcid:undata-geo/G00124200,2004,0.75
+dcs:who/LEAD_3,dcid:undata-geo/G00134200,2004,0.79
+dcs:who/LEAD_3,dcid:undata-geo/G00160200,2004,0.37
+dcs:who/LEAD_3,dcid:undata-geo/G00407300,2004,0.34

@@ -1,0 +1,4 @@
+SERIES,GEOGRAPHY,TIME_PERIOD,OBS_VALUE
+dcs:who/GDO_q12x2x3x3,dcid:country/CHL,2017,1100.0
+dcs:who/GDO_q12x2x3x3,dcid:country/MUS,2017,1000.0
+dcs:who/GDO_q12x2x3x3,dcid:country/SWE,2017,3900.0

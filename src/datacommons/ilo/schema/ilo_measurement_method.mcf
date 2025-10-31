@@ -1,0 +1,95 @@
+
+Node: dcid:UNDATA_ILO_0_B_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_0_B_NB"
+description: "ILO Measurement Method: [Decimals = 0 | Observation Status = Break in series | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_0_E_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_0_E_NB"
+description: "ILO Measurement Method: [Decimals = 0 | Observation Status = Estimate | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_0_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_0_NB"
+description: "ILO Measurement Method: [Decimals = 0 | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_0_P_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_0_P_NB"
+description: "ILO Measurement Method: [Decimals = 0 | Observation Status = Provisional | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_1_B_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_B_NB"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Break in series | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_1_B_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_B_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Break in series | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_1_E_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_E_NB"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Estimate | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_1_E_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_E_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Estimate | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_1_I_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_I_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Imputation | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_1_M_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_M_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Model-based extrapolation | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_1_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_NB"
+description: "ILO Measurement Method: [Decimals = 1 | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_1_P_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_P_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Provisional | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_1_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_1_U_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_U_NB"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Unreliable | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_1_U_RT
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_1_U_RT"
+description: "ILO Measurement Method: [Decimals = 1 | Observation Status = Unreliable | Unit Measure Type = Rate]"
+
+Node: dcid:UNDATA_ILO_2017_2_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_2017_2_NB"
+description: "ILO Measurement Method: [Base Year = Represents 2017 as the baseline year for currency conversion or economic value comparison in U.S. dollars, standardizing values over time. | Decimals = 2 | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_2_B_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_2_B_NB"
+description: "ILO Measurement Method: [Decimals = 2 | Observation Status = Break in series | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_2_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_2_NB"
+description: "ILO Measurement Method: [Decimals = 2 | Unit Measure Type = Number]"
+
+Node: dcid:UNDATA_ILO_2_U_NB
+typeOf: dcs:UNDATA_ILO_MeasurementMethodEnum
+name: "ILO_2_U_NB"
+description: "ILO Measurement Method: [Decimals = 2 | Observation Status = Unreliable | Unit Measure Type = Number]"

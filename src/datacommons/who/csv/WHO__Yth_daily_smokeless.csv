@@ -1,0 +1,9 @@
+SERIES,GEOGRAPHY,TIME_PERIOD,OBS_VALUE
+dcs:who/Yth_daily_smokeless.SEX--F,dcid:country/FIN,2021,2.0
+dcs:who/Yth_daily_smokeless.SEX--M,dcid:country/FIN,2021,6.0
+dcs:who/Yth_daily_smokeless,dcid:country/FIN,2021,4.0
+dcs:who/Yth_daily_smokeless.SEX--F,dcid:country/ISL,2020,5.0
+dcs:who/Yth_daily_smokeless.SEX--M,dcid:country/ISL,2020,6.0
+dcs:who/Yth_daily_smokeless.SEX--M,dcid:country/SWE,2022,7.0
+dcs:who/Yth_daily_smokeless.SEX--F,dcid:country/SWE,2022,2.0
+dcs:who/Yth_daily_smokeless,dcid:country/SWE,2022,5.0

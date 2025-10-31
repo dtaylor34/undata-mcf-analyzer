@@ -1,0 +1,3310 @@
+
+Node: dcid:UNDATA_ILO_AgeEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "AgeEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y0T14
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "under 15 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y10T14
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "10 to 14 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y15T19
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "15 to 19 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y15T24
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "15 to 24 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y15T64
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "15 to 64 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y20T24
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "20 to 24 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y25T29
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "25 to 29 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y25T34
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "25 to 34 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y25T54
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "25 to 54 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y30T34
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "30 to 34 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y35T39
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "35 to 39 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y35T44
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "35 to 44 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y40T44
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "40 to 44 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y45T49
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "45 to 49 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y45T54
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "45 to 54 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y50T54
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "50 to 54 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y55T59
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "55 to 59 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y55T64
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "55 to 64 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y5T9
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "5 to 9 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y60T64
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "60 to 64 years old"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y_GE15
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "15 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y_GE25
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "25 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_AgeEnum_Y_GE65
+typeOf: dcs:UNDATA_ILO_AgeEnum
+name: "65 years old and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CareWorkersCategoryEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "CareWorkersCategoryEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CareWorkersCategoryEnum_CAT_CARE_CWCS
+typeOf: dcs:UNDATA_ILO_CareWorkersCategoryEnum
+name: "Care workers employed in care sectors"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CareWorkersCategoryEnum_CAT_CARE_CWNCS
+typeOf: dcs:UNDATA_ILO_CareWorkersCategoryEnum
+name: "Care workers employed in non-care sectors"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CareWorkersCategoryEnum_CAT_CARE_DW
+typeOf: dcs:UNDATA_ILO_CareWorkersCategoryEnum
+name: "Domestic workers employed by households"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CareWorkersCategoryEnum_CAT_CARE_NCWCS
+typeOf: dcs:UNDATA_ILO_CareWorkersCategoryEnum
+name: "Non-care workers employed in care sectors"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CareWorkersCategoryEnum_CAT_CARE_NCWNCS
+typeOf: dcs:UNDATA_ILO_CareWorkersCategoryEnum
+name: "Not care workers nor in the care sector"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CategoryOfUnemployedEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "CategoryOfUnemployedEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CategoryOfUnemployedEnum_CAT_UNE_FJS
+typeOf: dcs:UNDATA_ILO_CategoryOfUnemployedEnum
+name: "Unemployed seeking their first job"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CategoryOfUnemployedEnum_CAT_UNE_PRE
+typeOf: dcs:UNDATA_ILO_CategoryOfUnemployedEnum
+name: "Unemployed previously employed"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CategoryOfUnemployedEnum_CAT_UNE_UNK
+typeOf: dcs:UNDATA_ILO_CategoryOfUnemployedEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CurrencyTypeEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "CurrencyTypeEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CurrencyTypeEnum_PPP
+typeOf: dcs:UNDATA_ILO_CurrencyTypeEnum
+name: "Purchasing Power Parity (PPP) dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_CurrencyTypeEnum_USD
+typeOf: dcs:UNDATA_ILO_CurrencyTypeEnum
+name: "United States dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DisabilityStatusEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "DisabilityStatusEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DisabilityStatusEnum_PD
+typeOf: dcs:UNDATA_ILO_DisabilityStatusEnum
+name: "Persons with disability"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DisabilityStatusEnum_PWD
+typeOf: dcs:UNDATA_ILO_DisabilityStatusEnum
+name: "Persons without disability"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DisabilityStatusEnum_X
+typeOf: dcs:UNDATA_ILO_DisabilityStatusEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "DurationEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M0
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "Less than 1 month"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M0T11
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "Less than 12 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M0T2
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "Less than 3 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M0T6
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "Less than 6 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M12T23
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "12 months to less than 24 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M1T2
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "1 month to less than 3 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M3T5
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "3 months to less than 6 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_M6T11
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "6 months to less than 12 months"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_MGE12
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "12 months or more"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_MGE24
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "24 months or more"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_DurationEnum_X
+typeOf: dcs:UNDATA_ILO_DurationEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "EconomicActivityEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_AGGREGATE_CON
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Construction"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_AGGREGATE_MAN
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacturing"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_AGGREGATE_MANEL
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacturing; Electricity, gas and water supply"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_AGGREGATE_MEL
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining and quarrying; Electricity, gas and water supply"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_AGGREGATE_MKT
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Trade, Transportation, Accommodation and Food, and Business and Administrative Services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_AGGREGATE_PUB
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Public Administration, Community, Social and other Services and Activities"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_SECTOR_AGR
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Agriculture"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_SECTOR_IND
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Industry"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_SECTOR_NAG
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Non-agriculture"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_SECTOR_SER
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Services"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ECO_SECTOR_X
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Not classified by sector"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_0
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities not Adequately Defined (ISIC2 - 0)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_1
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Agriculture, Hunting, Forestry and Fishing (ISIC2 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_2
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining and Quarrying (ISIC2 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_3
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacturing (ISIC2 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_4
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Electricity, Gas and Water (ISIC2 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_5
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Construction (ISIC2 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_6
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Wholesale and Retail Trade and Restaurants and Hotels (ISIC2 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_7
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Transport, Storage and Communication (ISIC2 - 7)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_8
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Financing, Insurance, Real Estate and Business Services (ISIC2 - 8)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_9
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Community, Social and Personal Services (ISIC2 - 9)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_TOTAL
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Total or no breakdown (ISIC2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC2_X
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Not elsewhere classified (ISIC2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_A
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Agriculture, hunting and forestry (ISIC3 - A)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_A01
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Agriculture, hunting and related service activities (ISIC3 - A01)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_A02
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Forestry, logging and related service activities (ISIC3 - A02)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_B
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Fishing (ISIC3 - B)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_B05
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Fishing, aquaculture and service activities incidental to fishing (ISIC3 - B05)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_C
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining and quarrying (ISIC3 - C)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_C10
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining of coal and lignite; extraction of peat (ISIC3 - C10)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_C11
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Extraction of crude petroleum and natural gas; service activities incidental to oil and gas extraction, excluding surveying (ISIC3 - C11)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_C12
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining of uranium and thorium ores (ISIC3 - C12)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_C13
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining of metal ores (ISIC3 - C13)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_C14
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other mining and quarrying (ISIC3 - C14)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacturing (ISIC3 - D)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D15
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of food products and beverages (ISIC3 - D15)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D16
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of tobacco products (ISIC3 - D16)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D17
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of textiles (ISIC3 - D17)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D18
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of wearing apparel; dressing and dyeing of fur (ISIC3 - D18)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D19
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Tanning and dressing of leather; manufacture of luggage, handbags, saddlery, harness and footwear (ISIC3 - D19)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D20
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (ISIC3 - D20)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D21
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of paper and paper products (ISIC3 - D21)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D22
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Publishing, printing and reproduction of recorded media (ISIC3 - D22)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D23
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of coke, refined petroleum products and nuclear fuel (ISIC3 - D23)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D24
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of chemicals and chemical products (ISIC3 - D24)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D25
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of rubber and plastics products (ISIC3 - D25)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D26
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of other non-metallic mineral products (ISIC3 - D26)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D27
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of basic metals (ISIC3 - D27)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D28
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of fabricated metal products, except machinery and equipment (ISIC3 - D28)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D29
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of machinery and equipment n.e.c. (ISIC3 - D29)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D30
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of office, accounting and computing machinery (ISIC3 - D30)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D31
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of electrical machinery and apparatus n.e.c. (ISIC3 - D31)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D32
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of radio, television and communication equipment and apparatus (ISIC3 - D32)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D33
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of medical, precision and optical instruments, watches and clocks (ISIC3 - D33)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D34
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of motor vehicles, trailers and semi-trailers (ISIC3 - D34)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D35
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of other transport equipment (ISIC3 - D35)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D36
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of furniture; manufacturing n.e.c. (ISIC3 - D36)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_D37
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Recycling (ISIC3 - D37)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_E
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Electricity, gas and water supply (ISIC3 - E)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_E40
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Electricity, gas, steam and hot water supply (ISIC3 - E40)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_E41
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Collection, purification and distribution of water (ISIC3 - E41)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_F
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Construction (ISIC3 - F)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_F45
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Construction (ISIC3 - F45)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_G
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Wholesale and retail trade; repair of motor vehicles, motorcycles and personal and household goods (ISIC3 - G)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_G50
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Sale, maintenance and repair of motor vehicles and motorcycles; retail sale of automotive fuel (ISIC3 - G50)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_G51
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Wholesale trade and commission trade, except of motor vehicles and motorcycles (ISIC3 - G51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_G52
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Retail trade, except of motor vehicles and motorcycles; repair of personal and household goods (ISIC3 - G52)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_H
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Hotels and restaurants (ISIC3 - H)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_H55
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Hotels and restaurants (ISIC3 - H55)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_I
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Transport, storage and communications (ISIC3 - I)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_I60
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Land transport; transport via pipelines (ISIC3 - I60)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_I61
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Water transport (ISIC3 - I61)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_I62
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Air transport (ISIC3 - I62)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_I63
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Supporting and auxiliary transport activities; activities of travel agencies (ISIC3 - I63)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_I64
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Post and telecommunications (ISIC3 - I64)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_J
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Financial intermediation (ISIC3 - J)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_J65
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Financial intermediation, except insurance and pension funding (ISIC3 - J65)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_J66
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Insurance and pension funding, except compulsory social security (ISIC3 - J66)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_J67
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities auxiliary to financial intermediation (ISIC3 - J67)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_K
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Real estate, renting and business activities (ISIC3 - K)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_K70
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Real estate activities (ISIC3 - K70)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_K71
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Renting of machinery and equipment without operator and of personal and household goods (ISIC3 - K71)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_K72
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Computer and related activities (ISIC3 - K72)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_K73
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Research and development (ISIC3 - K73)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_K74
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other business activities (ISIC3 - K74)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_L
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Public administration and defence; compulsory social security (ISIC3 - L)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_L75
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Public administration and defence; compulsory social security (ISIC3 - L75)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_M
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Education (ISIC3 - M)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_M80
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Education (ISIC3 - M80)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_N
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Health and social work (ISIC3 - N)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_N85
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Health and social work (ISIC3 - N85)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_O
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other community, social and personal service activities (ISIC3 - O)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_O90
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Sewage and refuse disposal, sanitation and similar activities (ISIC3 - O90)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_O91
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of membership organizations n.e.c. (ISIC3 - O91)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_O92
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Recreational, cultural and sporting activities (ISIC3 - O92)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_O93
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other service activities (ISIC3 - O93)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_P
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of private households as employers and undifferentiated production activities of private households (ISIC3 - P)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_P95
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of private households as employers of domestic staff (ISIC3 - P95)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_P96
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Undifferentiated goods-producing activities of private households for own use (ISIC3 - P96)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_P97
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Undifferentiated service-producing activities of private households for own use (ISIC3 - P97)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_Q
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Extraterritorial organizations and bodies (ISIC3 - Q)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_Q99
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Extraterritorial organizations and bodies (ISIC3 - Q99)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_TOTAL
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Total or no breakdown (ISIC3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC3_X
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Not elsewhere classified (ISIC3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_A
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Agriculture; forestry and fishing (ISIC4 - A)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_A01
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Crop and animal production, hunting and related service activities (ISIC4 - A01)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_A02
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Forestry and logging (ISIC4 - A02)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_A03
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Fishing and aquaculture (ISIC4 - A03)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_B
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining and quarrying (ISIC4 - B)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_B05
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining of coal and lignite (ISIC4 - B05)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_B06
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Extraction of crude petroleum and natural gas (ISIC4 - B06)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_B07
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining of metal ores (ISIC4 - B07)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_B08
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other mining and quarrying (ISIC4 - B08)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_B09
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Mining support service activities (ISIC4 - B09)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacturing (ISIC4 - C)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C10
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of food products (ISIC4 - C10)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C11
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of beverages (ISIC4 - C11)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C12
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of tobacco products (ISIC4 - C12)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C13
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of textiles (ISIC4 - C13)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C14
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of wearing apparel (ISIC4 - C14)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C15
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of leather and related products (ISIC4 - C15)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C16
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (ISIC4 - C16)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C17
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of paper and paper products (ISIC4 - C17)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C18
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Printing and reproduction of recorded media (ISIC4 - C18)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C19
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of coke and refined petroleum products (ISIC4 - C19)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C20
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of chemicals and chemical products (ISIC4 - C20)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C21
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of pharmaceuticals, medicinal chemical and botanical products (ISIC4 - C21)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C22
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of rubber and plastics products (ISIC4 - C22)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C23
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of other non-metallic mineral products (ISIC4 - C23)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C24
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of basic metals (ISIC4 - C24)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C25
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of fabricated metal products, except machinery and equipment (ISIC4 - C25)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C26
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of computer, electronic and optical products (ISIC4 - C26)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C27
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of electrical equipment (ISIC4 - C27)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C28
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of machinery and equipment n.e.c. (ISIC4 - C28)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C29
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of motor vehicles, trailers and semi-trailers (ISIC4 - C29)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C30
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of other transport equipment (ISIC4 - C30)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C31
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Manufacture of furniture (ISIC4 - C31)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C32
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other manufacturing (ISIC4 - C32)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_C33
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Repair and installation of machinery and equipment (ISIC4 - C33)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_D
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Electricity; gas, steam and air conditioning supply (ISIC4 - D)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_D35
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Electricity, gas, steam and air conditioning supply (ISIC4 - D35)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_E
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Water supply; sewerage, waste management and remediation activities (ISIC4 - E)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_E36
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Water collection, treatment and supply (ISIC4 - E36)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_E37
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Sewerage (ISIC4 - E37)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_E38
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Waste collection, treatment and disposal activities; materials recovery (ISIC4 - E38)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_E39
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Remediation activities and other waste management services (ISIC4 - E39)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_F
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Construction (ISIC4 - F)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_F41
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Construction of buildings (ISIC4 - F41)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_F42
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Civil engineering (ISIC4 - F42)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_F43
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Specialized construction activities (ISIC4 - F43)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_G
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Wholesale and retail trade; repair of motor vehicles and motorcycles (ISIC4 - G)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_G45
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Wholesale and retail trade and repair of motor vehicles and motorcycles (ISIC4 - G45)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_G46
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Wholesale trade, except of motor vehicles and motorcycles (ISIC4 - G46)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_G47
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Retail trade, except of motor vehicles and motorcycles (ISIC4 - G47)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_H
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Transportation and storage (ISIC4 - H)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_H49
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Land transport and transport via pipelines (ISIC4 - H49)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_H50
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Water transport (ISIC4 - H50)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_H51
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Air transport (ISIC4 - H51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_H52
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Warehousing and support activities for transportation (ISIC4 - H52)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_H53
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Postal and courier activities (ISIC4 - H53)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_I
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Accommodation and food service activities (ISIC4 - I)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_I55
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Accommodation (ISIC4 - I55)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_I56
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Food and beverage service activities (ISIC4 - I56)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Information and communication (ISIC4 - J)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J58
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Publishing activities (ISIC4 - J58)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J59
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Motion picture, video and television programme production, sound recording and music publishing activities (ISIC4 - J59)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J60
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Programming and broadcasting activities (ISIC4 - J60)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J61
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Telecommunications (ISIC4 - J61)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J62
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Computer programming, consultancy and related activities (ISIC4 - J62)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_J63
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Information service activities (ISIC4 - J63)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_K
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Financial and insurance activities (ISIC4 - K)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_K64
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Financial service activities, except insurance and pension funding (ISIC4 - K64)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_K65
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Insurance, reinsurance and pension funding, except compulsory social security (ISIC4 - K65)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_K66
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities auxiliary to financial service and insurance activities (ISIC4 - K66)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_L
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Real estate activities (ISIC4 - L)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_L68
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Real estate activities (ISIC4 - L68)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Professional, scientific and technical activities (ISIC4 - M)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M69
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Legal and accounting activities (ISIC4 - M69)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M70
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of head offices; management consultancy activities (ISIC4 - M70)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M71
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Architectural and engineering activities; technical testing and analysis (ISIC4 - M71)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M72
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Scientific research and development (ISIC4 - M72)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M73
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Advertising and market research (ISIC4 - M73)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M74
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other professional, scientific and technical activities (ISIC4 - M74)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_M75
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Veterinary activities (ISIC4 - M75)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Administrative and support service activities (ISIC4 - N)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N77
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Rental and leasing activities (ISIC4 - N77)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N78
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Employment activities (ISIC4 - N78)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N79
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Travel agency, tour operator, reservation service and related activities (ISIC4 - N79)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N80
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Security and investigation activities (ISIC4 - N80)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N81
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Services to buildings and landscape activities (ISIC4 - N81)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_N82
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Office administrative, office support and other business support activities (ISIC4 - N82)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_O
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Public administration and defence; compulsory social security (ISIC4 - O)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_O84
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Public administration and defence; compulsory social security (ISIC4 - O84)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_P
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Education (ISIC4 - P)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_P85
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Education (ISIC4 - P85)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_Q
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Human health and social work activities (ISIC4 - Q)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_Q86
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Human health activities (ISIC4 - Q86)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_Q87
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Residential care activities (ISIC4 - Q87)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_Q88
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Social work activities without accommodation (ISIC4 - Q88)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_R
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Arts, entertainment and recreation (ISIC4 - R)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_R90
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Creative, arts and entertainment activities (ISIC4 - R90)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_R91
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Libraries, archives, museums and other cultural activities (ISIC4 - R91)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_R92
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Gambling and betting activities (ISIC4 - R92)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_R93
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Sports activities and amusement and recreation activities (ISIC4 - R93)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_S
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other service activities (ISIC4 - S)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_S94
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of membership organizations (ISIC4 - S94)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_S95
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Repair of computers and personal and household goods (ISIC4 - S95)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_S96
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Other personal service activities (ISIC4 - S96)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_T
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use (ISIC4 - T)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_T97
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of households as employers of domestic personnel (ISIC4 - T97)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_T98
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Undifferentiated goods- and services-producing activities of private households for own use (ISIC4 - T98)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_TOTAL
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Total or no breakdown (ISIC4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_U
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of extraterritorial organizations and bodies (ISIC4 - U)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_U99
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Activities of extraterritorial organizations and bodies (ISIC4 - U99)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EconomicActivityEnum_ISIC4_X
+typeOf: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Not elsewhere classified (ISIC4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "EducationLevelEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_EDU_AGGREGATE_ADV
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Advanced"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_EDU_AGGREGATE_BAS
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Basic"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_EDU_AGGREGATE_INT
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Intermediate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_EDU_AGGREGATE_LTB
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Less than basic"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_0
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Early childhood education (ISCED11 - 0)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_1
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Primary education (ISCED11 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_2
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Lower secondary education (ISCED11 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_3
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Upper secondary education (ISCED11 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_4
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Post-secondary non-tertiary education (ISCED11 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_5
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Short-cycle tertiary education (ISCED11 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_6
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Bachelor's or equivalent level (ISCED11 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_7
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Master's or equivalent level (ISCED11 - 7)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_8
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Doctoral or equivalent level (ISCED11 - 8)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_9
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Not elsewhere classified (ISCED11 - 9)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_TOTAL
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Total or no breakdown (ISCED11)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED11_X
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "No schooling (ISCED11 - X)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_0
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Pre-primary education (ISCED97 - 0)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_1
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Primary education or first stage of basic education (ISCED97 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_2
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Lower secondary or second stage of basic education (ISCED97 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_3
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Upper secondary education (ISCED97 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_4
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Post-secondary non-tertiary education (ISCED97 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_5
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "First stage of tertiary education (not leading directly to an advanced research qualification) (ISCED97 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_6
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Second stage of tertiary education (leading to an advanced research qualification) (ISCED97 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_TOTAL
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Total or no breakdown (ISCED97)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_ISCED97_X
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "No schooling (ISCED97 - X)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_UNK
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Level unknown"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EducationLevelEnum_X
+typeOf: dcs:UNDATA_ILO_EducationLevelEnum
+name: "No schooling"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "EstablishmentSizeEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P10T19
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "10 to 19 persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P1T4
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "1 to 4 persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P20T49
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "20 to 49 persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P2T4
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "2 to 4 persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P5T49
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "5 to 49 persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P5T9
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "5 to 9 persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_P_GE50
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "50 persons and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_EstablishmentSizeEnum_X
+typeOf: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "Not stated"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "HoursWorkedEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H0
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "No hours actually worked"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H0T24
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "Less than 25 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H15T24
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "15 to 24 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H15T29
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "15 to 29 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H1T14
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "1 to 14 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H25T34
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "25 to 34 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H30T34
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "30 to 34 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H35T39
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "35 to 39 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_H40T48
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "40 to 48 hours"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_HGE40
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "40 hours and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_HGE49
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "49 hours and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_HGE50
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "50 hours and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_HGE60
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "60 hours and over"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_VARY
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "Hours vary"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HoursWorkedEnum_X
+typeOf: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HouseholdTypeEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "HouseholdTypeEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HouseholdTypeEnum_HHT_CHILDLT6_E
+typeOf: dcs:UNDATA_ILO_HouseholdTypeEnum
+name: "Extended family with child under age 6"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HouseholdTypeEnum_HHT_CHILDLT6_K
+typeOf: dcs:UNDATA_ILO_HouseholdTypeEnum
+name: "Couple with child under age 6"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HouseholdTypeEnum_HHT_CHILDLT6_L
+typeOf: dcs:UNDATA_ILO_HouseholdTypeEnum
+name: "Lone parent with child under age 6"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_HouseholdTypeEnum_HHT_CHILDLT6_NC
+typeOf: dcs:UNDATA_ILO_HouseholdTypeEnum
+name: "Household without child under age 6"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_InstitutionalSectorEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "InstitutionalSectorEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_InstitutionalSectorEnum_INS_SECTOR_PRI
+typeOf: dcs:UNDATA_ILO_InstitutionalSectorEnum
+name: "Private"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_InstitutionalSectorEnum_INS_SECTOR_PUB
+typeOf: dcs:UNDATA_ILO_InstitutionalSectorEnum
+name: "Public"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_InstitutionalSectorEnum_X
+typeOf: dcs:UNDATA_ILO_InstitutionalSectorEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "MaritalStatusEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_1
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Single / Widowed / Divorced"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_2
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Married / Union / Cohabiting"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_MRD
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Married"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_SEP
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Divorced or legally separated"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_SGLE
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Single"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_UNION
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Union / Cohabiting"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_MTS_WID
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Widowed"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MaritalStatusEnum_X
+typeOf: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MultipleJobHoldersEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "MultipleJobHoldersEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MultipleJobHoldersEnum_MJH_AGGREGATE_MULTI
+typeOf: dcs:UNDATA_ILO_MultipleJobHoldersEnum
+name: "More than one job"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MultipleJobHoldersEnum_MJH_AGGREGATE_ONE
+typeOf: dcs:UNDATA_ILO_MultipleJobHoldersEnum
+name: "One job only"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_MultipleJobHoldersEnum_X
+typeOf: dcs:UNDATA_ILO_MultipleJobHoldersEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccInjuriesIncapacityEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "OccInjuriesIncapacityEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccInjuriesIncapacityEnum_INJ_INCAPACITY_PRM
+typeOf: dcs:UNDATA_ILO_OccInjuriesIncapacityEnum
+name: "Permanent incapacity"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccInjuriesIncapacityEnum_INJ_INCAPACITY_TMP
+typeOf: dcs:UNDATA_ILO_OccInjuriesIncapacityEnum
+name: "Temporary incapacity"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "OccupationEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_0
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Armed forces occupations (ISCO08 - 0)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_01
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Commissioned armed forces officers (ISCO08 - 01)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_02
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Non-commissioned armed forces officers (ISCO08 - 02)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_03
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Armed forces occupations, other ranks (ISCO08 - 03)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_1
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Managers (ISCO08 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_11
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Chief executives, senior officials and legislators (ISCO08 - 11)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_12
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Administrative and commercial managers (ISCO08 - 12)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_13
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Production and specialised services managers (ISCO08 - 13)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_14
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Hospitality, retail and other services managers (ISCO08 - 14)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_2
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Professionals (ISCO08 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_21
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Science and engineering professionals (ISCO08 - 21)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_22
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Health professionals (ISCO08 - 22)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_23
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Teaching professionals (ISCO08 - 23)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_24
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Business and administration professionals (ISCO08 - 24)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_25
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Information and communications technology professionals (ISCO08 - 25)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_26
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Legal, social and cultural professionals (ISCO08 - 26)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_3
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Technicians and associate professionals (ISCO08 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_31
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Science and engineering associate professionals (ISCO08 - 31)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_32
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Health associate professionals (ISCO08 - 32)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_33
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Business and administration associate professionals (ISCO08 - 33)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_34
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Legal, social, cultural and related associate professionals (ISCO08 - 34)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_35
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Information and communications technicians (ISCO08 - 35)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_4
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Clerical support workers (ISCO08 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_41
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "General and keyboard clerks (ISCO08 - 41)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_42
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Customer services clerks (ISCO08 - 42)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_43
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Numerical and material recording clerks (ISCO08 - 43)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_44
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Other clerical support workers (ISCO08 - 44)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_5
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Service and sales workers (ISCO08 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_51
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Personal service workers (ISCO08 - 51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_52
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Sales workers (ISCO08 - 52)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_53
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Personal care workers (ISCO08 - 53)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_54
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Protective services workers (ISCO08 - 54)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_6
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Skilled agricultural, forestry and fishery workers (ISCO08 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_61
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Market-oriented skilled agricultural workers (ISCO08 - 61)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_62
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Market-oriented skilled forestry, fishery and hunting workers (ISCO08 - 62)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_63
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Subsistence farmers, fishers, hunters and gatherers (ISCO08 - 63)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_7
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Craft and related trades workers (ISCO08 - 7)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_71
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Building and related trades workers, excluding electricians (ISCO08 - 71)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_72
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Metal, machinery and related trades workers (ISCO08 - 72)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_73
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Handicraft and printing workers (ISCO08 - 73)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_74
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Electrical and electronic trades workers (ISCO08 - 74)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_75
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Food processing, wood working, garment and other craft and related trades workers (ISCO08 - 75)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_8
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Plant and machine operators, and assemblers (ISCO08 - 8)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_81
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Stationary plant and machine operators (ISCO08 - 81)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_82
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Assemblers (ISCO08 - 82)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_83
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Drivers and mobile plant operators (ISCO08 - 83)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_9
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Elementary occupations (ISCO08 - 9)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_91
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Cleaners and helpers (ISCO08 - 91)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_92
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Agricultural, forestry and fishery labourers (ISCO08 - 92)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_93
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Labourers in mining, construction, manufacturing and transport (ISCO08 - 93)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_94
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Food preparation assistants (ISCO08 - 94)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_95
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Street and related sales and service workers (ISCO08 - 95)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_96
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Refuse workers and other elementary workers (ISCO08 - 96)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO08_X
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Not elsewhere classified (ISCO08 - X)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_0AND1
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Professional, technical and related workers (ISCO68 - 0 and ISCO68 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_2
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Administrative and managerial workers (ISCO68 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_3
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Clerical and related workers (ISCO68 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_4
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Sales workers (ISCO68 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_5
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Service workers (ISCO68 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_6
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Agriculture, animal husbandry and forestry workers, fishermen and hunters (ISCO68 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_7T9
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Production and related workers, transport equipment operators and labourers (ISCO68 - 7, ISCO68 - 8, and ISCO68 - 9)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_AF
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Armed Forces (ISCO68 - AF)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO68_X
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Not elsewhere classified (ISCO68 - X)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_0
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Armed forces (ISCO88 - 0)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_01
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Armed forces (ISCO88 - 01)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_1
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Legislators, senior officials and managers (ISCO88 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_11
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Legislators and senior officials (ISCO88 - 11)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_12
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Corporate managers (ISCO88 - 12)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_13
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "General managers (ISCO88 - 13)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_2
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Professionals (ISCO88 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_21
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Physical, mathematical and engineering science professionals (ISCO88 - 21)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_22
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Life science and health professionals (ISCO88 - 22)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_23
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Teaching professionals (ISCO88 - 23)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_24
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Other professionals (ISCO88 - 24)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_3
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Technicians and associate professionals (ISCO88 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_31
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Physical and engineering science associate professionals (ISCO88 - 31)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_32
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Life science and health associate professionals (ISCO88 - 32)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_33
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Teaching associate professionals (ISCO88 - 33)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_34
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Other associate professionals (ISCO88 - 34)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_4
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Clerks (ISCO88 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_41
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Office clerks (ISCO88 - 41)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_42
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Customer services clerks (ISCO88 - 42)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_5
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Service workers and shop and market sales workers (ISCO88 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_51
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Personal and protective services workers (ISCO88 - 51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_52
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Models, salespersons and demonstrators (ISCO88 - 52)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_6
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Skilled agricultural and fishery workers (ISCO88 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_61
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Market-oriented skilled agricultural and fishery workers (ISCO88 - 61)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_62
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Subsistence agricultural and fishery workers (ISCO88 - 62)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_7
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Craft and related trades workers (ISCO88 - 7)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_71
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Extraction and building trades workers (ISCO88 - 71)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_72
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Metal, machinery and related trades workers (ISCO88 - 72)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_73
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Precision, handicraft, printing and related trades workers (ISCO88 - 73)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_74
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Other craft and related trades workers (ISCO88 - 74)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_8
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Plant and machine operators and assemblers (ISCO88 - 8)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_81
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Stationary-plant and related operators (ISCO88 - 81)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_82
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Machine operators and assemblers (ISCO88 - 82)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_83
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Drivers and mobile-plant operators (ISCO88 - 83)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_9
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Elementary occupations (ISCO88 - 9)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_91
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Sales and services elementary occupations (ISCO88 - 91)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_92
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Agricultural, fishery and related labourers (ISCO88 - 92)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_93
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Labourers in mining, construction, manufacturing and transport (ISCO88 - 93)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_ISCO88_X
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Not elsewhere classified (ISCO88 - X)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_SKILL_L1
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Skill level 1 (low)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_SKILL_L2
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Skill level 2 (medium)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_SKILL_L3-4
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Skill levels 3 and 4 (high)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_OccupationEnum_X
+typeOf: dcs:UNDATA_ILO_OccupationEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "QuantileEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_01
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 1"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_02
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 2"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_03
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 3"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_04
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 4"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_05
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 5"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_06
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 6"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_07
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 7"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_08
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 8"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_09
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 9"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_QuantileEnum_QTL_DECILE_10
+typeOf: dcs:UNDATA_ILO_QuantileEnum
+name: "Decile 10"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "SeriesEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAP_5EAP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour force (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAP_5WAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour force participation rate (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAP_DWA1_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour force participation rate, seasonally adjusted series (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAP_DWAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour force participation rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAP_TEA1_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour force, seasonally adjusted series (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAP_TEAP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour force (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4HRL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Average hourly earnings of employees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4HRL_NB_PPP
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Average hourly earnings of employees in international dollars at Purchasing Power Parity rates (PPP)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4HRL_NB_USD
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Average hourly earnings of employees in US dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4MMN_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Monthly minimum wage"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4MMN_NB_PPP
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Monthly minimum wage in international dollars at Purchasing Power Parity rates (PPP)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4MMN_NB_USD
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Monthly minimum wage in US dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4MTH_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Average monthly earnings of employees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4MTH_NB_PPP
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Average monthly earnings of employees in international dollars at Purchasing Power Parity rates (PPP)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_4MTH_NB_USD
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Average monthly earnings of employees in US dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_GGAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Gender pay gap"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_XFLS_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Female share of low pay earners"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EAR_XTLP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Low pay rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EES_TEES_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of employees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EES_XPLV_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of employees with access to parental leave"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EES_XTMP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of temporary employees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_5EET_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Youth not in employment, education or training (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_5EET_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of youth not in employment, education or training (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_5EIP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Persons outside the labour force (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_5PLF_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Potential labour force (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_5WAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Inactivity rate (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_DWAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Inactivity rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_NEET_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Youth not in employment, education or training (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_NEET_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of youth not in employment, education or training (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_TEIP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Persons outside the labour force (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_WDIS_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of discouraged job-seekers (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EIP_WPLF_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Potential labour force (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_5EMP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_5NIF_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal employment (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_5NIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal employment rate (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_5PIF_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment outside the formal sector (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_5PIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of employment outside the formal sector (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_5WAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment-to-population ratio (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_CARE_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Care employment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_CNIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal care employment rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_CPIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of care employment outside the formal sector (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_DWA1_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment-to-population ratio, seasonally adjusted series (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_DWAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment-to-population ratio (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_NIFL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal employment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_NIFL_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal employment rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_NORM_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment by educational mismatch (using normative approach) (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_PIFL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment outside the formal sector (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_PIFL_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of employment outside the formal sector (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_PTER_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Part-time (defined as less than 35 actual weekly hours) employment rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_PUBL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Public sector employment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_SNIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal employment in STEM occupations rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_SPIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of employment in STEM occupations outside the formal sector (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_STAT_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment by educational mismatch (using statistical approach) (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_STEM_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment in STEM occupations (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_TEM1_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment, seasonally adjusted series (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_TEMP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Employment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_TNIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Informal tourism sector employment rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_TOUR_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Tourism sector employment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_EMP_TPIF_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Share of tourism sector employment outside the formal sector (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_FOW_5SFP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Subsistence foodstuff producers (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_FOW_5SFP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Subsistence foodstuff production rate (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_GDP_211P_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Output per worker (GDP in constant 2017 international dollars at Purchasing Power Parity rates) (ILO modelled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_GDP_2HRW_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Output per hour worked (GDP in constant 2017 international dollars at Purchasing Power Parity rates) (ILO modelled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_GED_2LFP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Prime-age labour force participation rate (ILO modelled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_HOW_TEMP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Mean weekly hours actually worked per employed person"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_ILR_CBCT_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Collective bargaining coverage rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_ILR_TUMT_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Trade union density rate"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_INJ_DAYS_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Days lost due to cases of occupational injury with temporary incapacity for work"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_INJ_FATL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Cases of fatal occupational injury"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_INJ_FATL_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Fatal occupational injuries per 100'000 workers"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_INJ_NFTL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Cases of non-fatal occupational injury"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_INJ_NFTL_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Non-fatal occupational injuries per 100'000 workers"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAC_4HRL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Hourly labour cost per employee"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAC_4HRL_NB_PPP
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Hourly labour cost per employee in international dollars at Purchasing Power Parity rates (PPP)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAC_4HRL_NB_USD
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Hourly labour cost per employee in US dollars"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAI_INDE_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Inspectors per 10'000 employed persons"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAI_INSP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of labour inspectors"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAI_VDIN_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour inspection visits per inspector"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAI_VIST_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of labour inspection visits"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAI_WOPL_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of registered workplaces that could be selected for labour inspection"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAP_2GDP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour income share (ILO modelled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LAP_2LID_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Labour income distribution (ILO modelled estimates)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LUU_5LU2_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "LU2: Combined rate of time-related underemployment and unemployment (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LUU_5LU3_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "LU3: Combined rate of unemployment and potential labour force (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LUU_5LU4_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "LU4: Composite rate of labour underutilization (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LUU_XLU2_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "LU2: Combined rate of time-related underemployment and unemployment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LUU_XLU3_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "LU3: Combined rate of unemployment and potential labour force (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_LUU_XLU4_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "LU4: Composite rate of labour underutilization (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_POP_XWAP_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Working-age population (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_STR_DAYS_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Days not worked due to strikes and lockouts"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_STR_DAYS_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Days not worked per 1000 workers due to strikes and lockouts"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_STR_TSTR_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of strikes and lockouts"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_STR_WORK_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Number of workers involved in strikes and lockouts"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_TRU_DEMP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Time-related underemployment rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_TRU_TTRU_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Time-related underemployment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_UNE_5EAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Unemployment rate (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_UNE_5UNE_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Unemployment (current ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_UNE_DEA1_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Unemployment rate, seasonally adjusted series (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_UNE_DEAP_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Unemployment rate (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_UNE_TUN1_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Unemployment, seasonally adjusted series (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_UNE_TUNE_NB
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Unemployment (previous ILO definition)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SeriesEnum_WBL_TWBL_RT
+typeOf: dcs:UNDATA_ILO_SeriesEnum
+name: "Participation rate in work-based learning"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SexEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "SexEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SexEnum_F
+typeOf: dcs:UNDATA_ILO_SexEnum
+name: "Female"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SexEnum_M
+typeOf: dcs:UNDATA_ILO_SexEnum
+name: "Male"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SexEnum_O
+typeOf: dcs:UNDATA_ILO_SexEnum
+name: "Other"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SkillMatchEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "SkillMatchEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SkillMatchEnum_EDU_SKILL_MATCH
+typeOf: dcs:UNDATA_ILO_SkillMatchEnum
+name: "Matched"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SkillMatchEnum_EDU_SKILL_OVER
+typeOf: dcs:UNDATA_ILO_SkillMatchEnum
+name: "Overeducated"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_SkillMatchEnum_EDU_SKILL_UNDER
+typeOf: dcs:UNDATA_ILO_SkillMatchEnum
+name: "Undereducated"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "StatusInEmploymentEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_A
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employers (ICSE18A - A: 11,12,19)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_AB
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Independent workers (ICSE18A - AB: 11,12,19,21,22,29)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_B
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Own-account workers (ICSE18A - B: 21, 22, 29)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_C
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Dependent workers (ICSE18A - C: 30)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_CDE
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Dependent workers (ICSE18A - CDE: 30,41,42,43,44,49)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_D
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employees (ICSE18A - D: 41, 42, 43, 44, 49)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_E
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Contributing family workers (ICSE18A - E: 51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18A_X
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_C
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Dependent contractors (ICSE18R - C: 30)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_D
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employees (ICSE18R - D: 41, 42, 43, 44, 49)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_E
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Contributing family workers (ICSE18R - E: 51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_F
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Independent workers in household market enterprises (ICSE18R - F: 12, 22)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_FCE
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Workers in employment for profit (ICSE18R - FCE: 12,22,30,51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_G
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Owner-operators of corporations (ICSE18R - G: 11, 21)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18R_GD
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Workers in employment for pay (ICSE18R - GD: 11,21,41,42,43,44,49)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_11
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employers in corporations (ICSE18 - 11)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_12
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employers in household market enterprises (ICSE18 - 12)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_19
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employers not elsewhere classified (ICSE18 - 19)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_21
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Owner-operators of corporations without employees (ICSE18 - 21)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_22
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Own-account workers in household market enterprises without employees (ICSE18 - 22)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_29
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Own-account workers not elsewhere classified (ICSE18 - 29)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_30
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Dependent contractors (ICSE18 - 30)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_41
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Permanent employees (ICSE18 - 41)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_42
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Fixed-term employees (ICSE18 - 42)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_43
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Short-term and casual employees (ICSE18 - 43)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_44
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Paid apprentices, trainees and interns (ICSE18 - 44)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_49
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employees not elsewhere classified (ICSE18 - 49)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE18_51
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Contributing family workers (ICSE18 - 51)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE93_1
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employees (ICSE93 - 1)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE93_2
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employers (ICSE93 - 2)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE93_3
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Own-account workers (ICSE93 - 3)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE93_4
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Members of producers' cooperatives (ICSE93 - 4)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE93_5
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Contributing family workers (ICSE93 - 5)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_ICSE93_6
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Workers not classifiable by status (ICSE93 - 6)"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_STE_EES
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Employees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_STE_SLF
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Self-employed"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_StatusInEmploymentEnum_X
+typeOf: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "TraineeTypeEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_APPRENTICES
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Apprentices"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_O
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Other trainees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_PAID
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Paid"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_PAID_APPRENTICES
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Paid apprentices"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_PAID_O
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Other paid trainees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_UNPAID
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Unpaid"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_UNPAID_APPRENTICES
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Unpaid apprentices"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_UNPAID_O
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Other unpaid trainees"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_TraineeTypeEnum_X
+typeOf: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Not classified"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_UrbanisationEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "UrbanisationEnum"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_UrbanisationEnum_R
+typeOf: dcs:UNDATA_ILO_UrbanisationEnum
+name: "Rural"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_UrbanisationEnum_U
+typeOf: dcs:UNDATA_ILO_UrbanisationEnum
+name: "Urban"
+isProvisional: dcs:True
+
+Node: dcid:UNDATA_ILO_UrbanisationEnum_X
+typeOf: dcs:UNDATA_ILO_UrbanisationEnum
+name: "Not elsewhere classified"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_careWorkersCategory
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_CareWorkersCategoryEnum
+name: "Care Workers Category"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_categoryOfUnemployed
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_CategoryOfUnemployedEnum
+name: "Category Of Unemployed"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_currencyType
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_CurrencyTypeEnum
+name: "Currency Type"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_duration
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_DurationEnum
+name: "Duration"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_economicActivity
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_EconomicActivityEnum
+name: "Economic Activity"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_educationLevel
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_EducationLevelEnum
+name: "Education Level"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_establishmentSize
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_EstablishmentSizeEnum
+name: "Establishment Size"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_hoursWorked
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_HoursWorkedEnum
+name: "Hours Worked"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_householdType
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_HouseholdTypeEnum
+name: "Household Type"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_institutionalSector
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_InstitutionalSectorEnum
+name: "Institutional Sector"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_maritalStatus
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_MaritalStatusEnum
+name: "Marital Status"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_multipleJobHolders
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_MultipleJobHoldersEnum
+name: "Multiple Job Holders"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_occInjuriesIncapacity
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_OccInjuriesIncapacityEnum
+name: "Occ Injuries Incapacity"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_occupation
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_OccupationEnum
+name: "Occupation"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_quantile
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_QuantileEnum
+name: "Quantile"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_series
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_SeriesEnum
+name: "Series"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_sex
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_SexEnum
+name: "Sex"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_skillMatch
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_SkillMatchEnum
+name: "Skill Match"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_statusInEmployment
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_StatusInEmploymentEnum
+name: "Status In Employment"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_traineeType
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_TraineeTypeEnum
+name: "Trainee Type"
+isProvisional: dcs:True
+
+Node: dcid:undata_ilo_urbanisation
+typeOf: schema:Property
+domainIncludes: dcs:Thing
+rangeIncludes: dcs:UNDATA_ILO_UrbanisationEnum
+name: "Urbanisation"
+isProvisional: dcs:True

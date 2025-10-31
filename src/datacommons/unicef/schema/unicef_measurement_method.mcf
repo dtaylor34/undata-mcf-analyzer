@@ -1,0 +1,50 @@
+
+Node: dcid:UNDATA_UNICEF_A
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_A"
+description: "UNICEF Measurement Method: [Observation Status = Normal value]"
+
+Node: dcid:UNDATA_UNICEF_AD
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_AD"
+description: "UNICEF Measurement Method: [Observation Status = Adjusted]"
+
+Node: dcid:UNDATA_UNICEF_E
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_E"
+description: "UNICEF Measurement Method: [Observation Status = Estimated value]"
+
+Node: dcid:UNDATA_UNICEF_ER
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_ER"
+description: "UNICEF Measurement Method: [Observation Status = External Reanalysis]"
+
+Node: dcid:UNDATA_UNICEF_MD
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_MD"
+description: "UNICEF Measurement Method: [Observation Status = Modelled]"
+
+Node: dcid:UNDATA_UNICEF_PRED
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_PRED"
+description: "UNICEF Measurement Method: [Observation Status = Predicted]"
+
+Node: dcid:UNDATA_UNICEF_RA
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_RA"
+description: "UNICEF Measurement Method: [Observation Status = Reanalysed]"
+
+Node: dcid:UNDATA_UNICEF_RP
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_RP"
+description: "UNICEF Measurement Method: [Observation Status = Reported]"
+
+Node: dcid:UNDATA_UNICEF_U
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF_U"
+description: "UNICEF Measurement Method: [Observation Status = Low reliability]"
+
+Node: dcid:UNDATA_UNICEF__T
+typeOf: dcs:UNDATA_UNICEF_MeasurementMethodEnum
+name: "UNICEF__T"
+description: "UNICEF Measurement Method: [Observation Status = Total or no breakdown]"

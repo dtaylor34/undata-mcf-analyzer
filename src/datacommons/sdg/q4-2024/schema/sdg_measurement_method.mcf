@@ -1,0 +1,140 @@
+
+Node: dcid:UNDATA_SDG_DEFINITION_DIFFERS
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_DEFINITION_DIFFERS"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Definition differs | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_DEFINITION_DIFFERS
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_DEFINITION_DIFFERS"
+description: "SDG Measurement Method: [Nature = Estimated data | Observation Status = Definition differs | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_DEFINITION_DIFFERS
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_DEFINITION_DIFFERS"
+description: "SDG Measurement Method: [Nature = Non-relevant | Observation Status = Definition differs | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_ESTIMATED
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_ESTIMATED"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Estimated value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_ESTIMATED
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_ESTIMATED"
+description: "SDG Measurement Method: [Nature = Estimated data | Observation Status = Estimated value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_ESTIMATED
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_ESTIMATED"
+description: "SDG Measurement Method: [Nature = Global monitoring data | Observation Status = Estimated value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_ESTIMATED
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_ESTIMATED"
+description: "SDG Measurement Method: [Nature = Non-relevant | Observation Status = Estimated value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_IMPUTED
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_IMPUTED"
+description: "SDG Measurement Method: [Nature = Estimated data | Observation Status = Imputed value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_LOW_RELIABILITY
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_LOW_RELIABILITY"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Low-reliability value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_MISSING_CANNOT_EXIST
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_MISSING_CANNOT_EXIST"
+description: "SDG Measurement Method: [Observation Status = Missing value; data cannot exist | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_NORMAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_NORMAL"
+description: "SDG Measurement Method: [Nature = Country adjusted data | Observation Status = Normal value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_NORMAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_NORMAL"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Normal value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_NORMAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_NORMAL"
+description: "SDG Measurement Method: [Nature = Estimated data | Observation Status = Normal value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_NORMAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_NORMAL"
+description: "SDG Measurement Method: [Nature = Global monitoring data | Observation Status = Normal value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_NORMAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_NORMAL"
+description: "SDG Measurement Method: [Nature = Modeled data | Observation Status = Normal value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_NORMAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_NORMAL"
+description: "SDG Measurement Method: [Nature = Non-relevant | Observation Status = Normal value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_PROVISIONAL
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_PROVISIONAL"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Provisional value | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_TS_BREAK
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_TS_BREAK"
+description: "SDG Measurement Method: [Nature = Country adjusted data | Observation Status = Time series break | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_TS_BREAK
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_TS_BREAK"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Time series break | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_TS_BREAK
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_TS_BREAK"
+description: "SDG Measurement Method: [Nature = Estimated data | Observation Status = Time series break | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG_TS_BREAK
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG_TS_BREAK"
+description: "SDG Measurement Method: [Nature = Non-relevant | Observation Status = Time series break | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Nature = Country adjusted data | Observation Status = Total or no breakdown | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Nature = Country data | Observation Status = Total or no breakdown | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Nature = Estimated data | Observation Status = Total or no breakdown | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Nature = Global monitoring data | Observation Status = Total or no breakdown | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Nature = Modeled data | Observation Status = Total or no breakdown | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Nature = Non-relevant | Observation Status = Total or no breakdown | Reporting Level = Global]"
+
+Node: dcid:UNDATA_SDG__T
+typeOf: dcs:UNDATA_SDG_MeasurementMethodEnum
+name: "SDG__T"
+description: "SDG Measurement Method: [Observation Status = Total or no breakdown | Reporting Level = Global]"

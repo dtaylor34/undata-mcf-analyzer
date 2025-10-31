@@ -1,0 +1,100 @@
+
+Node: dcid:UNDATA_UNICEF_1_IN_X
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "1 in X"
+
+Node: dcid:UNDATA_UNICEF_COUNT
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Number"
+
+Node: dcid:UNDATA_UNICEF_COUNT_DEATHS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Number of deaths"
+
+Node: dcid:UNDATA_UNICEF_COUNT_PERSONS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Number of Persons"
+
+Node: dcid:UNDATA_UNICEF_COUNT_STILLBIRTHS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Number of stillbirths"
+
+Node: dcid:UNDATA_UNICEF_INDEX
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Index"
+
+Node: dcid:UNDATA_UNICEF_PT
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Percent"
+
+Node: dcid:UNDATA_UNICEF_PT_COUNT_POP
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Percent of population"
+
+Node: dcid:UNDATA_UNICEF_RATIO
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Ratio"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_BIRTHS_PER_1000_COUNT_POP_F
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Births per 1,000 women"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_100000_COUNT_BIRTHS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 100,000 births"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_LIVEBIRTHS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 live births"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_POP_M1
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 children aged 1 month"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_POP_Y1
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 children aged 1 year"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_POP_Y10
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 children aged 10 years"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_POP_Y15
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 youths aged 15 years"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_POP_Y20
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 persons aged 20 years"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_DEATHS_PER_1000_COUNT_POP_Y5
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Deaths per 1,000 children aged 5 years"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_PER_100000_COUNT_POP
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Per 100,000 population"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_PER_1000_COUNT
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Per 1,000"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_PER_1000_COUNT_POP
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Per 1,000 population"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_PER_CR_USD_GNI_PER_COUNT_POP
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Per 1 USD GNI per capita"
+
+Node: dcid:UNDATA_UNICEF_RATIO_COUNT_STILLBIRTHS_PER_1000_COUNT_BIRTHS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Stillbirths per 1,000 total births"
+
+Node: dcid:UNDATA_UNICEF_STILLBIRTHS
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Number of stillbirths"
+
+Node: dcid:UNDATA_UNICEF_TIME_YR
+typeOf: dcs:UNDATA_UNICEF_UnitOfMeasure
+name: "Years"

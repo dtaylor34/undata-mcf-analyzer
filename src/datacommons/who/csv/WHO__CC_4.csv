@@ -1,0 +1,9 @@
+SERIES,GEOGRAPHY,TIME_PERIOD,OBS_VALUE
+dcs:who/CC_4,dcid:Earth,2004,84.16
+dcs:who/CC_4,dcid:undata-geo/G00100100,2004,1.6
+dcs:who/CC_4,dcid:undata-geo/G00101200,2004,14.66
+dcs:who/CC_4,dcid:undata-geo/G00121200,2004,5.74
+dcs:who/CC_4,dcid:undata-geo/G00124200,2004,139.32
+dcs:who/CC_4,dcid:undata-geo/G00134200,2004,148.92
+dcs:who/CC_4,dcid:undata-geo/G00160200,2004,12.36
+dcs:who/CC_4,dcid:undata-geo/G00407300,2004,278.06
