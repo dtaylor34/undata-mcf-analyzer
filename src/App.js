@@ -8,7 +8,6 @@ import { Switch } from './components/ui/switch';
 import { Sun, Moon, Database } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
-import { getAllFiles, getComparableVersions } from './mcf-file-index';
 import { parseMCF, extractObservations, observationsToChartData } from './mcf-parser';
 
 // Dynamic MCF file loader - loads real files from public folder
@@ -218,10 +217,9 @@ const generateChartData = (mcf) => {
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   
-  // File selection state
-  const [selectedFile, setSelectedFile] = useState('ilo/schema/schema.mcf'); // Default to ILO schema
-  const [selectedVersion, setSelectedVersion] = useState('');
-  const [compareVersion, setCompareVersion] = useState('');
+  // File selection state (now just file IDs)
+  const [selectedFileId, setSelectedFileId] = useState('');
+  const [compareFileId, setCompareFileId] = useState('');
   const [showDiff, setShowDiff] = useState(false);
   
   // MCF content state
@@ -246,14 +244,13 @@ export default function App() {
   // Load MCF file when selection changes
   useEffect(() => {
     async function loadFile() {
-      if (!selectedFile) return;
+      if (!selectedFileId) return;
       
       setIsLoading(true);
       try {
-        const fileId = selectedVersion || selectedFile;
-        const content = await loadMCFFile(fileId);
+        const content = await loadMCFFile(selectedFileId);
         setCurrentMCFContent(content || '');
-        console.log('📄 Loaded file:', fileId);
+        console.log('📄 Loaded file:', selectedFileId);
       } catch (error) {
         console.error('Error loading file:', error);
         setCurrentMCFContent('');
@@ -263,20 +260,20 @@ export default function App() {
     }
     
     loadFile();
-  }, [selectedFile, selectedVersion]);
+  }, [selectedFileId]);
   
   // Load compare version when diff is shown
   useEffect(() => {
     async function loadCompareFile() {
-      if (!showDiff || !compareVersion) {
+      if (!showDiff || !compareFileId) {
         setCompareMCFContent('');
         return;
       }
       
       try {
-        const content = await loadMCFFile(compareVersion);
+        const content = await loadMCFFile(compareFileId);
         setCompareMCFContent(content || '');
-        console.log('📄 Loaded compare file:', compareVersion);
+        console.log('📄 Loaded compare file:', compareFileId);
       } catch (error) {
         console.error('Error loading compare file:', error);
         setCompareMCFContent('');
@@ -284,7 +281,7 @@ export default function App() {
     }
     
     loadCompareFile();
-  }, [showDiff, compareVersion]);
+  }, [showDiff, compareFileId]);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -336,12 +333,8 @@ export default function App() {
 
       {/* File Selector */}
       <FileSelector
-        selectedFile={selectedFile}
-        selectedVersion={selectedVersion}
-        compareVersion={compareVersion}
-        onFileChange={setSelectedFile}
-        onVersionChange={setSelectedVersion}
-        onCompareVersionChange={setCompareVersion}
+        onFileSelected={setSelectedFileId}
+        onCompareFileSelected={setCompareFileId}
         showDiff={showDiff}
         onToggleDiff={() => setShowDiff(!showDiff)}
       />
@@ -360,8 +353,8 @@ export default function App() {
           <DiffViewer
             oldVersion={compareMCF}
             newVersion={currentMCF}
-            oldVersionName={compareVersion}
-            newVersionName={selectedVersion}
+            oldVersionName={compareFileId}
+            newVersionName={selectedFileId}
           />
         )}
 

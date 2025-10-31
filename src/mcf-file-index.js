@@ -147,6 +147,95 @@ export function getAllFiles() {
 }
 
 /**
+ * Get all unique file types (e.g., schema.mcf, sv.mcf, series.mcf)
+ */
+export function getUniqueFileTypes() {
+  const fileTypes = new Set();
+  
+  // Collect from ILO
+  MCF_FILE_INDEX.ilo.files.forEach(file => fileTypes.add(file.name));
+  
+  // Collect from SDG versions
+  Object.values(MCF_FILE_INDEX.sdg.versions).forEach(version => {
+    version.files.forEach(file => fileTypes.add(file.name));
+  });
+  
+  // Collect from UNICEF
+  MCF_FILE_INDEX.unicef.files.forEach(file => fileTypes.add(file.name));
+  
+  // Collect from WHO
+  MCF_FILE_INDEX.who.files.forEach(file => fileTypes.add(file.name));
+  
+  return Array.from(fileTypes).sort();
+}
+
+/**
+ * Get all versions for a specific file type
+ * Returns array of { org, version, versionName, emoji, fileId, displayName }
+ */
+export function getVersionsForFileType(fileType) {
+  const versions = [];
+  
+  // ILO files (no version, just org)
+  const iloFile = MCF_FILE_INDEX.ilo.files.find(f => f.name === fileType);
+  if (iloFile) {
+    versions.push({
+      org: 'ilo',
+      orgName: MCF_FILE_INDEX.ilo.name,
+      emoji: MCF_FILE_INDEX.ilo.emoji,
+      fileId: iloFile.id,
+      displayName: `${MCF_FILE_INDEX.ilo.emoji} ILO`,
+      sortKey: 'ilo-default'
+    });
+  }
+  
+  // SDG files (with versions)
+  Object.entries(MCF_FILE_INDEX.sdg.versions).forEach(([versionKey, version]) => {
+    const sdgFile = version.files.find(f => f.name === fileType);
+    if (sdgFile) {
+      versions.push({
+        org: 'sdg',
+        version: versionKey,
+        versionName: version.name,
+        orgName: MCF_FILE_INDEX.sdg.name,
+        emoji: MCF_FILE_INDEX.sdg.emoji,
+        fileId: sdgFile.id,
+        displayName: `${MCF_FILE_INDEX.sdg.emoji} SDG ${version.name}`,
+        sortKey: `sdg-${versionKey}`
+      });
+    }
+  });
+  
+  // UNICEF files
+  const unicefFile = MCF_FILE_INDEX.unicef.files.find(f => f.name === fileType);
+  if (unicefFile) {
+    versions.push({
+      org: 'unicef',
+      orgName: MCF_FILE_INDEX.unicef.name,
+      emoji: MCF_FILE_INDEX.unicef.emoji,
+      fileId: unicefFile.id,
+      displayName: `${MCF_FILE_INDEX.unicef.emoji} UNICEF`,
+      sortKey: 'unicef-default'
+    });
+  }
+  
+  // WHO files
+  const whoFile = MCF_FILE_INDEX.who.files.find(f => f.name === fileType);
+  if (whoFile) {
+    versions.push({
+      org: 'who',
+      orgName: MCF_FILE_INDEX.who.name,
+      emoji: MCF_FILE_INDEX.who.emoji,
+      fileId: whoFile.id,
+      displayName: `${MCF_FILE_INDEX.who.emoji} WHO`,
+      sortKey: 'who-default'
+    });
+  }
+  
+  return versions.sort((a, b) => a.sortKey.localeCompare(b.sortKey));
+}
+
+/**
  * Get comparable versions for a file (e.g., SDG across quarters)
  */
 export function getComparableVersions(fileId) {
