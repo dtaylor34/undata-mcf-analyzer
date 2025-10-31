@@ -3,6 +3,7 @@ import { FileSelector } from './components/FileSelector';
 import DiffViewer from './components/DiffViewer';
 import CodeDisplay from './components/CodeDisplay';
 import ChartPreview from './components/ChartPreview';
+import { CodeEditor } from './components/CodeEditor';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Switch } from './components/ui/switch';
 import { Sun, Moon, Database } from 'lucide-react';
@@ -517,11 +518,11 @@ export default function App() {
                 />
               ) : rawViewMode === 'edit' ? (
                 <div className="space-y-2">
-                  <textarea
+                  <CodeEditor
                     value={rawEditContent || generateFormattedCode(currentMCF)}
-                    onChange={(e) => setRawEditContent(e.target.value)}
-                    className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary"
-                    spellCheck={false}
+                    onChange={setRawEditContent}
+                    language="mcf"
+                    placeholder="Edit MCF content..."
                   />
                   <div className="flex gap-2 justify-end">
                     <button
@@ -589,7 +590,7 @@ export default function App() {
                 <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title=".STAT Data Visualization" />
               ) : statViewMode === 'edit' ? (
                 <div className="space-y-2">
-                  <textarea value={statEditContent || generateStatView(currentMCF)} onChange={(e) => setStatEditContent(e.target.value)} className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary" spellCheck={false} />
+                  <CodeEditor value={statEditContent || generateStatView(currentMCF)} onChange={setStatEditContent} language="mcf" placeholder="Edit .STAT content..." />
                   <div className="flex gap-2 justify-end">
                     <button onClick={() => setStatEditContent(generateStatView(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
                     <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
@@ -626,7 +627,7 @@ export default function App() {
                 <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title="DataCommons Visualization" />
               ) : datacommonsViewMode === 'edit' ? (
                 <div className="space-y-2">
-                  <textarea value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={(e) => setDatacommonsEditContent(e.target.value)} className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary" spellCheck={false} />
+                  <CodeEditor value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={setDatacommonsEditContent} language="json" placeholder="Edit DataCommons JSON..." />
                   <div className="flex gap-2 justify-end">
                     <button onClick={() => setDatacommonsEditContent(generateDataCommonsView(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
                     <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
@@ -663,7 +664,7 @@ export default function App() {
                 <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title="Cached Data Visualization" />
               ) : cachedViewMode === 'edit' ? (
                 <div className="space-y-2">
-                  <textarea value={cachedEditContent || generateCachedVersion(currentMCF)} onChange={(e) => setCachedEditContent(e.target.value)} className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary" spellCheck={false} />
+                  <CodeEditor value={cachedEditContent || generateCachedVersion(currentMCF)} onChange={setCachedEditContent} language="mcf" placeholder="Edit cached content..." />
                   <div className="flex gap-2 justify-end">
                     <button onClick={() => setCachedEditContent(generateCachedVersion(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
                     <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
