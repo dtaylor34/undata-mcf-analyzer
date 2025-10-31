@@ -421,7 +421,7 @@ export default function App() {
         <Tabs defaultValue="raw" className="w-full">
           <TabsList className="grid w-full grid-cols-4 h-auto">
             <TabsTrigger value="raw" className="text-xs sm:text-sm">
-              Raw
+              MCF
             </TabsTrigger>
             <TabsTrigger value="stat" className="text-xs sm:text-sm">
               .STAT
