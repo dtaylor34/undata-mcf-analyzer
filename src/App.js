@@ -272,11 +272,17 @@ export default function App() {
   const [compareMCFContent, setCompareMCFContent] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
-  // View mode states for each tab
-  const [rawViewMode, setRawViewMode] = useState('formatted'); // 'formatted' | 'raw' | 'yaml'
+  // View mode states for each tab: 'formatted' | 'raw' | 'yaml' | 'chart' | 'edit'
+  const [rawViewMode, setRawViewMode] = useState('formatted');
   const [statViewMode, setStatViewMode] = useState('formatted');
   const [datacommonsViewMode, setDatacommonsViewMode] = useState('formatted');
   const [cachedViewMode, setCachedViewMode] = useState('formatted');
+  
+  // Edit mode content states
+  const [rawEditContent, setRawEditContent] = useState('');
+  const [statEditContent, setStatEditContent] = useState('');
+  const [datacommonsEditContent, setDatacommonsEditContent] = useState('');
+  const [cachedEditContent, setCachedEditContent] = useState('');
 
   // Load real catalog data
   const [catalogStats, setCatalogStats] = useState(null);
@@ -437,6 +443,8 @@ export default function App() {
                   {rawViewMode === 'formatted' && 'Formatted MCF with proper indentation'}
                   {rawViewMode === 'raw' && 'Raw MCF file content without formatting'}
                   {rawViewMode === 'yaml' && 'YAML representation of MCF data'}
+                  {rawViewMode === 'chart' && 'Visual chart representation of the data'}
+                  {rawViewMode === 'edit' && 'Edit and modify MCF content - changes are local'}
                 </p>
                 <div className="flex gap-1 bg-muted rounded-lg p-1">
                   <button
@@ -469,23 +477,90 @@ export default function App() {
                   >
                     YAML
                   </button>
+                  <button
+                    onClick={() => setRawViewMode('chart')}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      rawViewMode === 'chart'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Chart
+                  </button>
+                  <button
+                    onClick={() => {
+                      setRawViewMode('edit');
+                      if (!rawEditContent) {
+                        setRawEditContent(generateFormattedCode(currentMCF));
+                      }
+                    }}
+                    className={`px-3 py-1 text-xs rounded transition-all ${
+                      rawViewMode === 'edit'
+                        ? 'bg-background text-foreground shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Edit
+                  </button>
                 </div>
               </div>
               
-              {/* Code Display */}
-              <CodeDisplay
-                code={
-                  rawViewMode === 'formatted' 
-                    ? generateFormattedCode(currentMCF)
-                    : rawViewMode === 'yaml'
-                    ? generateYAMLView(currentMCF)
-                    : generateRawCode(currentMCF)
-                }
-                language={
-                  rawViewMode === 'yaml' ? 'yaml' : 'MCF'
-                }
-                formatted={rawViewMode !== 'raw'}
-              />
+              {/* Content Display */}
+              {rawViewMode === 'chart' ? (
+                <ChartPreview
+                  data={(() => {
+                    const nodes = parseMCF(currentMCF);
+                    const observations = extractObservations(nodes);
+                    return observationsToChartData(observations);
+                  })()}
+                  title="MCF Data Visualization"
+                />
+              ) : rawViewMode === 'edit' ? (
+                <div className="space-y-2">
+                  <textarea
+                    value={rawEditContent || generateFormattedCode(currentMCF)}
+                    onChange={(e) => setRawEditContent(e.target.value)}
+                    className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary"
+                    spellCheck={false}
+                  />
+                  <div className="flex gap-2 justify-end">
+                    <button
+                      onClick={() => {
+                        setRawEditContent(generateFormattedCode(currentMCF));
+                      }}
+                      className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors"
+                    >
+                      Reset
+                    </button>
+                    <button
+                      onClick={() => {
+                        const confirmed = window.confirm('Save changes? This will update the current view with your edits.');
+                        if (confirmed) {
+                          setCurrentMCFContent(rawEditContent);
+                          setRawViewMode('formatted');
+                        }
+                      }}
+                      className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+                    >
+                      Apply Changes
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <CodeDisplay
+                  code={
+                    rawViewMode === 'formatted' 
+                      ? generateFormattedCode(currentMCF)
+                      : rawViewMode === 'yaml'
+                      ? generateYAMLView(currentMCF)
+                      : generateRawCode(currentMCF)
+                  }
+                  language={
+                    rawViewMode === 'yaml' ? 'yaml' : 'MCF'
+                  }
+                  formatted={rawViewMode !== 'raw'}
+                />
+              )}
             </div>
           </TabsContent>
 
@@ -497,51 +572,32 @@ export default function App() {
                   {statViewMode === 'formatted' && '.STAT format representation of the MCF data'}
                   {statViewMode === 'raw' && 'Raw .STAT format without formatting'}
                   {statViewMode === 'yaml' && 'YAML representation of .STAT data'}
+                  {statViewMode === 'chart' && 'Visual chart from .STAT data'}
+                  {statViewMode === 'edit' && 'Edit .STAT content - changes are local'}
                 </p>
                 <div className="flex gap-1 bg-muted rounded-lg p-1">
-                  <button
-                    onClick={() => setStatViewMode('formatted')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      statViewMode === 'formatted'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    Formatted
-                  </button>
-                  <button
-                    onClick={() => setStatViewMode('raw')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      statViewMode === 'raw'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    Raw
-                  </button>
-                  <button
-                    onClick={() => setStatViewMode('yaml')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      statViewMode === 'yaml'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    YAML
-                  </button>
+                  <button onClick={() => setStatViewMode('formatted')} className={`px-3 py-1 text-xs rounded transition-all ${statViewMode === 'formatted' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Formatted</button>
+                  <button onClick={() => setStatViewMode('raw')} className={`px-3 py-1 text-xs rounded transition-all ${statViewMode === 'raw' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Raw</button>
+                  <button onClick={() => setStatViewMode('yaml')} className={`px-3 py-1 text-xs rounded transition-all ${statViewMode === 'yaml' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>YAML</button>
+                  <button onClick={() => setStatViewMode('chart')} className={`px-3 py-1 text-xs rounded transition-all ${statViewMode === 'chart' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Chart</button>
+                  <button onClick={() => { setStatViewMode('edit'); if (!statEditContent) setStatEditContent(generateStatView(currentMCF)); }} className={`px-3 py-1 text-xs rounded transition-all ${statViewMode === 'edit' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Edit</button>
                 </div>
               </div>
               
-              {/* Code Display */}
-              <CodeDisplay
-                code={
-                  statViewMode === 'yaml'
-                    ? generateStatYAML(currentMCF)
-                    : generateStatView(currentMCF)
-                }
-                language={statViewMode === 'yaml' ? 'yaml' : 'stat'}
-                formatted={statViewMode !== 'raw'}
-              />
+              {/* Content Display */}
+              {statViewMode === 'chart' ? (
+                <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title=".STAT Data Visualization" />
+              ) : statViewMode === 'edit' ? (
+                <div className="space-y-2">
+                  <textarea value={statEditContent || generateStatView(currentMCF)} onChange={(e) => setStatEditContent(e.target.value)} className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary" spellCheck={false} />
+                  <div className="flex gap-2 justify-end">
+                    <button onClick={() => setStatEditContent(generateStatView(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
+                    <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                  </div>
+                </div>
+              ) : (
+                <CodeDisplay code={statViewMode === 'yaml' ? generateStatYAML(currentMCF) : generateStatView(currentMCF)} language={statViewMode === 'yaml' ? 'yaml' : 'stat'} formatted={statViewMode !== 'raw'} />
+              )}
             </div>
           </TabsContent>
 
@@ -553,51 +609,32 @@ export default function App() {
                   {datacommonsViewMode === 'formatted' && 'DataCommons JSON representation'}
                   {datacommonsViewMode === 'raw' && 'Raw DataCommons JSON without formatting'}
                   {datacommonsViewMode === 'yaml' && 'YAML representation of DataCommons data'}
+                  {datacommonsViewMode === 'chart' && 'Visual chart from DataCommons data'}
+                  {datacommonsViewMode === 'edit' && 'Edit DataCommons JSON - changes are local'}
                 </p>
                 <div className="flex gap-1 bg-muted rounded-lg p-1">
-                  <button
-                    onClick={() => setDatacommonsViewMode('formatted')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      datacommonsViewMode === 'formatted'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    Formatted
-                  </button>
-                  <button
-                    onClick={() => setDatacommonsViewMode('raw')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      datacommonsViewMode === 'raw'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    Raw
-                  </button>
-                  <button
-                    onClick={() => setDatacommonsViewMode('yaml')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      datacommonsViewMode === 'yaml'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    YAML
-                  </button>
+                  <button onClick={() => setDatacommonsViewMode('formatted')} className={`px-3 py-1 text-xs rounded transition-all ${datacommonsViewMode === 'formatted' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Formatted</button>
+                  <button onClick={() => setDatacommonsViewMode('raw')} className={`px-3 py-1 text-xs rounded transition-all ${datacommonsViewMode === 'raw' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Raw</button>
+                  <button onClick={() => setDatacommonsViewMode('yaml')} className={`px-3 py-1 text-xs rounded transition-all ${datacommonsViewMode === 'yaml' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>YAML</button>
+                  <button onClick={() => setDatacommonsViewMode('chart')} className={`px-3 py-1 text-xs rounded transition-all ${datacommonsViewMode === 'chart' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Chart</button>
+                  <button onClick={() => { setDatacommonsViewMode('edit'); if (!datacommonsEditContent) setDatacommonsEditContent(generateDataCommonsView(currentMCF)); }} className={`px-3 py-1 text-xs rounded transition-all ${datacommonsViewMode === 'edit' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Edit</button>
                 </div>
               </div>
               
-              {/* Code Display */}
-              <CodeDisplay
-                code={
-                  datacommonsViewMode === 'yaml'
-                    ? generateDataCommonsYAML(currentMCF)
-                    : generateDataCommonsView(currentMCF)
-                }
-                language={datacommonsViewMode === 'yaml' ? 'yaml' : 'json'}
-                formatted={datacommonsViewMode !== 'raw'}
-              />
+              {/* Content Display */}
+              {datacommonsViewMode === 'chart' ? (
+                <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title="DataCommons Visualization" />
+              ) : datacommonsViewMode === 'edit' ? (
+                <div className="space-y-2">
+                  <textarea value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={(e) => setDatacommonsEditContent(e.target.value)} className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary" spellCheck={false} />
+                  <div className="flex gap-2 justify-end">
+                    <button onClick={() => setDatacommonsEditContent(generateDataCommonsView(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
+                    <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                  </div>
+                </div>
+              ) : (
+                <CodeDisplay code={datacommonsViewMode === 'yaml' ? generateDataCommonsYAML(currentMCF) : generateDataCommonsView(currentMCF)} language={datacommonsViewMode === 'yaml' ? 'yaml' : 'json'} formatted={datacommonsViewMode !== 'raw'} />
+              )}
             </div>
           </TabsContent>
 
@@ -609,51 +646,32 @@ export default function App() {
                   {cachedViewMode === 'formatted' && 'Cached version optimized for local website use'}
                   {cachedViewMode === 'raw' && 'Raw cached version without formatting'}
                   {cachedViewMode === 'yaml' && 'YAML representation of cached data'}
+                  {cachedViewMode === 'chart' && 'Visual chart from cached data'}
+                  {cachedViewMode === 'edit' && 'Edit cached content - changes are local'}
                 </p>
                 <div className="flex gap-1 bg-muted rounded-lg p-1">
-                  <button
-                    onClick={() => setCachedViewMode('formatted')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      cachedViewMode === 'formatted'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    Formatted
-                  </button>
-                  <button
-                    onClick={() => setCachedViewMode('raw')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      cachedViewMode === 'raw'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    Raw
-                  </button>
-                  <button
-                    onClick={() => setCachedViewMode('yaml')}
-                    className={`px-3 py-1 text-xs rounded transition-all ${
-                      cachedViewMode === 'yaml'
-                        ? 'bg-background text-foreground shadow-sm'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    YAML
-                  </button>
+                  <button onClick={() => setCachedViewMode('formatted')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'formatted' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Formatted</button>
+                  <button onClick={() => setCachedViewMode('raw')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'raw' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Raw</button>
+                  <button onClick={() => setCachedViewMode('yaml')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'yaml' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>YAML</button>
+                  <button onClick={() => setCachedViewMode('chart')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'chart' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Chart</button>
+                  <button onClick={() => { setCachedViewMode('edit'); if (!cachedEditContent) setCachedEditContent(generateCachedVersion(currentMCF)); }} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'edit' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Edit</button>
                 </div>
               </div>
               
-              {/* Code Display */}
-              <CodeDisplay
-                code={
-                  cachedViewMode === 'yaml'
-                    ? generateCachedYAML(currentMCF)
-                    : generateCachedVersion(currentMCF)
-                }
-                language={cachedViewMode === 'yaml' ? 'yaml' : 'mcf'}
-                formatted={cachedViewMode !== 'raw'}
-              />
+              {/* Content Display */}
+              {cachedViewMode === 'chart' ? (
+                <ChartPreview data={(() => { const nodes = parseMCF(currentMCF); const observations = extractObservations(nodes); return observationsToChartData(observations); })()} title="Cached Data Visualization" />
+              ) : cachedViewMode === 'edit' ? (
+                <div className="space-y-2">
+                  <textarea value={cachedEditContent || generateCachedVersion(currentMCF)} onChange={(e) => setCachedEditContent(e.target.value)} className="w-full h-[500px] p-4 font-mono text-sm bg-card border border-border rounded-lg resize-vertical focus:outline-none focus:ring-2 focus:ring-primary" spellCheck={false} />
+                  <div className="flex gap-2 justify-end">
+                    <button onClick={() => setCachedEditContent(generateCachedVersion(currentMCF))} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
+                    <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                  </div>
+                </div>
+              ) : (
+                <CodeDisplay code={cachedViewMode === 'yaml' ? generateCachedYAML(currentMCF) : generateCachedVersion(currentMCF)} language={cachedViewMode === 'yaml' ? 'yaml' : 'mcf'} formatted={cachedViewMode !== 'raw'} />
+              )}
             </div>
           </TabsContent>
 
