@@ -11,60 +11,48 @@ import { getAllOrganizations, getStatistics } from './real-catalog';
 import { getAllFiles, getComparableVersions } from './mcf-file-index';
 import { parseMCF, extractObservations, observationsToChartData } from './mcf-parser';
 
-// Dynamic MCF file loader
+// Dynamic MCF file loader - loads real files from public folder
 async function loadMCFFile(fileId) {
   try {
-    // Map file ID to actual file path
-    const allFiles = getAllFiles();
-    const fileInfo = allFiles.find(f => f.id === fileId);
+    // Convert file ID to public URL path
+    const publicPath = `/datacommons/${fileId}`;
     
-    if (!fileInfo) {
-      console.error('File not found:', fileId);
-      return null;
+    console.log('🔍 Loading MCF file:', publicPath);
+    
+    // Fetch the actual MCF file
+    const response = await fetch(publicPath);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
     
-    // For demo: Generate sample content based on file
-    // TODO: Replace with actual file loading when build system supports it
-    return generateSampleMCF(fileInfo);
+    const content = await response.text();
+    console.log('✅ Loaded file successfully:', publicPath, `(${content.length} chars)`);
+    
+    return content;
   } catch (error) {
-    console.error('Error loading MCF file:', error);
+    console.error('❌ Error loading MCF file:', fileId, error);
+    
+    // Fallback: try GitHub if local fetch fails
+    try {
+      const githubUrl = `https://raw.githubusercontent.com/UN-Data-Commons/un-data-commons-etl/main/datacommons/${fileId}`;
+      console.log('🔄 Trying GitHub fallback:', githubUrl);
+      
+      const response = await fetch(githubUrl);
+      if (response.ok) {
+        const content = await response.text();
+        console.log('✅ Loaded from GitHub:', githubUrl, `(${content.length} chars)`);
+        return content;
+      }
+    } catch (githubError) {
+      console.error('❌ GitHub fallback failed:', githubError);
+    }
+    
     return null;
   }
 }
 
-// Generate sample MCF content (placeholder until file loading is implemented)
-function generateSampleMCF(fileInfo) {
-  return `Node: ${fileInfo.id.replace(/\//g, '_')}
-typeOf: dcs:StatisticalVariable
-name: "${fileInfo.name}"
-populationType: dcs:Person
-measuredProperty: dcs:count
-statType: dcs:measuredValue
-description: "MCF file from ${fileInfo.orgName}"
-
-Node: Observation_${fileInfo.id.replace(/\//g, '_')}_2020
-typeOf: dcs:StatVarObservation
-variableMeasured: ${fileInfo.id.replace(/\//g, '_')}
-observationAbout: dcid:country/USA
-observationDate: "2020"
-value: 100
-
-Node: Observation_${fileInfo.id.replace(/\//g, '_')}_2021
-typeOf: dcs:StatVarObservation
-variableMeasured: ${fileInfo.id.replace(/\//g, '_')}
-observationAbout: dcid:country/USA
-observationDate: "2021"
-value: 120
-
-Node: Observation_${fileInfo.id.replace(/\//g, '_')}_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: ${fileInfo.id.replace(/\//g, '_')}
-observationAbout: dcid:country/USA
-observationDate: "2022"
-value: 150`;
-}
-
-// Sample MCF data for demonstration (will be replaced by dynamic loading)
+// Mock MCF data kept for reference (not used - real files loaded via fetch)
 const mockMCFData = {
   'unemployment_rate.mcf': {
     'v1.0.0': `Node: UnemploymentRate

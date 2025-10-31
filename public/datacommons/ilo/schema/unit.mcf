@@ -1,0 +1,36 @@
+
+Node: dcid:UNDATA_ILO_CR_PPP
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "US Dollar converted using PPPs"
+
+Node: dcid:UNDATA_ILO_CR_USD
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "US Dollars"
+
+Node: dcid:UNDATA_ILO_CS
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Cases"
+
+Node: dcid:UNDATA_ILO_DS
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Days"
+
+Node: dcid:UNDATA_ILO_HR
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Hours"
+
+Node: dcid:UNDATA_ILO_PS
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Persons"
+
+Node: dcid:UNDATA_ILO_PT
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Percentage"
+
+Node: dcid:UNDATA_ILO_RT
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Rate"
+
+Node: dcid:UNDATA_ILO_WP
+typeOf: dcs:UNDATA_ILO_UnitOfMeasure
+name: "Workplaces"

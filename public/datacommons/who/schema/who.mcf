@@ -1,0 +1,7 @@
+
+## Custom schema
+
+Node: dcid:WHO_Series
+name: "WHO_Series"
+typeOf: schema:Class
+subClassOf: schema:Thing

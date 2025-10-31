@@ -1,0 +1,3219 @@
+spec: {
+  pop_type: "WHO_Adult_curr_e-cig"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_curr_smokeless"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_curr_tob_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_curr_tob_use"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_daily_cig_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_daily_e-cig"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_daily_smokeless"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_daily_tob_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_daily_tob_use"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_nonsmoked_svy_yr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Adult_svy_yr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_AIR_10"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_11"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_12"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_15"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_16"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_17"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_39"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_41"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_42"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_43"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_44"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_45"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_46"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_51"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_52"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_6"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_7"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_71"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_72"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_73"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_74"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_75"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_8"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_9"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AIR_90"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_AMR_INFECT_ECOLI"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_AMR_INFECT_MRSA"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_COORD01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_COORD02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_COORD03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_COORD04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_QA01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_QA02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_QA03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_QA04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_QA05"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_SURVL01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_SURVL02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_SURVL03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_SURVL04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_AMRGLASS_SURVL05"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_anc1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_anc15"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_anc4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_anc45"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_asfr1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_BARRIERAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_METNEED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_PAYERSAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_SATISFACTIONACTIVITIES"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_SATISFACTIONSERVICES"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_SOURCESOFAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ASSISTIVETECH_TRAVELDISTANCEAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_bfearly"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_16"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_bmi30wm"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_16"
+ }
+spec: {
+  pop_type: "WHO_BP_03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_BP_04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_BP_05"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_BP_06"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_CARE_SOURCE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_carep"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CaseCS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_CATARACTSURGICAL"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_CATARACTSURGICALEFFECTIVE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_CC_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_6"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_7"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_CC_8"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_72"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_57"
+ }
+spec: {
+  pop_type: "WHO_cci"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_cci2030"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_CCO_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_CCO_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_14"
+ }
+spec: {
+  pop_type: "WHO_CCO_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_39"
+ }
+spec: {
+  pop_type: "WHO_CHILDMORT_DEATHS_10TO14"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CHILDMORT_MORTALITY_10TO14"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CHILDMORT10TO19"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CHILDMORT5TO14"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CHILDVIOL"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_75"
+  vertical: "UN_SUB_THEME_25"
+ }
+spec: {
+  pop_type: "WHO_CHOLERA_0000000001"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_CHOLERA_0000000002"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_CHOLERA_0000000003"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_CM_01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CM_02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CM_03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_CM_04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_cpmowho"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_cpmt"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_csection"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_csection5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_DEVICES00"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_DEVICES01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_DEVICES02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_DEVICES03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_DEVICES04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_DEVICES05"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_DEVICES06"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES07"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES08"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES09"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES10"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES11"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES12"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES13"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES14"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES15"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES16"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES17"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES18"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES19"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES20"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES21"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES22"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_DEVICES23"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E_Group"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E1_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E10_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E11_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E12_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E13_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E14_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E15_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E3_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E5_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E6_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_E9_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EC_direct_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EC_indirect_compliance"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EMFLIMITELECTRIC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EMFLIMITELECTRICLF"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EMFLIMITELECTRICRF"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EMFLIMITMAGNETIC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EMFLIMITPOWERDENSITY"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_EMFSAR"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_FAMILYPLANNINGUNPDUHC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+  vertical: "UN_SUB_THEME_39"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_CTPFHU_40_HH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_ESTIMATE_AVAILABLE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_TOT_10_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_TOT_10_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_TOT_10_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_TOT_25_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_TOT_25_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_CATA_TOT_25_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_BNLFHU_FURIMP_HH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_BNLFHU_P_HH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_BNLFHU_TOT_HH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_190_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_190_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_215_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_215_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_310_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_310_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_365_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_365_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_REL_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP_REL_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP190_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP215_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP310_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NP365_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_NPRELPL_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P_215_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P_215_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P_365_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P_365_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P190_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P190_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P190_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P215_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P310_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P310_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P310_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_P365_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PG_190_STD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PG_215_STD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PG_310_STD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PG_365_STD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PG_RELPL_STD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PREL_LEVEL_MILLION"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PREL_LEVEL_SH"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMP_PRELPL_POP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_FINPROTECTION_IMPOV_ESTIMATE_AVAILABLE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_13"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_41"
+ }
+spec: {
+  pop_type: "WHO_fps"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+  vertical: "UN_SUB_THEME_39"
+ }
+spec: {
+  pop_type: "WHO_fpsmowho"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+  vertical: "UN_SUB_THEME_39"
+ }
+spec: {
+  pop_type: "WHO_GASPRSAZM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPRSCFM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPRSCIP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPRSCRO"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPRSESC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPTIAZM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPTICFM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPTICIP"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPTICRO"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GASPTIESC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GBD_DALYRTAGE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q12x2x1x3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_27"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_GDO_q12x2x2x3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_GDO_q12x2x3x3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_GDO_q12x2x5x3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_GDO_q18x2x1_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_GDO_q18x2x3_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_GDO_q18x2x3_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_GDO_q18x2x3_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_GDO_q19x3x1_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_GDO_q20"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_GDO_q2x3x1_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q35"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q6x1_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q6x1_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x1_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x1_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x1_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x1_7"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x2_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x2_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x2_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x2_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x2_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x3_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x3_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x3_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x4_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x4_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x4_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x5_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x5_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x6_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_GDO_q9x6_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_23"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHE_DALYNUM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHE_DALYRATE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHE_YLDNUM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHE_YLDRATE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHE_YLLNUM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHE_YLLRATE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_CHE_pc_US_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_CHEGDP_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_EXT_pc_US_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_EXTCHE_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_GGHE-D_pc_US_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_GGHE-DCHE_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_GGHE-DGDP_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_GGHE-DGGE_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_OOP_pc_US_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_OOPSCHE_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_PVT-D_pc_US_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GHED_PVT-DCHE_SHA2011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_48"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GLASSAMC_AWARE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_GLASSAMC_TC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HCF_NO_ELECTRICITY"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_HCF_REL_ELECTRICITY"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_HCF_UNREL_ELECTRICITY"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_43"
+ }
+spec: {
+  pop_type: "WHO_HEMOGLOBINLEVEL_CHILDREN_MEAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_22"
+  vertical: "UN_SUB_THEME_16"
+ }
+spec: {
+  pop_type: "WHO_HEMOGLOBINLEVEL_NONPREGNANT_MEAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_22"
+  vertical: "UN_SUB_THEME_16"
+ }
+spec: {
+  pop_type: "WHO_HEMOGLOBINLEVEL_PREGNANT_MEAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+  vertical: "UN_SUB_THEME_22"
+  vertical: "UN_SUB_THEME_16"
+ }
+spec: {
+  pop_type: "WHO_HEMOGLOBINLEVEL_REPRODUCTIVEAGE_MEAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_22"
+  vertical: "UN_SUB_THEME_16"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000001"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000006"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000007"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000008"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000009"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000012"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000015"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000020"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000021"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000022"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000023"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000024"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000026"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000027"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_0000000028"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HIV_ARTCOVERAGE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_HRH_40"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HRH_41"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HRH_42"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_HRH_43"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HRH_44"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HRH_45"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HRH_46"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0001"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0002"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0003"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0004"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0005"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0006"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0007"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0008"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0009"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_HWF_0010"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0011"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0012"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0013"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0014"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0015"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0016"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0017"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0018"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0019"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0020"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0021"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0022"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0023"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0024"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_HWF_0025"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_39"
+ }
+spec: {
+  pop_type: "WHO_HWF_0026"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_68"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_39"
+ }
+spec: {
+  pop_type: "WHO_HWWS_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+ }
+spec: {
+  pop_type: "WHO_HWWS_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+ }
+spec: {
+  pop_type: "WHO_ICD11_IMPL_LVL"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_74"
+ }
+spec: {
+  pop_type: "WHO_IHR05"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR06"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR07"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR08"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR09"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR10"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR11"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR12"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHR13"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY01"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_78"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY02"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY03"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY04"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY05"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY06"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY07"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY08"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_74"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY09"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY10"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY11"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY12"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_IHRSPAR_CAPACITY13"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_74"
+ }
+spec: {
+  pop_type: "WHO_IMMUNIZATION_VACCINATIONCARDSSEEN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_imr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_IR_CARBAMATE_EXTENT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_IR_INSECTICIDERESISTANCE_PREV"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_IR_ORGANOCHLORINE_EXTENT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_IR_ORGANOPHOSPHATE_EXTENT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_IR_PYRETHROID_EXTENT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_itnch"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_itnwm"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_ITU_ICT_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_43"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ITU_ICT_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_43"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ITU_IDI"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_43"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_ITU_IDI_RANK"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_43"
+  vertical: "UN_SUB_THEME_38"
+ }
+spec: {
+  pop_type: "WHO_LBW_NUMBER"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_LBW_PREVALENCE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_LEAD_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_LEAD_10"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_29"
+ }
+spec: {
+  pop_type: "WHO_LEAD_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_LEAD_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_LEAD_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_LEAD_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_LEAD_6"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_LEAD_7"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_LEAD_8"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_LEAD_9"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_29"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000029"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000030"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000031"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000032"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000033"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000034"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_LIFE_0000000035"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_M_Est_cig_curr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_M_Est_cig_curr_std"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_M_Est_smk_curr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_M_Est_smk_curr_std"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_M_Est_tob_curr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_M_Est_tob_curr_std"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_M_Group"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_1STLINE_TREATED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_ACT_TREATED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_CONF_CASES"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_EST_CASES"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_EST_DEATHS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_EST_INCIDENCE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_EST_MORTALITY"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_IMPORTED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_INDIG"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_IPTP3_COVERAGE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_IRS_COVERAGE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_ITN_COVERAGE"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_MICR_POS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_MICR_TEST"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_PF_INDIG"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_69"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_PRES_CASES"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_PV_INDIG"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_RDT_POS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_RDT_TEST"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_SUSPECTS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MALARIA_TOTAL_CASES"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MCV2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MENING_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MENING_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MENING_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MH_20"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_MORT_100"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_MORT_200"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_MORT_300"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_MORT_MATERNALNUM"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_MORTADO"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CHOL_MEANHDL_A"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CHOL_MEANHDL_C"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CHOL_MEANNONHDL_A"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CHOL_MEANNONHDL_C"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CHOL_MEANTOTALCHOL_A"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CHOL_MEANTOTALCHOL_C"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_CXCA_SCREENED_WITHIN_TIMEPERIOD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_NCD_DTH_TOT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_nmr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_OCC_19"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_68"
+ }
+spec: {
+  pop_type: "WHO_OCC_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_68"
+ }
+spec: {
+  pop_type: "WHO_OCC_20"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_68"
+ }
+spec: {
+  pop_type: "WHO_OCC_21"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_42"
+  vertical: "UN_SUB_THEME_68"
+ }
+spec: {
+  pop_type: "WHO_ors"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_ort"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_overwgt5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_P_count_places_sf"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_P_Group"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_PHE_HHAIR_POP_CATEGORY_FUELS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_PHE_HHAIR_POP_CLEAN_FUELS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_PHE_HHAIR_POP_POLLUTING_FUELS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_PHE_HHAIR_PROP_POP_CATEGORY_FUELS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_PHE_HHAIR_PROP_POP_CLEAN_FUELS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_PHE_HHAIR_PROP_POP_POLLUTING_FUELS"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_61"
+ }
+spec: {
+  pop_type: "WHO_pncall3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_pncall5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_pnchome3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_pnchome5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_TB_new_oth"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_new_sn"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_new_snsuoth"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_new_sp"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_new_su"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_newret_oth"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_nrel"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_oth"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_rel"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_rel_clindx"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_rel_ep"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_rel_labconf"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_tad"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_ret_taf"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_rr_mdr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_TB_tot_newrel"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_tfr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_TOTENV_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_TOTENV_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_TOTENV_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_TOTENV_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_TOTENV_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_TOTENV_6"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_u5mr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_VACCINEPREVENTABLE_WILDPOLIO"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_vbcg"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_vdpt"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_vfull"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHOSIS_000006"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHOSIS_000007"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_WHOSIS_000014"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHOSIS_000015"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+  vertical: "UN_SUB_THEME_67"
+ }
+spec: {
+  pop_type: "WHO_WHOSIS_000016"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS10_8"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_WHS10_9"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_WHS2_126"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_22"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHS2_131"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_22"
+ }
+spec: {
+  pop_type: "WHO_WHS2_138"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_41"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_42"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_43"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_45"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_46"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_49"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_50"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_53"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_55"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_56"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_57"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS3_62"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+ }
+spec: {
+  pop_type: "WHO_WHS4_100"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS4_106"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS4_111"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHS4_115"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHS4_117"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS4_128"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHS4_129"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS4_154"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_24"
+ }
+spec: {
+  pop_type: "WHO_WHS4_543"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS4_544"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_WHS5_512"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_58"
+ }
+spec: {
+  pop_type: "WHO_WHS6_101"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_WHS6_102"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_WHS6_116"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_20"
+ }
+spec: {
+  pop_type: "WHO_WHS8_110"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_21"
+  vertical: "UN_SUB_THEME_18"
+ }
+spec: {
+  pop_type: "WHO_W-MM_Group"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_WSH_1"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_10"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_10_HYG"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+ }
+spec: {
+  pop_type: "WHO_WSH_10_SAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_10_WAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_2"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_55"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_20"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_20_HYG"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+ }
+spec: {
+  pop_type: "WHO_WSH_20_SAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_20_WAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_3"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_30"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_30_HYG"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+ }
+spec: {
+  pop_type: "WHO_WSH_30_SAN"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_30_WAT"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_4"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_55"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_5"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_6"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_55"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_7"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_54"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_8"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_56"
+  vertical: "UN_SUB_THEME_18"
+  vertical: "UN_SUB_THEME_55"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_DOMESTIC_WASTE_SAFELY_TREATED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_HYGIENE_BASIC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_SANITATION_BASIC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_SANITATION_OD"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_SANITATION_SAFELY_MANAGED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_55"
+ }
+spec: {
+  pop_type: "WHO_WSH_WATER_BASIC"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_WSH_WATER_SAFELY_MANAGED"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+  vertical: "UN_SUB_THEME_54"
+ }
+spec: {
+  pop_type: "WHO_Youth_svy_yr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_curr_cig_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_curr_e-cig"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_curr_smokeless"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_curr_tob_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_curr_tob_use"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_daily_cig_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_daily_e-cig"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_daily_smokeless"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_daily_tob_smoking"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }
+spec: {
+  pop_type: "WHO_Yth_nonsmoked_svy_yr"
+  obs_props { mprop: "value" }
+  vertical: "UN_SUB_THEME_19"
+ }

@@ -1,0 +1,10 @@
+Node: E:ILO->E1
+typeOf: dcs:StatVarObservation
+variableMeasured: C:ILO->SERIES
+observationAbout: C:ILO->GEOGRAPHY
+observationDate: C:ILO->TIME_PERIOD
+observationPeriod: C:ILO->OBSERVATION_PERIOD
+value: C:ILO->OBS_VALUE
+unit: C:ILO->UNIT_MEASURE
+scalingFactor: C:ILO->UNIT_MULT
+measurementMethod: C:ILO->MEASUREMENT_METHOD

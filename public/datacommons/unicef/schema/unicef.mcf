@@ -1,0 +1,17 @@
+
+## Custom schema
+
+Node: dcid:UNDATA_UNICEF_Series
+name: "UNDATA_UNICEF_Series"
+typeOf: schema:Class
+subClassOf: schema:Thing
+
+Node: dcid:UNDATA_UNICEF_MeasurementMethodEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "UNDATA_UNICEF_MeasurementMethodEnum"
+
+Node: dcid:UNDATA_UNICEF_UnitOfMeasure
+name: "UNDATA_UNICEF_UnitOfMeasure"
+typeOf: schema:Class
+subClassOf: dcs:UnitOfMeasure

@@ -1,0 +1,9 @@
+SERIES,GEOGRAPHY,TIME_PERIOD,OBS_VALUE
+dcs:who/GDO_q18x2x3_3,dcid:country/AUS,2017,14.9
+dcs:who/GDO_q18x2x3_3,dcid:country/BRA,2017,0.4
+dcs:who/GDO_q18x2x3_3,dcid:country/CHE,2017,0.0
+dcs:who/GDO_q18x2x3_3,dcid:country/FRA,2017,1.96
+dcs:who/GDO_q18x2x3_3,dcid:country/HUN,2017,0.0
+dcs:who/GDO_q18x2x3_3,dcid:country/ITA,2017,99990.0
+dcs:who/GDO_q18x2x3_3,dcid:country/NLD,2017,8.0
+dcs:who/GDO_q18x2x3_3,dcid:country/SWE,2017,4257833.0

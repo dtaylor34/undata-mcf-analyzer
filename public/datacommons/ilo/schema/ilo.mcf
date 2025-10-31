@@ -1,0 +1,17 @@
+
+## Custom schema
+
+Node: dcid:UNDATA_ILO_Series
+name: "UNDATA_ILO_Series"
+typeOf: schema:Class
+subClassOf: schema:Thing
+
+Node: dcid:UNDATA_ILO_MeasurementMethodEnum
+typeOf: schema:Class
+subClassOf: schema:Enumeration
+name: "UNDATA_ILO_MeasurementMethodEnum"
+
+Node: dcid:UNDATA_ILO_UnitOfMeasure
+name: "UNDATA_ILO_UnitOfMeasure"
+typeOf: schema:Class
+subClassOf: dcs:UnitOfMeasure

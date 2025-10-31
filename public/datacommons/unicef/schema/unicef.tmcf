@@ -1,0 +1,9 @@
+Node: E:UNICEF->E1
+typeOf: dcs:StatVarObservation
+variableMeasured: C:UNICEF->SERIES
+observationAbout: C:UNICEF->GEOGRAPHY
+observationDate: C:UNICEF->TIME_PERIOD
+observationPeriod: C:UNICEF->OBSERVATION_PERIOD
+value: C:UNICEF->OBS_VALUE
+unit: C:UNICEF->UNIT_MEASURE
+measurementMethod: C:UNICEF->MEASUREMENT_METHOD

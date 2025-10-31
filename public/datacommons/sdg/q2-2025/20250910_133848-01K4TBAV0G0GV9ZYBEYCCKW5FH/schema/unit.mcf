@@ -1,0 +1,164 @@
+
+Node: dcid:UNDATA_SDG_ACIDITY_PH
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "pH"
+
+Node: dcid:UNDATA_SDG_AREA_HA
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Hectares"
+
+Node: dcid:UNDATA_SDG_AREA_KM2
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Square kilometers"
+
+Node: dcid:UNDATA_SDG_CATEGORY_BINARY_TF
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "True / False"
+
+Node: dcid:UNDATA_SDG_COUNT
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Number"
+
+Node: dcid:UNDATA_SDG_CR_LCU
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Local currency"
+
+Node: dcid:UNDATA_SDG_CR_USD
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "United States dollars"
+
+Node: dcid:UNDATA_SDG_CR_USD_K
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Constant United States dollars"
+
+Node: dcid:UNDATA_SDG_CR_USD_PPP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "PPP-adjusted United States dollars"
+
+Node: dcid:UNDATA_SDG_INDEX
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Index"
+
+Node: dcid:UNDATA_SDG_PT
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Percent"
+
+Node: dcid:UNDATA_SDG_RATIO
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Ratio"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_MICROMOLE_PER_VOL_LT
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Micromole per liter"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PASSENGERS_PER_DISTANCE_KM
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Passenger kilometres"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_1000000_COUNT_POP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per million population"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_100000_COUNT_EMPLOYEES
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 100,000 employees"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_100000_COUNT_LIVEBIRTHS
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 100,000 live births"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_100000_COUNT_POP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 100,000 population"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_10000_COUNT_POP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 10,000 population"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_1000_COUNT_LIVEBIRTHS
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 1,000 live births"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_1000_COUNT_POP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 1,000 population"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_1000_COUNT_POP_UNINFECTED
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Per 1,000 uninfected population"
+
+Node: dcid:UNDATA_SDG_RATIO_COUNT_PER_100_AREA_M2
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Items per 100 square meters"
+
+Node: dcid:UNDATA_SDG_RATIO_CR_USD_PER_VOL_M3
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "United States dollars per cubic meter"
+
+Node: dcid:UNDATA_SDG_RATIO_ENERGY_MJ_PER_CR_USD_PPP2011_GDP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Megajoules per USD constant 2011 PPP GDP"
+
+Node: dcid:UNDATA_SDG_RATIO_POWER_W_PER_COUNT_POP
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Watts per capita"
+
+Node: dcid:UNDATA_SDG_RATIO_VOL_M3_PER_TIME_SC
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Cubic metres per second"
+
+Node: dcid:UNDATA_SDG_RATIO_VOL_M3_PER_TIME_YR
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Cubic metres per year"
+
+Node: dcid:UNDATA_SDG_RATIO_WEIGHT_KG_PER_AREA_KM2_PER_TIME_DS
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Kilograms per square kilometer per day"
+
+Node: dcid:UNDATA_SDG_RATIO_WEIGHT_KG_PER_CR_USD_K
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Kilograms per constant USD"
+
+Node: dcid:UNDATA_SDG_RATIO_WEIGHT_MG_PER_VOL_LT
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Milligrams per liter"
+
+Node: dcid:UNDATA_SDG_RATIO_WEIGHT_MICROGM_PER_VOL_M3
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Micrograms per cubic meter"
+
+Node: dcid:UNDATA_SDG_RATIO_WEIGHT_TN_PER_AREA_HA
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Tonnes per hectare"
+
+Node: dcid:UNDATA_SDG_RATIO_WEIGHT_TN_PER_DISTANCE_KM
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Tonne kilometers"
+
+Node: dcid:UNDATA_SDG_SCORE
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Score"
+
+Node: dcid:UNDATA_SDG_TIME_MS_EARNINGS
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Number of months of earnings"
+
+Node: dcid:UNDATA_SDG_VOL_LT_PUREALCOHOL
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Liters of pure alcohol"
+
+Node: dcid:UNDATA_SDG_VOL_TEU
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Twenty-foot equivalent units (TEUs)"
+
+Node: dcid:UNDATA_SDG_WEIGHT_KG
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Kilograms"
+
+Node: dcid:UNDATA_SDG_WEIGHT_TN
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Tonnes"
+
+Node: dcid:UNDATA_SDG_WEIGHT_TN_CO2EQUIV
+typeOf: dcs:UNDATA_SDG_UnitOfMeasure
+name: "Tonnes of CO2 equivalent"

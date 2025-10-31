@@ -1,0 +1,14 @@
+SERIES,GEOGRAPHY,TIME_PERIOD,OBS_VALUE
+dcs:who/AMRGLASS_SURVL03,dcid:SouthEasternAsia,2018,15.0
+dcs:who/AMRGLASS_SURVL03,dcid:SouthEasternAsia,2019,48.0
+dcs:who/AMRGLASS_SURVL03,dcid:SouthEasternAsia,2020,26.0
+dcs:who/AMRGLASS_SURVL03,dcid:africa,2018,5.0
+dcs:who/AMRGLASS_SURVL03,dcid:africa,2019,12.0
+dcs:who/AMRGLASS_SURVL03,dcid:africa,2020,14.0
+dcs:who/AMRGLASS_SURVL03,dcid:europe,2017,147.0
+dcs:who/AMRGLASS_SURVL03,dcid:europe,2018,412.0
+dcs:who/AMRGLASS_SURVL03,dcid:europe,2019,363.0
+dcs:who/AMRGLASS_SURVL03,dcid:europe,2020,259.0
+dcs:who/AMRGLASS_SURVL03,dcid:undata-geo/G00121000,2018,6.0
+dcs:who/AMRGLASS_SURVL03,dcid:undata-geo/G00121000,2019,1.0
+dcs:who/AMRGLASS_SURVL03,dcid:undata-geo/G00121000,2020,16.0
