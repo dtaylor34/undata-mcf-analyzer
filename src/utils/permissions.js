@@ -99,6 +99,9 @@ export function getTokenPermissions(token) {
 export function canAccessOrganization(permissions, orgId) {
   if (!permissions) return false;
   
+  // Test data is publicly accessible
+  if (orgId === 'sdg') return true; // SDG test-data is public for demos
+  
   // Admin has access to everything
   if (permissions.organizations.includes('*')) return true;
   
@@ -114,6 +117,9 @@ export function canAccessOrganization(permissions, orgId) {
  */
 export function canAccessFile(permissions, fileId) {
   if (!permissions) return false;
+  
+  // Test data is publicly accessible
+  if (fileId && fileId.startsWith('sdg/')) return true; // All SDG files are public for demos
   
   // Admin has access to everything
   if (permissions.files.includes('*')) return true;

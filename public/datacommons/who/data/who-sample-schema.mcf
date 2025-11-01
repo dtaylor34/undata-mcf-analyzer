@@ -1,0 +1,26 @@
+Node: dcid:undata/who/LIFE_EXPECTANCY
+typeOf: dcs:StatisticalVariable
+name: "Life expectancy at birth"
+description: "Life expectancy at birth (years)"
+measuredProperty: dcs:lifeExpectancy
+statType: dcs:measuredValue
+populationType: dcs:Person
+
+Node: dcid:undata/who/INFANT_MORTALITY
+typeOf: dcs:StatisticalVariable
+name: "Infant mortality rate"
+description: "Infant deaths per 1,000 live births"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+
+Node: dcid:undata/who/YEARS
+typeOf: dcs:Unit
+name: "Years"
+abbreviation: "yrs"
+
+Node: dcid:undata/who/PER_1000_BIRTHS
+typeOf: dcs:Unit
+name: "Per 1,000 live births"
+abbreviation: "/1000"
+

@@ -12,7 +12,7 @@
 import React from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-export default function ChartPreview({ data, indicator, isDarkMode }) {
+export default function ChartPreview({ data, indicator, isDarkMode, onDataPointClick }) {
   // Transform data for charting - data is now a chart object with metadata
   const chartData = data?.data || generateSampleData();
   const chartType = data?.chartType === 'timeSeries' ? 'line' : (data?.chartType === 'bar' ? 'bar' : 'line');
@@ -26,6 +26,21 @@ export default function ChartPreview({ data, indicator, isDarkMode }) {
   const statType = data?.statType || '';
   const measuredProperty = data?.measuredProperty || '';
   const observationCount = data?.observationCount || chartData.length;
+
+  // Handle data point click
+  const handleClick = (clickData) => {
+    if (onDataPointClick && clickData && clickData.activePayload) {
+      const point = clickData.activePayload[0].payload;
+      onDataPointClick({
+        date: point.date || point.name || point.year,
+        value: point.value,
+        entity: point.entity,
+        variable: data?.id || data?.title,
+        unit: unit,
+        observation: point.observation // Pass original observation if available
+      });
+    }
+  };
 
   // Custom tooltip styling with unit display
   const CustomTooltip = ({ active, payload }) => {
@@ -103,9 +118,14 @@ export default function ChartPreview({ data, indicator, isDarkMode }) {
 
       {/* Chart */}
       <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+        {onDataPointClick && (
+          <div className={`mb-3 text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            💡 <strong>Tip:</strong> Click any data point to see it in all formats (MCF, .STAT, DataCommons, Cached)
+          </div>
+        )}
         <ResponsiveContainer width="100%" height={400}>
           {chartType === 'line' ? (
-            <LineChart data={chartData}>
+            <LineChart data={chartData} onClick={handleClick}>
               <CartesianGrid 
                 strokeDasharray="3 3" 
                 stroke={isDarkMode ? '#374151' : '#e5e7eb'} 
@@ -132,11 +152,11 @@ export default function ChartPreview({ data, indicator, isDarkMode }) {
                 stroke="#3b82f6" 
                 strokeWidth={3}
                 dot={{ fill: '#3b82f6', r: 5 }}
-                activeDot={{ r: 7 }}
+                activeDot={{ r: 8, cursor: onDataPointClick ? 'pointer' : 'default' }}
               />
             </LineChart>
           ) : (
-            <BarChart data={chartData}>
+            <BarChart data={chartData} onClick={handleClick}>
               <CartesianGrid 
                 strokeDasharray="3 3" 
                 stroke={isDarkMode ? '#374151' : '#e5e7eb'} 
@@ -152,7 +172,11 @@ export default function ChartPreview({ data, indicator, isDarkMode }) {
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend />
-              <Bar dataKey="value" fill="#3b82f6" />
+              <Bar 
+                dataKey="value" 
+                fill="#3b82f6" 
+                cursor={onDataPointClick ? 'pointer' : 'default'}
+              />
             </BarChart>
           )}
         </ResponsiveContainer>

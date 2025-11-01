@@ -152,7 +152,8 @@ export function observationsToChartData(observations, statisticalVariables = [])
       label: obs.date || obs.about || 'N/A',
       entity: obs.about,
       unit: obs.unit || unit,
-      date: obs.date
+      date: obs.date,
+      observation: obs // Include original observation for click handling
     }));
     
     return {

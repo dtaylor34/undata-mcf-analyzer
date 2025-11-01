@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FileSelector } from './components/FileSelector';
+import { FileSelectorV2 } from './components/FileSelectorV2';
 import { DataSourceSelector } from './components/DataSourceSelector';
 import { ShareButton } from './components/ShareButton';
 import DiffViewer from './components/DiffViewer';
@@ -7,6 +7,9 @@ import CodeDisplay from './components/CodeDisplay';
 import ChartPreview from './components/ChartPreview';
 import { CodeEditor } from './components/CodeEditor';
 import { ChartFilter } from './components/ChartFilter';
+import { DualChartPreview } from './components/DualChartPreview';
+import { ThematicAreasExplorer } from './components/ThematicAreasExplorer';
+import { FormatComparison } from './components/FormatComparison';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Switch } from './components/ui/switch';
 import { Sun, Moon, Database } from 'lucide-react';
@@ -16,6 +19,7 @@ import { useUrlState } from './hooks/useUrlState';
 import { getCurrentPermissions, filterOrganizations, filterFiles, filterDataSources, validateUrlPermissions, isAdmin } from './utils/permissions';
 import { parseMCF, extractStatisticalVariables, extractObservations, observationsToChartData, parseAndAnalyzeMCF } from './mcf-parser';
 import { loadCSVAndConvert, combineSchemaAndObservations } from './csv-to-mcf-converter';
+import { csvToMCF, generateAllFormats, observationToFormats } from './utils/csv-to-mcf';
 
 // Dynamic MCF file loader - loads real files from public folder
 async function loadMCFFile(fileId) {
@@ -277,10 +281,13 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeTab, setActiveTab] = useState('raw');
   
-  // File selection state (now just file IDs)
+  // File selection state (can be version or individual file)
   const [selectedFileId, setSelectedFileId] = useState('');
+  const [selectedFileIds, setSelectedFileIds] = useState([]); // For combined loading
   const [compareFileId, setCompareFileId] = useState('');
+  const [compareFileIds, setCompareFileIds] = useState([]); // For combined comparison
   const [showDiff, setShowDiff] = useState(false);
+  const [isMultiFile, setIsMultiFile] = useState(false); // Track if loading multiple files
   
   // MCF content state
   const [currentMCFContent, setCurrentMCFContent] = useState('');
@@ -298,6 +305,12 @@ export default function App() {
   const [datacommonsViewMode, setDatacommonsViewMode] = useState('formatted');
   const [cachedViewMode, setCachedViewMode] = useState('formatted');
   
+  // Edit format preference for each tab: 'formatted' | 'raw'
+  const [rawEditFormat, setRawEditFormat] = useState('formatted');
+  const [statEditFormat, setStatEditFormat] = useState('formatted');
+  const [datacommonsEditFormat, setDatacommonsEditFormat] = useState('formatted');
+  const [cachedEditFormat, setCachedEditFormat] = useState('formatted');
+  
   // Edit mode content states
   const [rawEditContent, setRawEditContent] = useState('');
   const [statEditContent, setStatEditContent] = useState('');
@@ -308,8 +321,59 @@ export default function App() {
   const [showEditPreview, setShowEditPreview] = useState(false);
   const [editPreviewData, setEditPreviewData] = useState([]);
   
+  // Dual chart preview (DataCommons + .STAT side-by-side)
+  const [showDualCharts, setShowDualCharts] = useState(false);
+  
   // Chart filtering states
   const [selectedCharts, setSelectedCharts] = useState([]);
+  
+  // Format comparison state (test feature)
+  const [showFormatComparison, setShowFormatComparison] = useState(false);
+  const [selectedObservation, setSelectedObservation] = useState(null);
+  const [selectedObsIndex, setSelectedObsIndex] = useState(0);
+  const [allObservations, setAllObservations] = useState([]);
+  const [initialUrlLoad, setInitialUrlLoad] = useState(true); // Track if we're loading from URL
+  
+  // Handler for chart data point clicks - opens Format Comparison
+  const handleChartDataPointClick = (pointData) => {
+    console.log('📊 Chart point clicked:', pointData);
+    
+    if (!allObservations || allObservations.length === 0) {
+      console.warn('⚠️ No observations loaded');
+      return;
+    }
+    
+    // Find the matching observation in allObservations
+    let matchedIndex = -1;
+    
+    // Try to match by observation reference first (most reliable)
+    if (pointData.observation) {
+      matchedIndex = allObservations.findIndex(obs => 
+        obs.variable === pointData.observation.variable &&
+        obs.date === pointData.observation.date &&
+        obs.about === pointData.observation.about &&
+        obs.value === pointData.observation.value
+      );
+    }
+    
+    // Fallback: match by date, value, and entity
+    if (matchedIndex === -1) {
+      matchedIndex = allObservations.findIndex(obs => 
+        obs.date === pointData.date &&
+        parseFloat(obs.value) === parseFloat(pointData.value) &&
+        obs.about === pointData.entity
+      );
+    }
+    
+    if (matchedIndex !== -1) {
+      console.log(`✅ Found matching observation at index ${matchedIndex}`);
+      setSelectedObsIndex(matchedIndex);
+      setSelectedObservation(allObservations[matchedIndex]);
+      setShowFormatComparison(true);
+    } else {
+      console.warn('⚠️ Could not find matching observation for clicked point');
+    }
+  };
   
   // Initialize permissions on mount
   useEffect(() => {
@@ -337,12 +401,85 @@ export default function App() {
     if (urlParams.activeTab) setActiveTab(urlParams.activeTab);
     if (urlParams.showDiff) setShowDiff(urlParams.showDiff);
     
-    // File selection will be handled by FileSelector component
-    // Data sources will be set after file loads
+    // Auto-select file from URL params
+    if (urlParams.org && urlParams.fileType) {
+      const fileId = `${urlParams.org}/${urlParams.fileType}`;
+      console.log('📂 Auto-selecting file from URL:', fileId);
+      
+      // IMPORTANT: Clear old file IDs first to prevent loading wrong files
+      setSelectedFileIds([]);
+      setSelectedFileId(fileId);
+      
+      // Try to get the correct file IDs for this version
+      import('./mcf-file-index-v2.js').then(({ getAllFileIdsForVersion }) => {
+        const [org, version] = fileId.split('/');
+        try {
+          const fileIds = getAllFileIdsForVersion(org, version);
+          if (fileIds && fileIds.length > 0) {
+            setSelectedFileIds(fileIds);
+            console.log(`📋 Loaded ${fileIds.length} file IDs for ${fileId}`);
+          }
+        } catch (err) {
+          console.warn('Could not get file IDs:', err);
+        }
+      });
+    }
+    
+    // Don't open comparison modal yet - wait for observations to load
+    // This will be handled by the separate useEffect below
   }, [currentPermissions]); // Run when permissions are loaded
   
-  // Update URL whenever relevant state changes
+  // Auto-open format comparison and jump to observation if specified in URL (runs ONCE when observations load)
   useEffect(() => {
+    // Only run if we have observations and haven't opened the modal yet
+    if (allObservations.length === 0 || showFormatComparison) return;
+    
+    const urlParams = readUrlParams();
+    console.log('🔗 Checking URL params for comparison:', { 
+      showComparison: urlParams.showComparison, 
+      obsIndex: urlParams.obsIndex,
+      observationsLoaded: allObservations.length,
+      modalAlreadyOpen: showFormatComparison
+    });
+    
+    // Open modal if URL requests it
+    if (urlParams.showComparison) {
+      console.log('✅ Opening Format Comparison from URL');
+      const targetIndex = (urlParams.obsIndex !== null && urlParams.obsIndex >= 0 && urlParams.obsIndex < allObservations.length) 
+        ? urlParams.obsIndex 
+        : 0;
+      
+      setSelectedObsIndex(targetIndex);
+      setSelectedObservation(allObservations[targetIndex]);
+      setShowFormatComparison(true);
+      
+      console.log(`📊 Showing observation ${targetIndex + 1} of ${allObservations.length}`);
+      
+      // Now that modal is open, we can allow URL updates
+      setTimeout(() => setInitialUrlLoad(false), 100);
+    }
+  }, [allObservations.length]); // Only depend on observation count, not the array or modal state
+  
+  // Fallback: Enable URL updates after 5 seconds even if observations never load
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (initialUrlLoad) {
+        console.log('⏱️ Initial URL load timeout - enabling URL updates');
+        setInitialUrlLoad(false);
+      }
+    }, 5000); // Increased from 2 to 5 seconds
+    
+    return () => clearTimeout(timeout);
+  }, [initialUrlLoad]);
+  
+  // Update URL whenever relevant state changes (but skip during initial load)
+  useEffect(() => {
+    // Don't update URL during initial load to preserve incoming URL parameters
+    if (initialUrlLoad) {
+      console.log('⏸️ Skipping URL update during initial load');
+      return;
+    }
+    
     const state = {
       isDarkMode,
       activeTab,
@@ -352,10 +489,12 @@ export default function App() {
       compareVersion: compareFileId || null,
       dataSources: selectedDataSources.map(s => s.csvFile),
       selectedCharts: selectedCharts.length > 0 ? selectedCharts : null,
+      showComparison: showFormatComparison,
+      obsIndex: showFormatComparison ? selectedObsIndex : null,
     };
     
     updateUrl(state);
-  }, [isDarkMode, activeTab, showDiff, selectedFileId, compareFileId, selectedDataSources, selectedCharts, updateUrl]);
+  }, [isDarkMode, activeTab, showDiff, selectedFileId, compareFileId, selectedDataSources, selectedCharts, showFormatComparison, selectedObsIndex, initialUrlLoad, updateUrl]);
 
   // Auto-select all charts when MCF content changes
   // Process MCF content for charts (using combined content as source of truth)
@@ -427,27 +566,149 @@ export default function App() {
     console.log('🏢 Organizations:', orgs);
   }, []);
   
-  // Load MCF file when selection changes
+  // Load MCF file(s) when selection changes
   useEffect(() => {
-    async function loadFile() {
-      if (!selectedFileId) return;
+    async function loadFiles() {
+      // CRITICAL: Check if selectedFileIds actually belong to the current selectedFileId's org
+      // Use selectedFileIds if available and they match the current organization
+      let fileIds = [selectedFileId];
+      
+      if (selectedFileIds.length > 0) {
+        // Extract organization from selectedFileId (e.g., "ilo/sample-data" -> "ilo")
+        const currentOrg = selectedFileId.split('/')[0];
+        
+        // Check if ALL selectedFileIds belong to this organization
+        const allMatch = selectedFileIds.every(id => id.startsWith(currentOrg + '/'));
+        
+        if (allMatch) {
+          fileIds = selectedFileIds;
+          console.log(`✅ Using ${selectedFileIds.length} file IDs: ${selectedFileIds.join(', ')}`);
+        } else {
+          console.log(`⚠️ Ignoring cached file IDs (don't match org: ${currentOrg}), falling back to: ${selectedFileId}`);
+        }
+      } else {
+        console.log(`ℹ️ No cached file IDs, using: ${selectedFileId}`);
+      }
+      
+      if (fileIds.length === 0 || !fileIds[0]) return;
+      
+      // CRITICAL: Clear observations FIRST to prevent accumulation
+      setAllObservations([]);
       
       setIsLoading(true);
+      setIsMultiFile(selectedFileIds.length > 1);
+      
       try {
-        const content = await loadMCFFile(selectedFileId);
-        setCurrentMCFContent(content || '');
-        console.log('📄 Loaded file:', selectedFileId);
+        // Store the loaded schema content for later use with CSV
+        let loadedSchemaContent = '';
         
-        // Analyze the file to check if it needs data sources
-        const analysis = analyzeMCFFile(content || '');
-        setFileAnalysis(analysis);
-        console.log('📊 File Analysis:', analysis);
+        if (fileIds.length === 1) {
+          // Single file mode
+          const content = await loadMCFFile(fileIds[0]);
+          loadedSchemaContent = content || '';
+          setCurrentMCFContent(loadedSchemaContent);
+          console.log('📄 Loaded file:', fileIds[0]);
+          
+          // Analyze the file
+          const analysis = analyzeMCFFile(loadedSchemaContent);
+          setFileAnalysis(analysis);
+          console.log('📊 File Analysis:', analysis);
+        } else {
+          // Multiple files mode - load and combine all
+          console.log(`📦 Loading ${fileIds.length} files...`);
+          const contents = await Promise.all(
+            fileIds.map(fileId => loadMCFFile(fileId))
+          );
+          
+          // Combine all files with separators
+          const combined = contents
+            .map((content, idx) => {
+              const fileName = fileIds[idx].split('/').pop();
+              return `\n\n# ========================================\n# File: ${fileName}\n# ========================================\n\n${content}`;
+            })
+            .join('\n');
+          
+          loadedSchemaContent = combined;
+          setCurrentMCFContent(loadedSchemaContent);
+          console.log(`✅ Combined ${fileIds.length} files (${combined.length} chars)`);
+          
+          // Analyze combined content
+          const analysis = analyzeMCFFile(loadedSchemaContent);
+          setFileAnalysis(analysis);
+          console.log('📊 Combined File Analysis:', analysis);
+        }
+        
+        // Check if this version has CSV files
+        if (selectedFileId) {
+          const parts = selectedFileId.split('/');
+          const org = parts[0];
+          const versionOrFile = parts.length > 1 ? parts[1] : null;
+          
+          // Try to find version info in file index
+          let versionInfo = null;
+          try {
+            const { MCF_FILE_INDEX_V2 } = await import('./mcf-file-index-v2.js');
+            if (MCF_FILE_INDEX_V2[org]?.versions?.[versionOrFile]) {
+              versionInfo = MCF_FILE_INDEX_V2[org].versions[versionOrFile];
+            }
+          } catch (err) {
+            console.warn('Could not load file index:', err);
+          }
+          
+          // If this version has CSV files, load them
+          if (versionInfo?.hasCSV && versionInfo?.csvFiles?.length > 0) {
+            console.log(`📊 CSV data detected for ${org}/${versionOrFile} - loading...`);
+            try {
+              const csvFile = versionInfo.csvFiles[0]; // Load first CSV file
+              const csvPath = `/datacommons/${csvFile.id}`;
+              console.log(`🔍 Loading CSV: ${csvPath}`);
+              
+              const csvResponse = await fetch(csvPath);
+              if (csvResponse.ok) {
+                const csvContent = await csvResponse.text();
+                console.log('✅ Loaded CSV file');
+                
+                // Convert CSV to MCF observations
+                const mcfObservations = csvToMCF(csvContent);
+                
+                // CRITICAL: Use freshly loaded schema, not stale state
+                const finalMCF = loadedSchemaContent + '\n\n' + mcfObservations;
+                setCurrentMCFContent(finalMCF);
+                console.log(`✅ Combined schema (${loadedSchemaContent.length} chars) + CSV observations`);
+                
+                // Generate all observations with all formats for comparison
+                const observations = generateAllFormats(finalMCF);
+                const observationsWithFormats = observations.map(obs => ({
+                  ...obs,
+                  formats: observationToFormats(obs)
+                }));
+                setAllObservations(observationsWithFormats);
+                console.log(`✅ Generated ${observations.length} observations with all formats`);
+              } else {
+                console.warn(`⚠️ CSV file not found: ${csvPath}`);
+              }
+            } catch (csvError) {
+              console.error('❌ Error loading CSV:', csvError);
+            }
+          }
+        }
         
         // Reset data sources when changing files
         setSelectedDataSources([]);
         setCombinedMCFContent('');
+        
+        // Clear all edit content states when file changes
+        setRawEditContent('');
+        setStatEditContent('');
+        setDatacommonsEditContent('');
+        setCachedEditContent('');
+        
+        // Clear edit preview
+        setShowEditPreview(false);
+        setEditPreviewData([]);
+        
       } catch (error) {
-        console.error('Error loading file:', error);
+        console.error('Error loading files:', error);
         setCurrentMCFContent('');
         setFileAnalysis(null);
       } finally {
@@ -455,8 +716,8 @@ export default function App() {
       }
     }
     
-    loadFile();
-  }, [selectedFileId]);
+    loadFiles();
+  }, [selectedFileId, selectedFileIds]);
   
   // Load compare version when diff is shown
   useEffect(() => {
@@ -695,7 +956,10 @@ export default function App() {
           sourceHash: btoa(mcfContent.substring(0, 100)), // Simple hash
           observationCount: observations.length,
           variableCount: statisticalVariables.length,
-          chartCount: chartData.length
+          chartCount: chartData.length,
+          isMultiFile: isMultiFile,
+          fileCount: isMultiFile ? selectedFileIds.length : 1,
+          sourceFiles: isMultiFile ? selectedFileIds.map(id => id.split('/').pop()) : [selectedFileId.split('/').pop()]
         },
         
         // Pre-computed chart configurations
@@ -840,6 +1104,42 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-4">
+              {/* Dual Chart Preview Button */}
+              {currentMCF && (
+                <button
+                  onClick={() => setShowDualCharts(!showDualCharts)}
+                  className={`px-3 py-2 text-sm rounded-lg transition-all ${
+                    showDualCharts
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                  }`}
+                  title="Preview charts side-by-side (DataCommons + .STAT)"
+                >
+                  {showDualCharts ? '✕ Hide' : '📊 Dual Chart Preview'}
+                </button>
+              )}
+              
+              {/* Format Comparison Button (Test Feature) */}
+              {allObservations.length > 0 && (
+                <div className="flex items-center gap-2">
+                  <div className="px-3 py-2 text-xs rounded-lg bg-green-900/20 border border-green-500/30 text-green-300">
+                    ✅ {allObservations.length} observations loaded
+                  </div>
+                  <button
+                    onClick={() => {
+                      // Show format comparison for first observation
+                      setSelectedObservation(allObservations[0]);
+                      setSelectedObsIndex(0);
+                      setShowFormatComparison(true);
+                    }}
+                    className="px-3 py-2 text-sm rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all"
+                    title="🧪 Test: Compare data formats (MCF, .STAT, DataCommons, Cached)"
+                  >
+                    🔄 Compare Formats
+                  </button>
+                </div>
+              )}
+              
               {/* Share Button */}
               <ShareButton 
                 onGetShareableUrl={() => getShareableUrl({
@@ -869,12 +1169,36 @@ export default function App() {
         </div>
       </header>
 
-      {/* File Selector */}
-      <FileSelector
-        onFileSelected={setSelectedFileId}
-        onCompareFileSelected={setCompareFileId}
+      {/* File Selector V2 (Hierarchical) */}
+      <FileSelectorV2
+        onFileSelected={(selection) => {
+          // Selection can be { type: 'version', path: 'ilo/v01', fileIds: [...] }
+          // or { type: 'file', path: 'ilo/schema/sv.mcf', fileIds: ['ilo/schema/sv.mcf'] }
+          if (selection.type === 'version') {
+            setSelectedFileId(selection.path);
+            setSelectedFileIds(selection.fileIds);
+          } else {
+            setSelectedFileId(selection.path);
+            setSelectedFileIds([]);
+          }
+        }}
+        onCompareFileSelected={(selection) => {
+          if (!selection) {
+            setCompareFileId('');
+            setCompareFileIds([]);
+            return;
+          }
+          if (selection.type === 'version') {
+            setCompareFileId(selection.path);
+            setCompareFileIds(selection.fileIds);
+          } else {
+            setCompareFileId(selection.path);
+            setCompareFileIds([]);
+          }
+        }}
         showDiff={showDiff}
         onToggleDiff={() => setShowDiff(!showDiff)}
+        isDarkMode={isDarkMode}
       />
 
       {/* Data Source Selector - Only shown when file needs data */}
@@ -891,6 +1215,30 @@ export default function App() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-6">
+        {/* Test Data Banner */}
+        {selectedFileId && selectedFileId.includes('test-data') && allObservations.length > 0 && (
+          <div className="mb-6 p-4 rounded-lg bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30">
+            <div className="flex items-start gap-3">
+              <div className="text-3xl">🧪</div>
+              <div className="flex-1">
+                <h3 className="font-bold text-lg text-purple-200 mb-1">Test Data Mode Active</h3>
+                <p className="text-sm text-purple-300 mb-2">
+                  You're viewing a <strong>proof-of-concept demo</strong> showing how CSV data flows through the MCF pipeline to generate multiple output formats.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-purple-200">
+                  <div>✅ <strong>CSV Source:</strong> poverty-sample.csv (12 observations)</div>
+                  <div>✅ <strong>Countries:</strong> AGO, ETH, KEN, ZMB (4 total)</div>
+                  <div>✅ <strong>Time Range:</strong> 2018-2020 (3 years)</div>
+                  <div>✅ <strong>Indicator:</strong> SI_POV_DAY1 (Poverty rate)</div>
+                </div>
+                <p className="text-xs text-purple-400 mt-2 italic">
+                  ⚠️ This is demo data created for the MCF Pipeline Viewer. For production, replace with real UN agency data.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+        
         {/* Loading indicator */}
         {isLoading && (
           <div className="mb-4 text-center py-4 text-muted-foreground">
@@ -906,6 +1254,17 @@ export default function App() {
             oldVersionName={compareFileId}
             newVersionName={selectedFileId}
           />
+        )}
+
+        {/* Dual Chart Preview (DataCommons + .STAT side-by-side) */}
+        {showDualCharts && currentMCF && (
+          <div className="mb-6">
+            <DualChartPreview
+              mcfContent={currentMCF}
+              agency={selectedFileId ? selectedFileId.split('/')[0] : 'unknown'}
+              isDarkMode={isDarkMode}
+            />
+          </div>
         )}
 
         {/* Tabs */}
@@ -927,6 +1286,13 @@ export default function App() {
 
           <TabsContent value="raw" className="mt-4">
             <div className="space-y-2">
+              {/* Multi-file indicator */}
+              {isMultiFile && (
+                <div className="p-3 rounded-lg bg-blue-900/20 border border-blue-500/30 text-blue-300 text-sm">
+                  <strong>📦 Combined View:</strong> Viewing {selectedFileIds.length} MCF files merged: {selectedFileIds.map(id => id.split('/').pop()).join(', ')}
+                </div>
+              )}
+              
               {/* View Mode Buttons */}
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
@@ -1015,7 +1381,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                         }
                         return null;
                       })}
@@ -1024,8 +1390,47 @@ export default function App() {
                 })()
               ) : rawViewMode === 'edit' ? (
                 <div className="space-y-4">
+                  {/* Edit Format Sub-Navigation */}
+                  <div className="flex items-center justify-between pb-2 border-b border-border">
+                    <p className="text-xs text-muted-foreground">
+                      {rawEditFormat === 'formatted' ? 'Editing formatted code (pretty-printed, easier to read)' : 'Editing raw code (minified, as stored in production)'}
+                    </p>
+                    <div className="flex gap-1 bg-muted/50 rounded-lg p-0.5">
+                      <button
+                        onClick={() => {
+                          setRawEditFormat('formatted');
+                          if (!rawEditContent || rawEditContent === currentMCF) {
+                            setRawEditContent(generateFormattedCode(currentMCF));
+                          }
+                        }}
+                        className={`px-2 py-1 text-xs rounded transition-all ${
+                          rawEditFormat === 'formatted'
+                            ? 'bg-background text-foreground shadow-sm'
+                            : 'text-muted-foreground hover:text-foreground'
+                        }`}
+                      >
+                        Formatted
+                      </button>
+                      <button
+                        onClick={() => {
+                          setRawEditFormat('raw');
+                          if (!rawEditContent || rawEditContent === generateFormattedCode(currentMCF)) {
+                            setRawEditContent(currentMCF);
+                          }
+                        }}
+                        className={`px-2 py-1 text-xs rounded transition-all ${
+                          rawEditFormat === 'raw'
+                            ? 'bg-background text-foreground shadow-sm'
+                            : 'text-muted-foreground hover:text-foreground'
+                        }`}
+                      >
+                        Raw
+                      </button>
+                    </div>
+                  </div>
+                  
                   <CodeEditor
-                    value={rawEditContent || generateFormattedCode(currentMCF)}
+                    value={rawEditContent || (rawEditFormat === 'formatted' ? generateFormattedCode(currentMCF) : currentMCF)}
                     onChange={setRawEditContent}
                     language="mcf"
                     placeholder="Edit MCF content..."
@@ -1048,7 +1453,7 @@ export default function App() {
                     <div className="flex gap-2">
                       <button
                         onClick={() => {
-                          setRawEditContent(generateFormattedCode(currentMCF));
+                          setRawEditContent(rawEditFormat === 'formatted' ? generateFormattedCode(currentMCF) : currentMCF);
                           setShowEditPreview(false);
                         }}
                         className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors"
@@ -1086,7 +1491,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                           }
                           return null;
                         })}
@@ -1148,7 +1553,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                         }
                         return null;
                       })}
@@ -1175,7 +1580,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                           }
                           return null;
                         })}
@@ -1225,7 +1630,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                         }
                         return null;
                       })}
@@ -1252,7 +1657,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                           }
                           return null;
                         })}
@@ -1268,6 +1673,13 @@ export default function App() {
 
           <TabsContent value="cached" className="mt-4">
             <div className="space-y-2">
+              {/* Multi-file indicator (all modes) */}
+              {isMultiFile && (
+                <div className="p-3 rounded-lg bg-blue-900/20 border border-blue-500/30 text-blue-300 text-sm">
+                  <strong>📦 Combined View:</strong> Viewing {selectedFileIds.length} files merged together: {selectedFileIds.map(id => id.split('/').pop()).join(', ')}
+                </div>
+              )}
+              
               {/* View Mode Buttons */}
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
@@ -1276,8 +1688,10 @@ export default function App() {
                   {cachedViewMode === 'yaml' && 'YAML representation of cached data'}
                   {cachedViewMode === 'chart' && 'Visual chart from cached data'}
                   {cachedViewMode === 'edit' && 'Edit cached content - changes are local'}
+                  {cachedViewMode === 'explorer' && 'Live thematic areas and indicators from UN Data Commons API'}
                 </p>
                 <div className="flex gap-1 bg-muted rounded-lg p-1">
+                  <button onClick={() => setCachedViewMode('explorer')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'explorer' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>🌍 Explorer</button>
                   <button onClick={() => setCachedViewMode('formatted')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'formatted' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Formatted</button>
                   <button onClick={() => setCachedViewMode('raw')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'raw' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>Raw</button>
                   <button onClick={() => setCachedViewMode('yaml')} className={`px-3 py-1 text-xs rounded transition-all ${cachedViewMode === 'yaml' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>YAML</button>
@@ -1287,7 +1701,12 @@ export default function App() {
               </div>
               
               {/* Content Display */}
-              {cachedViewMode === 'chart' ? (
+              {cachedViewMode === 'explorer' ? (
+                <ThematicAreasExplorer 
+                  organization={selectedFileId ? selectedFileId.split('/')[0] : 'ilo'} 
+                  isDarkMode={isDarkMode} 
+                />
+              ) : cachedViewMode === 'chart' ? (
                 (() => {
                   const nodes = parseMCF(currentMCF);
                   const statisticalVariables = extractStatisticalVariables(nodes);
@@ -1302,7 +1721,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                         }
                         return null;
                       })}
@@ -1311,7 +1730,62 @@ export default function App() {
                 })()
               ) : cachedViewMode === 'edit' ? (
                 <div className="space-y-4">
-                  <CodeEditor value={cachedEditContent || generateCachedVersion(currentMCF)} onChange={setCachedEditContent} language="mcf" placeholder="Edit cached content..." />
+                  {/* Multi-file indicator */}
+                  {isMultiFile && (
+                    <div className="p-3 rounded-lg bg-blue-900/20 border border-blue-500/30 text-blue-300 text-sm">
+                      <strong>📦 Combined View:</strong> You're editing {selectedFileIds.length} files merged together. 
+                      The cached format combines all content into one optimized structure.
+                    </div>
+                  )}
+                  
+                  {/* Edit Format Sub-Navigation */}
+                  <div className="flex items-center justify-between pb-2 border-b border-border">
+                    <p className="text-xs text-muted-foreground">
+                      {cachedEditFormat === 'formatted' ? 'Editing formatted JSON (pretty-printed, easier to read)' : 'Editing raw JSON (minified, single-line)'}
+                    </p>
+                    <div className="flex gap-1 bg-muted/50 rounded-lg p-0.5">
+                      <button
+                        onClick={() => {
+                          setCachedEditFormat('formatted');
+                          if (!cachedEditContent || cachedEditContent === JSON.stringify(JSON.parse(generateCachedVersion(currentMCF)))) {
+                            setCachedEditContent(generateCachedVersion(currentMCF));
+                          }
+                        }}
+                        className={`px-2 py-1 text-xs rounded transition-all ${
+                          cachedEditFormat === 'formatted'
+                            ? 'bg-background text-foreground shadow-sm'
+                            : 'text-muted-foreground hover:text-foreground'
+                        }`}
+                      >
+                        Formatted
+                      </button>
+                      <button
+                        onClick={() => {
+                          setCachedEditFormat('raw');
+                          if (!cachedEditContent) {
+                            // Minify the JSON
+                            const formatted = generateCachedVersion(currentMCF);
+                            const minified = JSON.stringify(JSON.parse(formatted));
+                            setCachedEditContent(minified);
+                          }
+                        }}
+                        className={`px-2 py-1 text-xs rounded transition-all ${
+                          cachedEditFormat === 'raw'
+                            ? 'bg-background text-foreground shadow-sm'
+                            : 'text-muted-foreground hover:text-foreground'
+                        }`}
+                      >
+                        Raw
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <CodeEditor 
+                    value={cachedEditContent || (cachedEditFormat === 'formatted' ? generateCachedVersion(currentMCF) : JSON.stringify(JSON.parse(generateCachedVersion(currentMCF))))} 
+                    onChange={setCachedEditContent} 
+                    language="json" 
+                    placeholder="Edit cached content..." 
+                  />
                   <div className="flex gap-2 justify-between">
                     <button onClick={() => { const content = cachedEditContent || generateCachedVersion(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
                     <div className="flex gap-2">
@@ -1329,7 +1803,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
                           }
                           return null;
                         })}
@@ -1353,6 +1827,24 @@ export default function App() {
           </p>
         </div>
       </footer>
+      
+      {/* Format Comparison Modal */}
+      {showFormatComparison && selectedObservation && (
+        <FormatComparison
+          observation={selectedObservation}
+          allObservations={allObservations}
+          initialIndex={selectedObsIndex}
+          onIndexChange={(newIndex) => {
+            setSelectedObsIndex(newIndex);
+            setSelectedObservation(allObservations[newIndex]);
+          }}
+          onClose={() => {
+            setShowFormatComparison(false);
+            setSelectedObsIndex(0);
+          }}
+          isDarkMode={isDarkMode}
+        />
+      )}
     </div>
   );
 }

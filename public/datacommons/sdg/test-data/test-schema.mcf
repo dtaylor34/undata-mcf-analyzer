@@ -1,0 +1,15 @@
+Node: dcid:undata/sdg/SI_POV_DAY1
+typeOf: dcs:StatisticalVariable
+name: "Proportion of population below international poverty line"
+description: "Percentage of population living below $2.15 per day (2017 PPP)"
+measuredProperty: dcs:count
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementDenominator: dcs:Count_Person
+measurementQualifier: dcs:BelowPovertyLevelInThePast12Months
+
+Node: dcid:undata/sdg/PERCENT
+typeOf: dcs:Unit
+name: "Percentage"
+abbreviation: "%"
+

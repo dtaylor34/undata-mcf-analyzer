@@ -4,14 +4,15 @@
  * 
  * FEATURES:
  * - Monospace font display
- * - Line numbers
+ * - Line numbers (optional, controlled by formatted prop)
  * - Copy to clipboard
  * - Dark/Light theme support
+ * - Minimal "raw" view without line numbers
  */
 
 import React, { useState } from 'react';
 
-export default function CodeDisplay({ code, language = 'text', isDarkMode }) {
+export default function CodeDisplay({ code, language = 'text', isDarkMode, formatted = true }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -43,25 +44,35 @@ export default function CodeDisplay({ code, language = 'text', isDarkMode }) {
         </button>
       </div>
 
-      {/* Code content with line numbers */}
+      {/* Code content */}
       <div className={`overflow-x-auto ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-        <div className="flex">
-          {/* Line numbers */}
-          <div className={`py-4 px-4 select-none ${isDarkMode ? 'bg-gray-800 text-gray-600' : 'bg-gray-100 text-gray-400'}`}>
-            {lines.map((_, idx) => (
-              <div key={idx} className="font-mono text-xs text-right leading-6">
-                {idx + 1}
-              </div>
-            ))}
-          </div>
+        {formatted ? (
+          /* Formatted view with line numbers */
+          <div className="flex">
+            {/* Line numbers */}
+            <div className={`py-4 px-4 select-none ${isDarkMode ? 'bg-gray-800 text-gray-600' : 'bg-gray-100 text-gray-400'}`}>
+              {lines.map((_, idx) => (
+                <div key={idx} className="font-mono text-xs text-right leading-6">
+                  {idx + 1}
+                </div>
+              ))}
+            </div>
 
-          {/* Code */}
-          <div className="flex-1 py-4 px-4 overflow-x-auto">
-            <pre className={`font-mono text-xs leading-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
+            {/* Code */}
+            <div className="flex-1 py-4 px-4 overflow-x-auto">
+              <pre className={`font-mono text-xs leading-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
+                {code}
+              </pre>
+            </div>
+          </div>
+        ) : (
+          /* Raw view without line numbers - minimal, read-only style */
+          <div className="py-4 px-4 overflow-x-auto">
+            <pre className={`font-mono text-xs leading-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} whitespace-pre-wrap break-all`}>
               {code}
             </pre>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Footer with stats */}

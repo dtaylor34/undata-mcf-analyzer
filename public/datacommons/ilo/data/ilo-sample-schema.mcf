@@ -1,0 +1,26 @@
+Node: dcid:undata/ilo/EMP_TEMP_SEX_AGE_NB
+typeOf: dcs:StatisticalVariable
+name: "Employment by sex and age"
+description: "Total employment (thousands)"
+measuredProperty: dcs:count
+statType: dcs:measuredValue
+populationType: dcs:Person
+
+Node: dcid:undata/ilo/UNE_DEAP_SEX_AGE_RT
+typeOf: dcs:StatisticalVariable
+name: "Unemployment rate by sex and age"
+description: "Unemployment rate (%)"
+measuredProperty: dcs:unemploymentRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+
+Node: dcid:undata/ilo/NUMBER
+typeOf: dcs:Unit
+name: "Number"
+abbreviation: "num"
+
+Node: dcid:undata/ilo/PERCENT
+typeOf: dcs:Unit
+name: "Percentage"
+abbreviation: "%"
+

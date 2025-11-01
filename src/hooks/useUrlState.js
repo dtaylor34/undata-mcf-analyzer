@@ -25,6 +25,8 @@ export function useUrlState() {
       viewMode: params.get('view') || 'formatted',
       selectedCharts: params.get('charts') ? params.get('charts').split(',') : [],
       isDarkMode: params.get('theme') === 'dark',
+      showComparison: params.get('compare-formats') === 'true',
+      obsIndex: params.get('obs') ? parseInt(params.get('obs'), 10) : null,
     };
   }, []);
 
@@ -50,6 +52,8 @@ export function useUrlState() {
       params.set('charts', state.selectedCharts.join(','));
     }
     if (state.isDarkMode) params.set('theme', 'dark');
+    if (state.showComparison) params.set('compare-formats', 'true');
+    if (state.obsIndex !== null && state.obsIndex !== undefined) params.set('obs', state.obsIndex.toString());
     
     // Use replaceState to avoid cluttering browser history with every state change
     const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
@@ -78,6 +82,8 @@ export function useUrlState() {
       params.set('charts', state.selectedCharts.join(','));
     }
     if (state.isDarkMode) params.set('theme', 'dark');
+    if (state.showComparison) params.set('compare-formats', 'true');
+    if (state.obsIndex !== null && state.obsIndex !== undefined) params.set('obs', state.obsIndex.toString());
     
     const queryString = params.toString();
     return `${window.location.origin}${window.location.pathname}${queryString ? '?' + queryString : ''}`;
