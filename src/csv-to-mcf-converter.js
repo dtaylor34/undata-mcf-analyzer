@@ -6,19 +6,55 @@
 
 /**
  * Parse CSV string into array of objects
+ * Handles quoted fields properly (RFC 4180 compliant)
  */
 export function parseCSV(csvContent) {
   const lines = csvContent.trim().split('\n');
   if (lines.length === 0) return [];
   
-  const headers = lines[0].split(',').map(h => h.trim());
+  // Parse a CSV line handling quotes
+  function parseLine(line) {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      const nextChar = line[i + 1];
+      
+      if (char === '"') {
+        if (inQuotes && nextChar === '"') {
+          // Escaped quote
+          current += '"';
+          i++; // Skip next quote
+        } else {
+          // Toggle quote state
+          inQuotes = !inQuotes;
+        }
+      } else if (char === ',' && !inQuotes) {
+        // Field separator
+        result.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    
+    // Add last field
+    result.push(current.trim());
+    return result;
+  }
+  
+  const headers = parseLine(lines[0]);
   const rows = [];
   
   for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(',').map(v => v.trim());
+    if (lines[i].trim() === '') continue; // Skip empty lines
+    
+    const values = parseLine(lines[i]);
     const row = {};
     headers.forEach((header, index) => {
-      row[header] = values[index];
+      row[header] = values[index] || '';
     });
     rows.push(row);
   }

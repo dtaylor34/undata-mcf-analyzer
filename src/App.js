@@ -13,6 +13,7 @@ import { Sun, Moon, Database } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
 import { useUrlState } from './hooks/useUrlState';
+import { getCurrentPermissions, filterOrganizations, filterFiles, filterDataSources, validateUrlPermissions, isAdmin } from './utils/permissions';
 import { parseMCF, extractStatisticalVariables, extractObservations, observationsToChartData, parseAndAnalyzeMCF } from './mcf-parser';
 import { loadCSVAndConvert, combineSchemaAndObservations } from './csv-to-mcf-converter';
 
@@ -266,7 +267,15 @@ const generateCachedYAML = (mcf) => {
 };
 
 export default function App() {
+  // URL state management hook
+  const { readUrlParams, updateUrl, getShareableUrl } = useUrlState();
+  
+  // Permission system
+  const [currentPermissions, setCurrentPermissions] = useState(null);
+  const [isAdminUser, setIsAdminUser] = useState(false);
+  
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [activeTab, setActiveTab] = useState('raw');
   
   // File selection state (now just file IDs)
   const [selectedFileId, setSelectedFileId] = useState('');
@@ -301,6 +310,52 @@ export default function App() {
   
   // Chart filtering states
   const [selectedCharts, setSelectedCharts] = useState([]);
+  
+  // Initialize permissions on mount
+  useEffect(() => {
+    const permissions = getCurrentPermissions();
+    setCurrentPermissions(permissions);
+    setIsAdminUser(isAdmin(permissions));
+    console.log('🔐 Current permissions loaded:', permissions);
+  }, []);
+  
+  // Initialize state from URL on mount (after permissions)
+  useEffect(() => {
+    if (!currentPermissions) return; // Wait for permissions to load
+    
+    const urlParams = readUrlParams();
+    console.log('📥 Loading state from URL:', urlParams);
+    
+    // Validate URL params against permissions
+    const validation = validateUrlPermissions(urlParams, currentPermissions);
+    if (!validation.isValid) {
+      console.warn('⚠️ URL contains restricted parameters:', validation.errors);
+    }
+    
+    // Apply URL params to state (only if they exist and are allowed)
+    if (urlParams.isDarkMode !== undefined) setIsDarkMode(urlParams.isDarkMode);
+    if (urlParams.activeTab) setActiveTab(urlParams.activeTab);
+    if (urlParams.showDiff) setShowDiff(urlParams.showDiff);
+    
+    // File selection will be handled by FileSelector component
+    // Data sources will be set after file loads
+  }, [currentPermissions]); // Run when permissions are loaded
+  
+  // Update URL whenever relevant state changes
+  useEffect(() => {
+    const state = {
+      isDarkMode,
+      activeTab,
+      showDiff,
+      org: selectedFileId ? selectedFileId.split('/')[0] : null,
+      fileType: selectedFileId ? selectedFileId.split('/').slice(1).join('/') : null,
+      compareVersion: compareFileId || null,
+      dataSources: selectedDataSources.map(s => s.csvFile),
+      selectedCharts: selectedCharts.length > 0 ? selectedCharts : null,
+    };
+    
+    updateUrl(state);
+  }, [isDarkMode, activeTab, showDiff, selectedFileId, compareFileId, selectedDataSources, selectedCharts, updateUrl]);
 
   // Auto-select all charts when MCF content changes
   // Process MCF content for charts (using combined content as source of truth)
@@ -766,21 +821,49 @@ export default function App() {
             <div className="flex items-center gap-3">
               <Database className="h-8 w-8 text-primary" />
               <div>
-                <h1>MCF Pipeline Viewer</h1>
+                <div className="flex items-center gap-2">
+                  <h1>MCF Pipeline Viewer</h1>
+                  {currentPermissions && (
+                    <span className={`text-xs px-2 py-0.5 rounded-full ${
+                      isAdminUser 
+                        ? 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' 
+                        : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                    }`}>
+                      {isAdminUser ? '👑 Admin' : '👤 User'}
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm text-muted-foreground">
                   End-to-end MCF transformation pipeline
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <Sun className="h-4 w-4 text-muted-foreground" />
-              <Switch
-                checked={isDarkMode}
-                onCheckedChange={setIsDarkMode}
-                aria-label="Toggle dark mode"
+            <div className="flex items-center gap-4">
+              {/* Share Button */}
+              <ShareButton 
+                onGetShareableUrl={() => getShareableUrl({
+                  isDarkMode,
+                  activeTab,
+                  showDiff,
+                  org: selectedFileId ? selectedFileId.split('/')[0] : null,
+                  fileType: selectedFileId ? selectedFileId.split('/').slice(1).join('/') : null,
+                  compareVersion: compareFileId || null,
+                  dataSources: selectedDataSources.map(s => s.csvFile),
+                  selectedCharts: selectedCharts.length > 0 ? selectedCharts : null,
+                })}
               />
-              <Moon className="h-4 w-4 text-muted-foreground" />
+              
+              {/* Dark Mode Toggle */}
+              <div className="flex items-center gap-2">
+                <Sun className="h-4 w-4 text-muted-foreground" />
+                <Switch
+                  checked={isDarkMode}
+                  onCheckedChange={setIsDarkMode}
+                  aria-label="Toggle dark mode"
+                />
+                <Moon className="h-4 w-4 text-muted-foreground" />
+              </div>
             </div>
           </div>
         </div>
@@ -826,7 +909,7 @@ export default function App() {
         )}
 
         {/* Tabs */}
-        <Tabs defaultValue="raw" className="w-full">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-4 h-auto">
             <TabsTrigger value="raw" className="text-xs sm:text-sm">
               MCF

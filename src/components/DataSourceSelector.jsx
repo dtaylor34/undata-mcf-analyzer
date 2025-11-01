@@ -135,15 +135,46 @@ export function DataSourceSelector({
 function getAvailableCSVForOrg(orgId) {
   const csvManifest = {
     'who': [
+      // Adult Health
       'WHO__Adult_curr_tob_use.csv',
-      'WHO__MALARIA_EST_CASES.csv',
-      'WHO__HIV_ARTCOVERAGE.csv',
-      'WHO__LIFE_0000000030.csv',
+      'WHO__DEVICES18.csv',
+      
+      // Child Mortality
       'WHO__CHILDMORT_DEATHS_10TO14.csv',
+      'WHO__CHILDMORT_DEATHS_5TO9.csv',
+      'WHO__CHILDMORT_DEATHS_UNDER5.csv',
+      
+      // Disease & Epidemiology
+      'WHO__MALARIA_EST_CASES.csv',
+      'WHO__MALARIA_EST_DEATHS.csv',
+      'WHO__HIV_ARTCOVERAGE.csv',
+      'WHO__HIV_PLHIV.csv',
+      'WHO__TB_NOTIFICATION_RATE.csv',
+      
+      // Life Expectancy & Demographics
+      'WHO__LIFE_0000000030.csv',
+      'WHO__LIFE_0000000031.csv',
+      'WHO__WHOSIS_000001.csv',
+      'WHO__WHOSIS_000015.csv',
+      
+      // Maternal & Reproductive Health
       'WHO__anc4.csv',
       'WHO__vfull.csv',
+      'WHO__MDG_0000000001.csv',
+      'WHO__MDG_0000000003.csv',
+      
+      // Air Quality & Environment
       'WHO__AIR_71.csv',
-      'WHO__DEVICES18.csv',
+      'WHO__AIR_72.csv',
+      'WHO__AIR_11.csv',
+      
+      // Health Systems & Resources
+      'WHO__HWF_0001.csv',
+      'WHO__HWF_0002.csv',
+      'WHO__GHED_CHE_pc_PPP_SHA2011.csv',
+      
+      // Note: 522 total CSV files available in WHO data
+      // Add more as needed for testing
     ],
     'sdg': [],  // SDG uses sample-observations.mcf
     'ilo': [],  // Could add ILO CSV files here
