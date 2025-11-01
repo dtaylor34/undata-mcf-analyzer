@@ -22,6 +22,12 @@ export const MCF_FILE_INDEX = {
     name: 'SDG',
     emoji: '🎯',
     versions: {
+      'sample-data': {
+        name: 'Sample Data (With Charts)',
+        files: [
+          { id: 'sdg/sample-observations.mcf', path: '../datacommons/sdg/sample-observations.mcf', name: 'sample-observations.mcf' },
+        ]
+      },
       'q4-2024': {
         name: 'Q4 2024',
         files: [
@@ -85,6 +91,14 @@ export const MCF_FILE_INDEX = {
       { id: 'who/schema/sv.mcf', path: '../datacommons/who/schema/sv.mcf', name: 'sv.mcf' },
       { id: 'who/schema/topics.mcf', path: '../datacommons/who/schema/topics.mcf', name: 'topics.mcf' },
       { id: 'who/schema/who.mcf', path: '../datacommons/who/schema/who.mcf', name: 'who.mcf' },
+    ],
+    // Sample CSV files with observations (522 total available)
+    sampleCSVFiles: [
+      'WHO__Adult_curr_tob_use.csv',
+      'WHO__MALARIA_EST_CASES.csv',
+      'WHO__HIV_ARTCOVERAGE.csv',
+      'WHO__LIFE_0000000030.csv',
+      'WHO__CHILDMORT_DEATHS_10TO14.csv',
     ]
   }
 };

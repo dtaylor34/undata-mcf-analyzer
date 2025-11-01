@@ -1,0 +1,209 @@
+# Sample MCF with Observations for Testing
+# Based on SDG Indicator: SI_POV_DAY1 (Poverty rate)
+
+Node: dcid:undata/sdg/SI_POV_DAY1
+typeOf: dcs:StatisticalVariable
+measuredProperty: dcs:count
+name: "Proportion of population below international poverty line"
+description: "Percentage of population living on less than $2.15 per day (2017 PPP)"
+populationType: dcs:Person
+statType: dcs:measuredValue
+unit: "Percentage"
+measurementMethod: "HouseholdSurvey"
+
+Node: dcid:undata/sdg/SI_POV_NAHC
+typeOf: dcs:StatisticalVariable
+measuredProperty: dcs:count
+name: "Proportion of population living below the national poverty line"
+description: "Percentage of population below national poverty line, by sex and age"
+populationType: dcs:Person
+statType: dcs:measuredValue
+unit: "Percentage"
+measurementMethod: "HouseholdSurvey"
+
+# Observations for SI_POV_DAY1 (Global poverty - World)
+Node: dcid:obs_SI_POV_DAY1_2010_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2010"
+value: 15.7
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2011_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2011"
+value: 14.8
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2012_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2012"
+value: 13.9
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2013_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2013"
+value: 12.9
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2014_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2014"
+value: 11.9
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2015_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2015"
+value: 10.1
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2016_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2016"
+value: 9.5
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2017_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2017"
+value: 9.3
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2018_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2018"
+value: 9.0
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2019_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2019"
+value: 8.6
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2020_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2020"
+value: 9.3
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2021_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2021"
+value: 8.8
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2022_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2022"
+value: 8.4
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_DAY1_2023_World
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_DAY1
+observationAbout: dcid:Earth
+observationDate: "2023"
+value: 8.2
+unit: "Percentage"
+
+# Observations for SI_POV_NAHC (National poverty - Multiple countries)
+Node: dcid:obs_SI_POV_NAHC_2020_USA
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/USA
+observationDate: "2020"
+value: 11.4
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2021_USA
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/USA
+observationDate: "2021"
+value: 11.6
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2022_USA
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/USA
+observationDate: "2022"
+value: 11.5
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2020_India
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/IND
+observationDate: "2020"
+value: 21.9
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2021_India
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/IND
+observationDate: "2021"
+value: 16.4
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2022_India
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 15.0
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2020_Brazil
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/BRA
+observationDate: "2020"
+value: 18.2
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2021_Brazil
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/BRA
+observationDate: "2021"
+value: 20.1
+unit: "Percentage"
+
+Node: dcid:obs_SI_POV_NAHC_2022_Brazil
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/sdg/SI_POV_NAHC
+observationAbout: dcid:country/BRA
+observationDate: "2022"
+value: 18.9
+unit: "Percentage"
+

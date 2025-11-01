@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FileSelector } from './components/FileSelector';
+import { DataSourceSelector } from './components/DataSourceSelector';
+import { ShareButton } from './components/ShareButton';
 import DiffViewer from './components/DiffViewer';
 import CodeDisplay from './components/CodeDisplay';
 import ChartPreview from './components/ChartPreview';
@@ -10,7 +12,9 @@ import { Switch } from './components/ui/switch';
 import { Sun, Moon, Database } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
-import { parseMCF, extractObservations, observationsToChartData } from './mcf-parser';
+import { useUrlState } from './hooks/useUrlState';
+import { parseMCF, extractStatisticalVariables, extractObservations, observationsToChartData, parseAndAnalyzeMCF } from './mcf-parser';
+import { loadCSVAndConvert, combineSchemaAndObservations } from './csv-to-mcf-converter';
 
 // Dynamic MCF file loader - loads real files from public folder
 async function loadMCFFile(fileId) {
@@ -274,6 +278,11 @@ export default function App() {
   const [compareMCFContent, setCompareMCFContent] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
+  // File analysis & data source combination
+  const [fileAnalysis, setFileAnalysis] = useState(null);
+  const [selectedDataSources, setSelectedDataSources] = useState([]);
+  const [combinedMCFContent, setCombinedMCFContent] = useState('');
+  
   // View mode states for each tab: 'formatted' | 'raw' | 'yaml' | 'chart' | 'edit'
   const [rawViewMode, setRawViewMode] = useState('formatted');
   const [statViewMode, setStatViewMode] = useState('formatted');
@@ -292,6 +301,62 @@ export default function App() {
   
   // Chart filtering states
   const [selectedCharts, setSelectedCharts] = useState([]);
+
+  // Auto-select all charts when MCF content changes
+  // Process MCF content for charts (using combined content as source of truth)
+  // This runs AFTER currentMCF is computed from combinedMCFContent || currentMCFContent
+  useEffect(() => {
+    // Use the source of truth (defined later in code)
+    const mcfContent = combinedMCFContent || currentMCFContent;
+    
+    if (mcfContent) {
+      try {
+        console.log('📊 Processing MCF content for charts...');
+        console.log('MCF Content length:', mcfContent.length);
+        
+        const nodes = parseMCF(mcfContent);
+        console.log('✅ Parsed nodes:', nodes.length);
+        
+        const statisticalVariables = extractStatisticalVariables(nodes);
+        console.log('✅ Statistical Variables:', statisticalVariables.length, statisticalVariables.map(v => v.dcid || v.name));
+        
+        const observations = extractObservations(nodes);
+        console.log('✅ Observations:', observations.length);
+        
+        if (observations.length > 0) {
+          console.log('Sample observation:', observations[0]);
+        }
+        
+        const chartDataArray = observationsToChartData(observations, statisticalVariables);
+        console.log('✅ Chart Data Array:', chartDataArray.length);
+        
+        if (chartDataArray.length > 0) {
+          console.log('Sample chart:', {
+            id: chartDataArray[0].id,
+            title: chartDataArray[0].title,
+            dataPoints: chartDataArray[0].data?.length,
+            unit: chartDataArray[0].unit
+          });
+        }
+        
+        // Auto-select all charts
+        if (chartDataArray.length > 0) {
+          const allChartIds = chartDataArray.map((_, index) => `chart-${index}`);
+          setSelectedCharts(allChartIds);
+          console.log(`✅ Auto-selected ${allChartIds.length} charts:`, allChartIds);
+        } else {
+          console.warn('⚠️ No charts generated - no observations found in MCF');
+          setSelectedCharts([]);
+        }
+      } catch (error) {
+        console.error('❌ Error processing MCF for charts:', error);
+        setSelectedCharts([]);
+      }
+    } else {
+      console.log('ℹ️ No MCF content to process');
+      setSelectedCharts([]);
+    }
+  }, [combinedMCFContent, currentMCFContent]);
 
   // Load real catalog data
   const [catalogStats, setCatalogStats] = useState(null);
@@ -317,9 +382,19 @@ export default function App() {
         const content = await loadMCFFile(selectedFileId);
         setCurrentMCFContent(content || '');
         console.log('📄 Loaded file:', selectedFileId);
+        
+        // Analyze the file to check if it needs data sources
+        const analysis = analyzeMCFFile(content || '');
+        setFileAnalysis(analysis);
+        console.log('📊 File Analysis:', analysis);
+        
+        // Reset data sources when changing files
+        setSelectedDataSources([]);
+        setCombinedMCFContent('');
       } catch (error) {
         console.error('Error loading file:', error);
         setCurrentMCFContent('');
+        setFileAnalysis(null);
       } finally {
         setIsLoading(false);
       }
@@ -348,6 +423,41 @@ export default function App() {
     
     loadCompareFile();
   }, [showDiff, compareFileId]);
+  
+  // Combine schema MCF with selected CSV data sources
+  // THIS IS WHERE MCF SOURCE OF TRUTH IS MAINTAINED
+  useEffect(() => {
+    async function combineDataSources() {
+      // If no data sources selected, use original content
+      if (selectedDataSources.length === 0) {
+        setCombinedMCFContent('');
+        return;
+      }
+      
+      try {
+        console.log(`🔗 Combining schema with ${selectedDataSources.length} data source(s)...`);
+        
+        // Load all CSV files and convert to observations
+        let allObservations = [];
+        for (const source of selectedDataSources) {
+          const observations = await loadCSVAndConvert(source.csvFile, source.basePath);
+          allObservations = [...allObservations, ...observations];
+          console.log(`  ✅ Loaded ${observations.length} observations from ${source.csvFile}`);
+        }
+        
+        // Combine schema with observations - MCF remains source of truth
+        const combined = combineSchemaAndObservations(currentMCFContent, allObservations);
+        setCombinedMCFContent(combined);
+        console.log(`✅ Combined MCF with ${allObservations.length} observations`);
+        
+      } catch (error) {
+        console.error('❌ Error combining data sources:', error);
+        setCombinedMCFContent('');
+      }
+    }
+    
+    combineDataSources();
+  }, [currentMCFContent, selectedDataSources]);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -357,9 +467,295 @@ export default function App() {
     }
   }, [isDarkMode]);
 
-  // Use loaded content (or fallback to empty)
-  const currentMCF = currentMCFContent;
+  /**
+   * Analyze MCF file to determine if it has observations (data)
+   * Returns status and counts for UI display
+   */
+  const analyzeMCFFile = (mcfContent) => {
+    if (!mcfContent) return null;
+    
+    try {
+      const nodes = parseMCF(mcfContent);
+      const variables = extractStatisticalVariables(nodes);
+      const observations = extractObservations(nodes);
+      
+      return {
+        status: observations.length > 0 ? 'COMPLETE' : 'NEEDS_DATA',
+        variableCount: variables.length,
+        observationCount: observations.length,
+        canGenerateCharts: observations.length > 0,
+        chartCount: observations.length > 0 ? observationsToChartData(observations, variables).length : 0
+      };
+    } catch (error) {
+      console.error('Error analyzing MCF file:', error);
+      return {
+        status: 'ERROR',
+        variableCount: 0,
+        observationCount: 0,
+        canGenerateCharts: false,
+        chartCount: 0
+      };
+    }
+  };
+
+  // Use combined content if available, otherwise use original
+  // THIS IS THE SOURCE OF TRUTH FOR ALL TABS
+  const currentMCF = combinedMCFContent || currentMCFContent;
   const compareMCF = compareMCFContent;
+
+  // ============================================================
+  // MCF TRANSFORMATION FUNCTIONS
+  // All formats are dynamically generated from MCF source
+  // ============================================================
+
+  /**
+   * Format MCF with proper spacing (source display)
+   */
+  const generateFormattedCode = (mcfContent) => {
+    if (!mcfContent) return '';
+    // Format MCF with proper spacing between nodes
+    return mcfContent.split('\n\n').map(block => block.trim()).join('\n\n');
+  };
+
+  /**
+   * Transform MCF → .STAT (SDMX) Format
+   * Extracts dimensions, measures, and builds SDMX-compliant structure
+   */
+  const generateStatView = (mcfContent) => {
+    if (!mcfContent) return '';
+    
+    try {
+      const nodes = parseMCF(mcfContent);
+      const statisticalVariables = extractStatisticalVariables(nodes);
+      const observations = extractObservations(nodes);
+      
+      if (observations.length === 0) {
+        return '# No observations found in MCF file\n# .STAT format requires observation data\n\n' + mcfContent;
+      }
+      
+      // Extract dimensions from observations
+      const dimensions = {
+        INDICATOR: [...new Set(observations.map(o => o.variable))],
+        REF_AREA: [...new Set(observations.map(o => o.about).filter(Boolean))],
+        TIME_PERIOD: [...new Set(observations.map(o => o.date).filter(Boolean))].sort(),
+      };
+      
+      // Build SDMX structure
+      const sdmxData = {
+        dataStructureDefinition: {
+          id: statisticalVariables[0]?.dcid || 'DATASET',
+          name: statisticalVariables[0]?.name || 'Statistical Dataset',
+          dimensions: Object.entries(dimensions).map(([id, values]) => ({
+            id,
+            name: id.replace(/_/g, ' '),
+            values: values.length
+          })),
+          measures: [{
+            id: 'OBS_VALUE',
+            name: 'Observation Value',
+            unit: statisticalVariables[0]?.unit || observations[0]?.unit || ''
+          }]
+        },
+        observations: observations.map(obs => ({
+          indicator: obs.variable,
+          refArea: obs.about || 'N/A',
+          timePeriod: obs.date || 'N/A',
+          value: obs.value,
+          unit: obs.unit,
+          measurementMethod: obs.measurementMethod
+        }))
+      };
+      
+      return JSON.stringify(sdmxData, null, 2);
+    } catch (error) {
+      console.error('Error transforming to .STAT format:', error);
+      return '# Error transforming to .STAT format\n\n' + mcfContent;
+    }
+  };
+
+  /**
+   * Transform MCF → DataCommons JSON Format
+   * Converts to DC API-compatible structure
+   */
+  const generateDataCommonsView = (mcfContent) => {
+    if (!mcfContent) return '';
+    
+    try {
+      const nodes = parseMCF(mcfContent);
+      const statisticalVariables = extractStatisticalVariables(nodes);
+      const observations = extractObservations(nodes);
+      
+      const dcFormat = {
+        variables: statisticalVariables.map(v => ({
+          dcid: v.dcid,
+          name: v.name,
+          description: v.description,
+          populationType: v.populationType,
+          measuredProperty: v.measuredProperty,
+          statType: v.statType,
+          measurementMethod: v.measurementMethod,
+          unit: v.unit
+        })),
+        observations: observations.map(obs => ({
+          variable: obs.variable,
+          entity: obs.about,
+          date: obs.date,
+          value: obs.value,
+          unit: obs.unit,
+          measurementMethod: obs.measurementMethod,
+          scalingFactor: obs.scalingFactor
+        })),
+        metadata: {
+          generatedFrom: 'MCF',
+          timestamp: new Date().toISOString(),
+          observationCount: observations.length,
+          variableCount: statisticalVariables.length
+        }
+      };
+      
+      return JSON.stringify(dcFormat, null, 2);
+    } catch (error) {
+      console.error('Error transforming to DataCommons format:', error);
+      return '# Error transforming to DataCommons format\n\n' + mcfContent;
+    }
+  };
+
+  /**
+   * Transform MCF → Cached/Optimized Format
+   * Pre-computes statistics and chart configurations for fast loading
+   */
+  const generateCachedVersion = (mcfContent) => {
+    if (!mcfContent) return '';
+    
+    try {
+      const nodes = parseMCF(mcfContent);
+      const statisticalVariables = extractStatisticalVariables(nodes);
+      const observations = extractObservations(nodes);
+      const chartData = observationsToChartData(observations, statisticalVariables);
+      
+      const cachedFormat = {
+        metadata: {
+          cacheVersion: '1.0',
+          generatedAt: new Date().toISOString(),
+          sourceHash: btoa(mcfContent.substring(0, 100)), // Simple hash
+          observationCount: observations.length,
+          variableCount: statisticalVariables.length,
+          chartCount: chartData.length
+        },
+        
+        // Pre-computed chart configurations
+        charts: chartData.map(chart => ({
+          id: chart.dcid,
+          title: chart.title,
+          description: chart.description,
+          type: chart.chartType,
+          unit: chart.unit,
+          
+          // Pre-computed statistics
+          stats: {
+            min: Math.min(...chart.data.map(d => d.value)),
+            max: Math.max(...chart.data.map(d => d.value)),
+            avg: chart.data.reduce((sum, d) => sum + d.value, 0) / chart.data.length,
+            count: chart.data.length
+          },
+          
+          // Chart configuration
+          config: {
+            xAxis: chart.hasTimeSeries ? 'date' : 'entity',
+            yAxis: 'value',
+            chartType: chart.chartType,
+            showLegend: chart.hasMultipleEntities,
+            dateRange: chart.dateRange
+          },
+          
+          // Actual data
+          data: chart.data
+        })),
+        
+        // Searchable index
+        searchableText: [
+          ...statisticalVariables.map(v => `${v.name} ${v.description}`),
+          ...observations.map(o => `${o.variable} ${o.about} ${o.date}`)
+        ].join(' ').toLowerCase(),
+        
+        // API endpoints for live data
+        apiEndpoints: {
+          datacommons: statisticalVariables.map(v => 
+            `https://datacommons.org/tools/visualization#v=${v.dcid}`
+          )
+        }
+      };
+      
+      return JSON.stringify(cachedFormat, null, 2);
+    } catch (error) {
+      console.error('Error generating cached version:', error);
+      return '# Error generating cached version\n\n' + mcfContent;
+    }
+  };
+
+  /**
+   * Transform MCF → YAML Format
+   * Structured, human-readable representation
+   */
+  const generateYAMLView = (mcfContent) => {
+    if (!mcfContent) return '';
+    
+    try {
+      const nodes = parseMCF(mcfContent);
+      
+      return nodes.map(node => {
+        const lines = [`# ${node.typeOf || 'Node'}: ${node.dcid || 'Unknown'}`];
+        
+        Object.entries(node).forEach(([key, value]) => {
+          if (typeof value === 'string' && value.includes('\n')) {
+            // Multi-line string
+            lines.push(`${key}: |`);
+            value.split('\n').forEach(line => lines.push(`  ${line}`));
+          } else {
+            lines.push(`${key}: ${JSON.stringify(value)}`);
+          }
+        });
+        
+        return lines.join('\n');
+      }).join('\n\n---\n\n');
+    } catch (error) {
+      console.error('Error generating YAML view:', error);
+      return '# Error generating YAML view\n' + mcfContent;
+    }
+  };
+
+  const generateStatYAML = (mcfContent) => {
+    // Generate YAML from .STAT JSON
+    try {
+      const statJson = generateStatView(mcfContent);
+      const parsed = JSON.parse(statJson);
+      return `# .STAT Format (SDMX) in YAML\n\n${JSON.stringify(parsed, null, 2).replace(/[{}",]/g, '').trim()}`;
+    } catch {
+      return generateYAMLView(mcfContent);
+    }
+  };
+
+  const generateDataCommonsYAML = (mcfContent) => {
+    // Generate YAML from DataCommons JSON
+    try {
+      const dcJson = generateDataCommonsView(mcfContent);
+      const parsed = JSON.parse(dcJson);
+      return `# DataCommons Format in YAML\n\n${JSON.stringify(parsed, null, 2).replace(/[{}",]/g, '').trim()}`;
+    } catch {
+      return generateYAMLView(mcfContent);
+    }
+  };
+
+  const generateCachedYAML = (mcfContent) => {
+    // Generate YAML from Cached JSON
+    try {
+      const cachedJson = generateCachedVersion(mcfContent);
+      const parsed = JSON.parse(cachedJson);
+      return `# Cached Format in YAML\n\n${JSON.stringify(parsed, null, 2).replace(/[{}",]/g, '').trim()}`;
+    } catch {
+      return generateYAMLView(mcfContent);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -397,6 +793,18 @@ export default function App() {
         showDiff={showDiff}
         onToggleDiff={() => setShowDiff(!showDiff)}
       />
+
+      {/* Data Source Selector - Only shown when file needs data */}
+      {!isLoading && fileAnalysis && selectedFileId && (
+        <div className="container mx-auto px-4 pt-4">
+          <DataSourceSelector
+            orgId={selectedFileId.split('/')[0]}
+            fileAnalysis={fileAnalysis}
+            selectedSources={selectedDataSources}
+            onSourcesChange={setSelectedDataSources}
+          />
+        </div>
+      )}
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-6">
@@ -508,8 +916,9 @@ export default function App() {
               {rawViewMode === 'chart' ? (
                 (() => {
                   const nodes = parseMCF(currentMCF);
+                  const statisticalVariables = extractStatisticalVariables(nodes);
                   const observations = extractObservations(nodes);
-                  const chartDataArray = observationsToChartData(observations);
+                  const chartDataArray = observationsToChartData(observations, statisticalVariables);
                   return (
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
@@ -523,7 +932,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                         }
                         return null;
                       })}
@@ -543,8 +952,9 @@ export default function App() {
                       onClick={() => {
                         const content = rawEditContent || generateFormattedCode(currentMCF);
                         const nodes = parseMCF(content);
+                        const statisticalVariables = extractStatisticalVariables(nodes);
                         const observations = extractObservations(nodes);
-                        const chartData = observationsToChartData(observations);
+                        const chartData = observationsToChartData(observations, statisticalVariables);
                         setEditPreviewData(chartData);
                         setShowEditPreview(true);
                       }}
@@ -593,7 +1003,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                           }
                           return null;
                         })}
@@ -643,8 +1053,9 @@ export default function App() {
               {statViewMode === 'chart' ? (
                 (() => {
                   const nodes = parseMCF(currentMCF);
+                  const statisticalVariables = extractStatisticalVariables(nodes);
                   const observations = extractObservations(nodes);
-                  const chartDataArray = observationsToChartData(observations);
+                  const chartDataArray = observationsToChartData(observations, statisticalVariables);
                   return (
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
@@ -654,7 +1065,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                         }
                         return null;
                       })}
@@ -665,7 +1076,7 @@ export default function App() {
                 <div className="space-y-4">
                   <CodeEditor value={statEditContent || generateStatView(currentMCF)} onChange={setStatEditContent} language="mcf" placeholder="Edit .STAT content..." />
                   <div className="flex gap-2 justify-between">
-                    <button onClick={() => { const content = statEditContent || generateStatView(currentMCF); const nodes = parseMCF(content); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <button onClick={() => { const content = statEditContent || generateStatView(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
                     <div className="flex gap-2">
                       <button onClick={() => { setStatEditContent(generateStatView(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
                       <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
@@ -681,7 +1092,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                           }
                           return null;
                         })}
@@ -719,8 +1130,9 @@ export default function App() {
               {datacommonsViewMode === 'chart' ? (
                 (() => {
                   const nodes = parseMCF(currentMCF);
+                  const statisticalVariables = extractStatisticalVariables(nodes);
                   const observations = extractObservations(nodes);
-                  const chartDataArray = observationsToChartData(observations);
+                  const chartDataArray = observationsToChartData(observations, statisticalVariables);
                   return (
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
@@ -730,7 +1142,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                         }
                         return null;
                       })}
@@ -741,7 +1153,7 @@ export default function App() {
                 <div className="space-y-4">
                   <CodeEditor value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={setDatacommonsEditContent} language="json" placeholder="Edit DataCommons JSON..." />
                   <div className="flex gap-2 justify-between">
-                    <button onClick={() => { const content = datacommonsEditContent || generateDataCommonsView(currentMCF); const nodes = parseMCF(content); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <button onClick={() => { const content = datacommonsEditContent || generateDataCommonsView(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
                     <div className="flex gap-2">
                       <button onClick={() => { setDatacommonsEditContent(generateDataCommonsView(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
                       <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
@@ -757,7 +1169,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                           }
                           return null;
                         })}
@@ -795,8 +1207,9 @@ export default function App() {
               {cachedViewMode === 'chart' ? (
                 (() => {
                   const nodes = parseMCF(currentMCF);
+                  const statisticalVariables = extractStatisticalVariables(nodes);
                   const observations = extractObservations(nodes);
-                  const chartDataArray = observationsToChartData(observations);
+                  const chartDataArray = observationsToChartData(observations, statisticalVariables);
                   return (
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
@@ -806,7 +1219,7 @@ export default function App() {
                       {chartDataArray.map((chart, index) => {
                         const chartId = `chart-${index}`;
                         if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart.data} title={chart.title} />;
+                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                         }
                         return null;
                       })}
@@ -817,7 +1230,7 @@ export default function App() {
                 <div className="space-y-4">
                   <CodeEditor value={cachedEditContent || generateCachedVersion(currentMCF)} onChange={setCachedEditContent} language="mcf" placeholder="Edit cached content..." />
                   <div className="flex gap-2 justify-between">
-                    <button onClick={() => { const content = cachedEditContent || generateCachedVersion(currentMCF); const nodes = parseMCF(content); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <button onClick={() => { const content = cachedEditContent || generateCachedVersion(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
                     <div className="flex gap-2">
                       <button onClick={() => { setCachedEditContent(generateCachedVersion(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
                       <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
@@ -833,7 +1246,7 @@ export default function App() {
                         {editPreviewData.map((chart, index) => {
                           const chartId = `chart-${index}`;
                           if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                            return <ChartPreview key={index} data={chart.data} title={chart.title || `Chart ${index + 1}`} />;
+                            return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} />;
                           }
                           return null;
                         })}

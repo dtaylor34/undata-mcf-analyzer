@@ -13,21 +13,37 @@ import React from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default function ChartPreview({ data, indicator, isDarkMode }) {
-  // Transform data for charting
+  // Transform data for charting - data is now a chart object with metadata
   const chartData = data?.data || generateSampleData();
-  const chartType = 'line'; // Could be dynamic based on data type
+  const chartType = data?.chartType === 'timeSeries' ? 'line' : (data?.chartType === 'bar' ? 'bar' : 'line');
+  
+  // Extract metadata
+  const title = data?.title || indicator?.name || 'Data Visualization';
+  const description = data?.description || '';
+  const unit = data?.unit || '';
+  const dateRange = data?.dateRange;
+  const entities = data?.entities || [];
+  const statType = data?.statType || '';
+  const measuredProperty = data?.measuredProperty || '';
+  const observationCount = data?.observationCount || chartData.length;
 
-  // Custom tooltip styling
+  // Custom tooltip styling with unit display
   const CustomTooltip = ({ active, payload }) => {
     if (!active || !payload?.length) return null;
-
+    
+    const point = payload[0].payload;
     return (
       <div className={`p-3 rounded-lg shadow-lg ${isDarkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
         <p className={`font-medium mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-          {payload[0].payload.name || payload[0].payload.year}
+          {point.date || point.name || point.year}
         </p>
+        {point.entity && (
+          <p className={`text-xs mb-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            {point.entity}
+          </p>
+        )}
         <p className={`text-sm ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
-          Value: <span className="font-bold">{payload[0].value}</span>
+          Value: <span className="font-bold">{payload[0].value}{unit ? ` ${unit}` : ''}</span>
         </p>
       </div>
     );
@@ -35,14 +51,54 @@ export default function ChartPreview({ data, indicator, isDarkMode }) {
 
   return (
     <div>
-      {/* Chart Info */}
+      {/* Enhanced Chart Info with Metadata */}
       <div className={`mb-6 p-4 rounded-lg ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
-        <h4 className={`font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-          {indicator?.name || 'Data Visualization'}
+        <h4 className={`font-bold mb-2 text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+          {title}
         </h4>
-        <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-          Showing {chartData.length} data points
-        </p>
+        {description && (
+          <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            {description}
+          </p>
+        )}
+        <div className="grid grid-cols-2 gap-2 text-xs">
+          {observationCount > 0 && (
+            <div>
+              <span className={`font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Observations:</span>
+              <span className={`ml-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{observationCount}</span>
+            </div>
+          )}
+          {unit && (
+            <div>
+              <span className={`font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Unit:</span>
+              <span className={`ml-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{unit}</span>
+            </div>
+          )}
+          {statType && (
+            <div>
+              <span className={`font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Stat Type:</span>
+              <span className={`ml-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{statType}</span>
+            </div>
+          )}
+          {measuredProperty && (
+            <div>
+              <span className={`font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Property:</span>
+              <span className={`ml-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{measuredProperty}</span>
+            </div>
+          )}
+          {dateRange && (
+            <div className="col-span-2">
+              <span className={`font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Date Range:</span>
+              <span className={`ml-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{dateRange.start} - {dateRange.end}</span>
+            </div>
+          )}
+          {entities.length > 0 && (
+            <div className="col-span-2">
+              <span className={`font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Entities:</span>
+              <span className={`ml-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{entities.join(', ')}</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Chart */}

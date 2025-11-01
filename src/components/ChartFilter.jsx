@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-export function ChartFilter({ charts = [], selectedCharts, onSelectionChange }) {
+export function ChartFilter({ charts = [], selectedCharts = [], onSelectionChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectAll, setSelectAll] = useState(true);
 
-  // Initialize with all charts selected
+  // Sync selectAll state with actual selection
   useEffect(() => {
-    if (charts.length > 0 && selectedCharts.length === 0) {
-      onSelectionChange(charts.map(c => c.id || c.name));
+    if (charts.length > 0) {
+      setSelectAll(selectedCharts.length === charts.length);
     }
-  }, [charts, selectedCharts.length, onSelectionChange]);
+  }, [selectedCharts.length, charts.length]);
 
   const handleToggleAll = () => {
     if (selectAll) {
@@ -40,11 +40,6 @@ export function ChartFilter({ charts = [], selectedCharts, onSelectionChange }) 
       }
     }
   };
-
-  // Update selectAll when selection changes externally
-  useEffect(() => {
-    setSelectAll(selectedCharts.length === charts.length && charts.length > 0);
-  }, [selectedCharts.length, charts.length]);
 
   return (
     <div className="relative inline-block">

@@ -40,6 +40,26 @@ export function parseMCF(mcfContent) {
 }
 
 /**
+ * Extract statistical variables metadata from MCF nodes
+ */
+export function extractStatisticalVariables(nodes) {
+  return nodes.filter(node => 
+    node.typeOf === 'dcs:StatisticalVariable' || 
+    node.typeOf === 'StatisticalVariable'
+  ).map(node => ({
+    dcid: node.dcid,
+    name: node.name,
+    description: node.description,
+    populationType: node.populationType,
+    measuredProperty: node.measuredProperty,
+    statType: node.statType,
+    measurementMethod: node.measurementMethod,
+    unit: node.unit,
+    ...node
+  }));
+}
+
+/**
  * Extract observations from MCF nodes for charting
  */
 export function extractObservations(nodes) {
@@ -54,6 +74,9 @@ export function extractObservations(nodes) {
     date: obs.observationDate,
     value: parseFloat(obs.value) || 0,
     about: obs.observationAbout,
+    unit: obs.unit,
+    scalingFactor: obs.scalingFactor,
+    measurementMethod: obs.measurementMethod,
     ...obs
   }));
 }
@@ -85,10 +108,10 @@ export function groupObservationsByVariable(observations) {
 }
 
 /**
- * Convert observations to chart data format
+ * Convert observations to chart data format with full metadata
  * Returns array of chart objects for multiple charts
  */
-export function observationsToChartData(observations) {
+export function observationsToChartData(observations, statisticalVariables = []) {
   if (!observations || observations.length === 0) {
     return [];
   }
@@ -97,27 +120,92 @@ export function observationsToChartData(observations) {
   const grouped = groupObservationsByVariable(observations);
   const variables = Object.keys(grouped);
   
-  // If only one variable, return single chart
-  if (variables.length === 1) {
-    return [{
-      title: variables[0],
-      data: grouped[variables[0]].map(obs => ({
-        name: obs.date || 'N/A',
-        value: obs.value,
-        label: obs.date || 'N/A'
-      }))
-    }];
-  }
-  
-  // Multiple variables - create separate chart for each variable
-  return variables.map(variable => ({
-    title: variable,
-    data: grouped[variable].map(obs => ({
-      name: obs.date || 'N/A',
+  // Create chart for each variable with metadata
+  return variables.map(variable => {
+    const varObservations = grouped[variable];
+    
+    // Find metadata for this variable
+    const varMetadata = statisticalVariables.find(v => 
+      v.dcid === variable || v.name === variable
+    ) || {};
+    
+    // Extract entities (observationAbout)
+    const entities = [...new Set(varObservations.map(obs => obs.about).filter(Boolean))];
+    
+    // Get date range
+    const dates = varObservations.map(obs => obs.date).filter(Boolean).sort();
+    const dateRange = dates.length > 0 ? {
+      start: dates[0],
+      end: dates[dates.length - 1]
+    } : null;
+    
+    // Get unit info
+    const unit = varObservations.find(obs => obs.unit)?.unit || varMetadata.unit || '';
+    
+    // Build chart title
+    const chartTitle = varMetadata.name || variable || 'Untitled Chart';
+    
+    // Convert to chart data points
+    const data = varObservations.map(obs => ({
+      name: obs.date || obs.about || 'N/A',
       value: obs.value,
-      label: obs.date || 'N/A'
-    }))
-  }));
+      label: obs.date || obs.about || 'N/A',
+      entity: obs.about,
+      unit: obs.unit || unit,
+      date: obs.date
+    }));
+    
+    return {
+      // Chart identification
+      id: variable,
+      dcid: variable,
+      title: chartTitle,
+      
+      // Metadata
+      description: varMetadata.description || '',
+      populationType: varMetadata.populationType || '',
+      measuredProperty: varMetadata.measuredProperty || '',
+      statType: varMetadata.statType || '',
+      measurementMethod: varMetadata.measurementMethod || '',
+      unit: unit,
+      
+      // Data structure
+      data: data,
+      
+      // Additional info
+      entities: entities,
+      dateRange: dateRange,
+      observationCount: varObservations.length,
+      
+      // Chart configuration hints
+      chartType: dates.length > 0 ? 'timeSeries' : (entities.length > 0 ? 'bar' : 'table'),
+      hasMultipleEntities: entities.length > 1,
+      hasTimeSeries: dates.length > 0
+    };
+  });
+}
+
+/**
+ * Enhanced parser that returns both data and metadata
+ */
+export function parseAndAnalyzeMCF(mcfContent) {
+  const nodes = parseMCF(mcfContent);
+  const statisticalVariables = extractStatisticalVariables(nodes);
+  const observations = extractObservations(nodes);
+  const chartData = observationsToChartData(observations, statisticalVariables);
+  
+  return {
+    nodes,
+    statisticalVariables,
+    observations,
+    chartData,
+    summary: {
+      totalNodes: nodes.length,
+      variableCount: statisticalVariables.length,
+      observationCount: observations.length,
+      chartCount: chartData.length
+    }
+  };
 }
 
 /**
@@ -163,14 +251,3 @@ export function getChartConfig(observations) {
     } : null
   };
 }
-
-/**
- * Extract statistical variables from nodes
- */
-export function extractStatisticalVariables(nodes) {
-  return nodes.filter(node => 
-    node.typeOf === 'dcs:StatisticalVariable' || 
-    node.typeOf === 'StatisticalVariable'
-  );
-}
-
