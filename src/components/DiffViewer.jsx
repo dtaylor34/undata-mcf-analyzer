@@ -106,21 +106,30 @@ export default function DiffViewer({
   
   // Smart diff algorithm that properly aligns changes
   const generateDiff = () => {
-    if (!oldVersion || !newVersion) return { left: [], right: [], changes: [] };
+    if (!oldVersion || !newVersion) return { left: [], right: [], changes: [], isLargeFile: false, totalOldLines: 0, totalNewLines: 0 };
 
-    // Handle both string content and objects
-    const oldText = typeof oldVersion === 'string' ? oldVersion : JSON.stringify(oldVersion, null, 2);
-    const newText = typeof newVersion === 'string' ? newVersion : JSON.stringify(newVersion, null, 2);
-    
-    const oldLines = oldText.split('\n');
-    const newLines = newText.split('\n');
-    
-    // Check if it's a large file (for UI warnings)
-    const isLargeFile = oldLines.length > 1000 || newLines.length > 1000;
-    
-    // Use LCS (Longest Common Subsequence) for proper diff alignment
-    // Now we compute the FULL diff, but we'll lazy-load the display
-    const diff = computeDiff(oldLines, newLines);
+    try {
+      // Handle both string content and objects
+      const oldText = typeof oldVersion === 'string' ? oldVersion : JSON.stringify(oldVersion, null, 2);
+      const newText = typeof newVersion === 'string' ? newVersion : JSON.stringify(newVersion, null, 2);
+      
+      const oldLines = oldText.split('\n');
+      const newLines = newText.split('\n');
+      
+      // Check if it's a large file (for UI warnings)
+      const isLargeFile = oldLines.length > 1000 || newLines.length > 1000;
+      
+      // CRITICAL: Prevent memory crash on huge files
+      // LCS algorithm has O(n*m) memory complexity - 60k x 60k = 3.6 BILLION cells = CRASH!
+      const maxSafeSize = 10000; // Max 10k lines per file for full diff
+      if (oldLines.length > maxSafeSize || newLines.length > maxSafeSize) {
+        console.warn(`⚠️ Files too large for detailed diff (${oldLines.length} x ${newLines.length} lines). Using simple comparison.`);
+        return generateSimpleDiff(oldLines, newLines);
+      }
+      
+      // Use LCS (Longest Common Subsequence) for proper diff alignment
+      // Now we compute the FULL diff, but we'll lazy-load the display
+      const diff = computeDiff(oldLines, newLines);
     
     const left = [];
     const right = [];
@@ -189,6 +198,60 @@ export default function DiffViewer({
     }
     
     return { left, right, changes, isLargeFile, totalOldLines: oldLines.length, totalNewLines: newLines.length };
+    } catch (error) {
+      console.error('❌ Error generating diff:', error);
+      // Return empty diff on error to prevent crash
+      return { left: [], right: [], changes: [], isLargeFile: true, totalOldLines: 0, totalNewLines: 0 };
+    }
+  };
+  
+  // Simple diff for VERY large files (avoids memory crash)
+  const generateSimpleDiff = (oldLines, newLines) => {
+    console.log('📊 Using simple diff for large files');
+    
+    // Create a line-by-line comparison without LCS algorithm
+    const left = [];
+    const right = [];
+    const changes = [];
+    
+    const maxLines = Math.max(oldLines.length, newLines.length);
+    
+    for (let i = 0; i < maxLines; i++) {
+      const oldLine = oldLines[i];
+      const newLine = newLines[i];
+      
+      if (oldLine !== undefined && newLine !== undefined) {
+        if (oldLine === newLine) {
+          // Same line
+          left.push({ type: 'same', content: oldLine, line: i + 1, wordDiff: null });
+          right.push({ type: 'same', content: newLine, line: i + 1, wordDiff: null });
+        } else {
+          // Different lines
+          left.push({ type: 'removed', content: oldLine, line: i + 1, wordDiff: null });
+          right.push({ type: 'added', content: newLine, line: i + 1, wordDiff: null });
+          changes.push({ type: 'modification', oldLine: i + 1, newLine: i + 1, oldContent: oldLine, newContent: newLine });
+        }
+      } else if (oldLine !== undefined) {
+        // Line removed
+        left.push({ type: 'removed', content: oldLine, line: i + 1, wordDiff: null });
+        right.push({ type: 'placeholder', content: '', line: null, wordDiff: null });
+        changes.push({ type: 'deletion', line: i + 1, content: oldLine });
+      } else if (newLine !== undefined) {
+        // Line added
+        left.push({ type: 'placeholder', content: '', line: null, wordDiff: null });
+        right.push({ type: 'added', content: newLine, line: i + 1, wordDiff: null });
+        changes.push({ type: 'addition', line: i + 1, content: newLine });
+      }
+    }
+    
+    return { 
+      left, 
+      right, 
+      changes, 
+      isLargeFile: true, 
+      totalOldLines: oldLines.length, 
+      totalNewLines: newLines.length 
+    };
   };
   
   // Compute diff using LCS algorithm

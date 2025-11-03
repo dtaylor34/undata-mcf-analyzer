@@ -19,6 +19,8 @@ import {
 
 export function FileSelectorV2({
   selectedOrg: propSelectedOrg,
+  selectedFileId,
+  compareFileId,
   onFileSelected,
   onCompareFileSelected,
   showDiff,
@@ -26,9 +28,9 @@ export function FileSelectorV2({
 }) {
   const [selectedOrg, setSelectedOrg] = useState(propSelectedOrg || 'ilo');
   const [selectedVersion, setSelectedVersion] = useState('v01');
-  const [selectedItem, setSelectedItem] = useState(`${propSelectedOrg || 'ilo'}/v01`); // Can be version (parent) or file (child)
-  const [compareItem, setCompareItem] = useState('');
-  const [expandedVersions, setExpandedVersions] = useState([`${propSelectedOrg || 'ilo'}/v01`]); // Track which versions are expanded
+  const [selectedItem, setSelectedItem] = useState(selectedFileId || ''); // Initialize from prop
+  const [compareItem, setCompareItem] = useState(compareFileId || ''); // Initialize from prop
+  const [expandedVersions, setExpandedVersions] = useState([]); // Don't auto-expand
   
   // DEBUG: Log when showDiff prop changes
   console.log('🔍 FileSelectorV2 - showDiff:', showDiff, 'compareItem:', compareItem);
@@ -42,17 +44,28 @@ export function FileSelectorV2({
     }
   }, [propSelectedOrg]);
   
-  // Initialize selection on mount
+  // Sync local state with parent props
   useEffect(() => {
-    if (selectedOrg && selectedVersion) {
-      const versionPath = `${selectedOrg}/${selectedVersion}`;
-      setSelectedItem(versionPath);
-      
-      // Load ALL files for this version (parent selection)
-      const fileIds = getAllFileIdsForVersion(selectedOrg, selectedVersion);
-      onFileSelected({ type: 'version', path: versionPath, fileIds });
+    if (selectedFileId !== selectedItem) {
+      setSelectedItem(selectedFileId || '');
+      // Auto-expand the selected item's version
+      if (selectedFileId) {
+        const versionPath = selectedFileId.split('/').slice(0, 2).join('/'); // Get just org/version
+        setExpandedVersions(prev => prev.includes(versionPath) ? prev : [...prev, versionPath]);
+      }
     }
-  }, []); // Only on mount
+  }, [selectedFileId]);
+  
+  useEffect(() => {
+    if (compareFileId !== compareItem) {
+      setCompareItem(compareFileId || '');
+      // Auto-expand the compare item's version
+      if (compareFileId) {
+        const versionPath = compareFileId.split('/').slice(0, 2).join('/');
+        setExpandedVersions(prev => prev.includes(versionPath) ? prev : [...prev, versionPath]);
+      }
+    }
+  }, [compareFileId]);
   
   // Clear comparison when diff mode is turned off OR when no base selected
   useEffect(() => {

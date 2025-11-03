@@ -19,6 +19,11 @@ export default function TranscodingViewer({ isDarkMode }) {
   const [editMode, setEditMode] = useState(false);
   const [showApprovalDropdown, setShowApprovalDropdown] = useState(false);
   const approvalDropdownRef = useRef(null);
+  const tableScrollRef = useRef(null);
+  
+  // Lazy loading state
+  const [loadedRows, setLoadedRows] = useState(200); // Start with 200 rows
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
   
   // Load transcoding data from API or file
   useEffect(() => {
@@ -36,6 +41,31 @@ export default function TranscodingViewer({ isDarkMode }) {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+  
+  // Reset loaded rows when filters change
+  useEffect(() => {
+    setLoadedRows(200);
+  }, [searchTerm, selectedEnumeration, confidenceFilter]);
+  
+  // Scroll handler for lazy loading
+  const handleTableScroll = (e) => {
+    if (isLoadingMore) return;
+    
+    const element = e.target;
+    const scrollPercentage = (element.scrollTop + element.clientHeight) / element.scrollHeight;
+    
+    // Load more when 80% scrolled
+    if (scrollPercentage > 0.8) {
+      const totalRows = filteredData.length;
+      if (loadedRows < totalRows) {
+        setIsLoadingMore(true);
+        setTimeout(() => {
+          setLoadedRows(prev => Math.min(prev + 200, totalRows));
+          setIsLoadingMore(false);
+        }, 100);
+      }
+    }
+  };
   
   async function loadTranscodingData() {
     setIsLoading(true);
@@ -369,7 +399,11 @@ export default function TranscodingViewer({ isDarkMode }) {
       )}
       
       {/* Table */}
-      <div className="overflow-x-auto">
+      <div 
+        ref={tableScrollRef}
+        onScroll={handleTableScroll}
+        className="overflow-x-auto overflow-y-auto max-h-[600px]"
+      >
         <table className={`w-full border-collapse ${isDarkMode ? 'border-gray-700' : 'border-gray-300'}`}>
           <thead>
             <tr className={isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}>
@@ -421,7 +455,7 @@ export default function TranscodingViewer({ isDarkMode }) {
                 </td>
               </tr>
             ) : (
-              filteredData.slice(0, 100).map((row, idx) => {
+              filteredData.slice(0, loadedRows).map((row, idx) => {
                 const confidence = row.confidence || calculateConfidence(row);
                 const confidenceBadge = getConfidenceBadge(confidence);
                 
@@ -470,13 +504,30 @@ export default function TranscodingViewer({ isDarkMode }) {
             )}
           </tbody>
         </table>
-        
-        {filteredData.length > 100 && (
-          <div className={`mt-4 text-center text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            Showing first 100 of {filteredData.length} results. Use filters to narrow down.
-          </div>
-        )}
       </div>
+      
+      {/* Lazy Loading Status */}
+      {filteredData.length > loadedRows && (
+        <div className={`mt-4 text-center text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          {isLoadingMore ? (
+            <div className="flex items-center justify-center gap-2">
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
+              <span>Loading more results...</span>
+            </div>
+          ) : (
+            <>
+              Showing {loadedRows.toLocaleString()} of {filteredData.length.toLocaleString()} results. 
+              <span className="text-blue-500"> Scroll down to load more.</span>
+            </>
+          )}
+        </div>
+      )}
+      
+      {filteredData.length > 0 && loadedRows >= filteredData.length && filteredData.length > 200 && (
+        <div className={`mt-4 text-center text-sm ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
+          ✅ All {filteredData.length.toLocaleString()} results loaded
+        </div>
+      )}
       
       {/* Actions */}
       {editMode && (

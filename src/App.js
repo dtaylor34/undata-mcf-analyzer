@@ -463,10 +463,9 @@ export default function App() {
           setShowDiff(false);
         }
       } else {
-        // No comparison in URL - only enable showDiff if there's a base file
-        if (urlParams.showDiff) {
-          setShowDiff(urlParams.showDiff);
-        }
+        // No comparison in URL - DON'T enable showDiff, user must select comparison first
+        console.log('ℹ️ No comparison in URL - diff mode will remain OFF until user selects both base and compare');
+        setShowDiff(false);
       }
       
       // Try to get the correct file IDs for this version
@@ -1371,6 +1370,8 @@ export default function App() {
       {/* File Selector V2 (Hierarchical) */}
       <FileSelectorV2
         selectedOrg={selectedOrg}
+        selectedFileId={selectedFileId}
+        compareFileId={compareFileId}
         onFileSelected={(selection) => {
           // Handle base deselection
           if (!selection) {
@@ -1457,7 +1458,7 @@ export default function App() {
         )}
         
         {/* Diff Viewer */}
-        {showDiff && !isLoading && compareFileId && (
+        {showDiff && !isLoading && compareFileId && compareMCF && currentMCF && (
           <DiffViewer
             oldVersion={compareMCF}
             newVersion={currentMCF}
@@ -1473,6 +1474,13 @@ export default function App() {
               // TODO: Fetch data from selected environment
             }}
           />
+        )}
+        
+        {/* Loading indicator for comparison */}
+        {showDiff && compareFileId && (!compareMCF || !currentMCF) && !isLoading && (
+          <div className="mb-4 text-center py-8 text-muted-foreground">
+            <div className="animate-pulse">Loading comparison data...</div>
+          </div>
         )}
 
         {/* Transcoding Viewer (SDG Transcoding Matrix Review) */}
