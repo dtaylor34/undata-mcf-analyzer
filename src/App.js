@@ -795,16 +795,44 @@ export default function App() {
   
   // Load compare version when diff is shown
   useEffect(() => {
+    console.log('🔥 COMPARISON USEEFFECT FIRED! showDiff:', showDiff, 'compareFileId:', compareFileId, 'compareFileIds:', compareFileIds);
+    
     async function loadCompareFile() {
       if (!showDiff || !compareFileId) {
+        console.log('⚠️ Comparison loading skipped - showDiff:', showDiff, 'compareFileId:', compareFileId);
         setCompareMCFContent('');
         return;
       }
       
+      console.log('🔍 Comparison Loading Debug:', {
+        showDiff,
+        compareFileId,
+        compareFileIdsLength: compareFileIds?.length || 0,
+        compareFileIds: compareFileIds
+      });
+      
       try {
-        const content = await loadMCFFile(compareFileId);
-        setCompareMCFContent(content || '');
-        console.log('📄 Loaded compare file:', compareFileId);
+        // Check if we need to load multiple files (version with nested files)
+        if (compareFileIds && compareFileIds.length > 0) {
+          console.log(`📦 Loading ${compareFileIds.length} comparison files...`);
+          const contents = await Promise.all(
+            compareFileIds.map(fileId => loadMCFFile(fileId))
+          );
+          
+          // Combine all files with separators
+          const combined = contents
+            .filter(c => c) // Remove any failed loads
+            .join('\n\n# ========================================\n\n');
+          
+          setCompareMCFContent(combined);
+          console.log(`✅ Combined ${compareFileIds.length} comparison files (${combined.length} chars)`);
+        } else {
+          // Single file mode
+          console.log('⚠️ No compareFileIds array - loading single file');
+          const content = await loadMCFFile(compareFileId);
+          setCompareMCFContent(content || '');
+          console.log('📄 Loaded compare file:', compareFileId, `(${content?.length || 0} chars)`);
+        }
       } catch (error) {
         console.error('Error loading compare file:', error);
         setCompareMCFContent('');
@@ -812,7 +840,7 @@ export default function App() {
     }
     
     loadCompareFile();
-  }, [showDiff, compareFileId]);
+  }, [showDiff, compareFileId, compareFileIds]);
   
   // Combine schema MCF with selected CSV data sources
   // THIS IS WHERE MCF SOURCE OF TRUTH IS MAINTAINED
@@ -1160,7 +1188,7 @@ export default function App() {
               <Database className="h-8 w-8 text-blue-500" />
               <div>
                 <div className="flex items-center gap-2">
-                  <h1>MCF Pipeline Viewer</h1>
+                  <h1>MCF Pipeline Viewer <span className="text-xs text-green-400">✓ UPDATED</span></h1>
                   {currentPermissions && (
                     <span className={`text-xs px-2 py-0.5 rounded-full ${
                       isAdminUser 
@@ -1436,6 +1464,14 @@ export default function App() {
             oldVersionName={compareFileId}
             newVersionName={selectedFileId}
             isDarkMode={isDarkMode}
+            onLeftEnvironmentChange={(envId) => {
+              console.log('🌍 Left (Base) environment changed to:', envId);
+              // TODO: Fetch data from selected environment
+            }}
+            onRightEnvironmentChange={(envId) => {
+              console.log('🌍 Right (Comparing) environment changed to:', envId);
+              // TODO: Fetch data from selected environment
+            }}
           />
         )}
 

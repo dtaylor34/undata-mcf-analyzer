@@ -10,9 +10,18 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Search } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
+import { getAllEnvironments } from '../utils/environment-config';
 
-export default function DiffViewer({ oldVersion, newVersion, oldVersionName, newVersionName, isDarkMode }) {
+export default function DiffViewer({ 
+  oldVersion, 
+  newVersion, 
+  oldVersionName, 
+  newVersionName, 
+  isDarkMode,
+  onLeftEnvironmentChange,
+  onRightEnvironmentChange
+}) {
   const [filterMode, setFilterMode] = useState('all'); // 'all', 'additions', 'deletions', 'modifications', 'unchanged'
   const leftScrollRef = useRef(null);
   const rightScrollRef = useRef(null);
@@ -27,6 +36,17 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
   const changesScrollRef = useRef(null);
   const [searchLeft, setSearchLeft] = useState(''); // Search term for left panel (base)
   const [searchRight, setSearchRight] = useState(''); // Search term for right panel (comparing)
+  
+  // Environment selection state
+  const [leftEnvironment, setLeftEnvironment] = useState('staging');
+  const [rightEnvironment, setRightEnvironment] = useState('staging');
+  const [showLeftEnvDropdown, setShowLeftEnvDropdown] = useState(false);
+  const [showRightEnvDropdown, setShowRightEnvDropdown] = useState(false);
+  
+  const environments = getAllEnvironments();
+  
+  // DEBUG: Log environments to verify they're loading
+  console.log('🌍 DiffViewer Environments loaded:', environments);
   
   // Handle ESC key to exit fullscreen
   useEffect(() => {
@@ -396,6 +416,7 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
         )}
       </div>
 
+
       {/* Collapsible Diff Viewer Header */}
       <div 
         className={`px-6 py-3 border-b ${isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-gray-50'} flex items-center justify-between cursor-pointer hover:${isDarkMode ? 'bg-gray-750' : 'bg-gray-100'} transition-colors`}
@@ -515,10 +536,59 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
         {/* Left Side - Base Version (Blue) */}
         <div>
           <div className={`px-4 py-2 font-mono text-xs flex items-center justify-between ${isDarkMode ? 'bg-blue-900/40 text-blue-300' : 'bg-blue-50 text-blue-700'}`}>
-            <div>
-              <span className="font-bold">☑️ {newVersionName}</span>
-              <span className={`ml-2 text-xs ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>(Base)</span>
+            <div className="flex items-center gap-3">
+              <div>
+                <span className="font-bold">☑️ {newVersionName}</span>
+                <span className={`ml-2 text-xs ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>(Base)</span>
+              </div>
+              
+              {/* Environment Dropdown - Base */}
+              {environments && environments.length > 0 ? (
+                <div className="relative">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowLeftEnvDropdown(!showLeftEnvDropdown);
+                    }}
+                    className={`px-3 py-1.5 rounded text-xs font-medium flex items-center gap-1.5 border-2 ${
+                      isDarkMode
+                        ? 'bg-blue-800 text-blue-100 border-blue-600 hover:bg-blue-700'
+                        : 'bg-blue-600 text-white border-blue-500 hover:bg-blue-700'
+                    }`}
+                  >
+                    <span>{environments.find(e => e.id === leftEnvironment)?.icon || '🔶'}</span>
+                    <span>{environments.find(e => e.id === leftEnvironment)?.name || 'Staging'}</span>
+                    <ChevronDown className="h-3 w-3" />
+                  </button>
+                {showLeftEnvDropdown && (
+                  <div className={`absolute top-full left-0 mt-1 rounded-lg shadow-lg border z-50 ${
+                    isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+                  }`}>
+                    {environments.map(env => (
+                      <button
+                        key={env.id}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setLeftEnvironment(env.id);
+                          if (onLeftEnvironmentChange) onLeftEnvironmentChange(env.id);
+                          setShowLeftEnvDropdown(false);
+                        }}
+                        className={`w-full px-3 py-2 text-left text-xs hover:bg-blue-600 hover:text-white transition-colors flex items-center gap-2 whitespace-nowrap ${
+                          isDarkMode ? 'text-gray-200' : 'text-gray-900'
+                        } ${leftEnvironment === env.id ? 'bg-blue-900/30 font-semibold' : ''}`}
+                      >
+                        <span>{env.icon}</span>
+                        <span>{env.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              ) : (
+                <div className="text-xs text-red-500 font-bold">ENV ERROR</div>
+              )}
             </div>
+            
             {/* Search Box - Base */}
             <div className="relative">
               <input
@@ -611,10 +681,59 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
         {/* Right Side - Comparing Version (Purple) */}
         <div>
           <div className={`px-4 py-2 font-mono text-xs flex items-center justify-between ${isDarkMode ? 'bg-purple-900/40 text-purple-300' : 'bg-purple-50 text-purple-700'}`}>
-            <div>
-              <span className="font-bold">⬤ {oldVersionName}</span>
-              <span className={`ml-2 text-xs ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>(Comparing)</span>
+            <div className="flex items-center gap-3">
+              <div>
+                <span className="font-bold">⬤ {oldVersionName}</span>
+                <span className={`ml-2 text-xs ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>(Comparing)</span>
+              </div>
+              
+              {/* Environment Dropdown - Comparing */}
+              {environments && environments.length > 0 ? (
+                <div className="relative">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowRightEnvDropdown(!showRightEnvDropdown);
+                    }}
+                    className={`px-3 py-1.5 rounded text-xs font-medium flex items-center gap-1.5 border-2 ${
+                      isDarkMode
+                        ? 'bg-purple-800 text-purple-100 border-purple-600 hover:bg-purple-700'
+                        : 'bg-purple-600 text-white border-purple-500 hover:bg-purple-700'
+                    }`}
+                  >
+                    <span>{environments.find(e => e.id === rightEnvironment)?.icon || '🔶'}</span>
+                    <span>{environments.find(e => e.id === rightEnvironment)?.name || 'Staging'}</span>
+                    <ChevronDown className="h-3 w-3" />
+                  </button>
+                {showRightEnvDropdown && (
+                  <div className={`absolute top-full left-0 mt-1 rounded-lg shadow-lg border z-50 ${
+                    isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+                  }`}>
+                    {environments.map(env => (
+                      <button
+                        key={env.id}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setRightEnvironment(env.id);
+                          if (onRightEnvironmentChange) onRightEnvironmentChange(env.id);
+                          setShowRightEnvDropdown(false);
+                        }}
+                        className={`w-full px-3 py-2 text-left text-xs hover:bg-purple-600 hover:text-white transition-colors flex items-center gap-2 whitespace-nowrap ${
+                          isDarkMode ? 'text-gray-200' : 'text-gray-900'
+                        } ${rightEnvironment === env.id ? 'bg-purple-900/30 font-semibold' : ''}`}
+                      >
+                        <span>{env.icon}</span>
+                        <span>{env.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              ) : (
+                <div className="text-xs text-red-500 font-bold">ENV ERROR</div>
+              )}
             </div>
+            
             {/* Search Box - Comparing */}
             <div className="relative">
               <input
