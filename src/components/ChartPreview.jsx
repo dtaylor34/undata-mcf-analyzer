@@ -11,6 +11,8 @@
 
 import React from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { generateStagingUrlAuto, hasStagingChart, getChartMapping } from '../utils/staging-chart-urls';
+import { getCurrentEnvironment, getEnvironmentConfig } from '../utils/environment-config';
 
 export default function ChartPreview({ data, indicator, isDarkMode, onDataPointClick }) {
   // Transform data for charting - data is now a chart object with metadata
@@ -26,6 +28,14 @@ export default function ChartPreview({ data, indicator, isDarkMode, onDataPointC
   const statType = data?.statType || '';
   const measuredProperty = data?.measuredProperty || '';
   const observationCount = data?.observationCount || chartData.length;
+
+  // Check if this chart has a live URL and get current environment
+  const variableId = data?.id || data?.variable;
+  const currentEnv = getCurrentEnvironment();
+  const envConfig = getEnvironmentConfig(currentEnv);
+  const stagingUrl = variableId ? generateStagingUrlAuto(variableId) : null;
+  const chartMapping = variableId ? getChartMapping(variableId) : null;
+  const hasLiveChart = hasStagingChart(variableId);
 
   // Handle data point click
   const handleClick = (clickData) => {
@@ -115,6 +125,50 @@ export default function ChartPreview({ data, indicator, isDarkMode, onDataPointC
           )}
         </div>
       </div>
+
+      {/* View Live Chart Button */}
+      {hasLiveChart && stagingUrl && (
+        <div className={`mb-4 p-4 rounded-lg border-2 ${
+          envConfig.color === 'orange' 
+            ? (isDarkMode ? 'bg-orange-900/20 border-orange-700' : 'bg-orange-50 border-orange-300')
+            : envConfig.color === 'blue'
+            ? (isDarkMode ? 'bg-blue-900/20 border-blue-700' : 'bg-blue-50 border-blue-300')
+            : (isDarkMode ? 'bg-green-900/20 border-green-700' : 'bg-green-50 border-green-300')
+        }`}>
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className={`font-semibold mb-1 ${
+                envConfig.color === 'orange'
+                  ? (isDarkMode ? 'text-orange-400' : 'text-orange-700')
+                  : envConfig.color === 'blue'
+                  ? (isDarkMode ? 'text-blue-400' : 'text-blue-700')
+                  : (isDarkMode ? 'text-green-400' : 'text-green-700')
+              }`}>
+                {envConfig.icon} Live Chart Available on UN Data {envConfig.name}
+              </div>
+              {chartMapping && (
+                <div className={`text-xs ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {chartMapping.thematicArea} › {chartMapping.category}
+                </div>
+              )}
+            </div>
+            <a
+              href={stagingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                envConfig.color === 'orange'
+                  ? (isDarkMode ? 'bg-orange-700 hover:bg-orange-600 text-white' : 'bg-orange-600 hover:bg-orange-700 text-white')
+                  : envConfig.color === 'blue'
+                  ? (isDarkMode ? 'bg-blue-700 hover:bg-blue-600 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white')
+                  : (isDarkMode ? 'bg-green-700 hover:bg-green-600 text-white' : 'bg-green-600 hover:bg-green-700 text-white')
+              }`}
+            >
+              View Live Chart →
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* Chart */}
       <div className={`p-6 rounded-lg ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>

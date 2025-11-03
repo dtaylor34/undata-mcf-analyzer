@@ -10,6 +10,7 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
+import { Search } from 'lucide-react';
 
 export default function DiffViewer({ oldVersion, newVersion, oldVersionName, newVersionName, isDarkMode }) {
   const [filterMode, setFilterMode] = useState('all'); // 'all', 'additions', 'deletions', 'modifications', 'unchanged'
@@ -19,6 +20,13 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [loadedLines, setLoadedLines] = useState(200); // Start with 200 lines
   const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [showDiffViewer, setShowDiffViewer] = useState(true); // Collapsible diff viewer
+  const [showDetailedChanges, setShowDetailedChanges] = useState(false); // Collapsible detailed changes - START COLLAPSED
+  const [loadedChanges, setLoadedChanges] = useState(50); // Lazy loading for detailed changes
+  const [isLoadingMoreChanges, setIsLoadingMoreChanges] = useState(false);
+  const changesScrollRef = useRef(null);
+  const [searchLeft, setSearchLeft] = useState(''); // Search term for left panel (base)
+  const [searchRight, setSearchRight] = useState(''); // Search term for right panel (comparing)
   
   // Handle ESC key to exit fullscreen
   useEffect(() => {
@@ -45,10 +53,36 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
     };
   }, [isFullscreen]);
   
-  // Reset loaded lines when filter changes
+  // Reset loaded lines when filter or search changes
   useEffect(() => {
     setLoadedLines(200);
-  }, [filterMode, oldVersion, newVersion]);
+  }, [filterMode, searchLeft, searchRight, oldVersion, newVersion]);
+  
+  // Reset loaded changes when detailed changes section is opened
+  useEffect(() => {
+    if (showDetailedChanges) {
+      setLoadedChanges(50);
+    }
+  }, [showDetailedChanges]);
+  
+  // Handle scroll for lazy loading in detailed changes section
+  const handleChangesScroll = (e) => {
+    if (isLoadingMoreChanges) return;
+    
+    const element = e.target;
+    const scrollPercentage = (element.scrollTop + element.clientHeight) / element.scrollHeight;
+    
+    if (scrollPercentage > 0.8) { // Load more when 80% scrolled
+      const diff = generateDiff();
+      if (loadedChanges < diff.changes.length) {
+        setIsLoadingMoreChanges(true);
+        setTimeout(() => {
+          setLoadedChanges(prev => Math.min(prev + 50, diff.changes.length));
+          setIsLoadingMoreChanges(false);
+        }, 300);
+      }
+    }
+  };
   
   // Smart diff algorithm that properly aligns changes
   const generateDiff = () => {
@@ -278,9 +312,18 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
   const filteredLeft = left.filter((_, idx) => filteredIndices[idx]);
   const filteredRight = right.filter((_, idx) => filteredIndices[idx]);
   
+  // Apply search filtering
+  const searchFilteredLeft = searchLeft
+    ? filteredLeft.filter(line => line.content.toLowerCase().includes(searchLeft.toLowerCase()))
+    : filteredLeft;
+  
+  const searchFilteredRight = searchRight
+    ? filteredRight.filter(line => line.content.toLowerCase().includes(searchRight.toLowerCase()))
+    : filteredRight;
+  
   // Apply lazy loading limit
-  const displayLeft = filteredLeft.slice(0, loadedLines);
-  const displayRight = filteredRight.slice(0, loadedLines);
+  const displayLeft = searchFilteredLeft.slice(0, loadedLines);
+  const displayRight = searchFilteredRight.slice(0, loadedLines);
   
   // Count different types (from full dataset for accurate counts)
   const additionCount = right.filter(l => l.type === 'added').length;
@@ -316,15 +359,14 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
             title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
           >
             {isFullscreen ? (
-              // Collapse/Exit Icon
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clipRule="evenodd" />
-                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H5.414l2.293 2.293a1 1 0 11-1.414 1.414L4 6.414V8a1 1 0 01-2 0V4zm9 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 11-2 0V5.414l-2.293 2.293a1 1 0 11-1.414-1.414L14.586 4H13a1 1 0 01-1-1zm-9 9a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 16H8a1 1 0 110 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 110-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L16 14.586V13a1 1 0 011-1z" clipRule="evenodd" />
+              // Exit Fullscreen - Corner brackets collapsing
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 14L2 18m0 0l4 4m-4-4h6m6-10l4-4m0 0l-4-4m4 4h-6" />
               </svg>
             ) : (
-              // Expand Icon
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H5.414l2.293 2.293a1 1 0 11-1.414 1.414L4 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 11-2 0V5.414l-2.293 2.293a1 1 0 11-1.414-1.414L14.586 4H13zM4 13a1 1 0 011 1v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 17H8a1 1 0 110 2H4a1 1 0 01-1-1v-4a1 1 0 011-1zm9 1a1 1 0 112 0v4a1 1 0 01-1 1h-4a1 1 0 110-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L16 14.586V13z" clipRule="evenodd" />
+              // Enter Fullscreen - Corner brackets expanding
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m15 5h-4m4 0v-4m0 4l-5-5" />
               </svg>
             )}
           </button>
@@ -354,8 +396,33 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
         )}
       </div>
 
-      {/* Filter Controls */}
-      <div className={`px-6 py-3 border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'} flex items-center gap-4`}>
+      {/* Collapsible Diff Viewer Header */}
+      <div 
+        className={`px-6 py-3 border-b ${isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-gray-50'} flex items-center justify-between cursor-pointer hover:${isDarkMode ? 'bg-gray-750' : 'bg-gray-100'} transition-colors`}
+        onClick={() => setShowDiffViewer(!showDiffViewer)}
+      >
+        <div className="flex items-center gap-3">
+          <svg 
+            className={`w-5 h-5 transition-transform ${showDiffViewer ? 'rotate-90' : ''}`}
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <h3 className={`text-lg font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+            📊 Side-by-Side Comparison
+          </h3>
+        </div>
+        <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          {showDiffViewer ? 'Click to collapse' : 'Click to expand'}
+        </div>
+      </div>
+
+      {showDiffViewer && (
+        <>
+          {/* Filter Controls */}
+          <div className={`px-6 py-3 border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'} flex items-center gap-4`}>
         <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Filter:</span>
         <div className="flex gap-2 flex-wrap">
           <button
@@ -422,107 +489,86 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
         </div>
       </div>
 
+      {/* Legend */}
+      <div className={`px-4 py-2 text-xs border-t border-b ${isDarkMode ? 'bg-gray-800/50 border-gray-700 text-gray-300' : 'bg-gray-50 border-gray-200 text-gray-700'}`}>
+        <span className="font-semibold mr-4">Legend:</span>
+        <span className="inline-flex items-center mr-4">
+          <span className="inline-flex items-center justify-center w-5 h-4 mr-1 text-xs font-bold bg-green-600 text-white rounded">+</span>
+          <span>Added lines</span>
+        </span>
+        <span className="inline-flex items-center mr-4">
+          <span className="inline-flex items-center justify-center w-5 h-4 mr-1 text-xs font-bold bg-red-600 text-white rounded">-</span>
+          <span>Removed lines</span>
+        </span>
+        <span className="inline-flex items-center mr-4">
+          <span className={`px-2 py-0.5 mr-1 text-xs font-bold rounded ${isDarkMode ? 'bg-green-600/60 text-green-50' : 'bg-green-700 text-white'}`}>word</span>
+          <span>Added text</span>
+        </span>
+        <span className="inline-flex items-center">
+          <span className={`px-2 py-0.5 mr-1 text-xs font-bold rounded line-through ${isDarkMode ? 'bg-red-600/60 text-red-50' : 'bg-red-700 text-white'}`}>word</span>
+          <span>Removed text</span>
+        </span>
+      </div>
+
       {/* Diff Content */}
       <div className="grid grid-cols-2 divide-x divide-gray-700">
-        {/* Left Side - Old Version */}
+        {/* Left Side - Base Version (Blue) */}
         <div>
-          <div className={`px-4 py-2 font-mono text-xs ${isDarkMode ? 'bg-red-900/30 text-red-300' : 'bg-red-50 text-red-700'}`}>
-            <span className="font-bold">- {oldVersionName}</span>
+          <div className={`px-4 py-2 font-mono text-xs flex items-center justify-between ${isDarkMode ? 'bg-blue-900/40 text-blue-300' : 'bg-blue-50 text-blue-700'}`}>
+            <div>
+              <span className="font-bold">☑️ {newVersionName}</span>
+              <span className={`ml-2 text-xs ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>(Base)</span>
+            </div>
+            {/* Search Box - Base */}
+            <div className="relative">
+              <input
+                type="text"
+                value={searchLeft}
+                onChange={(e) => setSearchLeft(e.target.value)}
+                placeholder="Search in base..."
+                className={`pl-8 pr-3 py-1 text-xs rounded border ${
+                  isDarkMode 
+                    ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500' 
+                    : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                } focus:outline-none focus:ring-2 focus:ring-blue-500 w-48`}
+              />
+              <Search className={`absolute left-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
+            </div>
           </div>
           <div 
             ref={leftScrollRef}
             onScroll={handleScroll('left')}
-            className={`overflow-auto ${isFullscreen ? 'h-[calc(100vh-400px)]' : 'max-h-96'} ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
-          >
-            {displayLeft.map((line, idx) => (
-              <div
-                key={idx}
-                className={`px-4 py-1 font-mono text-xs border-l-4 ${
-                  line.type === 'removed'
-                    ? isDarkMode
-                      ? 'bg-red-900/70 text-red-100 border-red-500'
-                      : 'bg-red-100 text-red-900 border-red-500'
-                    : line.type === 'placeholder'
-                    ? isDarkMode
-                      ? 'bg-gray-800/50 border-transparent'
-                      : 'bg-gray-50 border-transparent'
-                    : isDarkMode
-                    ? 'text-gray-400 border-transparent'
-                    : 'text-gray-700 border-transparent'
-                }`}
-              >
-                <span className={`inline-block w-12 text-right mr-4 ${isDarkMode ? 'text-gray-600' : 'text-gray-400'}`}>
-                  {line.line || ''}
-                </span>
-                {line.type === 'removed' && <span className="mr-2 text-red-500 font-bold">-</span>}
-                {line.wordDiff ? (
-                  <span>
-                    {line.wordDiff.map((word, wIdx) => (
-                      <span
-                        key={wIdx}
-                        className={
-                          word.type === 'removed'
-                            ? 'bg-red-600 text-white font-bold px-1 rounded'
-                            : ''
-                        }
-                      >
-                        {word.text}
-                      </span>
-                    ))}
-                  </span>
-                ) : (
-                  <span>{line.content || ' '}</span>
-                )}
-              </div>
-            ))}
-            
-            {/* Loading Indicator */}
-            {(isLoadingMore || hasMore) && (
-              <div className={`px-4 py-4 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                {isLoadingMore ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
-                    <span className="text-xs">Loading more...</span>
-                  </div>
-                ) : hasMore ? (
-                  <span className="text-xs">Scroll down to load more ({filteredLeft.length - loadedLines} remaining)</span>
-                ) : null}
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Right Side - New Version */}
-        <div>
-          <div className={`px-4 py-2 font-mono text-xs ${isDarkMode ? 'bg-green-900/30 text-green-300' : 'bg-green-50 text-green-700'}`}>
-            <span className="font-bold">+ {newVersionName}</span>
-          </div>
-          <div 
-            ref={rightScrollRef}
-            onScroll={handleScroll('right')}
-            className={`overflow-auto ${isFullscreen ? 'h-[calc(100vh-400px)]' : 'max-h-96'} ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
+            className={`overflow-auto ${isFullscreen ? 'h-[calc(100vh-400px)]' : 'max-h-96'} ${isDarkMode ? 'bg-slate-900' : 'bg-gray-50'}`}
           >
             {displayRight.map((line, idx) => (
               <div
                 key={idx}
-                className={`px-4 py-1 font-mono text-xs border-l-4 ${
+                className={`px-4 py-1.5 font-mono text-xs border-l-4 ${
                   line.type === 'added'
                     ? isDarkMode
-                      ? 'bg-green-900/70 text-green-100 border-green-500'
-                      : 'bg-green-100 text-green-900 border-green-500'
+                      ? 'bg-green-900/40 text-green-100 border-green-500'
+                      : 'bg-green-100 text-green-900 border-green-600'
                     : line.type === 'placeholder'
                     ? isDarkMode
-                      ? 'bg-gray-800/50 border-transparent'
+                      ? 'bg-slate-800/30 border-transparent text-gray-600'
                       : 'bg-gray-50 border-transparent'
+                    : line.type === 'same'
+                    ? isDarkMode
+                      ? 'text-gray-300 border-transparent'
+                      : 'text-gray-700 border-transparent'
                     : isDarkMode
-                    ? 'text-gray-400 border-transparent'
+                    ? 'text-gray-200 border-transparent'
                     : 'text-gray-700 border-transparent'
                 }`}
               >
-                <span className={`inline-block w-12 text-right mr-4 ${isDarkMode ? 'text-gray-600' : 'text-gray-400'}`}>
+                <span className={`inline-block w-12 text-right mr-4 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
                   {line.line || ''}
                 </span>
-                {line.type === 'added' && <span className="mr-2 text-green-500 font-bold">+</span>}
+                {line.type === 'added' && (
+                  <span className="inline-flex items-center justify-center w-6 h-5 mr-2 text-xs font-bold bg-green-600 text-white rounded">
+                    +
+                  </span>
+                )}
                 {line.wordDiff ? (
                   <span>
                     {line.wordDiff.map((word, wIdx) => (
@@ -530,7 +576,9 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
                         key={wIdx}
                         className={
                           word.type === 'added'
-                            ? 'bg-green-600 text-white font-bold px-1 rounded'
+                            ? (isDarkMode 
+                              ? 'bg-green-600/60 text-green-50 font-bold px-1.5 py-0.5 rounded'
+                              : 'bg-green-700 text-white font-bold px-1.5 py-0.5 rounded')
                             : ''
                         }
                       >
@@ -559,19 +607,155 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
             )}
           </div>
         </div>
+
+        {/* Right Side - Comparing Version (Purple) */}
+        <div>
+          <div className={`px-4 py-2 font-mono text-xs flex items-center justify-between ${isDarkMode ? 'bg-purple-900/40 text-purple-300' : 'bg-purple-50 text-purple-700'}`}>
+            <div>
+              <span className="font-bold">⬤ {oldVersionName}</span>
+              <span className={`ml-2 text-xs ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>(Comparing)</span>
+            </div>
+            {/* Search Box - Comparing */}
+            <div className="relative">
+              <input
+                type="text"
+                value={searchRight}
+                onChange={(e) => setSearchRight(e.target.value)}
+                placeholder="Search in comparing..."
+                className={`pl-8 pr-3 py-1 text-xs rounded border ${
+                  isDarkMode 
+                    ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500' 
+                    : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                } focus:outline-none focus:ring-2 focus:ring-purple-500 w-48`}
+              />
+              <Search className={`absolute left-2 top-1/2 -translate-y-1/2 h-3.5 w-3.5 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
+            </div>
+          </div>
+          <div 
+            ref={rightScrollRef}
+            onScroll={handleScroll('right')}
+            className={`overflow-auto ${isFullscreen ? 'h-[calc(100vh-400px)]' : 'max-h-96'} ${isDarkMode ? 'bg-slate-900' : 'bg-gray-50'}`}
+          >
+            {displayLeft.map((line, idx) => (
+              <div
+                key={idx}
+                className={`px-4 py-1.5 font-mono text-xs border-l-4 ${
+                  line.type === 'removed'
+                    ? isDarkMode
+                      ? 'bg-red-900/40 text-red-100 border-red-500'
+                      : 'bg-red-100 text-red-900 border-red-600'
+                    : line.type === 'placeholder'
+                    ? isDarkMode
+                      ? 'bg-slate-800/30 border-transparent text-gray-600'
+                      : 'bg-gray-50 border-transparent'
+                    : line.type === 'same'
+                    ? isDarkMode
+                      ? 'text-gray-300 border-transparent'
+                      : 'text-gray-700 border-transparent'
+                    : isDarkMode
+                    ? 'text-gray-200 border-transparent'
+                    : 'text-gray-700 border-transparent'
+                }`}
+              >
+                <span className={`inline-block w-12 text-right mr-4 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+                  {line.line || ''}
+                </span>
+                {line.type === 'removed' && (
+                  <span className="inline-flex items-center justify-center w-6 h-5 mr-2 text-xs font-bold bg-red-600 text-white rounded">
+                    -
+                  </span>
+                )}
+                {line.wordDiff ? (
+                  <span>
+                    {line.wordDiff.map((word, wIdx) => (
+                      <span
+                        key={wIdx}
+                        className={
+                          word.type === 'removed'
+                            ? (isDarkMode
+                              ? 'bg-red-600/60 text-red-50 font-bold px-1.5 py-0.5 rounded line-through'
+                              : 'bg-red-700 text-white font-bold px-1.5 py-0.5 rounded line-through')
+                            : ''
+                        }
+                      >
+                        {word.text}
+                      </span>
+                    ))}
+                  </span>
+                ) : (
+                  <span>{line.content || ' '}</span>
+                )}
+              </div>
+            ))}
+            
+            {/* Loading Indicator */}
+            {(isLoadingMore || hasMore) && (
+              <div className={`px-4 py-4 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                {isLoadingMore ? (
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
+                    <span className="text-xs">Loading more...</span>
+                  </div>
+                ) : hasMore ? (
+                  <span className="text-xs">Scroll down to load more ({filteredLeft.length - loadedLines} remaining)</span>
+                ) : null}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+        </>
+      )}
+
+      {/* Collapsible Detailed Changes Header */}
+      <div 
+        className={`px-6 py-3 border-t ${isDarkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-gray-50'} flex items-center justify-between cursor-pointer hover:${isDarkMode ? 'bg-gray-750' : 'bg-gray-100'} transition-colors`}
+        onClick={() => setShowDetailedChanges(!showDetailedChanges)}
+      >
+        <div className="flex items-center gap-3">
+          <svg 
+            className={`w-5 h-5 transition-transform ${showDetailedChanges ? 'rotate-90' : ''}`}
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <div>
+            <h3 className={`text-lg font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+              📝 Change Summary
+            </h3>
+            <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              {changes.length.toLocaleString()} total changes detected {showDetailedChanges ? `• Loaded ${Math.min(loadedChanges, changes.length)}` : '• Click to expand'}
+            </p>
+          </div>
+        </div>
+        <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          {showDetailedChanges ? 'Click to collapse' : 'Click to expand'}
+        </div>
       </div>
 
-      {/* Detailed Changes Summary */}
-      <div className={`px-6 py-4 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-        
-        {/* Show specific changes */}
-        {changes.length > 0 && (
-          <div className={`mt-4 p-4 rounded ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
-            <h4 className={`text-sm font-bold mb-2 ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-              📝 Detailed Changes ({changes.length})
-            </h4>
-            <div className="space-y-2 max-h-40 overflow-auto">
-              {changes.slice(0, 10).map((change, idx) => (
+      {showDetailedChanges && changes.length > 0 && (
+        <div className={`px-6 py-4 ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+          {/* Explanation banner */}
+          <div className={`mb-4 p-3 rounded text-sm ${
+            isDarkMode ? 'bg-blue-900/20 text-blue-300 border border-blue-800' : 'bg-blue-50 text-blue-800 border border-blue-200'
+          }`}>
+            <strong>ℹ️ What you're seeing:</strong> This list shows line-by-line changes between the two versions. Scroll down to load more automatically.
+            {changes.length > 10000 && (
+              <span className="block mt-1">
+                <strong>Note:</strong> These versions have {changes.length.toLocaleString()} total differences, suggesting they may be completely different files or major structural changes.
+              </span>
+            )}
+          </div>
+          
+          <div className={`p-4 rounded ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
+            <div 
+              className="space-y-2 max-h-96 overflow-auto"
+              onScroll={handleChangesScroll}
+              ref={changesScrollRef}
+            >
+              {changes.slice(0, loadedChanges).map((change, idx) => (
                 <div key={idx} className={`text-xs font-mono p-2 rounded ${
                   change.type === 'modification'
                     ? isDarkMode ? 'bg-yellow-900/30' : 'bg-yellow-50'
@@ -606,15 +790,45 @@ export default function DiffViewer({ oldVersion, newVersion, oldVersionName, new
                   )}
                 </div>
               ))}
-              {changes.length > 10 && (
-                <p className={`text-xs ${isDarkMode ? 'text-gray-500' : 'text-gray-600'}`}>
-                  ... and {changes.length - 10} more changes
-                </p>
+              
+              {/* Loading indicator or remaining count */}
+              {isLoadingMoreChanges && (
+                <div className={`mt-3 p-3 rounded text-center ${
+                  isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
+                }`}>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
+                    <span className="text-xs">Loading more changes...</span>
+                  </div>
+                </div>
+              )}
+              
+              {!isLoadingMoreChanges && loadedChanges < changes.length && (
+                <div className={`mt-3 p-2 rounded text-center ${
+                  isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
+                }`}>
+                  <p className="text-xs font-medium">
+                    ... and {(changes.length - loadedChanges).toLocaleString()} more changes
+                  </p>
+                  <p className={`text-xs mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    Scroll down to load more • Or use "Side-by-Side Comparison" above
+                  </p>
+                </div>
+              )}
+              
+              {loadedChanges >= changes.length && changes.length > 50 && (
+                <div className={`mt-3 p-2 rounded text-center ${
+                  isDarkMode ? 'bg-green-900/20 text-green-300 border border-green-800' : 'bg-green-50 text-green-800 border border-green-200'
+                }`}>
+                  <p className="text-xs font-medium">
+                    ✅ All {changes.length.toLocaleString()} changes loaded
+                  </p>
+                </div>
               )}
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

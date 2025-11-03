@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FileSelectorV2 } from './components/FileSelectorV2';
 import { DataSourceSelector } from './components/DataSourceSelector';
-import { ShareButton } from './components/ShareButton';
+import { EnvironmentSelector } from './components/EnvironmentSelector';
 import DiffViewer from './components/DiffViewer';
 import CodeDisplay from './components/CodeDisplay';
 import ChartPreview from './components/ChartPreview';
@@ -10,9 +10,10 @@ import { ChartFilter } from './components/ChartFilter';
 import { DualChartPreview } from './components/DualChartPreview';
 import { ThematicAreasExplorer } from './components/ThematicAreasExplorer';
 import { FormatComparison } from './components/FormatComparison';
+import TranscodingViewer from './components/TranscodingViewer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Switch } from './components/ui/switch';
-import { Sun, Moon, Database } from 'lucide-react';
+import { Sun, Moon, Database, ChevronDown, GitCompare, Share2 } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
 import { useUrlState } from './hooks/useUrlState';
@@ -20,6 +21,7 @@ import { getCurrentPermissions, filterOrganizations, filterFiles, filterDataSour
 import { parseMCF, extractStatisticalVariables, extractObservations, observationsToChartData, parseAndAnalyzeMCF } from './mcf-parser';
 import { loadCSVAndConvert, combineSchemaAndObservations } from './csv-to-mcf-converter';
 import { csvToMCF, generateAllFormats, observationToFormats } from './utils/csv-to-mcf';
+import { getOrganizations } from './mcf-file-index-v2';
 
 // Dynamic MCF file loader - loads real files from public folder
 async function loadMCFFile(fileId) {
@@ -281,6 +283,22 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeTab, setActiveTab] = useState('raw');
   
+  // Organization selection (now in header)
+  const [selectedOrg, setSelectedOrg] = useState('sdg');
+  const [showOrgDropdown, setShowOrgDropdown] = useState(false);
+  const organizationsForDropdown = getOrganizations();
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showOrgDropdown && !event.target.closest('.org-dropdown')) {
+        setShowOrgDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showOrgDropdown]);
+  
   // File selection state (can be version or individual file)
   const [selectedFileId, setSelectedFileId] = useState('');
   const [selectedFileIds, setSelectedFileIds] = useState([]); // For combined loading
@@ -323,6 +341,7 @@ export default function App() {
   
   // Dual chart preview (DataCommons + .STAT side-by-side)
   const [showDualCharts, setShowDualCharts] = useState(false);
+  const [showTranscodingViewer, setShowTranscodingViewer] = useState(false);
   
   // Chart filtering states
   const [selectedCharts, setSelectedCharts] = useState([]);
@@ -399,7 +418,6 @@ export default function App() {
     // Apply URL params to state (only if they exist and are allowed)
     if (urlParams.isDarkMode !== undefined) setIsDarkMode(urlParams.isDarkMode);
     if (urlParams.activeTab) setActiveTab(urlParams.activeTab);
-    if (urlParams.showDiff) setShowDiff(urlParams.showDiff);
     
     // Auto-select file from URL params
     if (urlParams.org && urlParams.fileType) {
@@ -409,6 +427,47 @@ export default function App() {
       // IMPORTANT: Clear old file IDs first to prevent loading wrong files
       setSelectedFileIds([]);
       setSelectedFileId(fileId);
+      
+      // Handle comparison if specified in URL
+      if (urlParams.compareVersion) {
+        const compareFileId = urlParams.compareVersion; // This is already the full file ID
+        
+        // CRITICAL: Prevent comparing a file with itself
+        if (compareFileId !== fileId) {
+          console.log('📊 Auto-selecting comparison from URL:', compareFileId);
+          setCompareFileId(compareFileId);
+          
+          // Load comparison file IDs
+          import('./mcf-file-index-v2.js').then(({ getAllFileIdsForVersion }) => {
+            const [compareOrg, compareVersion] = compareFileId.split('/');
+            try {
+              const compareIds = getAllFileIdsForVersion(compareOrg, compareVersion);
+              if (compareIds && compareIds.length > 0) {
+                setCompareFileIds(compareIds);
+                console.log(`📋 Loaded ${compareIds.length} comparison file IDs for ${compareFileId}`);
+              }
+            } catch (err) {
+              console.warn('Could not get comparison file IDs:', err);
+            }
+          });
+          
+          // Only enable showDiff if we have both base and valid comparison
+          if (urlParams.showDiff) {
+            setShowDiff(true);
+          }
+        } else {
+          console.warn('⚠️ Cannot compare a file with itself - ignoring URL compare parameter');
+          // Clear the invalid comparison from URL
+          setCompareFileId('');
+          setCompareFileIds([]);
+          setShowDiff(false);
+        }
+      } else {
+        // No comparison in URL - only enable showDiff if there's a base file
+        if (urlParams.showDiff) {
+          setShowDiff(urlParams.showDiff);
+        }
+      }
       
       // Try to get the correct file IDs for this version
       import('./mcf-file-index-v2.js').then(({ getAllFileIdsForVersion }) => {
@@ -423,11 +482,23 @@ export default function App() {
           console.warn('Could not get file IDs:', err);
         }
       });
+    } else if (urlParams.showDiff) {
+      console.warn('⚠️ Cannot enable diff mode without a base file selected');
     }
     
     // Don't open comparison modal yet - wait for observations to load
     // This will be handled by the separate useEffect below
   }, [currentPermissions]); // Run when permissions are loaded
+  
+  // Safety check: Turn off diff mode if no base is selected
+  useEffect(() => {
+    if (showDiff && !selectedFileId) {
+      console.warn('⚠️ Diff mode active without base selected - turning off');
+      setShowDiff(false);
+      setCompareFileId('');
+      setCompareFileIds([]);
+    }
+  }, [showDiff, selectedFileId]);
   
   // Auto-open format comparison and jump to observation if specified in URL (runs ONCE when observations load)
   useEffect(() => {
@@ -480,13 +551,16 @@ export default function App() {
       return;
     }
     
+    // CRITICAL: Only include compareVersion if it's different from base
+    const validCompareVersion = (compareFileId && compareFileId !== selectedFileId) ? compareFileId : null;
+    
     const state = {
       isDarkMode,
       activeTab,
       showDiff,
       org: selectedFileId ? selectedFileId.split('/')[0] : null,
       fileType: selectedFileId ? selectedFileId.split('/').slice(1).join('/') : null,
-      compareVersion: compareFileId || null,
+      compareVersion: validCompareVersion,
       dataSources: selectedDataSources.map(s => s.csvFile),
       selectedCharts: selectedCharts.length > 0 ? selectedCharts : null,
       showComparison: showFormatComparison,
@@ -1083,7 +1157,7 @@ export default function App() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Database className="h-8 w-8 text-primary" />
+              <Database className="h-8 w-8 text-blue-500" />
               <div>
                 <div className="flex items-center gap-2">
                   <h1>MCF Pipeline Viewer</h1>
@@ -1103,75 +1177,184 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              {/* Dual Chart Preview Button */}
-              {currentMCF && (
-                <button
-                  onClick={() => setShowDualCharts(!showDualCharts)}
-                  className={`px-3 py-2 text-sm rounded-lg transition-all ${
-                    showDualCharts
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-                  }`}
-                  title="Preview charts side-by-side (DataCommons + .STAT)"
-                >
-                  {showDualCharts ? '✕ Hide' : '📊 Dual Chart Preview'}
-                </button>
-              )}
-              
-              {/* Format Comparison Button (Test Feature) */}
-              {allObservations.length > 0 && (
-                <div className="flex items-center gap-2">
-                  <div className="px-3 py-2 text-xs rounded-lg bg-green-900/20 border border-green-500/30 text-green-300">
-                    ✅ {allObservations.length} observations loaded
-                  </div>
-                  <button
-                    onClick={() => {
-                      // Show format comparison for first observation
-                      setSelectedObservation(allObservations[0]);
-                      setSelectedObsIndex(0);
-                      setShowFormatComparison(true);
-                    }}
-                    className="px-3 py-2 text-sm rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all"
-                    title="🧪 Test: Compare data formats (MCF, .STAT, DataCommons, Cached)"
-                  >
-                    🔄 Compare Formats
-                  </button>
-                </div>
-              )}
-              
+            <div className="flex items-center gap-2">
               {/* Share Button */}
-              <ShareButton 
-                onGetShareableUrl={() => getShareableUrl({
-                  isDarkMode,
-                  activeTab,
-                  showDiff,
-                  org: selectedFileId ? selectedFileId.split('/')[0] : null,
-                  fileType: selectedFileId ? selectedFileId.split('/').slice(1).join('/') : null,
-                  compareVersion: compareFileId || null,
-                  dataSources: selectedDataSources.map(s => s.csvFile),
-                  selectedCharts: selectedCharts.length > 0 ? selectedCharts : null,
-                })}
-              />
+              <button
+                onClick={() => {
+                  const url = getShareableUrl({
+                    isDarkMode,
+                    activeTab,
+                    showDiff,
+                    org: selectedFileId ? selectedFileId.split('/')[0] : null,
+                    fileType: selectedFileId ? selectedFileId.split('/').slice(1).join('/') : null,
+                    compareVersion: compareFileId || null,
+                    dataSources: selectedDataSources.map(s => s.csvFile),
+                    selectedCharts: selectedCharts.length > 0 ? selectedCharts : null,
+                  });
+                  navigator.clipboard.writeText(url);
+                  // Optional: Show a toast notification
+                }}
+                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Share"
+                title="Copy shareable link to clipboard"
+              >
+                <Share2 className="h-5 w-5 text-muted-foreground" />
+              </button>
               
               {/* Dark Mode Toggle */}
-              <div className="flex items-center gap-2">
-                <Sun className="h-4 w-4 text-muted-foreground" />
-                <Switch
-                  checked={isDarkMode}
-                  onCheckedChange={setIsDarkMode}
-                  aria-label="Toggle dark mode"
-                />
-                <Moon className="h-4 w-4 text-muted-foreground" />
-              </div>
+              <button
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? (
+                  <Moon className="h-5 w-5 text-muted-foreground" />
+                ) : (
+                  <Sun className="h-5 w-5 text-muted-foreground" />
+                )}
+              </button>
             </div>
+          </div>
+          
+          {/* Navigation Chips Row */}
+          <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center gap-3">
+              {/* Dataset Dropdown Chip */}
+              <div className="relative org-dropdown">
+                <button
+                  onClick={() => setShowOrgDropdown(!showOrgDropdown)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                    isDarkMode
+                      ? 'bg-gray-700 text-white hover:bg-gray-600'
+                      : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                  }`}
+                >
+                  <span className={`font-normal ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Dataset |</span>
+                  <span className="font-bold">{organizationsForDropdown.find(o => o.id === selectedOrg)?.name || 'SDG'}</span>
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+                
+                {showOrgDropdown && (
+                  <div className={`absolute top-full left-0 mt-2 rounded-lg shadow-lg border z-50 min-w-[160px] ${
+                    isDarkMode 
+                      ? 'bg-gray-800 border-gray-700' 
+                      : 'bg-white border-gray-200'
+                  }`}>
+                  {organizationsForDropdown.map(org => {
+                    const isSelected = selectedOrg === org.id;
+                    return (
+                      <button
+                        key={org.id}
+                        onClick={() => {
+                          setSelectedOrg(org.id);
+                          setShowOrgDropdown(false);
+                        }}
+                        className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg flex items-center gap-3 ${
+                          isSelected 
+                            ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 font-medium' 
+                            : isDarkMode ? 'text-gray-200' : 'text-gray-900'
+                        }`}
+                      >
+                        {/* Checkbox */}
+                        <div 
+                          className="flex-shrink-0 w-4 h-4 rounded border-2 flex items-center justify-center"
+                          style={{
+                            borderColor: isSelected ? '#3b82f6' : isDarkMode ? '#6b7280' : '#d1d5db',
+                            backgroundColor: isSelected ? '#3b82f6' : 'transparent'
+                          }}
+                        >
+                          {isSelected && (
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          )}
+                        </div>
+                        {org.name}
+                      </button>
+                    );
+                  })}
+                  </div>
+                )}
+              </div>
+
+              {/* Environment Selector Chip */}
+              <EnvironmentSelector isDarkMode={isDarkMode} />
+
+              {/* Transcoding Review Chip */}
+              <button
+                onClick={() => setShowTranscodingViewer(!showTranscodingViewer)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  isDarkMode
+                    ? 'bg-gray-700 text-white hover:bg-gray-600'
+                    : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                }`}
+              >
+                Transcoding Review
+              </button>
+
+              {/* Dual Chart Preview Chip */}
+              <button
+                onClick={() => setShowDualCharts(!showDualCharts)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  isDarkMode
+                    ? 'bg-gray-700 text-white hover:bg-gray-600'
+                    : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                }`}
+              >
+                Dual Chart Preview
+              </button>
+            </div>
+
+            {/* Show Diff Chip (Right Aligned) */}
+            <button
+              onClick={() => {
+                if (!selectedFileId) return; // Require base to be selected
+                const newShowDiff = !showDiff;
+                setShowDiff(newShowDiff);
+                
+                // Clear comparison when turning off diff mode
+                if (!newShowDiff) {
+                  setCompareFileId('');
+                  setCompareFileIds([]);
+                  setCompareMCFContent('');
+                }
+              }}
+              disabled={!selectedFileId}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                !selectedFileId
+                  ? isDarkMode 
+                    ? 'bg-gray-800 text-gray-600 cursor-not-allowed'
+                    : 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
+                  : showDiff
+                  ? isDarkMode ? 'bg-purple-600 text-white hover:bg-purple-700' : 'bg-purple-500 text-white hover:bg-purple-600'
+                  : isDarkMode
+                  ? 'bg-transparent text-purple-400 border-2 border-purple-500 hover:bg-purple-900/20'
+                  : 'bg-transparent text-purple-600 border-2 border-purple-500 hover:bg-purple-50'
+              }`}
+              title={!selectedFileId ? 'Select a base item first' : 'Compare two versions side-by-side'}
+            >
+              <GitCompare className="h-4 w-4" />
+              {showDiff ? 'Comparing...' : 'Show Diff'}
+            </button>
           </div>
         </div>
       </header>
 
       {/* File Selector V2 (Hierarchical) */}
       <FileSelectorV2
+        selectedOrg={selectedOrg}
         onFileSelected={(selection) => {
+          // Handle base deselection
+          if (!selection) {
+            setSelectedFileId('');
+            setSelectedFileIds([]);
+            // Turn off diff mode when base is cleared
+            setShowDiff(false);
+            setCompareFileId('');
+            setCompareFileIds([]);
+            return;
+          }
+          
           // Selection can be { type: 'version', path: 'ilo/v01', fileIds: [...] }
           // or { type: 'file', path: 'ilo/schema/sv.mcf', fileIds: ['ilo/schema/sv.mcf'] }
           if (selection.type === 'version') {
@@ -1197,7 +1380,6 @@ export default function App() {
           }
         }}
         showDiff={showDiff}
-        onToggleDiff={() => setShowDiff(!showDiff)}
         isDarkMode={isDarkMode}
       />
 
@@ -1247,13 +1429,21 @@ export default function App() {
         )}
         
         {/* Diff Viewer */}
-        {showDiff && !isLoading && (
+        {showDiff && !isLoading && compareFileId && (
           <DiffViewer
             oldVersion={compareMCF}
             newVersion={currentMCF}
             oldVersionName={compareFileId}
             newVersionName={selectedFileId}
+            isDarkMode={isDarkMode}
           />
+        )}
+
+        {/* Transcoding Viewer (SDG Transcoding Matrix Review) */}
+        {showTranscodingViewer && (
+          <div className="mb-6">
+            <TranscodingViewer isDarkMode={isDarkMode} />
+          </div>
         )}
 
         {/* Dual Chart Preview (DataCommons + .STAT side-by-side) */}
@@ -1434,6 +1624,7 @@ export default function App() {
                     onChange={setRawEditContent}
                     language="mcf"
                     placeholder="Edit MCF content..."
+                    isDarkMode={isDarkMode}
                   />
                   <div className="flex gap-2 justify-between">
                     <button
@@ -1446,7 +1637,11 @@ export default function App() {
                         setEditPreviewData(chartData);
                         setShowEditPreview(true);
                       }}
-                      className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors"
+                      className={`px-4 py-2 text-sm rounded transition-colors ${
+                        isDarkMode 
+                          ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                          : 'bg-blue-500 text-white hover:bg-blue-600'
+                      }`}
                     >
                       Preview Chart
                     </button>
@@ -1456,7 +1651,11 @@ export default function App() {
                           setRawEditContent(rawEditFormat === 'formatted' ? generateFormattedCode(currentMCF) : currentMCF);
                           setShowEditPreview(false);
                         }}
-                        className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors"
+                        className={`px-4 py-2 text-sm rounded transition-colors ${
+                          isDarkMode 
+                            ? 'bg-gray-700 text-white hover:bg-gray-600' 
+                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                        }`}
                       >
                         Reset
                       </button>
@@ -1469,7 +1668,11 @@ export default function App() {
                             setShowEditPreview(false);
                           }
                         }}
-                        className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+                        className={`px-4 py-2 text-sm rounded transition-colors ${
+                          isDarkMode 
+                            ? 'bg-gray-900 text-white hover:bg-black' 
+                            : 'bg-gray-900 text-white hover:bg-black'
+                        }`}
                       >
                         Apply Changes
                       </button>
@@ -1562,12 +1765,12 @@ export default function App() {
                 })()
               ) : statViewMode === 'edit' ? (
                 <div className="space-y-4">
-                  <CodeEditor value={statEditContent || generateStatView(currentMCF)} onChange={setStatEditContent} language="mcf" placeholder="Edit .STAT content..." />
+                  <CodeEditor value={statEditContent || generateStatView(currentMCF)} onChange={setStatEditContent} language="mcf" placeholder="Edit .STAT content..." isDarkMode={isDarkMode} />
                   <div className="flex gap-2 justify-between">
-                    <button onClick={() => { const content = statEditContent || generateStatView(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <button onClick={() => { const content = statEditContent || generateStatView(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-blue-500 text-white hover:bg-blue-600'}`}>Preview Chart</button>
                     <div className="flex gap-2">
-                      <button onClick={() => { setStatEditContent(generateStatView(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
-                      <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                      <button onClick={() => { setStatEditContent(generateStatView(currentMCF)); setShowEditPreview(false); }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Reset</button>
+                      <button onClick={() => { if (window.confirm('Apply changes to .STAT view?')) { setStatViewMode('formatted'); setShowEditPreview(false); } }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-gray-900 text-white hover:bg-black' : 'bg-gray-900 text-white hover:bg-black'}`}>Apply Changes</button>
                     </div>
                   </div>
                   {showEditPreview && editPreviewData.length > 0 && (
@@ -1639,12 +1842,12 @@ export default function App() {
                 })()
               ) : datacommonsViewMode === 'edit' ? (
                 <div className="space-y-4">
-                  <CodeEditor value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={setDatacommonsEditContent} language="json" placeholder="Edit DataCommons JSON..." />
+                  <CodeEditor value={datacommonsEditContent || generateDataCommonsView(currentMCF)} onChange={setDatacommonsEditContent} language="json" placeholder="Edit DataCommons JSON..." isDarkMode={isDarkMode} />
                   <div className="flex gap-2 justify-between">
-                    <button onClick={() => { const content = datacommonsEditContent || generateDataCommonsView(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <button onClick={() => { const content = datacommonsEditContent || generateDataCommonsView(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-blue-500 text-white hover:bg-blue-600'}`}>Preview Chart</button>
                     <div className="flex gap-2">
-                      <button onClick={() => { setDatacommonsEditContent(generateDataCommonsView(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
-                      <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                      <button onClick={() => { setDatacommonsEditContent(generateDataCommonsView(currentMCF)); setShowEditPreview(false); }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Reset</button>
+                      <button onClick={() => { if (window.confirm('Apply changes to DataCommons view?')) { setDatacommonsViewMode('formatted'); setShowEditPreview(false); } }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-gray-900 text-white hover:bg-black' : 'bg-gray-900 text-white hover:bg-black'}`}>Apply Changes</button>
                     </div>
                   </div>
                   {showEditPreview && editPreviewData.length > 0 && (
@@ -1783,14 +1986,15 @@ export default function App() {
                   <CodeEditor 
                     value={cachedEditContent || (cachedEditFormat === 'formatted' ? generateCachedVersion(currentMCF) : JSON.stringify(JSON.parse(generateCachedVersion(currentMCF))))} 
                     onChange={setCachedEditContent} 
-                    language="json" 
+                    language="json"
                     placeholder="Edit cached content..." 
+                    isDarkMode={isDarkMode}
                   />
                   <div className="flex gap-2 justify-between">
-                    <button onClick={() => { const content = cachedEditContent || generateCachedVersion(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary/90 transition-colors">Preview Chart</button>
+                    <button onClick={() => { const content = cachedEditContent || generateCachedVersion(currentMCF); const nodes = parseMCF(content); const statisticalVariables = extractStatisticalVariables(nodes); const observations = extractObservations(nodes); const chartData = observationsToChartData(observations, statisticalVariables); setEditPreviewData(chartData); setShowEditPreview(true); }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-blue-500 text-white hover:bg-blue-600'}`}>Preview Chart</button>
                     <div className="flex gap-2">
-                      <button onClick={() => { setCachedEditContent(generateCachedVersion(currentMCF)); setShowEditPreview(false); }} className="px-4 py-2 text-sm bg-muted text-foreground rounded hover:bg-muted/80 transition-colors">Reset</button>
-                      <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); setShowEditPreview(false); } }} className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">Apply Changes</button>
+                      <button onClick={() => { setCachedEditContent(generateCachedVersion(currentMCF)); setShowEditPreview(false); }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Reset</button>
+                      <button onClick={() => { if (window.confirm('Apply changes to Cached view?')) { setCachedViewMode('formatted'); setShowEditPreview(false); } }} className={`px-4 py-2 text-sm rounded transition-colors ${isDarkMode ? 'bg-gray-900 text-white hover:bg-black' : 'bg-gray-900 text-white hover:bg-black'}`}>Apply Changes</button>
                     </div>
                   </div>
                   {showEditPreview && editPreviewData.length > 0 && (
