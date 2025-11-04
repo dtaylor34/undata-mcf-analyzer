@@ -9,6 +9,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { MapPin, Table as TableIcon, Download, Play, Pause, Info, Filter, TrendingUp } from 'lucide-react';
 import { WorldMapChart, TrendLineChart, AreaTrendChart, ComparisonBarChart } from './UNDataCharts';
+import WorldMapVisualization from './WorldMapVisualization';
 
 export default function ChartPreview({ 
   cachedData, 
@@ -294,13 +295,13 @@ export default function ChartPreview({
           
           {/* Professional Chart Visualization */}
           <div className="space-y-6">
-            {/* World Map as Horizontal Bar Chart */}
+            {/* Interactive World Map (Geographic Visualization) */}
             {filteredData.length > 0 ? (
               <div>
-                <WorldMapChart 
+                <WorldMapVisualization
                   data={filteredData} 
                   isDarkMode={isDarkMode}
-                  onCountryHover={setHoveredCountry}
+                  selectedYear={selectedYear}
                 />
               </div>
             ) : (
@@ -331,19 +332,6 @@ export default function ChartPreview({
                 />
               </div>
             )}
-          </div>
-          
-          {/* Color Legend */}
-          <div className="mt-6 flex items-center gap-3">
-            <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              {Math.min(...currentYearData.map(d => d.value)).toFixed(1)}%
-            </span>
-            <div className="flex-1 h-3 rounded" style={{
-              background: `linear-gradient(to right, rgb(219, 172, 246), rgb(139, 92, 246), rgb(109, 40, 217))`
-            }} />
-            <span className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              {Math.max(...currentYearData.map(d => d.value)).toFixed(1)}%
-            </span>
           </div>
           
           {/* Timeline Slider */}
