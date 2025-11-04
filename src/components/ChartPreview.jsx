@@ -16,7 +16,6 @@ export default function ChartPreview({
   onClose 
 }) {
   const [viewMode, setViewMode] = useState('map'); // 'map' or 'table'
-  const [selectedYear, setSelectedYear] = useState(2019);
   const [isPlaying, setIsPlaying] = useState(false);
   const [filterLocation, setFilterLocation] = useState('world');
   const [filterTheme, setFilterTheme] = useState('all');
@@ -47,6 +46,16 @@ export default function ChartPreview({
     
     return Array.from(years).sort();
   }, [cachedData]);
+  
+  // Initialize selectedYear to first available year
+  const [selectedYear, setSelectedYear] = useState(availableYears[0] || 2019);
+  
+  // Update selectedYear when availableYears changes
+  useEffect(() => {
+    if (availableYears.length > 0 && !availableYears.includes(selectedYear)) {
+      setSelectedYear(availableYears[0]);
+    }
+  }, [availableYears, selectedYear]);
   
   // Get data for current year
   const currentYearData = useMemo(() => {
@@ -270,20 +279,42 @@ export default function ChartPreview({
               {cachedData.indicator?.name || 'World Data Visualization'}
             </h4>
             <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Data for {selectedYear} • Highest coverage
+              Data for {selectedYear} • {filteredData.length} locations
             </p>
           </div>
+          
+          {/* Debug Info */}
+          {console.log('📊 ChartPreview Data:', {
+            selectedYear,
+            filteredDataLength: filteredData.length,
+            availableYears,
+            cachedData: cachedData ? Object.keys(cachedData) : 'null',
+            sampleData: filteredData[0]
+          })}
           
           {/* Professional Chart Visualization */}
           <div className="space-y-6">
             {/* World Map as Horizontal Bar Chart */}
-            <div>
-              <WorldMapChart 
-                data={filteredData} 
-                isDarkMode={isDarkMode}
-                onCountryHover={setHoveredCountry}
-              />
-            </div>
+            {filteredData.length > 0 ? (
+              <div>
+                <WorldMapChart 
+                  data={filteredData} 
+                  isDarkMode={isDarkMode}
+                  onCountryHover={setHoveredCountry}
+                />
+              </div>
+            ) : (
+              <div className={`text-center py-12 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <p className="mb-2">No data available for {selectedYear}</p>
+                <p className="text-sm">Available years: {availableYears.join(', ') || 'None'}</p>
+                <button
+                  onClick={() => availableYears.length > 0 && setSelectedYear(availableYears[0])}
+                  className="mt-4 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                >
+                  Load Year {availableYears[0]}
+                </button>
+              </div>
+            )}
             
             {/* Trend Chart if we have multiple years */}
             {availableYears.length > 1 && getTrendData().length > 0 && (
