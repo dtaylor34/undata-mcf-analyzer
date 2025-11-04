@@ -348,6 +348,7 @@ export default function App() {
   const [showDataIngestion, setShowDataIngestion] = useState(false);
   const [showTransformationBlueprint, setShowTransformationBlueprint] = useState(false);
   const [showCachedDataViewer, setShowCachedDataViewer] = useState(false);
+  const [showCurrentDatasetCharts, setShowCurrentDatasetCharts] = useState(false);
   
   // Chart filtering states
   const [selectedCharts, setSelectedCharts] = useState([]);
@@ -1329,6 +1330,24 @@ export default function App() {
               {/* Environment Selector Chip */}
               <EnvironmentSelector isDarkMode={isDarkMode} />
 
+              {/* Preview Current Dataset Charts */}
+              {selectedFileId && chartData && chartData.length > 0 && (
+                <button
+                  onClick={() => setShowCurrentDatasetCharts(!showCurrentDatasetCharts)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                    showCurrentDatasetCharts
+                      ? isDarkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-white'
+                      : isDarkMode
+                      ? 'bg-gray-700 text-white hover:bg-gray-600'
+                      : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                  }`}
+                  title="Preview how this dataset will look as UN Data charts"
+                >
+                  <BarChart3 className="h-4 w-4" />
+                  Preview Charts
+                </button>
+              )}
+              
               {/* Cached Data Viewer Chip */}
               <button
                 onClick={() => setShowCachedDataViewer(!showCachedDataViewer)}
@@ -1339,9 +1358,10 @@ export default function App() {
                     ? 'bg-gray-700 text-white hover:bg-gray-600'
                     : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
                 }`}
+                title="View all deployed cached datasets"
               >
                 <BarChart3 className="h-4 w-4" />
-                View Charts
+                View All Charts
               </button>
 
               {/* Transcoding Review Chip */}
@@ -1537,6 +1557,69 @@ export default function App() {
           </div>
         )}
 
+        {/* Current Dataset Chart Preview */}
+        {showCurrentDatasetCharts && chartData && chartData.length > 0 && (
+          <div className="mb-6">
+            <div className={`p-6 rounded-lg border ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'}`}>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    📊 Chart Preview: {selectedFileId}
+                  </h3>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    Visualizing {chartData.length} data points from current dataset
+                  </p>
+                </div>
+                <button
+                  onClick={() => setShowCurrentDatasetCharts(false)}
+                  className={`px-4 py-2 rounded-lg ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'}`}
+                >
+                  Close
+                </button>
+              </div>
+              
+              {/* Import and use UNDataGeoChart with converted data */}
+              <div className="mt-4">
+                {(() => {
+                  // Convert chartData to format needed for GeoChart
+                  const processedData = chartData.map(chart => ({
+                    code: chart.country?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
+                    name: chart.country?.split('/').pop() || 'Unknown',
+                    value: parseFloat(chart.value) || 0,
+                    indicator: chart.variable,
+                    unit: chart.unit || '%',
+                    year: chart.year || new Date().getFullYear()
+                  }));
+                  
+                  // Group by country and take most recent
+                  const countryMap = {};
+                  processedData.forEach(item => {
+                    if (!countryMap[item.code] || item.year > countryMap[item.code].year) {
+                      countryMap[item.code] = item;
+                    }
+                  });
+                  
+                  const finalData = Object.values(countryMap);
+                  
+                  const UNDataGeoChart = require('./components/UNDataGeoChart').default;
+                  
+                  return (
+                    <UNDataGeoChart
+                      data={finalData}
+                      isDarkMode={isDarkMode}
+                      selectedYear={finalData[0]?.year || new Date().getFullYear()}
+                      indicator={{
+                        name: chartData[0]?.variable || 'Indicator',
+                        source: selectedFileId.split('/')[0].toUpperCase()
+                      }}
+                    />
+                  );
+                })()}
+              </div>
+            </div>
+          </div>
+        )}
+        
         {/* Cached Data Viewer */}
         {showCachedDataViewer && (
           <div className="mb-6">
