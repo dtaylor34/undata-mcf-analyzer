@@ -1331,7 +1331,7 @@ export default function App() {
               <EnvironmentSelector isDarkMode={isDarkMode} />
 
               {/* Preview Current Dataset Charts */}
-              {selectedFileId && chartData && chartData.length > 0 && (
+              {selectedFileId && allObservations && allObservations.length > 0 && (
                 <button
                   onClick={() => setShowCurrentDatasetCharts(!showCurrentDatasetCharts)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
@@ -1558,7 +1558,7 @@ export default function App() {
         )}
 
         {/* Current Dataset Chart Preview */}
-        {showCurrentDatasetCharts && chartData && chartData.length > 0 && (
+        {showCurrentDatasetCharts && allObservations && allObservations.length > 0 && (
           <div className="mb-6">
             <div className={`p-6 rounded-lg border ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'}`}>
               <div className="flex items-center justify-between mb-4">
@@ -1567,7 +1567,7 @@ export default function App() {
                     📊 Chart Preview: {selectedFileId}
                   </h3>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Visualizing {chartData.length} data points from current dataset
+                    Visualizing {allObservations.length} data points from current dataset
                   </p>
                 </div>
                 <button
@@ -1581,14 +1581,14 @@ export default function App() {
               {/* Import and use UNDataGeoChart with converted data */}
               <div className="mt-4">
                 {(() => {
-                  // Convert chartData to format needed for GeoChart
-                  const processedData = chartData.map(chart => ({
-                    code: chart.country?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
-                    name: chart.country?.split('/').pop() || 'Unknown',
-                    value: parseFloat(chart.value) || 0,
-                    indicator: chart.variable,
-                    unit: chart.unit || '%',
-                    year: chart.year || new Date().getFullYear()
+                  // Convert allObservations to format needed for GeoChart
+                  const processedData = allObservations.map(obs => ({
+                    code: obs.observationAbout?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
+                    name: obs.observationAbout?.split('/').pop() || 'Unknown',
+                    value: parseFloat(obs.value) || 0,
+                    indicator: obs.variableMeasured,
+                    unit: obs.unit || '%',
+                    year: parseInt(obs.observationDate) || new Date().getFullYear()
                   }));
                   
                   // Group by country and take most recent
@@ -1599,7 +1599,7 @@ export default function App() {
                     }
                   });
                   
-                  const finalData = Object.values(countryMap);
+                  const finalData = Object.values(countryMap).filter(item => item.code !== 'UNKNOWN');
                   
                   const UNDataGeoChart = require('./components/UNDataGeoChart').default;
                   
@@ -1609,7 +1609,7 @@ export default function App() {
                       isDarkMode={isDarkMode}
                       selectedYear={finalData[0]?.year || new Date().getFullYear()}
                       indicator={{
-                        name: chartData[0]?.variable || 'Indicator',
+                        name: allObservations[0]?.variableMeasured || 'Indicator',
                         source: selectedFileId.split('/')[0].toUpperCase()
                       }}
                     />
