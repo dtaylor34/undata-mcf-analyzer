@@ -9,7 +9,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { MapPin, Table as TableIcon, Download, Play, Pause, Info, Filter, TrendingUp } from 'lucide-react';
 import { WorldMapChart, TrendLineChart, AreaTrendChart, ComparisonBarChart } from './UNDataCharts';
-import WorldMapVisualization from './WorldMapVisualization';
+import UNDataGeoChart from './UNDataGeoChart';
 
 export default function ChartPreview({ 
   cachedData, 
@@ -295,13 +295,14 @@ export default function ChartPreview({
           
           {/* Professional Chart Visualization */}
           <div className="space-y-6">
-            {/* Interactive World Map (Geographic Visualization) */}
+            {/* Google GeoChart (Same as UN Data Website) */}
             {filteredData.length > 0 ? (
               <div>
-                <WorldMapVisualization
+                <UNDataGeoChart
                   data={filteredData} 
                   isDarkMode={isDarkMode}
                   selectedYear={selectedYear}
+                  indicator={cachedData?.indicator}
                 />
               </div>
             ) : (
