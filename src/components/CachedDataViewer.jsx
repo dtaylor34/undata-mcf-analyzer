@@ -307,7 +307,7 @@ export default function CachedDataViewer({ isDarkMode }) {
       {selectedItem && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-6" onClick={() => setSelectedItem(null)}>
           <div
-            className={`max-w-6xl w-full max-h-[90vh] overflow-y-auto rounded-lg ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}
+            className={`max-w-7xl w-full max-h-[90vh] overflow-y-auto rounded-lg ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className={`sticky top-0 p-6 border-b ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} z-10`}>
@@ -317,7 +317,7 @@ export default function CachedDataViewer({ isDarkMode }) {
                     {selectedItem.name}
                   </h3>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {generateChartsFromData(selectedItem).length} charts available
+                    UN Data Thematic Area Visualization
                   </p>
                 </div>
                 <button
@@ -329,28 +329,12 @@ export default function CachedDataViewer({ isDarkMode }) {
               </div>
             </div>
             
-            <div className="p-6 space-y-6">
-              {generateChartsFromData(selectedItem).map((chart, idx) => (
-                <div key={idx} className={`p-4 rounded-lg border ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'}`}>
-                  <h4 className={`font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                    {chart.title}
-                  </h4>
-                  <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {chart.subtitle}
-                  </p>
-                  {chart.data && chart.data.length > 0 ? (
-                    <ChartPreview
-                      data={chart.data}
-                      title={chart.title}
-                      isDarkMode={isDarkMode}
-                    />
-                  ) : (
-                    <div className={`text-center py-8 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-                      No data available for this chart
-                    </div>
-                  )}
-                </div>
-              ))}
+            <div className="p-6">
+              <ChartPreview
+                cachedData={selectedItem.data}
+                isDarkMode={isDarkMode}
+                onClose={() => setSelectedItem(null)}
+              />
             </div>
           </div>
         </div>
