@@ -1,0 +1,6 @@
+Country,CountryCode,Year,Goal,Target,IndicatorCode,IndicatorName,Value,Unit,Source
+Afghanistan,AFG,2024,1,1.1,1.1.1,Proportion of population below international poverty line,28.5,%,World Bank
+Afghanistan,AFG,2024,2,2.1,2.1.1,Prevalence of undernourishment,29.9,%,FAO
+Pakistan,PAK,2024,1,1.1,1.1.1,Proportion of population below international poverty line,21.9,%,World Bank
+Pakistan,PAK,2024,2,2.1,2.1.1,Prevalence of undernourishment,15.8,%,FAO
+

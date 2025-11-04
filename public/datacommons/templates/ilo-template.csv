@@ -1,0 +1,6 @@
+Country,CountryCode,Year,IndicatorCode,IndicatorName,Value,Unit,Source,Methodology
+Afghanistan,AFG,2024,EMP_RATE,Employment Rate,45.2,%,ILO STAT,Labour Force Survey
+Afghanistan,AFG,2024,UNEMP_RATE,Unemployment Rate,11.2,%,ILO STAT,Labour Force Survey
+Pakistan,PAK,2024,EMP_RATE,Employment Rate,51.3,%,ILO STAT,Labour Force Survey
+Pakistan,PAK,2024,UNEMP_RATE,Unemployment Rate,6.5,%,ILO STAT,Labour Force Survey
+

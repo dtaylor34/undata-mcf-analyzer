@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
-export const FormatComparison = ({ observation, allObservations = [], initialIndex = 0, onIndexChange, onClose, isDarkMode }) => {
+// Helper function to generate CSV representation from observation
+const generateCSVFromObservation = (obs) => {
+  if (!obs) return 'No data available';
+  
+  // Generate a CSV row that represents this observation
+  const csvHeader = 'Geography,Indicator,Year,Value,Unit';
+  const csvRow = `${obs.geography || 'Unknown'},${obs.variable || 'Unknown'},${obs.date || 'Unknown'},${obs.value || 'N/A'},${obs.unit || 'PERCENT'}`;
+  
+  return `${csvHeader}\n${csvRow}`;
+};
+
+export const FormatComparison = ({ observation, allObservations = [], initialIndex = 0, onIndexChange, onClose, isDarkMode, selectedFileId }) => {
   const [currentIndex, setCurrentIndex] = useState(
     initialIndex !== null && initialIndex !== undefined ? initialIndex : 
     (allObservations.findIndex(obs => obs.dcid === observation?.dcid) || 0)
   );
+  const [activeTab, setActiveTab] = useState('csv'); // csv, mcf, stat, datacommons, cached
   
   const handlePrevious = () => {
     const newIndex = currentIndex > 0 ? currentIndex - 1 : allObservations.length - 1;
@@ -88,6 +100,74 @@ export const FormatComparison = ({ observation, allObservations = [], initialInd
           </button>
         </div>
 
+        {/* File Selector */}
+        <div className="p-4 bg-purple-900/10 border-b border-border">
+          <div className="flex items-center gap-3">
+            <label className="text-sm font-medium text-muted-foreground">
+              Viewing Dataset:
+            </label>
+            <div className={`flex-1 px-4 py-2 rounded font-mono text-sm font-bold ${
+              isDarkMode ? 'bg-gray-800 text-blue-400' : 'bg-gray-100 text-blue-600'
+            }`}>
+              {selectedFileId || 'No file selected'}
+            </div>
+          </div>
+        </div>
+
+        {/* Format Tabs */}
+        <div className={`flex gap-2 p-4 border-b ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'} overflow-x-auto`}>
+          <button
+            onClick={() => setActiveTab('csv')}
+            className={`px-6 py-3 rounded-lg font-medium whitespace-nowrap transition-all ${
+              activeTab === 'csv'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : isDarkMode ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            CSV
+          </button>
+          <button
+            onClick={() => setActiveTab('mcf')}
+            className={`px-6 py-3 rounded-lg font-medium whitespace-nowrap transition-all ${
+              activeTab === 'mcf'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : isDarkMode ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            MCF
+          </button>
+          <button
+            onClick={() => setActiveTab('stat')}
+            className={`px-6 py-3 rounded-lg font-medium whitespace-nowrap transition-all ${
+              activeTab === 'stat'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : isDarkMode ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            .STAT
+          </button>
+          <button
+            onClick={() => setActiveTab('datacommons')}
+            className={`px-6 py-3 rounded-lg font-medium whitespace-nowrap transition-all ${
+              activeTab === 'datacommons'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : isDarkMode ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            DataCommons
+          </button>
+          <button
+            onClick={() => setActiveTab('cached')}
+            className={`px-6 py-3 rounded-lg font-medium whitespace-nowrap transition-all ${
+              activeTab === 'cached'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : isDarkMode ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Cached
+          </button>
+        </div>
+
         {/* Observation Summary */}
         <div className="p-4 bg-blue-900/10 border-b border-border">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">
@@ -114,52 +194,73 @@ export const FormatComparison = ({ observation, allObservations = [], initialInd
           </div>
         </div>
 
-        {/* Format Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+        {/* Format Content - Single View Based on Active Tab */}
+        <div className="p-6">
+          
+          {/* CSV Format */}
+          {activeTab === 'csv' && (
+            <FormatCard
+              title="📊 CSV Format"
+              subtitle="Original Raw Data (Before Conversion)"
+              isDarkMode={isDarkMode}
+            >
+              <pre className="text-xs font-mono whitespace-pre-wrap break-all">
+{currentObs.formats?.csv || generateCSVFromObservation(currentObs)}
+              </pre>
+            </FormatCard>
+          )}
           
           {/* MCF Format */}
-          <FormatCard
-            title="📄 MCF Format"
-            subtitle="Master Catalog Format (Source of Truth)"
-            isDarkMode={isDarkMode}
-          >
-            <pre className="text-xs font-mono whitespace-pre-wrap break-all">
+          {activeTab === 'mcf' && (
+            <FormatCard
+              title="📄 MCF Format"
+              subtitle="Master Catalog Format (Source of Truth)"
+              isDarkMode={isDarkMode}
+            >
+              <pre className="text-xs font-mono whitespace-pre-wrap break-all">
 {currentObs.formats.mcf}
-            </pre>
-          </FormatCard>
+              </pre>
+            </FormatCard>
+          )}
 
           {/* .STAT Format */}
-          <FormatCard
-            title="📈 .STAT Format"
-            subtitle="SDMX-JSON 2.0 (UN .Stat Suite)"
-            isDarkMode={isDarkMode}
-          >
-            <pre className="text-xs font-mono whitespace-pre-wrap break-all">
+          {activeTab === 'stat' && (
+            <FormatCard
+              title="📈 .STAT Format"
+              subtitle="SDMX-JSON 2.0 (UN .Stat Suite)"
+              isDarkMode={isDarkMode}
+            >
+              <pre className="text-xs font-mono whitespace-pre-wrap break-all">
 {JSON.stringify(currentObs.formats.stat, null, 2)}
-            </pre>
-          </FormatCard>
+              </pre>
+            </FormatCard>
+          )}
 
           {/* DataCommons Format */}
-          <FormatCard
-            title="🌍 DataCommons Format"
-            subtitle="Google DataCommons JSON"
-            isDarkMode={isDarkMode}
-          >
-            <pre className="text-xs font-mono whitespace-pre-wrap break-all">
+          {activeTab === 'datacommons' && (
+            <FormatCard
+              title="🌍 DataCommons Format"
+              subtitle="Google DataCommons JSON"
+              isDarkMode={isDarkMode}
+            >
+              <pre className="text-xs font-mono whitespace-pre-wrap break-all">
 {JSON.stringify(currentObs.formats.datacommons, null, 2)}
-            </pre>
-          </FormatCard>
+              </pre>
+            </FormatCard>
+          )}
 
           {/* Cached Format */}
-          <FormatCard
-            title="📊 Cached Format"
-            subtitle="UN Data Website Optimized JSON"
-            isDarkMode={isDarkMode}
-          >
-            <pre className="text-xs font-mono whitespace-pre-wrap break-all">
+          {activeTab === 'cached' && (
+            <FormatCard
+              title="📊 Cached Format"
+              subtitle="UN Data Website Optimized JSON"
+              isDarkMode={isDarkMode}
+            >
+              <pre className="text-xs font-mono whitespace-pre-wrap break-all">
 {JSON.stringify(currentObs.formats.cached, null, 2)}
-            </pre>
-          </FormatCard>
+              </pre>
+            </FormatCard>
+          )}
 
         </div>
 
@@ -191,8 +292,8 @@ export const FormatComparison = ({ observation, allObservations = [], initialInd
         <div className="p-4 border-t border-border bg-muted/20 space-y-2">
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm text-muted-foreground flex-1">
-              <strong>💡 Key Insight:</strong> This is the SAME data point represented in 4 different formats.
-              MCF is the source of truth, and the other formats are transformations optimized for different use cases.
+              <strong>💡 Key Insight:</strong> This is the SAME data point represented across 5 formats.
+              Starting from CSV (raw data), converted to MCF (source of truth), then transformed into .STAT, DataCommons, and Cached formats for different use cases.
             </div>
             <button
               onClick={() => {

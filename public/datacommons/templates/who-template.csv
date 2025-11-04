@@ -1,0 +1,6 @@
+Country,CountryCode,Year,IndicatorCode,IndicatorName,Value,Unit,Sex,AgeGroup,Source
+Afghanistan,AFG,2024,LIFE_EXP,Life expectancy at birth,64.8,years,All,All,WHO
+Afghanistan,AFG,2024,MALARIA_CASES,Malaria cases reported,12345,cases,All,All,WHO
+Pakistan,PAK,2024,LIFE_EXP,Life expectancy at birth,67.3,years,All,All,WHO
+Pakistan,PAK,2024,MALARIA_CASES,Malaria cases reported,45678,cases,All,All,WHO
+

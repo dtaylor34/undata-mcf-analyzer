@@ -1,0 +1,6 @@
+Country,CountryCode,Year,IndicatorCode,IndicatorName,Value,Unit,AgeGroup,Sex,Source
+Afghanistan,AFG,2024,U5MR,Under-five mortality rate,62.3,per 1000 live births,0-4,All,UNICEF
+Afghanistan,AFG,2024,STUNTING,Stunting prevalence,38.2,%,0-4,All,UNICEF
+Pakistan,PAK,2024,U5MR,Under-five mortality rate,65.2,per 1000 live births,0-4,All,UNICEF
+Pakistan,PAK,2024,STUNTING,Stunting prevalence,37.6,%,0-4,All,UNICEF
+

@@ -11,9 +11,12 @@ import { DualChartPreview } from './components/DualChartPreview';
 import { ThematicAreasExplorer } from './components/ThematicAreasExplorer';
 import { FormatComparison } from './components/FormatComparison';
 import TranscodingViewer from './components/TranscodingViewer';
+import DataIngestionDashboard from './components/DataIngestionDashboard';
+import TransformationBlueprint from './components/TransformationBlueprint';
+import CachedDataViewer from './components/CachedDataViewer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Switch } from './components/ui/switch';
-import { Sun, Moon, Database, ChevronDown, GitCompare, Share2 } from 'lucide-react';
+import { Sun, Moon, Database, ChevronDown, GitCompare, Share2, Upload, BarChart3 } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
 import { useUrlState } from './hooks/useUrlState';
@@ -342,6 +345,9 @@ export default function App() {
   // Dual chart preview (DataCommons + .STAT side-by-side)
   const [showDualCharts, setShowDualCharts] = useState(false);
   const [showTranscodingViewer, setShowTranscodingViewer] = useState(false);
+  const [showDataIngestion, setShowDataIngestion] = useState(false);
+  const [showTransformationBlueprint, setShowTransformationBlueprint] = useState(false);
+  const [showCachedDataViewer, setShowCachedDataViewer] = useState(false);
   
   // Chart filtering states
   const [selectedCharts, setSelectedCharts] = useState([]);
@@ -1205,6 +1211,21 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-2">
+              {/* Data Ingestion Button */}
+              <button
+                onClick={() => setShowDataIngestion(!showDataIngestion)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                  showDataIngestion
+                    ? isDarkMode ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'
+                    : isDarkMode
+                    ? 'bg-gray-700 text-white hover:bg-gray-600'
+                    : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                }`}
+              >
+                <Upload className="h-4 w-4" />
+                Data Ingestion
+              </button>
+              
               {/* Share Button */}
               <button
                 onClick={() => {
@@ -1243,7 +1264,8 @@ export default function App() {
             </div>
           </div>
           
-          {/* Navigation Chips Row */}
+          {/* Navigation Chips Row - Hide when Data Ingestion is active */}
+          {!showDataIngestion && (
           <div className="flex items-center justify-between mt-4">
             <div className="flex items-center gap-3">
               {/* Dataset Dropdown Chip */}
@@ -1307,6 +1329,21 @@ export default function App() {
               {/* Environment Selector Chip */}
               <EnvironmentSelector isDarkMode={isDarkMode} />
 
+              {/* Cached Data Viewer Chip */}
+              <button
+                onClick={() => setShowCachedDataViewer(!showCachedDataViewer)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                  showCachedDataViewer
+                    ? isDarkMode ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'
+                    : isDarkMode
+                    ? 'bg-gray-700 text-white hover:bg-gray-600'
+                    : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                }`}
+              >
+                <BarChart3 className="h-4 w-4" />
+                View Charts
+              </button>
+
               {/* Transcoding Review Chip */}
               <button
                 onClick={() => setShowTranscodingViewer(!showTranscodingViewer)}
@@ -1364,10 +1401,12 @@ export default function App() {
               {showDiff ? 'Comparing...' : 'Show Diff'}
             </button>
           </div>
+          )}
         </div>
       </header>
 
-      {/* File Selector V2 (Hierarchical) */}
+      {/* File Selector V2 (Hierarchical) - Hide when Data Ingestion is active */}
+      {!showDataIngestion && (
       <FileSelectorV2
         selectedOrg={selectedOrg}
         selectedFileId={selectedFileId}
@@ -1411,6 +1450,7 @@ export default function App() {
         showDiff={showDiff}
         isDarkMode={isDarkMode}
       />
+      )}
 
       {/* Data Source Selector - Only shown when file needs data */}
       {!isLoading && fileAnalysis && selectedFileId && (
@@ -1480,6 +1520,27 @@ export default function App() {
         {showDiff && compareFileId && (!compareMCF || !currentMCF) && !isLoading && (
           <div className="mb-4 text-center py-8 text-muted-foreground">
             <div className="animate-pulse">Loading comparison data...</div>
+          </div>
+        )}
+
+        {/* Data Ingestion Dashboard */}
+        {showDataIngestion && (
+          <div className="mb-6">
+            <DataIngestionDashboard isDarkMode={isDarkMode} />
+            
+            {/* Transformation Blueprint (optional, can be opened from dashboard) */}
+            {showTransformationBlueprint && (
+              <div className="mt-6">
+                <TransformationBlueprint isDarkMode={isDarkMode} />
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Cached Data Viewer */}
+        {showCachedDataViewer && (
+          <div className="mb-6">
+            <CachedDataViewer isDarkMode={isDarkMode} />
           </div>
         )}
 
@@ -2082,6 +2143,7 @@ export default function App() {
           observation={selectedObservation}
           allObservations={allObservations}
           initialIndex={selectedObsIndex}
+          selectedFileId={selectedFileId}
           onIndexChange={(newIndex) => {
             setSelectedObsIndex(newIndex);
             setSelectedObservation(allObservations[newIndex]);
