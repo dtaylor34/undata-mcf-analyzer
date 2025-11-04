@@ -201,7 +201,7 @@ export default function ChartPreview({
                     x={(idx % 10) * 80 + 10}
                     y={Math.floor(idx / 10) * 180 + 20}
                     width="70"
-                    height="160"}
+                    height="160"
                     fill={getColorForValue(country.value)}
                     stroke={isDarkMode ? '#374151' : '#d1d5db'}
                     strokeWidth="1"
