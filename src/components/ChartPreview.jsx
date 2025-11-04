@@ -7,7 +7,8 @@
  */
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { MapPin, Table as TableIcon, Download, Play, Pause, Info, Filter } from 'lucide-react';
+import { MapPin, Table as TableIcon, Download, Play, Pause, Info, Filter, TrendingUp } from 'lucide-react';
+import { WorldMapChart, TrendLineChart, AreaTrendChart, ComparisonBarChart } from './UNDataCharts';
 
 export default function ChartPreview({ 
   cachedData, 
@@ -115,6 +116,41 @@ export default function ChartPreview({
       d.code.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [currentYearData, searchQuery]);
+  
+  // Get trend data for all years (global average)
+  const getTrendData = () => {
+    if (!cachedData || availableYears.length === 0) return [];
+    
+    return availableYears.map(year => {
+      const yearData = [];
+      
+      // Collect all values for this year
+      if (cachedData.locations) {
+        Object.values(cachedData.locations).forEach(location => {
+          const data = location.data?.find(d => parseInt(d.year) === year);
+          if (data && data.value) {
+            yearData.push(parseFloat(data.value));
+          }
+        });
+      } else if (cachedData.indicators) {
+        cachedData.indicators.forEach(ind => {
+          if (ind.year === year && ind.value) {
+            yearData.push(parseFloat(ind.value));
+          }
+        });
+      }
+      
+      // Calculate average
+      const avgValue = yearData.length > 0
+        ? yearData.reduce((sum, val) => sum + val, 0) / yearData.length
+        : 0;
+      
+      return {
+        year: year.toString(),
+        value: parseFloat(avgValue.toFixed(2))
+      };
+    });
+  };
   
   // Get color for value (matching UN Data purple gradient)
   const getColorForValue = (value) => {
@@ -231,72 +267,37 @@ export default function ChartPreview({
         <div className={`rounded-lg border ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} p-6`}>
           <div className="mb-6">
             <h4 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-              {cachedData.indicator?.name || 'World Map Visualization'}
+              {cachedData.indicator?.name || 'World Data Visualization'}
             </h4>
             <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               Data for {selectedYear} • Highest coverage
             </p>
           </div>
           
-          {/* Simplified Map Visualization */}
-          <div className="relative">
-            <svg viewBox="0 0 800 400" className="w-full" style={{ maxHeight: '400px' }}>
-              {/* Background */}
-              <rect width="800" height="400" fill={isDarkMode ? '#1f2937' : '#f3f4f6'} />
-              
-              {/* Sample countries as rectangles (simplified for demonstration) */}
-              {filteredData.slice(0, 20).map((country, idx) => (
-                <g key={country.code}>
-                  <rect
-                    x={(idx % 10) * 80 + 10}
-                    y={Math.floor(idx / 10) * 180 + 20}
-                    width="70"
-                    height="160"
-                    fill={getColorForValue(country.value)}
-                    stroke={isDarkMode ? '#374151' : '#d1d5db'}
-                    strokeWidth="1"
-                    onMouseEnter={() => setHoveredCountry(country)}
-                    onMouseLeave={() => setHoveredCountry(null)}
-                    style={{ cursor: 'pointer', transition: 'all 0.2s' }}
-                  />
-                  <text
-                    x={(idx % 10) * 80 + 45}
-                    y={Math.floor(idx / 10) * 180 + 100}
-                    textAnchor="middle"
-                    fill={isDarkMode ? '#fff' : '#000'}
-                    fontSize="10"
-                    fontWeight="bold"
-                  >
-                    {country.code}
-                  </text>
-                  <text
-                    x={(idx % 10) * 80 + 45}
-                    y={Math.floor(idx / 10) * 180 + 120}
-                    textAnchor="middle"
-                    fill={isDarkMode ? '#fff' : '#000'}
-                    fontSize="12"
-                    fontWeight="bold"
-                  >
-                    {country.value.toFixed(1)}%
-                  </text>
-                </g>
-              ))}
-            </svg>
+          {/* Professional Chart Visualization */}
+          <div className="space-y-6">
+            {/* World Map as Horizontal Bar Chart */}
+            <div>
+              <WorldMapChart 
+                data={filteredData} 
+                isDarkMode={isDarkMode}
+                onCountryHover={setHoveredCountry}
+              />
+            </div>
             
-            {/* Hover Tooltip */}
-            {hoveredCountry && (
-              <div className={`absolute top-4 right-4 p-3 rounded-lg shadow-lg ${
-                isDarkMode ? 'bg-gray-900 border border-gray-700' : 'bg-white border border-gray-200'
-              }`}>
-                <p className={`font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                  {hoveredCountry.name}
-                </p>
-                <p className={`text-2xl font-bold mt-1 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
-                  {hoveredCountry.value.toFixed(1)}%
-                </p>
-                <p className={`text-xs mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {hoveredCountry.indicator}
-                </p>
+            {/* Trend Chart if we have multiple years */}
+            {availableYears.length > 1 && getTrendData().length > 0 && (
+              <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+                <div className="flex items-center gap-2 mb-4">
+                  <TrendingUp className="h-5 w-5 text-purple-500" />
+                  <h5 className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    Global Trend Over Time
+                  </h5>
+                </div>
+                <AreaTrendChart
+                  data={getTrendData()}
+                  isDarkMode={isDarkMode}
+                />
               </div>
             )}
           </div>
@@ -361,41 +362,65 @@ export default function ChartPreview({
       
       {/* Table View */}
       {viewMode === 'table' && (
-        <div className={`rounded-lg border ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} overflow-hidden`}>
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className={isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}>
-                <tr>
-                  <th className={`px-4 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Location
-                  </th>
-                  <th className={`px-4 py-3 text-right text-xs font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Value ({selectedYear})
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredData.map((country, idx) => (
-                  <tr 
-                    key={country.code}
-                    className={`border-t ${
-                      isDarkMode ? 'border-gray-700 hover:bg-gray-700' : 'border-gray-200 hover:bg-gray-50'
-                    }`}
-                  >
-                    <td className={`px-4 py-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                      {country.name}
-                    </td>
-                    <td className={`px-4 py-3 text-right font-bold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
-                      {country.value.toFixed(1)}%
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className="space-y-6">
+          {/* Comparison Bar Chart */}
+          <div className={`rounded-lg border ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} p-6`}>
+            <ComparisonBarChart
+              data={filteredData}
+              isDarkMode={isDarkMode}
+              title={`Top Locations - ${selectedYear}`}
+            />
           </div>
           
-          <div className={`px-4 py-3 text-xs ${isDarkMode ? 'bg-gray-900 text-gray-500' : 'bg-gray-50 text-gray-500'}`}>
-            Data based in alphabetical order. Some places may be missing due to incomplete reporting that year.
+          {/* Detailed Table */}
+          <div className={`rounded-lg border ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} overflow-hidden`}>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className={isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}>
+                  <tr>
+                    <th className={`px-4 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Rank
+                    </th>
+                    <th className={`px-4 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Location
+                    </th>
+                    <th className={`px-4 py-3 text-right text-xs font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Value ({selectedYear})
+                    </th>
+                    <th className={`px-4 py-3 text-right text-xs font-medium ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Indicator
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredData.map((country, idx) => (
+                    <tr 
+                      key={country.code}
+                      className={`border-t ${
+                        isDarkMode ? 'border-gray-700 hover:bg-gray-700' : 'border-gray-200 hover:bg-gray-50'
+                      }`}
+                    >
+                      <td className={`px-4 py-3 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                        {idx + 1}
+                      </td>
+                      <td className={`px-4 py-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                        {country.name}
+                      </td>
+                      <td className={`px-4 py-3 text-right font-bold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+                        {country.value.toFixed(1)}%
+                      </td>
+                      <td className={`px-4 py-3 text-right text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                        {country.indicator}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            
+            <div className={`px-4 py-3 text-xs ${isDarkMode ? 'bg-gray-900 text-gray-500' : 'bg-gray-50 text-gray-500'}`}>
+              Showing {filteredData.length} locations • Data based on alphabetical order • Some places may be missing due to incomplete reporting
+            </div>
           </div>
         </div>
       )}
