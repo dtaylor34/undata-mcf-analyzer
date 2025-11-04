@@ -1331,22 +1331,32 @@ export default function App() {
               <EnvironmentSelector isDarkMode={isDarkMode} />
 
               {/* Preview Current Dataset Charts */}
-              {selectedFileId && allObservations && allObservations.length > 0 && (
-                <button
-                  onClick={() => setShowCurrentDatasetCharts(!showCurrentDatasetCharts)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
-                    showCurrentDatasetCharts
-                      ? isDarkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-white'
-                      : isDarkMode
-                      ? 'bg-gray-700 text-white hover:bg-gray-600'
-                      : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
-                  }`}
-                  title="Preview how this dataset will look as UN Data charts"
-                >
-                  <BarChart3 className="h-4 w-4" />
-                  Preview Charts
-                </button>
-              )}
+              {(() => {
+                const hasObservations = allObservations && allObservations.length > 0;
+                console.log('🔍 Preview Charts Button Check:', {
+                  selectedFileId,
+                  observationsCount: allObservations?.length || 0,
+                  shouldShow: selectedFileId && hasObservations,
+                  sampleObservation: allObservations?.[0]
+                });
+                
+                return selectedFileId && hasObservations && (
+                  <button
+                    onClick={() => setShowCurrentDatasetCharts(!showCurrentDatasetCharts)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                      showCurrentDatasetCharts
+                        ? isDarkMode ? 'bg-green-600 text-white' : 'bg-green-500 text-white'
+                        : isDarkMode
+                        ? 'bg-gray-700 text-white hover:bg-gray-600'
+                        : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-300'
+                    }`}
+                    title="Preview how this dataset will look as UN Data charts"
+                  >
+                    <BarChart3 className="h-4 w-4" />
+                    Preview Charts ({allObservations.length})
+                  </button>
+                );
+              })()}
               
               {/* Cached Data Viewer Chip */}
               <button
