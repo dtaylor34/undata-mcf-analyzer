@@ -14,7 +14,8 @@ import {
   ZoomableGroup
 } from 'react-simple-maps';
 
-const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
+// Use reliable world map TopoJSON from unpkg CDN
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 export default function WorldMapVisualization({ data, isDarkMode, selectedYear }) {
   const [tooltipContent, setTooltipContent] = useState(null);
@@ -23,10 +24,18 @@ export default function WorldMapVisualization({ data, isDarkMode, selectedYear }
   // Create a map of country codes to values
   const dataMap = {};
   data.forEach(country => {
-    // Map country codes (handle different formats)
-    const code = country.code?.toUpperCase() || country.name;
-    dataMap[code] = country.value;
+    // Map both by code and name for flexible matching
+    if (country.code) {
+      dataMap[country.code.toUpperCase()] = country.value;
+    }
+    if (country.name) {
+      dataMap[country.name] = country.value;
+      dataMap[country.name.toUpperCase()] = country.value;
+    }
   });
+  
+  console.log('🗺️ WorldMapVisualization dataMap:', dataMap);
+  console.log('🗺️ Sample data:', data.slice(0, 2));
   
   // Get min/max for color scaling
   const values = data.map(d => d.value).filter(v => v !== undefined);
@@ -51,12 +60,19 @@ export default function WorldMapVisualization({ data, isDarkMode, selectedYear }
   };
   
   const handleMouseEnter = (geo, event) => {
-    const countryCode = geo.properties.ISO_A3 || geo.properties.ADM0_A3;
-    const countryName = geo.properties.name || geo.properties.NAME;
-    const value = dataMap[countryCode];
+    // world-atlas uses 'name' property for country name
+    const countryName = geo.properties.name;
+    const countryCode = geo.id; // ISO 3-letter code
+    
+    // Try to find value by code or name
+    const value = dataMap[countryCode] || dataMap[countryName];
     
     if (value !== undefined) {
-      const countryData = data.find(d => d.code === countryCode || d.name === countryName);
+      const countryData = data.find(d => 
+        d.code === countryCode || 
+        d.name === countryName ||
+        d.name?.toLowerCase() === countryName?.toLowerCase()
+      );
       setTooltipContent({
         name: countryData?.name || countryName,
         value: value,
@@ -96,8 +112,15 @@ export default function WorldMapVisualization({ data, isDarkMode, selectedYear }
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {
-                  const countryCode = geo.properties.ISO_A3 || geo.properties.ADM0_A3;
-                  const fillColor = getCountryColor(countryCode);
+                  // world-atlas uses geo.id for ISO code
+                  const countryCode = geo.id;
+                  const countryName = geo.properties?.name;
+                  
+                  // Try to get color by code or name
+                  let fillColor = getCountryColor(countryCode);
+                  if (fillColor === (isDarkMode ? '#374151' : '#e5e7eb') && countryName) {
+                    fillColor = getCountryColor(countryName);
+                  }
                   
                   return (
                     <Geography
