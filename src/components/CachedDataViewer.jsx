@@ -49,6 +49,8 @@ export default function CachedDataViewer({ isDarkMode }) {
           files = [];
       }
       
+      console.log(`📂 Found ${files.length} cache files for ${viewMode}`);
+      
       // Load the actual content for each file
       const loadedData = files.map(file => {
         const content = loadCacheFile(file.path);
@@ -59,8 +61,19 @@ export default function CachedDataViewer({ isDarkMode }) {
         };
       }).filter(item => item.data !== null);
       
-      setCachedData(loadedData);
-      console.log(`📊 Loaded ${loadedData.length} cached files for ${viewMode}`);
+      console.log(`📊 Loaded ${loadedData.length} cached files with data`);
+      
+      // For location view, create an aggregated dataset with all countries
+      if (viewMode === 'location' && loadedData.length > 0) {
+        const aggregated = {
+          name: 'All Locations',
+          path: 'aggregated/all-countries',
+          data: aggregateCountryData(loadedData)
+        };
+        setCachedData([aggregated, ...loadedData]);
+      } else {
+        setCachedData(loadedData);
+      }
       
     } catch (error) {
       console.error('Failed to load cached data:', error);
@@ -68,6 +81,75 @@ export default function CachedDataViewer({ isDarkMode }) {
     } finally {
       setIsLoading(false);
     }
+  };
+  
+  // Aggregate all country cache files into one dataset
+  const aggregateCountryData = (countryFiles) => {
+    console.log(`🌍 Aggregating ${countryFiles.length} country files...`);
+    
+    const locations = {};
+    let totalObservations = 0;
+    const sources = new Set();
+    const indicatorSet = new Set();
+    
+    countryFiles.forEach(file => {
+      const data = file.data;
+      if (!data || !data.indicators) return;
+      
+      const countryCode = data.countryCode || data.country || 'Unknown';
+      const countryName = data.country || data.countryCode || 'Unknown';
+      
+      // Group data by year
+      const yearlyData = {};
+      data.indicators.forEach(ind => {
+        const year = ind.year?.toString() || '2019';
+        if (!yearlyData[year]) {
+          yearlyData[year] = {
+            values: [],
+            indicator: ind.name,
+            unit: ind.unit,
+            source: ind.source
+          };
+        }
+        yearlyData[year].values.push(parseFloat(ind.value) || 0);
+        sources.add(ind.source);
+        indicatorSet.add(ind.name);
+      });
+      
+      // Calculate average for each year
+      const dataByYear = Object.entries(yearlyData).map(([year, yearData]) => {
+        const avgValue = yearData.values.reduce((sum, val) => sum + val, 0) / yearData.values.length;
+        totalObservations++;
+        return {
+          year,
+          value: avgValue.toFixed(2),
+          unit: yearData.unit,
+          indicator: yearData.indicator,
+          source: yearData.source
+        };
+      });
+      
+      locations[countryCode] = {
+        name: countryName,
+        code: countryCode,
+        data: dataByYear
+      };
+    });
+    
+    console.log(`✅ Aggregated ${Object.keys(locations).length} countries with ${totalObservations} data points`);
+    
+    return {
+      locations,
+      indicator: {
+        id: Array.from(indicatorSet)[0] || 'indicator',
+        name: Array.from(indicatorSet)[0] || 'Indicator',
+        unit: '%'
+      },
+      source: Array.from(sources).join(', '),
+      totalObservations,
+      countries: Object.keys(locations),
+      sources: Array.from(sources)
+    };
   };
   
   const extractNameFromPath = (path) => {
@@ -237,10 +319,67 @@ export default function CachedDataViewer({ isDarkMode }) {
       
       {/* Data Grid */}
       {!isLoading && filteredData.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredData.map((item, idx) => {
-            const charts = generateChartsFromData(item);
-            const indicatorCount = item.data.indicators?.length || item.data.totalObservations || 0;
+        <>
+          {/* Show "All Locations" card first if in location view */}
+          {viewMode === 'location' && filteredData[0]?.name === 'All Locations' && (
+            <div className="mb-6">
+              <div
+                className={`rounded-lg border-2 ${isDarkMode ? 'bg-gradient-to-br from-blue-900/30 to-purple-900/30 border-blue-700' : 'bg-gradient-to-br from-blue-50 to-purple-50 border-blue-300'} p-8 hover:shadow-xl transition-all cursor-pointer`}
+                onClick={() => setSelectedItem(filteredData[0])}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                      🌍 {filteredData[0].name}
+                    </h3>
+                    <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                      Interactive world map with all countries
+                    </p>
+                  </div>
+                  <div className={`px-4 py-2 rounded-full text-sm font-bold ${isDarkMode ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'}`}>
+                    Featured
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-3 gap-4">
+                  <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800/50' : 'bg-white/50'}`}>
+                    <div className={`text-3xl font-bold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+                      {filteredData[0].data?.countries?.length || 0}
+                    </div>
+                    <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Countries
+                    </div>
+                  </div>
+                  <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800/50' : 'bg-white/50'}`}>
+                    <div className={`text-3xl font-bold ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>
+                      {filteredData[0].data?.totalObservations || 0}
+                    </div>
+                    <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Data Points
+                    </div>
+                  </div>
+                  <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-800/50' : 'bg-white/50'}`}>
+                    <div className={`text-3xl font-bold ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>
+                      {filteredData[0].data?.sources?.length || 0}
+                    </div>
+                    <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Sources
+                    </div>
+                  </div>
+                </div>
+                
+                <div className={`mt-4 text-center text-sm font-medium ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+                  Click to view interactive world map →
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Individual country/theme/sdg/partner cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredData.slice(viewMode === 'location' ? 1 : 0).map((item, idx) => {
+              const charts = generateChartsFromData(item);
+              const indicatorCount = item.data.indicators?.length || item.data.totalObservations || 0;
             
             return (
               <div
@@ -301,6 +440,7 @@ export default function CachedDataViewer({ isDarkMode }) {
             );
           })}
         </div>
+        </>
       )}
       
       {/* Detailed View Modal */}

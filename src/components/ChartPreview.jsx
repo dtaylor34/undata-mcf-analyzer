@@ -25,34 +25,84 @@ export default function ChartPreview({
   
   // Extract years from data
   const availableYears = useMemo(() => {
-    if (!cachedData || !cachedData.locations) return [];
+    if (!cachedData) return [];
+    
     const years = new Set();
-    Object.values(cachedData.locations).forEach(location => {
-      location.data?.forEach(d => {
-        if (d.year) years.add(d.year);
+    
+    // Handle different cache structures
+    if (cachedData.indicators && Array.isArray(cachedData.indicators)) {
+      // Cache file structure from cache-generator.js
+      cachedData.indicators.forEach(ind => {
+        if (ind.year) years.add(ind.year);
       });
-    });
+    } else if (cachedData.locations) {
+      // Alternative structure with locations object
+      Object.values(cachedData.locations).forEach(location => {
+        location.data?.forEach(d => {
+          if (d.year) years.add(d.year);
+        });
+      });
+    }
+    
     return Array.from(years).sort();
   }, [cachedData]);
   
   // Get data for current year
   const currentYearData = useMemo(() => {
-    if (!cachedData || !cachedData.locations) return [];
+    if (!cachedData) return [];
     
     const data = [];
-    Object.entries(cachedData.locations).forEach(([code, location]) => {
-      const yearData = location.data?.find(d => d.year === selectedYear.toString());
-      if (yearData) {
-        data.push({
-          code,
-          name: location.name || code,
-          value: parseFloat(yearData.value),
-          unit: yearData.unit,
-          indicator: yearData.indicator,
-          source: yearData.source
-        });
-      }
-    });
+    
+    // Handle cache file structure from cache-generator.js
+    if (cachedData.indicators && Array.isArray(cachedData.indicators)) {
+      // Group by country and filter by year
+      const countryMap = new Map();
+      
+      cachedData.indicators.forEach(ind => {
+        if (ind.year === selectedYear) {
+          const key = cachedData.countryCode || cachedData.country || 'Unknown';
+          if (!countryMap.has(key)) {
+            countryMap.set(key, {
+              code: cachedData.countryCode || key,
+              name: cachedData.country || key,
+              values: [],
+              source: ind.source
+            });
+          }
+          countryMap.get(key).values.push(ind.value);
+        }
+      });
+      
+      // Calculate average for each country
+      countryMap.forEach((country, code) => {
+        if (country.values.length > 0) {
+          const avgValue = country.values.reduce((sum, val) => sum + parseFloat(val || 0), 0) / country.values.length;
+          data.push({
+            code: country.code,
+            name: country.name,
+            value: avgValue,
+            unit: cachedData.indicators[0]?.unit || '%',
+            indicator: cachedData.indicators[0]?.name || 'Indicator',
+            source: country.source
+          });
+        }
+      });
+    } else if (cachedData.locations) {
+      // Alternative structure with locations object
+      Object.entries(cachedData.locations).forEach(([code, location]) => {
+        const yearData = location.data?.find(d => d.year === selectedYear.toString());
+        if (yearData) {
+          data.push({
+            code,
+            name: location.name || code,
+            value: parseFloat(yearData.value),
+            unit: yearData.unit,
+            indicator: yearData.indicator,
+            source: yearData.source
+          });
+        }
+      });
+    }
     
     return data.sort((a, b) => b.value - a.value);
   }, [cachedData, selectedYear]);
