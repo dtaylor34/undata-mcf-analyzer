@@ -601,6 +601,10 @@ export default function App() {
           console.log('Sample observation:', observations[0]);
         }
         
+        // CRITICAL: Set observations for Preview Charts button
+        setAllObservations(observations);
+        console.log('✅ Set allObservations for Preview Charts:', observations.length);
+        
         const chartDataArray = observationsToChartData(observations, statisticalVariables);
         console.log('✅ Chart Data Array:', chartDataArray.length);
         
