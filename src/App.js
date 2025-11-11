@@ -1573,15 +1573,16 @@ export default function App() {
 
         {/* Current Dataset Chart Preview */}
         {showCurrentDatasetCharts && allObservations && allObservations.length > 0 && (
-          <div className="mb-6">
-            <div className={`p-6 rounded-lg border ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'}`}>
-              <div className="flex items-center justify-between mb-4">
+          <div className="mb-6 space-y-6">
+            {/* Header */}
+            <div className={`p-4 rounded-lg border ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'}`}>
+              <div className="flex items-center justify-between">
                 <div>
                   <h3 className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                     📊 Chart Preview: {selectedFileId}
                   </h3>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Visualizing {allObservations.length} data points from current dataset
+                    {allObservations.length} observations across multiple indicators
                   </p>
                 </div>
                 <button
@@ -1591,46 +1592,53 @@ export default function App() {
                   Close
                 </button>
               </div>
+            </div>
               
-              {/* Import and use UNDataGeoChart with converted data */}
-              <div className="mt-4">
-                {(() => {
-                  // Convert allObservations to format needed for GeoChart
-                  const processedData = allObservations.map(obs => ({
-                    code: obs.observationAbout?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
-                    name: obs.observationAbout?.split('/').pop() || 'Unknown',
-                    value: parseFloat(obs.value) || 0,
-                    indicator: obs.variableMeasured,
-                    unit: obs.unit || '%',
-                    year: parseInt(obs.observationDate) || new Date().getFullYear()
-                  }));
-                  
-                  // Group by country and take most recent
-                  const countryMap = {};
-                  processedData.forEach(item => {
-                    if (!countryMap[item.code] || item.year > countryMap[item.code].year) {
-                      countryMap[item.code] = item;
-                    }
-                  });
-                  
-                  const finalData = Object.values(countryMap).filter(item => item.code !== 'UNKNOWN');
-                  
-                  const UNDataGeoChart = require('./components/UNDataGeoChart').default;
-                  
-                  return (
+            {/* Display separate chart for EACH indicator */}
+            {(() => {
+              const UNDataGeoChart = require('./components/UNDataGeoChart').default;
+              
+              // Group observations by indicator/variable
+              const indicatorGroups = {};
+              allObservations.forEach(obs => {
+                const indicatorKey = obs.variableMeasured || 'Unknown Indicator';
+                if (!indicatorGroups[indicatorKey]) {
+                  indicatorGroups[indicatorKey] = [];
+                }
+                indicatorGroups[indicatorKey].push(obs);
+              });
+              
+              console.log('📊 Found indicators:', Object.keys(indicatorGroups));
+              
+              // Create a chart for each indicator
+              return Object.entries(indicatorGroups).map(([indicatorName, observations], index) => {
+                // Convert observations to chart format
+                const chartData = observations.map(obs => ({
+                  code: obs.observationAbout?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
+                  name: obs.observationAbout?.split('/').pop() || 'Unknown',
+                  value: parseFloat(obs.value) || 0,
+                  indicator: indicatorName,
+                  unit: obs.unit || '%',
+                  year: parseInt(obs.observationDate) || new Date().getFullYear()
+                })).filter(item => item.code !== 'UNKNOWN');
+                
+                console.log(`📊 Chart ${index + 1}: ${indicatorName} (${chartData.length} countries)`);
+                
+                return (
+                  <div key={indicatorName}>
                     <UNDataGeoChart
-                      data={finalData}
+                      data={chartData}
                       isDarkMode={isDarkMode}
-                      selectedYear={finalData[0]?.year || new Date().getFullYear()}
+                      selectedYear={chartData[0]?.year || new Date().getFullYear()}
                       indicator={{
-                        name: allObservations[0]?.variableMeasured || 'Indicator',
+                        name: indicatorName,
                         source: selectedFileId.split('/')[0].toUpperCase()
                       }}
                     />
-                  );
-                })()}
-              </div>
-            </div>
+                  </div>
+                );
+              });
+            })()}
           </div>
         )}
         
