@@ -70,6 +70,14 @@ export const MCF_FILE_INDEX_V2 = {
           { id: 'sdg/test-data/poverty-sample.csv', name: 'poverty-sample.csv', type: 'csv', description: '12 observations across 4 countries' },
         ]
       },
+      'child-protection': {
+        name: '👶 Child Protection (Multi-Partner Test)',
+        isComplete: true,
+        files: [
+          { id: 'test-data/child-protection-sdg.mcf', name: 'child-protection-sdg.mcf', type: 'observations', description: 'SDG: Birth registration & early marriage (32 countries)' },
+          { id: 'test-data/child-protection-ilo.mcf', name: 'child-protection-ilo.mcf', type: 'observations', description: 'ILO: Parental leave access (26 countries)' },
+        ]
+      },
       'q4-2024': {
         name: 'Q4 2024',
         isComplete: true,

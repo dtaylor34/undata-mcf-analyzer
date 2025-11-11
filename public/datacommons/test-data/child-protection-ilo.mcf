@@ -1,0 +1,234 @@
+# MCF Test File: Child Protection - ILO Data
+# Theme: Children and Youth > Child Protection
+# Partner: International Labour Organization (ILO)
+# Source: https://rshiny.ilo.org
+# Indicators focused on parental leave access
+
+# Statistical Variable: Share of employees with access to parental leave
+Node: dcid:ilo_parental_leave_access
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:parentalLeaveAccess
+statType: dcs:measuredValue
+name: "Share of Employees With Access to Parental Leave"
+description: "Percentage of employees with access to parental leave in the World"
+unit: dcs:Percent
+
+# Observations - World aggregate data (2022)
+Node: obs_parental_leave_world_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:Earth
+observationDate: "2022"
+value: 45.2
+unit: "Percent"
+
+# Country-level observations for 2022
+Node: obs_parental_leave_angola_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/AGO
+observationDate: "2022"
+value: 5.9
+unit: "Percent"
+
+Node: obs_parental_leave_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 10.2
+unit: "Percent"
+
+Node: obs_parental_leave_benin_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/BEN
+observationDate: "2022"
+value: 8.9
+unit: "Percent"
+
+Node: obs_parental_leave_botswana_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/BWA
+observationDate: "2022"
+value: 50.5
+unit: "Percent"
+
+Node: obs_parental_leave_burkina_faso_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/BFA
+observationDate: "2022"
+value: 10.4
+unit: "Percent"
+
+Node: obs_parental_leave_chile_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/CHL
+observationDate: "2022"
+value: 73.7
+unit: "Percent"
+
+Node: obs_parental_leave_cote_ivoire_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/CIV
+observationDate: "2022"
+value: 15.0
+unit: "Percent"
+
+Node: obs_parental_leave_ghana_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/GHA
+observationDate: "2022"
+value: 14.3
+unit: "Percent"
+
+Node: obs_parental_leave_guatemala_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/GTM
+observationDate: "2022"
+value: 72.4
+unit: "Percent"
+
+Node: obs_parental_leave_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 22.1
+unit: "Percent"
+
+Node: obs_parental_leave_indonesia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/IDN
+observationDate: "2022"
+value: 31.8
+unit: "Percent"
+
+Node: obs_parental_leave_kenya_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/KEN
+observationDate: "2022"
+value: 18.5
+unit: "Percent"
+
+Node: obs_parental_leave_malawi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/MWI
+observationDate: "2022"
+value: 12.7
+unit: "Percent"
+
+Node: obs_parental_leave_mexico_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/MEX
+observationDate: "2022"
+value: 65.3
+unit: "Percent"
+
+Node: obs_parental_leave_nigeria_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/NGA
+observationDate: "2022"
+value: 8.2
+unit: "Percent"
+
+Node: obs_parental_leave_pakistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/PAK
+observationDate: "2022"
+value: 19.4
+unit: "Percent"
+
+Node: obs_parental_leave_philippines_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/PHL
+observationDate: "2022"
+value: 42.1
+unit: "Percent"
+
+Node: obs_parental_leave_rwanda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/RWA
+observationDate: "2022"
+value: 16.3
+unit: "Percent"
+
+Node: obs_parental_leave_senegal_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/SEN
+observationDate: "2022"
+value: 9.1
+unit: "Percent"
+
+Node: obs_parental_leave_south_africa_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/ZAF
+observationDate: "2022"
+value: 58.7
+unit: "Percent"
+
+Node: obs_parental_leave_tanzania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/TZA
+observationDate: "2022"
+value: 11.2
+unit: "Percent"
+
+Node: obs_parental_leave_thailand_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/THA
+observationDate: "2022"
+value: 54.6
+unit: "Percent"
+
+Node: obs_parental_leave_uganda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/UGA
+observationDate: "2022"
+value: 13.8
+unit: "Percent"
+
+Node: obs_parental_leave_vietnam_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/VNM
+observationDate: "2022"
+value: 48.9
+unit: "Percent"
+
+Node: obs_parental_leave_zambia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/ZMB
+observationDate: "2022"
+value: 10.6
+unit: "Percent"
+
+Node: obs_parental_leave_zimbabwe_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:ilo_parental_leave_access
+observationAbout: dcid:country/ZWE
+observationDate: "2022"
+value: 14.9
+unit: "Percent"
+

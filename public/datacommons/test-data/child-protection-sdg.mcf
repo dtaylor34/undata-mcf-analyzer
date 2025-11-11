@@ -1,0 +1,286 @@
+# MCF Test File: Child Protection - SDG Data
+# Theme: Children and Youth > Child Protection
+# Partner: United Nations SDG Database
+# Indicators focused on birth registration and early marriage
+
+# Statistical Variable: Birth registration (children under 5)
+Node: dcid:sdg_birth_registration_under5
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:birthRegistration
+statType: dcs:measuredValue
+name: "Proportion of Children Whose Births Have Been Registered"
+description: "Percentage of children under age 5 whose births are registered with a civil authority"
+unit: dcs:Percent
+age: "Under 5 years"
+
+# Statistical Variable: Early marriage (before age 15)
+Node: dcid:sdg_early_marriage_before15
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:earlyMarriage
+statType: dcs:measuredValue
+name: "Proportion of Women Married Before Age 15"
+description: "Percentage of women aged 20-24 who were married or in a union before age 15"
+unit: dcs:Percent
+age: "20-24 years"
+gender: "Female"
+
+# Birth Registration Observations (2022)
+Node: obs_birth_reg_afghanistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/AFG
+observationDate: "2022"
+value: 37.2
+unit: "Percent"
+
+Node: obs_birth_reg_albania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/ALB
+observationDate: "2022"
+value: 98.5
+unit: "Percent"
+
+Node: obs_birth_reg_angola_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/AGO
+observationDate: "2022"
+value: 45.1
+unit: "Percent"
+
+Node: obs_birth_reg_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 54.3
+unit: "Percent"
+
+Node: obs_birth_reg_benin_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/BEN
+observationDate: "2022"
+value: 81.7
+unit: "Percent"
+
+Node: obs_birth_reg_bolivia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/BOL
+observationDate: "2022"
+value: 88.4
+unit: "Percent"
+
+Node: obs_birth_reg_burkina_faso_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/BFA
+observationDate: "2022"
+value: 78.9
+unit: "Percent"
+
+Node: obs_birth_reg_burundi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/BDI
+observationDate: "2022"
+value: 92.1
+unit: "Percent"
+
+Node: obs_birth_reg_cambodia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/KHM
+observationDate: "2022"
+value: 73.5
+unit: "Percent"
+
+Node: obs_birth_reg_cameroon_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/CMR
+observationDate: "2022"
+value: 71.2
+unit: "Percent"
+
+Node: obs_birth_reg_chad_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/TCD
+observationDate: "2022"
+value: 19.4
+unit: "Percent"
+
+Node: obs_birth_reg_colombia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/COL
+observationDate: "2022"
+value: 95.8
+unit: "Percent"
+
+Node: obs_birth_reg_congo_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/COG
+observationDate: "2022"
+value: 88.6
+unit: "Percent"
+
+Node: obs_birth_reg_ethiopia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/ETH
+observationDate: "2022"
+value: 21.3
+unit: "Percent"
+
+Node: obs_birth_reg_ghana_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/GHA
+observationDate: "2022"
+value: 71.8
+unit: "Percent"
+
+Node: obs_birth_reg_haiti_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/HTI
+observationDate: "2022"
+value: 80.4
+unit: "Percent"
+
+Node: obs_birth_reg_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 89.2
+unit: "Percent"
+
+Node: obs_birth_reg_kenya_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/KEN
+observationDate: "2022"
+value: 77.5
+unit: "Percent"
+
+Node: obs_birth_reg_malawi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/MWI
+observationDate: "2022"
+value: 63.9
+unit: "Percent"
+
+Node: obs_birth_reg_mali_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_birth_registration_under5
+observationAbout: dcid:country/MLI
+observationDate: "2022"
+value: 81.5
+unit: "Percent"
+
+# Early Marriage Observations (2022)
+Node: obs_early_marriage_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 15.5
+unit: "Percent"
+
+Node: obs_early_marriage_burkina_faso_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/BFA
+observationDate: "2022"
+value: 10.3
+unit: "Percent"
+
+Node: obs_early_marriage_chad_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/TCD
+observationDate: "2022"
+value: 29.1
+unit: "Percent"
+
+Node: obs_early_marriage_ethiopia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/ETH
+observationDate: "2022"
+value: 14.1
+unit: "Percent"
+
+Node: obs_early_marriage_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 11.9
+unit: "Percent"
+
+Node: obs_early_marriage_mali_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/MLI
+observationDate: "2022"
+value: 17.8
+unit: "Percent"
+
+Node: obs_early_marriage_niger_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/NER
+observationDate: "2022"
+value: 28.4
+unit: "Percent"
+
+Node: obs_early_marriage_nigeria_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/NGA
+observationDate: "2022"
+value: 16.7
+unit: "Percent"
+
+Node: obs_early_marriage_pakistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/PAK
+observationDate: "2022"
+value: 8.6
+unit: "Percent"
+
+Node: obs_early_marriage_senegal_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/SEN
+observationDate: "2022"
+value: 9.2
+unit: "Percent"
+
+Node: obs_early_marriage_tanzania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/TZA
+observationDate: "2022"
+value: 5.2
+unit: "Percent"
+
+Node: obs_early_marriage_uganda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:sdg_early_marriage_before15
+observationAbout: dcid:country/UGA
+observationDate: "2022"
+value: 7.3
+unit: "Percent"
+
