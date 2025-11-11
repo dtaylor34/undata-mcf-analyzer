@@ -20,6 +20,33 @@ statType: dcs:measuredValue
 populationType: dcs:Person
 measurementQualifier: dcs:Neonatal
 
+Node: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children aged 1-17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month [1-14 years] (2018)"
+measuredProperty: dcs:value
+statType: dcs:measuredValue
+populationType: dcs:UNDATA_WHO_PT_CHLD_DISCPLN
+age: dcs:UNDATA_WHO_AgeEnum_Y1T14
+observationPeriod: "2018"
+
+Node: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y2T14__YEAR--2018
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children aged 1-17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month [2-14 years] (2018)"
+measuredProperty: dcs:value
+statType: dcs:measuredValue
+populationType: dcs:UNDATA_WHO_PT_CHLD_DISCPLN
+age: dcs:UNDATA_WHO_AgeEnum_Y2T14
+observationPeriod: "2018"
+
+Node: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children aged 1-17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month [1-14 years] (2012)"
+measuredProperty: dcs:value
+statType: dcs:measuredValue
+populationType: dcs:UNDATA_WHO_PT_CHLD_DISCPLN
+age: dcs:UNDATA_WHO_AgeEnum_Y1T14
+observationPeriod: "2012"
+
 # Observations: Under-5 Mortality Rate
 Node: dcid:obs_u5_mortality_afghanistan_2022
 typeOf: dcs:StatVarObservation
@@ -309,4 +336,167 @@ observationAbout: dcid:country/TZA
 observationDate: "2022"
 value: 17.6
 unit: dcs:Per1000LiveBirths
+
+# Observations: Physical/Psychological Aggression (1-14 years, 2018)
+Node: dcid:obs_violence_gmb_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/GMB
+observationDate: "2018"
+value: 89.2
+unit: dcs:Percent
+
+Node: dcid:obs_violence_irq_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/IRQ
+observationDate: "2018"
+value: 80.9
+unit: dcs:Percent
+
+Node: dcid:obs_violence_jor_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/JOR
+observationDate: "2018"
+value: 81.6
+unit: dcs:Percent
+
+Node: dcid:obs_violence_kgz_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/KGZ
+observationDate: "2018"
+value: 74.3
+unit: dcs:Percent
+
+Node: dcid:obs_violence_lso_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/LSO
+observationDate: "2018"
+value: 75.8
+unit: dcs:Percent
+
+Node: dcid:obs_violence_mdg_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/MDG
+observationDate: "2018"
+value: 86
+unit: dcs:Percent
+
+Node: dcid:obs_violence_mng_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/MNG
+observationDate: "2018"
+value: 49.1
+unit: dcs:Percent
+
+Node: dcid:obs_violence_mne_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/MNE
+observationDate: "2018"
+value: 65.8
+unit: dcs:Percent
+
+Node: dcid:obs_violence_sur_2018_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2018
+observationAbout: dcid:country/SUR
+observationDate: "2018"
+value: 87.3
+unit: dcs:Percent
+
+# Observations: Physical/Psychological Aggression (2-14 years, 2018)
+Node: dcid:obs_violence_gmb_2018_y2t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y2T14__YEAR--2018
+observationAbout: dcid:country/GMB
+observationDate: "2018"
+value: 88.5
+unit: dcs:Percent
+
+Node: dcid:obs_violence_irq_2018_y2t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y2T14__YEAR--2018
+observationAbout: dcid:country/IRQ
+observationDate: "2018"
+value: 79.8
+unit: dcs:Percent
+
+Node: dcid:obs_violence_jor_2018_y2t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y2T14__YEAR--2018
+observationAbout: dcid:country/JOR
+observationDate: "2018"
+value: 80.3
+unit: dcs:Percent
+
+# Observations: Physical/Psychological Aggression (1-14 years, 2012)
+Node: dcid:obs_violence_arg_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/ARG
+observationDate: "2012"
+value: 72.4
+unit: dcs:Percent
+
+Node: dcid:obs_violence_brb_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/BRB
+observationDate: "2012"
+value: 75.1
+unit: dcs:Percent
+
+Node: dcid:obs_violence_bih_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/BIH
+observationDate: "2012"
+value: 55.2
+unit: dcs:Percent
+
+Node: dcid:obs_violence_ner_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/NER
+observationDate: "2012"
+value: 81.6
+unit: dcs:Percent
+
+Node: dcid:obs_violence_qat_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/QAT
+observationDate: "2012"
+value: 49.9
+unit: dcs:Percent
+
+Node: dcid:obs_violence_mda_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/MDA
+observationDate: "2012"
+value: 75.6
+unit: dcs:Percent
+
+Node: dcid:obs_violence_lca_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/LCA
+observationDate: "2012"
+value: 67.5
+unit: dcs:Percent
+
+Node: dcid:obs_violence_ukr_2012_y1t14
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who/PT_CHLD_DISCPLN_CVPR.AGE--Y1T14__YEAR--2012
+observationAbout: dcid:country/UKR
+observationDate: "2012"
+value: 61.2
+unit: dcs:Percent
 

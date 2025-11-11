@@ -1597,41 +1597,55 @@ export default function App() {
             {/* Display separate chart for EACH indicator */}
             {(() => {
               const UNDataGeoChart = require('./components/UNDataGeoChart').default;
+              const nodes = parseMCF(currentMCF);
+              const statisticalVariables = extractStatisticalVariables(nodes);
+              
+              // Create mapping of dcids to human-readable names
+              const variableNames = {};
+              statisticalVariables.forEach(v => {
+                const dcid = v.dcid || v.Node;
+                if (dcid && v.name) {
+                  variableNames[dcid] = v.name;
+                }
+              });
               
               // Group observations by indicator/variable
               const indicatorGroups = {};
               allObservations.forEach(obs => {
-                const indicatorKey = obs.variableMeasured || 'Unknown Indicator';
-                if (!indicatorGroups[indicatorKey]) {
-                  indicatorGroups[indicatorKey] = [];
+                const indicatorDcid = obs.variableMeasured || 'Unknown Indicator';
+                if (!indicatorGroups[indicatorDcid]) {
+                  indicatorGroups[indicatorDcid] = [];
                 }
-                indicatorGroups[indicatorKey].push(obs);
+                indicatorGroups[indicatorDcid].push(obs);
               });
               
               console.log('📊 Found indicators:', Object.keys(indicatorGroups));
+              console.log('📊 Variable names mapping:', variableNames);
               
               // Create a chart for each indicator
-              return Object.entries(indicatorGroups).map(([indicatorName, observations], index) => {
+              return Object.entries(indicatorGroups).map(([indicatorDcid, observations], index) => {
                 // Convert observations to chart format
                 const chartData = observations.map(obs => ({
                   code: obs.observationAbout?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
                   name: obs.observationAbout?.split('/').pop() || 'Unknown',
                   value: parseFloat(obs.value) || 0,
-                  indicator: indicatorName,
+                  indicator: indicatorDcid,
                   unit: obs.unit || '%',
                   year: parseInt(obs.observationDate) || new Date().getFullYear()
                 })).filter(item => item.code !== 'UNKNOWN');
                 
+                const indicatorName = variableNames[indicatorDcid] || indicatorDcid;
                 console.log(`📊 Chart ${index + 1}: ${indicatorName} (${chartData.length} countries)`);
                 
                 return (
-                  <div key={indicatorName}>
+                  <div key={indicatorDcid}>
                     <UNDataGeoChart
                       data={chartData}
                       isDarkMode={isDarkMode}
                       selectedYear={chartData[0]?.year || new Date().getFullYear()}
                       indicator={{
                         name: indicatorName,
+                        dcid: indicatorDcid,
                         source: selectedFileId.split('/')[0].toUpperCase()
                       }}
                     />
@@ -2123,6 +2137,7 @@ export default function App() {
                 (() => {
                   const UNDataGeoChart = require('./components/UNDataGeoChart').default;
                   const nodes = parseMCF(currentMCF);
+                  const statisticalVariables = extractStatisticalVariables(nodes);
                   const observations = extractObservations(nodes);
                   
                   console.log('📊 Cached Tab Chart View - Observations:', observations.length);
@@ -2137,17 +2152,27 @@ export default function App() {
                     );
                   }
                   
+                  // Create mapping of dcids to human-readable names
+                  const variableNames = {};
+                  statisticalVariables.forEach(v => {
+                    const dcid = v.dcid || v.Node;
+                    if (dcid && v.name) {
+                      variableNames[dcid] = v.name;
+                    }
+                  });
+                  
                   // Group observations by indicator/variable (same logic as Preview Charts)
                   const indicatorGroups = {};
                   observations.forEach(obs => {
-                    const indicatorKey = obs.variableMeasured || 'Unknown Indicator';
-                    if (!indicatorGroups[indicatorKey]) {
-                      indicatorGroups[indicatorKey] = [];
+                    const indicatorDcid = obs.variableMeasured || 'Unknown Indicator';
+                    if (!indicatorGroups[indicatorDcid]) {
+                      indicatorGroups[indicatorDcid] = [];
                     }
-                    indicatorGroups[indicatorKey].push(obs);
+                    indicatorGroups[indicatorDcid].push(obs);
                   });
                   
                   console.log('📊 Cached Tab - Found indicators:', Object.keys(indicatorGroups));
+                  console.log('📊 Cached Tab - Variable names mapping:', variableNames);
                   
                   return (
                     <div className="space-y-6">
@@ -2166,28 +2191,30 @@ export default function App() {
                       </div>
                       
                       {/* Display separate UN Data-style chart for EACH indicator */}
-                      {Object.entries(indicatorGroups).map(([indicatorName, indicatorObservations], index) => {
+                      {Object.entries(indicatorGroups).map(([indicatorDcid, indicatorObservations], index) => {
                         // Convert observations to chart format
                         const chartData = indicatorObservations.map(obs => ({
                           code: obs.observationAbout?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
                           name: obs.observationAbout?.split('/').pop() || 'Unknown',
                           value: parseFloat(obs.value) || 0,
-                          indicator: indicatorName,
+                          indicator: indicatorDcid,
                           unit: obs.unit || '%',
                           year: parseInt(obs.observationDate) || new Date().getFullYear()
                         })).filter(item => item.code !== 'UNKNOWN');
                         
+                        const indicatorName = variableNames[indicatorDcid] || indicatorDcid;
                         console.log(`📊 Cached Chart ${index + 1}: ${indicatorName} (${chartData.length} countries)`);
                         
                         return (
-                          <div key={indicatorName}>
+                          <div key={indicatorDcid}>
                             <UNDataGeoChart
                               data={chartData}
                               isDarkMode={isDarkMode}
                               selectedYear={chartData[0]?.year || new Date().getFullYear()}
                               indicator={{
                                 name: indicatorName,
-                                source: selectedFileId?.split('/')[0]?.toUpperCase() || 'UN DATA'
+                                dcid: indicatorDcid,
+                                source: selectedFileId?.split('/')[0]?.toUpperCase() || 'UNICEF'
                               }}
                             />
                           </div>

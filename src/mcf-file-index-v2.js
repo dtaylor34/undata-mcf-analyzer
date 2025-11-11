@@ -71,13 +71,13 @@ export const MCF_FILE_INDEX_V2 = {
         ]
       },
       'child-protection': {
-        name: '👶 Child Protection (Multi-Partner Test)',
+        name: '👶 Child Protection (Real UN Data)',
         isComplete: true,
         files: [
-          { id: 'test-data/child-protection-sdg.mcf', name: 'child-protection-sdg.mcf', type: 'observations', description: 'SDG: Birth registration & early marriage (32 countries)' },
-          { id: 'test-data/child-protection-ilo.mcf', name: 'child-protection-ilo.mcf', type: 'observations', description: 'ILO: Parental leave access (26 countries)' },
-          { id: 'test-data/child-protection-who.mcf', name: 'child-protection-who.mcf', type: 'observations', description: 'WHO: Child mortality rates (28 countries, 2 indicators)' },
-          { id: 'test-data/child-protection-unicef.mcf', name: 'child-protection-unicef.mcf', type: 'observations', description: 'UNICEF: Immunization & education (32 countries, 2 indicators)' },
+          { id: 'test-data/child-protection-sdg.mcf', name: 'child-protection-sdg.mcf', type: 'observations', description: 'SDG: Birth registration & early marriage (32 countries, 2 indicators)' },
+          { id: 'test-data/child-protection-ilo.mcf', name: 'child-protection-ilo.mcf', type: 'observations', description: 'ILO: Parental leave access (26 countries, 1 indicator)' },
+          { id: 'test-data/child-protection-who.mcf', name: 'child-protection-who.mcf', type: 'observations', description: 'WHO: Child mortality & violence/punishment indicators (28 countries, 5 indicators)' },
+          { id: 'test-data/child-protection-unicef.mcf', name: 'child-protection-unicef.mcf', type: 'observations', description: 'UNICEF: 17 child protection indicators - Birth registration, Child labour, Marriage, Violence, FGM (75 observations)' },
         ]
       },
       'q4-2024': {

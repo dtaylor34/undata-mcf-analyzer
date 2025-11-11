@@ -1,360 +1,768 @@
 # UNICEF Child Protection Data
-# Theme: Children and Youth / Child Protection
-# Focus: Immunization, education, and child welfare indicators
+# Theme: Children and Youth / Child Protection (UN_SUB_THEME_25)
+# Source: UN Data Commons Staging API - Real Data
+# Data pulled from: https://staging.undatacommons.dev/UNSDWebsite/undatacommons/areas/503827296
 
-Node: dcid:unicef_immunization_dtp3
+# STATISTICAL VARIABLES
+
+Node: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
 typeOf: dcs:StatisticalVariable
-name: "DTP3 immunization coverage among 1-year-olds (%)"
-description: "Percentage of children aged 12-23 months who received three doses of diphtheria-tetanus-pertussis vaccine"
-measuredProperty: dcs:immunizationRate
+name: "Proportion of children under left alone or under the supervision of another child younger than 10 years of age for more than 1 hour at least once in the last week (Under 5 years old) by quintile (2)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_ECD_CHLD_LFT_ALN
 statType: dcs:measuredValue
-populationType: dcs:Person
-measurementQualifier: dcs:Under2Years
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
 
-Node: dcid:unicef_primary_school_completion
+Node: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
 typeOf: dcs:StatisticalVariable
-name: "Primary school completion rate (%)"
-description: "Percentage of children completing primary education"
-measuredProperty: dcs:educationCompletionRate
+name: "Proportion of children whose births are registered (Under 5 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
 statType: dcs:measuredValue
-populationType: dcs:Person
-measurementQualifier: dcs:PrimarySchool
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
 
-# Observations: DTP3 Immunization Coverage
-Node: dcid:obs_dtp3_afghanistan_2022
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour (economic activities) (5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_PS_PSY_V_CGVR.AGE--Y1T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children who experienced any physical punishment and/or psychological aggression by caregivers (1 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_PSY_V_CGVR
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y1T14
+
+Node: dcid:undata/unicef/PT_MRD_U18.SEX--F__AGE--Y20T24
+typeOf: dcs:StatisticalVariable
+name: "Proportion of persons married or in union before age 18 (Female, 20 to 24 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_MRD_U18
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y20T24
+
+Node: dcid:undata/unicef/PT_MRD.SEX--F__AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children and adolescents who are currently married or in union (Female, 15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_MRD
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_F_20-24_MRD-U15.SEX--F__AGE--Y20T24
+typeOf: dcs:StatisticalVariable
+name: "Proportion of women married or in union before age 15 (Female, 20 to 24 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_F_MRD
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y20T24
+
+Node: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--F__AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour (Female, 5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--M__AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour (Male, 5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_REG.SEX--M__AGE--Y0T4
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (Male, Under 5 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
+
+Node: dcid:undata/unicef/PT_CHLD_REG.SEX--F__AGE--Y0T4
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (Female, Under 5 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
+
+Node: dcid:undata/unicef/PT_CHLD_ADLT_YTHS_OFFNDR.AGE--Y10T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of adolescents and youth who had at least one contact with law enforcement (10 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_ADLT_YTHS
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y10T14
+
+Node: dcid:undata/unicef/PT_CHLD_ADLT_YTHS_OFFNDR.AGE--Y15T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of adolescents and youth who had at least one contact with law enforcement (15 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_ADLT_YTHS
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T17
+
+Node: dcid:undata/unicef/PT_CHLD_PS_V_SXLH.AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of young women who experienced sexual violence in childhood (15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_V
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_CHLD_PS_V_PHY.AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of young women who experienced physical violence in childhood (15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_V
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_F_15-49_FGM.SEX--F__AGE--Y15T49
+typeOf: dcs:StatisticalVariable
+name: "Proportion of girls and women who have undergone female genital mutilation (15 to 49 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_F_FGM
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T49
+
+Node: dcid:undata/unicef/PT_F_15-49_FGM_DGHTR.SEX--F__AGE--Y15T49
+typeOf: dcs:StatisticalVariable
+name: "Proportion of girls aged 0-14 who have undergone female genital mutilation (reported by mothers 15-49)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_F_FGM
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T49
+
+# OBSERVATIONS: Children Left Alone (Female, Under 5) - 2019 Data
+
+Node: dcid:obs_left_alone_dza_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/AFG
-observationDate: "2022"
-value: 68.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/DZA
+observationDate: "2019"
+value: 12.3
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_angola_2022
+Node: dcid:obs_left_alone_bgd_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/AGO
-observationDate: "2022"
-value: 54.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_bangladesh_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
 observationAbout: dcid:country/BGD
-observationDate: "2022"
-value: 98.0
+observationDate: "2019"
+value: 11.2
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_benin_2022
+Node: dcid:obs_left_alone_blr_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/BEN
-observationDate: "2022"
-value: 78.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/BLR
+observationDate: "2019"
+value: 2.4
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_burkina_faso_2022
+Node: dcid:obs_left_alone_caf_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/BFA
-observationDate: "2022"
-value: 91.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/CAF
+observationDate: "2019"
+value: 49.3
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_burundi_2022
+Node: dcid:obs_left_alone_cub_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/BDI
-observationDate: "2022"
-value: 94.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/CUB
+observationDate: "2019"
+value: 2.4
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_cambodia_2022
+Node: dcid:obs_left_alone_dom_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/KHM
-observationDate: "2022"
-value: 94.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/DOM
+observationDate: "2019"
+value: 7.2
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_cameroon_2022
+Node: dcid:obs_left_alone_gnb_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/CMR
-observationDate: "2022"
-value: 76.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/GNB
+observationDate: "2019"
+value: 69.6
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_chad_2022
+Node: dcid:obs_left_alone_kir_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/TCD
-observationDate: "2022"
-value: 49.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/KIR
+observationDate: "2019"
+value: 29.8
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_drc_2022
+Node: dcid:obs_left_alone_lka_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/COD
-observationDate: "2022"
-value: 69.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/LKA
+observationDate: "2019"
+value: 4.1
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_ethiopia_2022
+Node: dcid:obs_left_alone_mkd_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/ETH
-observationDate: "2022"
-value: 77.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/MKD
+observationDate: "2019"
+value: 5.3
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_ghana_2022
+Node: dcid:obs_left_alone_npl_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/GHA
-observationDate: "2022"
-value: 96.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/NPL
+observationDate: "2019"
+value: 24.3
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_guinea_2022
+Node: dcid:obs_left_alone_sen_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/GIN
-observationDate: "2022"
-value: 52.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_haiti_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/HTI
-observationDate: "2022"
-value: 55.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_india_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/IND
-observationDate: "2022"
-value: 93.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_kenya_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/KEN
-observationDate: "2022"
-value: 92.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_liberia_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/LBR
-observationDate: "2022"
-value: 81.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_madagascar_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/MDG
-observationDate: "2022"
-value: 75.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_malawi_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/MWI
-observationDate: "2022"
-value: 92.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_mali_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/MLI
-observationDate: "2022"
-value: 71.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_mozambique_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/MOZ
-observationDate: "2022"
-value: 89.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_niger_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/NER
-observationDate: "2022"
-value: 81.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_nigeria_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/NGA
-observationDate: "2022"
-value: 57.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_pakistan_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/PAK
-observationDate: "2022"
-value: 80.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_rwanda_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/RWA
-observationDate: "2022"
-value: 98.0
-unit: dcs:Percent
-
-Node: dcid:obs_dtp3_senegal_2022
-typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
 observationAbout: dcid:country/SEN
-observationDate: "2022"
-value: 89.0
+observationDate: "2019"
+value: 38.3
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_somalia_2022
+Node: dcid:obs_left_alone_srb_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/SOM
-observationDate: "2022"
-value: 46.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/SRB
+observationDate: "2019"
+value: 4.1
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_tanzania_2022
+Node: dcid:obs_left_alone_stp_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/TZA
-observationDate: "2022"
-value: 95.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/STP
+observationDate: "2019"
+value: 21.8
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_uganda_2022
+Node: dcid:obs_left_alone_tcd_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/UGA
-observationDate: "2022"
-value: 92.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/TCD
+observationDate: "2019"
+value: 64.4
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_yemen_2022
+Node: dcid:obs_left_alone_tkm_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/YEM
-observationDate: "2022"
-value: 63.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/TKM
+observationDate: "2019"
+value: 1.8
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_zambia_2022
+Node: dcid:obs_left_alone_ton_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
-observationAbout: dcid:country/ZMB
-observationDate: "2022"
-value: 94.0
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
+observationAbout: dcid:country/TON
+observationDate: "2019"
+value: 7.3
 unit: dcs:Percent
 
-Node: dcid:obs_dtp3_zimbabwe_2022
+Node: dcid:obs_left_alone_zwe_2019
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_immunization_dtp3
+variableMeasured: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--F__AGE--Y0T4
 observationAbout: dcid:country/ZWE
-observationDate: "2022"
-value: 91.0
+observationDate: "2019"
+value: 20.1
 unit: dcs:Percent
 
-# Observations: Primary School Completion Rate
-Node: dcid:obs_primary_school_afghanistan_2022
+# OBSERVATIONS: Birth Registration (Under 5) - 2021 Data
+
+Node: dcid:obs_birth_reg_and_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/AFG
-observationDate: "2022"
-value: 45.2
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/AND
+observationDate: "2021"
+value: 100
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_bangladesh_2022
+Node: dcid:obs_birth_reg_aus_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/BGD
-observationDate: "2022"
-value: 82.5
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/AUS
+observationDate: "2021"
+value: 100
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_ethiopia_2022
+Node: dcid:obs_birth_reg_aut_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/ETH
-observationDate: "2022"
-value: 58.3
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/AUT
+observationDate: "2021"
+value: 100
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_india_2022
+Node: dcid:obs_birth_reg_bel_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/BEL
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_bfa_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/BFA
+observationDate: "2021"
+value: 84.8
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_can_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/CAN
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_che_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/CHE
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_civ_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/CIV
+observationDate: "2021"
+value: 95.5
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_cri_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/CRI
+observationDate: "2021"
+value: 96.4
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_cyp_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/CYP
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_egy_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/EGY
+observationDate: "2021"
+value: 99.1
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_est_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/EST
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_fin_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/FIN
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_fji_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/FJI
+observationDate: "2021"
+value: 86.6
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_fra_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/FRA
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_gab_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/GAB
+observationDate: "2021"
+value: 95.6
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_gbr_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/GBR
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_grc_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/GRC
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_ind_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
 observationAbout: dcid:country/IND
-observationDate: "2022"
-value: 91.7
+observationDate: "2021"
+value: 89.1
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_kenya_2022
+Node: dcid:obs_birth_reg_ita_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/KEN
-observationDate: "2022"
-value: 87.4
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/ITA
+observationDate: "2021"
+value: 100
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_nigeria_2022
+Node: dcid:obs_birth_reg_jpn_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/JPN
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_lie_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/LIE
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_mdg_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/MDG
+observationDate: "2021"
+value: 73.8
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_mlt_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/MLT
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_mrt_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/MRT
+observationDate: "2021"
+value: 44.8
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_ner_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/NER
+observationDate: "2021"
+value: 65.9
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_nga_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
 observationAbout: dcid:country/NGA
-observationDate: "2022"
-value: 66.1
+observationDate: "2021"
+value: 57.3
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_pakistan_2022
+Node: dcid:obs_birth_reg_nld_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/PAK
-observationDate: "2022"
-value: 67.8
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/NLD
+observationDate: "2021"
+value: 100
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_rwanda_2022
+Node: dcid:obs_birth_reg_rou_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/RWA
-observationDate: "2022"
-value: 79.5
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/ROU
+observationDate: "2021"
+value: 100
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_tanzania_2022
+Node: dcid:obs_birth_reg_slv_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
-observationAbout: dcid:country/TZA
-observationDate: "2022"
-value: 84.2
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/SLV
+observationDate: "2021"
+value: 99
 unit: dcs:Percent
 
-Node: dcid:obs_primary_school_uganda_2022
+Node: dcid:obs_birth_reg_smr_2021
 typeOf: dcs:StatVarObservation
-variableMeasured: dcid:unicef_primary_school_completion
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/SMR
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_swe_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/SWE
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_usa_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/USA
+observationDate: "2021"
+value: 100
+unit: dcs:Percent
+
+Node: dcid:obs_birth_reg_vnm_2021
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T4
+observationAbout: dcid:country/VNM
+observationDate: "2021"
+value: 98.1
+unit: dcs:Percent
+
+# OBSERVATIONS: Marriage Before Age 15 (Female, 20-24) - 2019 Data
+
+Node: dcid:obs_marriage_u15_bgd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_20-24_MRD-U15.SEX--F__AGE--Y20T24
+observationAbout: dcid:country/BGD
+observationDate: "2019"
+value: 22.3
+unit: dcs:Percent
+
+Node: dcid:obs_marriage_u15_caf_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_20-24_MRD-U15.SEX--F__AGE--Y20T24
+observationAbout: dcid:country/CAF
+observationDate: "2019"
+value: 28.5
+unit: dcs:Percent
+
+Node: dcid:obs_marriage_u15_tcd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_20-24_MRD-U15.SEX--F__AGE--Y20T24
+observationAbout: dcid:country/TCD
+observationDate: "2019"
+value: 29.1
+unit: dcs:Percent
+
+Node: dcid:obs_marriage_u15_ner_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_20-24_MRD-U15.SEX--F__AGE--Y20T24
+observationAbout: dcid:country/NER
+observationDate: "2019"
+value: 28.7
+unit: dcs:Percent
+
+# OBSERVATIONS: Child Labour Female (5-17) - 2019 Data
+
+Node: dcid:obs_child_labour_f_bgd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--F__AGE--Y5T17
+observationAbout: dcid:country/BGD
+observationDate: "2019"
+value: 4.8
+unit: dcs:Percent
+
+Node: dcid:obs_child_labour_f_bol_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--F__AGE--Y5T17
+observationAbout: dcid:country/BOL
+observationDate: "2019"
+value: 11.2
+unit: dcs:Percent
+
+Node: dcid:obs_child_labour_f_ken_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--F__AGE--Y5T17
+observationAbout: dcid:country/KEN
+observationDate: "2019"
+value: 17.5
+unit: dcs:Percent
+
+Node: dcid:obs_child_labour_f_tcd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--F__AGE--Y5T17
+observationAbout: dcid:country/TCD
+observationDate: "2019"
+value: 28.4
+unit: dcs:Percent
+
+# OBSERVATIONS: Child Labour Male (5-17) - 2019 Data
+
+Node: dcid:obs_child_labour_m_bgd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--M__AGE--Y5T17
+observationAbout: dcid:country/BGD
+observationDate: "2019"
+value: 7.1
+unit: dcs:Percent
+
+Node: dcid:obs_child_labour_m_bol_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--M__AGE--Y5T17
+observationAbout: dcid:country/BOL
+observationDate: "2019"
+value: 13.5
+unit: dcs:Percent
+
+Node: dcid:obs_child_labour_m_ken_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--M__AGE--Y5T17
+observationAbout: dcid:country/KEN
+observationDate: "2019"
+value: 20.1
+unit: dcs:Percent
+
+Node: dcid:obs_child_labour_m_tcd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_Y5T17_LBR.SEX--M__AGE--Y5T17
+observationAbout: dcid:country/TCD
+observationDate: "2019"
+value: 33.4
+unit: dcs:Percent
+
+# OBSERVATIONS: Sexual Violence in Childhood (15-19) - 2019 Data
+
+Node: dcid:obs_sexual_violence_bgd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_PS_V_SXLH.AGE--Y15T19
+observationAbout: dcid:country/BGD
+observationDate: "2019"
+value: 8.2
+unit: dcs:Percent
+
+Node: dcid:obs_sexual_violence_ken_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_PS_V_SXLH.AGE--Y15T19
+observationAbout: dcid:country/KEN
+observationDate: "2019"
+value: 11.4
+unit: dcs:Percent
+
+Node: dcid:obs_sexual_violence_uga_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_PS_V_SXLH.AGE--Y15T19
 observationAbout: dcid:country/UGA
-observationDate: "2022"
-value: 73.6
+observationDate: "2019"
+value: 14.7
 unit: dcs:Percent
 
+# OBSERVATIONS: Physical Violence in Childhood (15-19) - 2019 Data
+
+Node: dcid:obs_physical_violence_bgd_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_PS_V_PHY.AGE--Y15T19
+observationAbout: dcid:country/BGD
+observationDate: "2019"
+value: 32.5
+unit: dcs:Percent
+
+Node: dcid:obs_physical_violence_ken_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_PS_V_PHY.AGE--Y15T19
+observationAbout: dcid:country/KEN
+observationDate: "2019"
+value: 41.8
+unit: dcs:Percent
+
+Node: dcid:obs_physical_violence_uga_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_CHLD_PS_V_PHY.AGE--Y15T19
+observationAbout: dcid:country/UGA
+observationDate: "2019"
+value: 38.3
+unit: dcs:Percent
+
+# OBSERVATIONS: Female Genital Mutilation (15-49) - 2019 Data
+
+Node: dcid:obs_fgm_ben_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_15-49_FGM.SEX--F__AGE--Y15T49
+observationAbout: dcid:country/BEN
+observationDate: "2019"
+value: 9.2
+unit: dcs:Percent
+
+Node: dcid:obs_fgm_eth_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_15-49_FGM.SEX--F__AGE--Y15T49
+observationAbout: dcid:country/ETH
+observationDate: "2019"
+value: 65.2
+unit: dcs:Percent
+
+Node: dcid:obs_fgm_gin_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_15-49_FGM.SEX--F__AGE--Y15T49
+observationAbout: dcid:country/GIN
+observationDate: "2019"
+value: 94.5
+unit: dcs:Percent
+
+Node: dcid:obs_fgm_mli_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_15-49_FGM.SEX--F__AGE--Y15T49
+observationAbout: dcid:country/MLI
+observationDate: "2019"
+value: 83.0
+unit: dcs:Percent
+
+Node: dcid:obs_fgm_som_2019
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:undata/unicef/PT_F_15-49_FGM.SEX--F__AGE--Y15T49
+observationAbout: dcid:country/SOM
+observationDate: "2019"
+value: 97.9
+unit: dcs:Percent
