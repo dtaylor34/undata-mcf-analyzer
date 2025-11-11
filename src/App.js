@@ -16,7 +16,7 @@ import TransformationBlueprint from './components/TransformationBlueprint';
 import CachedDataViewer from './components/CachedDataViewer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Switch } from './components/ui/switch';
-import { Sun, Moon, Database, ChevronDown, GitCompare, Share2, Upload, BarChart3 } from 'lucide-react';
+import { Sun, Moon, Database, ChevronDown, GitCompare, Share2, Upload, BarChart3, Info } from 'lucide-react';
 import { Label } from './components/ui/label';
 import { getAllOrganizations, getStatistics } from './real-catalog';
 import { useUrlState } from './hooks/useUrlState';
@@ -2121,22 +2121,77 @@ export default function App() {
                 />
               ) : cachedViewMode === 'chart' ? (
                 (() => {
+                  const UNDataGeoChart = require('./components/UNDataGeoChart').default;
                   const nodes = parseMCF(currentMCF);
-                  const statisticalVariables = extractStatisticalVariables(nodes);
                   const observations = extractObservations(nodes);
-                  const chartDataArray = observationsToChartData(observations, statisticalVariables);
-                  return (
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-lg font-medium">Cached Chart Visualization</h3>
-                        <ChartFilter charts={chartDataArray.map((chart, i) => ({ id: `chart-${i}`, name: chart.title, title: chart.title }))} selectedCharts={selectedCharts} onSelectionChange={setSelectedCharts} />
+                  
+                  console.log('📊 Cached Tab Chart View - Observations:', observations.length);
+                  
+                  if (observations.length === 0) {
+                    return (
+                      <div className={`p-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                        <Info className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                        <p className="text-lg font-medium mb-2">No Chart Data Available</p>
+                        <p className="text-sm">Load an MCF file with observations to see charts</p>
                       </div>
-                      {chartDataArray.map((chart, index) => {
-                        const chartId = `chart-${index}`;
-                        if (selectedCharts.length === 0 || selectedCharts.includes(chartId)) {
-                          return <ChartPreview key={index} data={chart} isDarkMode={isDarkMode} onDataPointClick={handleChartDataPointClick} />;
-                        }
-                        return null;
+                    );
+                  }
+                  
+                  // Group observations by indicator/variable (same logic as Preview Charts)
+                  const indicatorGroups = {};
+                  observations.forEach(obs => {
+                    const indicatorKey = obs.variableMeasured || 'Unknown Indicator';
+                    if (!indicatorGroups[indicatorKey]) {
+                      indicatorGroups[indicatorKey] = [];
+                    }
+                    indicatorGroups[indicatorKey].push(obs);
+                  });
+                  
+                  console.log('📊 Cached Tab - Found indicators:', Object.keys(indicatorGroups));
+                  
+                  return (
+                    <div className="space-y-6">
+                      {/* Header */}
+                      <div className={`p-4 rounded-lg border ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'}`}>
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                              Cached Chart Visualization
+                            </h3>
+                            <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                              {observations.length} observations across {Object.keys(indicatorGroups).length} indicators
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Display separate UN Data-style chart for EACH indicator */}
+                      {Object.entries(indicatorGroups).map(([indicatorName, indicatorObservations], index) => {
+                        // Convert observations to chart format
+                        const chartData = indicatorObservations.map(obs => ({
+                          code: obs.observationAbout?.split('/').pop()?.toUpperCase() || 'UNKNOWN',
+                          name: obs.observationAbout?.split('/').pop() || 'Unknown',
+                          value: parseFloat(obs.value) || 0,
+                          indicator: indicatorName,
+                          unit: obs.unit || '%',
+                          year: parseInt(obs.observationDate) || new Date().getFullYear()
+                        })).filter(item => item.code !== 'UNKNOWN');
+                        
+                        console.log(`📊 Cached Chart ${index + 1}: ${indicatorName} (${chartData.length} countries)`);
+                        
+                        return (
+                          <div key={indicatorName}>
+                            <UNDataGeoChart
+                              data={chartData}
+                              isDarkMode={isDarkMode}
+                              selectedYear={chartData[0]?.year || new Date().getFullYear()}
+                              indicator={{
+                                name: indicatorName,
+                                source: selectedFileId?.split('/')[0]?.toUpperCase() || 'UN DATA'
+                              }}
+                            />
+                          </div>
+                        );
                       })}
                     </div>
                   );
