@@ -1,0 +1,360 @@
+# UNICEF Child Protection Data
+# Theme: Children and Youth / Child Protection
+# Focus: Immunization, education, and child welfare indicators
+
+Node: dcid:unicef_immunization_dtp3
+typeOf: dcs:StatisticalVariable
+name: "DTP3 immunization coverage among 1-year-olds (%)"
+description: "Percentage of children aged 12-23 months who received three doses of diphtheria-tetanus-pertussis vaccine"
+measuredProperty: dcs:immunizationRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Under2Years
+
+Node: dcid:unicef_primary_school_completion
+typeOf: dcs:StatisticalVariable
+name: "Primary school completion rate (%)"
+description: "Percentage of children completing primary education"
+measuredProperty: dcs:educationCompletionRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:PrimarySchool
+
+# Observations: DTP3 Immunization Coverage
+Node: dcid:obs_dtp3_afghanistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/AFG
+observationDate: "2022"
+value: 68.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_angola_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/AGO
+observationDate: "2022"
+value: 54.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 98.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_benin_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/BEN
+observationDate: "2022"
+value: 78.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_burkina_faso_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/BFA
+observationDate: "2022"
+value: 91.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_burundi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/BDI
+observationDate: "2022"
+value: 94.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_cambodia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/KHM
+observationDate: "2022"
+value: 94.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_cameroon_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/CMR
+observationDate: "2022"
+value: 76.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_chad_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/TCD
+observationDate: "2022"
+value: 49.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_drc_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/COD
+observationDate: "2022"
+value: 69.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_ethiopia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/ETH
+observationDate: "2022"
+value: 77.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_ghana_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/GHA
+observationDate: "2022"
+value: 96.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_guinea_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/GIN
+observationDate: "2022"
+value: 52.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_haiti_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/HTI
+observationDate: "2022"
+value: 55.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 93.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_kenya_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/KEN
+observationDate: "2022"
+value: 92.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_liberia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/LBR
+observationDate: "2022"
+value: 81.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_madagascar_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/MDG
+observationDate: "2022"
+value: 75.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_malawi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/MWI
+observationDate: "2022"
+value: 92.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_mali_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/MLI
+observationDate: "2022"
+value: 71.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_mozambique_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/MOZ
+observationDate: "2022"
+value: 89.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_niger_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/NER
+observationDate: "2022"
+value: 81.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_nigeria_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/NGA
+observationDate: "2022"
+value: 57.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_pakistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/PAK
+observationDate: "2022"
+value: 80.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_rwanda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/RWA
+observationDate: "2022"
+value: 98.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_senegal_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/SEN
+observationDate: "2022"
+value: 89.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_somalia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/SOM
+observationDate: "2022"
+value: 46.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_tanzania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/TZA
+observationDate: "2022"
+value: 95.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_uganda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/UGA
+observationDate: "2022"
+value: 92.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_yemen_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/YEM
+observationDate: "2022"
+value: 63.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_zambia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/ZMB
+observationDate: "2022"
+value: 94.0
+unit: dcs:Percent
+
+Node: dcid:obs_dtp3_zimbabwe_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_immunization_dtp3
+observationAbout: dcid:country/ZWE
+observationDate: "2022"
+value: 91.0
+unit: dcs:Percent
+
+# Observations: Primary School Completion Rate
+Node: dcid:obs_primary_school_afghanistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/AFG
+observationDate: "2022"
+value: 45.2
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 82.5
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_ethiopia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/ETH
+observationDate: "2022"
+value: 58.3
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 91.7
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_kenya_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/KEN
+observationDate: "2022"
+value: 87.4
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_nigeria_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/NGA
+observationDate: "2022"
+value: 66.1
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_pakistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/PAK
+observationDate: "2022"
+value: 67.8
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_rwanda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/RWA
+observationDate: "2022"
+value: 79.5
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_tanzania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/TZA
+observationDate: "2022"
+value: 84.2
+unit: dcs:Percent
+
+Node: dcid:obs_primary_school_uganda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:unicef_primary_school_completion
+observationAbout: dcid:country/UGA
+observationDate: "2022"
+value: 73.6
+unit: dcs:Percent
+

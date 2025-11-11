@@ -1,0 +1,312 @@
+# WHO Child Protection Data
+# Theme: Children and Youth / Child Protection
+# Focus: Child mortality and health indicators
+
+Node: dcid:who_child_mortality_under5
+typeOf: dcs:StatisticalVariable
+name: "Under-5 mortality rate (per 1,000 live births)"
+description: "Probability of dying between birth and exactly 5 years of age, expressed per 1,000 live births"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Under5Years
+
+Node: dcid:who_neonatal_mortality
+typeOf: dcs:StatisticalVariable
+name: "Neonatal mortality rate (per 1,000 live births)"
+description: "Number of deaths during the first 28 days of life per 1,000 live births"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Neonatal
+
+# Observations: Under-5 Mortality Rate
+Node: dcid:obs_u5_mortality_afghanistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/AFG
+observationDate: "2022"
+value: 56.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_angola_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/AGO
+observationDate: "2022"
+value: 72.3
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 28.3
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_benin_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/BEN
+observationDate: "2022"
+value: 89.5
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_burkina_faso_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/BFA
+observationDate: "2022"
+value: 81.7
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_burundi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/BDI
+observationDate: "2022"
+value: 51.9
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_chad_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/TCD
+observationDate: "2022"
+value: 117.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_drc_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/COD
+observationDate: "2022"
+value: 78.4
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_ethiopia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/ETH
+observationDate: "2022"
+value: 49.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_ghana_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/GHA
+observationDate: "2022"
+value: 45.1
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_haiti_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/HTI
+observationDate: "2022"
+value: 58.7
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 31.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_kenya_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/KEN
+observationDate: "2022"
+value: 38.9
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_madagascar_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/MDG
+observationDate: "2022"
+value: 48.3
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_malawi_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/MWI
+observationDate: "2022"
+value: 37.6
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_mali_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/MLI
+observationDate: "2022"
+value: 94.8
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_mozambique_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/MOZ
+observationDate: "2022"
+value: 70.1
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_niger_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/NER
+observationDate: "2022"
+value: 84.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_nigeria_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/NGA
+observationDate: "2022"
+value: 103.7
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_pakistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/PAK
+observationDate: "2022"
+value: 62.1
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_rwanda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/RWA
+observationDate: "2022"
+value: 35.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_senegal_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/SEN
+observationDate: "2022"
+value: 39.7
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_somalia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/SOM
+observationDate: "2022"
+value: 112.5
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_tanzania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/TZA
+observationDate: "2022"
+value: 42.3
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_uganda_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/UGA
+observationDate: "2022"
+value: 38.5
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_yemen_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/YEM
+observationDate: "2022"
+value: 54.8
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_zambia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/ZMB
+observationDate: "2022"
+value: 54.6
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_u5_mortality_zimbabwe_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_child_mortality_under5
+observationAbout: dcid:country/ZWE
+observationDate: "2022"
+value: 47.1
+unit: dcs:Per1000LiveBirths
+
+# Observations: Neonatal Mortality Rate
+Node: dcid:obs_neonatal_mortality_afghanistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/AFG
+observationDate: "2022"
+value: 35.7
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_bangladesh_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/BGD
+observationDate: "2022"
+value: 17.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_ethiopia_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/ETH
+observationDate: "2022"
+value: 24.8
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_india_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/IND
+observationDate: "2022"
+value: 19.3
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_kenya_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/KEN
+observationDate: "2022"
+value: 18.9
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_nigeria_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/NGA
+observationDate: "2022"
+value: 34.5
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_pakistan_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/PAK
+observationDate: "2022"
+value: 38.2
+unit: dcs:Per1000LiveBirths
+
+Node: dcid:obs_neonatal_mortality_tanzania_2022
+typeOf: dcs:StatVarObservation
+variableMeasured: dcid:who_neonatal_mortality
+observationAbout: dcid:country/TZA
+observationDate: "2022"
+value: 17.6
+unit: dcs:Per1000LiveBirths
+

@@ -76,6 +76,8 @@ export const MCF_FILE_INDEX_V2 = {
         files: [
           { id: 'test-data/child-protection-sdg.mcf', name: 'child-protection-sdg.mcf', type: 'observations', description: 'SDG: Birth registration & early marriage (32 countries)' },
           { id: 'test-data/child-protection-ilo.mcf', name: 'child-protection-ilo.mcf', type: 'observations', description: 'ILO: Parental leave access (26 countries)' },
+          { id: 'test-data/child-protection-who.mcf', name: 'child-protection-who.mcf', type: 'observations', description: 'WHO: Child mortality rates (28 countries, 2 indicators)' },
+          { id: 'test-data/child-protection-unicef.mcf', name: 'child-protection-unicef.mcf', type: 'observations', description: 'UNICEF: Immunization & education (32 countries, 2 indicators)' },
         ]
       },
       'q4-2024': {
