@@ -26,6 +26,174 @@ unit: dcs:Percent
 age: "20-24 years"
 gender: "Female"
 
+Node: dcid:sdg_early_marriage_before18
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:earlyMarriage
+statType: dcs:measuredValue
+name: "Proportion of Women Married Before Age 18"
+description: "Percentage of women aged 20-24 who were married or in a union before age 18"
+unit: dcs:Percent
+age: "20-24 years"
+gender: "Female"
+
+Node: dcid:sdg_birth_registration_complete_countries
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Country
+measuredProperty: dcs:birthRegistrationCompleteness
+statType: dcs:measuredValue
+name: "Proportion of Countries With Birth Registration Data at Least 90% Complete"
+description: "Percentage of countries that have birth registration data that is at least 90 percent complete"
+unit: dcs:Percent
+
+Node: dcid:sdg_birth_reg_by_age_12to23m
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:birthRegistration
+statType: dcs:measuredValue
+name: "Proportion of Children Whose Births Are Registered (12 to 23 months)"
+unit: dcs:Percent
+age: "12-23 months"
+
+Node: dcid:sdg_birth_reg_by_age_24to35m
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:birthRegistration
+statType: dcs:measuredValue
+name: "Proportion of Children Whose Births Are Registered (24 to 35 months)"
+unit: dcs:Percent
+age: "24-35 months"
+
+Node: dcid:sdg_birth_reg_by_age_36to47m
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:birthRegistration
+statType: dcs:measuredValue
+name: "Proportion of Children Whose Births Are Registered (36 to 47 months)"
+unit: dcs:Percent
+age: "36-47 months"
+
+Node: dcid:sdg_birth_reg_by_age_48to59m
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:birthRegistration
+statType: dcs:measuredValue
+name: "Proportion of Children Whose Births Are Registered (48 to 59 months)"
+unit: dcs:Percent
+age: "48-59 months"
+
+Node: dcid:sdg_trafficking_forced_labour
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking for Forced Labour, Servitude and Slavery"
+unit: dcs:Count
+
+Node: dcid:sdg_trafficking_forced_labour_by_age
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking for Forced Labour (by Age Group)"
+unit: dcs:Count
+
+Node: dcid:sdg_trafficking_under18_female
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (Under 18, Female)"
+unit: dcs:Count
+age: "Under 18"
+gender: "Female"
+
+Node: dcid:sdg_trafficking_under18_male
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (Under 18, Male)"
+unit: dcs:Count
+age: "Under 18"
+gender: "Male"
+
+Node: dcid:sdg_trafficking_18plus_female
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (18+, Female)"
+unit: dcs:Count
+age: "18+ years"
+gender: "Female"
+
+Node: dcid:sdg_trafficking_18plus_male
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (18+, Male)"
+unit: dcs:Count
+age: "18+ years"
+gender: "Male"
+
+Node: dcid:sdg_trafficking_per100k
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (per 100,000 population)"
+unit: "Per 100,000"
+
+Node: dcid:sdg_trafficking_per100k_by_age
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (per 100,000) by Age Group"
+unit: "Per 100,000"
+
+Node: dcid:sdg_trafficking_per100k_under18_female
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (per 100,000) Under 18, Female"
+unit: "Per 100,000"
+age: "Under 18"
+gender: "Female"
+
+Node: dcid:sdg_trafficking_per100k_under18_male
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (per 100,000) Under 18, Male"
+unit: "Per 100,000"
+age: "Under 18"
+gender: "Male"
+
+Node: dcid:sdg_trafficking_per100k_18plus_female
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (per 100,000) 18+, Female"
+unit: "Per 100,000"
+age: "18+ years"
+gender: "Female"
+
+Node: dcid:sdg_trafficking_per100k_18plus_male
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:humanTrafficking
+statType: dcs:measuredValue
+name: "Detected Victims of Human Trafficking (per 100,000) 18+, Male"
+unit: "Per 100,000"
+age: "18+ years"
+gender: "Male"
+
 # Birth Registration Observations (2022)
 Node: obs_birth_reg_afghanistan_2022
 typeOf: dcs:StatVarObservation

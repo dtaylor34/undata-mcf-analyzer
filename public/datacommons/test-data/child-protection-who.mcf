@@ -47,6 +47,88 @@ populationType: dcs:UNDATA_WHO_PT_CHLD_DISCPLN
 age: dcs:UNDATA_WHO_AgeEnum_Y1T14
 observationPeriod: "2012"
 
+Node: dcid:who/infant_mortality_rate
+typeOf: dcs:StatisticalVariable
+name: "Infant mortality rate (per 1,000 live births)"
+description: "Probability of dying between birth and exactly 1 year of age"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Infant
+
+Node: dcid:who/child_mortality_1to4
+typeOf: dcs:StatisticalVariable
+name: "Child mortality rate ages 1-4 (per 1,000 live births)"
+description: "Probability of dying between ages 1 and 4"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Ages1To4
+
+Node: dcid:who/adolescent_mortality_10to14
+typeOf: dcs:StatisticalVariable
+name: "Adolescent mortality rate ages 10-14 (per 1,000 population)"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Ages10To14
+
+Node: dcid:who/adolescent_mortality_15to19
+typeOf: dcs:StatisticalVariable
+name: "Adolescent mortality rate ages 15-19 (per 1,000 population)"
+measuredProperty: dcs:mortalityRate
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Ages15To19
+
+Node: dcid:who/child_wasting_under5
+typeOf: dcs:StatisticalVariable
+name: "Prevalence of wasting among children under 5 years (%)"
+measuredProperty: dcs:wasting
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Under5Years
+
+Node: dcid:who/child_stunting_under5
+typeOf: dcs:StatisticalVariable
+name: "Prevalence of stunting among children under 5 years (%)"
+measuredProperty: dcs:stunting
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Under5Years
+
+Node: dcid:who/child_overweight_under5
+typeOf: dcs:StatisticalVariable
+name: "Prevalence of overweight among children under 5 years (%)"
+measuredProperty: dcs:overweight
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Under5Years
+
+Node: dcid:who/low_birthweight
+typeOf: dcs:StatisticalVariable
+name: "Low birthweight prevalence (%)"
+description: "Percentage of live births weighing less than 2,500 grams"
+measuredProperty: dcs:lowBirthweight
+statType: dcs:measuredValue
+populationType: dcs:Person
+
+Node: dcid:who/exclusive_breastfeeding_0to5m
+typeOf: dcs:StatisticalVariable
+name: "Exclusive breastfeeding rate (0-5 months) (%)"
+measuredProperty: dcs:breastfeeding
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:Ages0To5Months
+
+Node: dcid:who/immunization_coverage_bcg
+typeOf: dcs:StatisticalVariable
+name: "BCG immunization coverage among 1-year-olds (%)"
+measuredProperty: dcs:immunizationCoverage
+statType: dcs:measuredValue
+populationType: dcs:Person
+measurementQualifier: dcs:BCG
+
 # Observations: Under-5 Mortality Rate
 Node: dcid:obs_u5_mortality_afghanistan_2022
 typeOf: dcs:StatVarObservation

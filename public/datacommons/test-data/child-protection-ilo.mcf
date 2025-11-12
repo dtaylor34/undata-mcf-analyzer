@@ -14,6 +14,26 @@ name: "Share of Employees With Access to Parental Leave"
 description: "Percentage of employees with access to parental leave in the World"
 unit: dcs:Percent
 
+Node: dcid:ilo_parental_leave_access_female
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:parentalLeaveAccess
+statType: dcs:measuredValue
+name: "Share of Employees With Access to Parental Leave (Female)"
+description: "Percentage of female employees with access to parental leave"
+unit: dcs:Percent
+gender: "Female"
+
+Node: dcid:ilo_parental_leave_access_male
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:parentalLeaveAccess
+statType: dcs:measuredValue
+name: "Share of Employees With Access to Parental Leave (Male)"
+description: "Percentage of male employees with access to parental leave"
+unit: dcs:Percent
+gender: "Male"
+
 # Observations - World aggregate data (2022)
 Node: obs_parental_leave_world_2022
 typeOf: dcs:StatVarObservation

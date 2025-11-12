@@ -151,6 +151,387 @@ statType: dcs:measuredValue
 undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
 age: dcs:UNDATA_UNICEF_AgeEnum_Y15T49
 
+Node: dcid:undata/unicef/PT_CHLD_REG.SEX--T__AGE--Y0T4
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (Both sexes, Under 5 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_T
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
+
+Node: dcid:undata/unicef/PT_CHLD_REG.AGE--Y0T59M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children under age 5 whose births are registered (0 to 59 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T59M
+
+Node: dcid:undata/unicef/PT_CHLD_REG.AGE--Y12T23M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (12 to 23 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y12T23M
+
+Node: dcid:undata/unicef/PT_CHLD_REG.AGE--Y24T35M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (24 to 35 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y24T35M
+
+Node: dcid:undata/unicef/PT_CHLD_REG.AGE--Y36T47M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (36 to 47 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y36T47M
+
+Node: dcid:undata/unicef/PT_CHLD_REG.AGE--Y48T59M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children whose births are registered (48 to 59 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_REG
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y48T59M
+
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.SEX--T__AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour - economic activities (Both sexes, 5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_T
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.SEX--M__AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour - economic activities (Male, 5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.SEX--F__AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour - economic activities (Female, 5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.AGE--Y5T11
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour - economic activities (5 to 11 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T11
+
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.AGE--Y12T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour - economic activities (12 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y12T14
+
+Node: dcid:undata/unicef/PT_CHLD_LBR_ECON.AGE--Y15T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children engaged in child labour - economic activities (15 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_ECON
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T17
+
+Node: dcid:undata/unicef/PT_MRD.AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children and adolescents who are currently married or in union (Both sexes, 15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_MRD
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_MRD.SEX--M__AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children and adolescents who are currently married or in union (Male, 15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_MRD
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_MRD_U18.AGE--Y20T24
+typeOf: dcs:StatisticalVariable
+name: "Proportion of persons married or in union before age 18 (Both sexes, 20 to 24 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_MRD_U18
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y20T24
+
+Node: dcid:undata/unicef/PT_MRD_U18.SEX--M__AGE--Y20T24
+typeOf: dcs:StatisticalVariable
+name: "Proportion of persons married or in union before age 18 (Male, 20 to 24 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_MRD_U18
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y20T24
+
+Node: dcid:undata/unicef/PT_F_20-24_MRD-U15.AGE--Y20T24
+typeOf: dcs:StatisticalVariable
+name: "Proportion of women married or in union before age 15 (Both sexes, 20 to 24 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_F_MRD
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y20T24
+
+Node: dcid:undata/unicef/PT_CHLD_PS_PSY_V_CGVR.SEX--M__AGE--Y1T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children who experienced any physical punishment and/or psychological aggression by caregivers (Male, 1 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_PSY_V_CGVR
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y1T14
+
+Node: dcid:undata/unicef/PT_CHLD_PS_PSY_V_CGVR.SEX--F__AGE--Y1T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children who experienced any physical punishment and/or psychological aggression by caregivers (Female, 1 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_PSY_V_CGVR
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y1T14
+
+Node: dcid:undata/unicef/PT_CHLD_PS_PSY_V_CGVR.SEX--T__AGE--Y1T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children who experienced any physical punishment and/or psychological aggression by caregivers (Both sexes, 1 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_PSY_V_CGVR
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_T
+age: dcs:UNDATA_UNICEF_AgeEnum_Y1T14
+
+Node: dcid:undata/unicef/PT_CHLD_PS_V_SXLH.SEX--F__AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of young women who experienced sexual violence in childhood (Female, 15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_V
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_CHLD_PS_V_PHY.SEX--F__AGE--Y15T19
+typeOf: dcs:StatisticalVariable
+name: "Proportion of young women who experienced physical violence in childhood (Female, 15 to 19 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PS_V
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T19
+
+Node: dcid:undata/unicef/PT_F_15-49_FGM_DGHTR.AGE--Y0T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of girls aged 0-14 who have undergone female genital mutilation"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_F_FGM
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T14
+
+Node: dcid:undata/unicef/PT_F_15-49_FGM_SUPP.SEX--F__AGE--Y15T49
+typeOf: dcs:StatisticalVariable
+name: "Proportion of women who think FGM should continue (15 to 49 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_F_FGM
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y15T49
+
+Node: dcid:undata/unicef/ECD_CHLD_LFT_ALN.AGE--Y0T4
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children under left alone or under supervision of another child (Under 5 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_ECD_CHLD_LFT_ALN
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
+
+Node: dcid:undata/unicef/ECD_CHLD_LFT_ALN.SEX--M__AGE--Y0T4
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children left alone (Male, Under 5 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_ECD_CHLD_LFT_ALN
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T4
+
+Node: dcid:undata/unicef/PT_CHLD_PRTN.AGE--Y0T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children living in poverty (0 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PRTN
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T17
+
+Node: dcid:undata/unicef/PT_CHLD_PRTN.SEX--F__AGE--Y0T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children living in poverty (Female, 0 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PRTN
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T17
+
+Node: dcid:undata/unicef/PT_CHLD_PRTN.SEX--M__AGE--Y0T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children living in poverty (Male, 0 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_PRTN
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T17
+
+Node: dcid:undata/unicef/PT_CHLD_ORPH.AGE--Y0T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children who are orphans (0 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_ORPH
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T17
+
+Node: dcid:undata/unicef/PT_CHLD_ORPH_BTHN.AGE--Y0T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children who are double orphans (0 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_ORPH
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y0T17
+
+Node: dcid:undata/unicef/PT_CHLD_EMPL.AGE--Y5T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in employment (5 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_EMPL
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T14
+
+Node: dcid:undata/unicef/PT_CHLD_EMPL.SEX--F__AGE--Y5T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in employment (Female, 5 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_EMPL
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T14
+
+Node: dcid:undata/unicef/PT_CHLD_EMPL.SEX--M__AGE--Y5T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in employment (Male, 5 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_EMPL
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T14
+
+Node: dcid:undata/unicef/PT_CHLD_Y5T14_LBR_HAZD.AGE--Y5T14
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in hazardous work (5 to 14 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_HAZD
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T14
+
+Node: dcid:undata/unicef/PT_CHLD_Y5T17_LBR_HAZD.AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in hazardous work (5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_LBR_HAZD
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_ADLT_YTHS_JSTC.AGE--Y10T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of youth in contact with justice system (10 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_ADLT_YTHS
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y10T17
+
+Node: dcid:undata/unicef/PT_ADLT_YTHS_JSTC.SEX--F__AGE--Y10T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of youth in contact with justice system (Female, 10 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_ADLT_YTHS
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y10T17
+
+Node: dcid:undata/unicef/PT_ADLT_YTHS_JSTC.SEX--M__AGE--Y10T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of youth in contact with justice system (Male, 10 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_ADLT_YTHS
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y10T17
+
+Node: dcid:undata/unicef/PT_CHLD_EDU_PREP.AGE--Y36T59M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in early childhood education (36 to 59 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_EDU
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y36T59M
+
+Node: dcid:undata/unicef/PT_CHLD_EDU_PREP.SEX--F__AGE--Y36T59M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in early childhood education (Female, 36 to 59 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_EDU
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_F
+age: dcs:UNDATA_UNICEF_AgeEnum_Y36T59M
+
+Node: dcid:undata/unicef/PT_CHLD_EDU_PREP.SEX--M__AGE--Y36T59M
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children in early childhood education (Male, 36 to 59 months)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_EDU
+statType: dcs:measuredValue
+undata_unicef_sex: dcs:UNDATA_UNICEF_SexEnum_M
+age: dcs:UNDATA_UNICEF_AgeEnum_Y36T59M
+
+Node: dcid:undata/unicef/PT_CHLD_DISAB.AGE--Y2T4
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children with disabilities (2 to 4 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_DISAB
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y2T4
+
+Node: dcid:undata/unicef/PT_CHLD_DISAB.AGE--Y5T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children with disabilities (5 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_DISAB
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y5T17
+
+Node: dcid:undata/unicef/PT_CHLD_FUNC_DIFF.AGE--Y2T17
+typeOf: dcs:StatisticalVariable
+name: "Proportion of children with functional difficulties (2 to 17 years old)"
+measuredProperty: dcs:value
+populationType: dcs:UNDATA_UNICEF_PT_CHLD_FUNC
+statType: dcs:measuredValue
+age: dcs:UNDATA_UNICEF_AgeEnum_Y2T17
+
 # OBSERVATIONS: Children Left Alone (Female, Under 5) - 2019 Data
 
 Node: dcid:obs_left_alone_dza_2019
