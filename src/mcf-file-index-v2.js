@@ -71,10 +71,10 @@ export const MCF_FILE_INDEX_V2 = {
         ]
       },
       'child-protection': {
-        name: '👶 Child Protection (100 Indicators - Real UN Data)',
+        name: '👶 Child Protection (109 Indicators - Real UN Data)',
         isComplete: true,
         files: [
-          { id: 'test-data/child-protection-sdg.mcf', name: 'child-protection-sdg.mcf', type: 'observations', description: 'SDG: 20 indicators - Birth registration, marriage, human trafficking (32 countries)' },
+          { id: 'test-data/child-protection-sdg.mcf', name: 'child-protection-sdg.mcf', type: 'observations', description: 'SDG: 29 indicators - Birth registration, marriage, human trafficking (32 countries)' },
           { id: 'test-data/child-protection-ilo.mcf', name: 'child-protection-ilo.mcf', type: 'observations', description: 'ILO: 3 indicators - Parental leave access by sex (26 countries)' },
           { id: 'test-data/child-protection-who.mcf', name: 'child-protection-who.mcf', type: 'observations', description: 'WHO: 15 indicators - Child mortality, violence, health & nutrition (28 countries)' },
           { id: 'test-data/child-protection-unicef.mcf', name: 'child-protection-unicef.mcf', type: 'observations', description: 'UNICEF: 62 indicators - Birth registration, labour, marriage, violence, FGM, poverty, education, disabilities' },

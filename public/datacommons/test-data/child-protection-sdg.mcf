@@ -46,6 +46,91 @@ name: "Proportion of Countries With Birth Registration Data at Least 90% Complet
 description: "Percentage of countries that have birth registration data that is at least 90 percent complete"
 unit: dcs:Percent
 
+Node: dcid:sdg_countries_birth_reg_90pct_complete
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Country
+measuredProperty: dcs:count
+statType: dcs:measuredValue
+name: "Countries with birth registration data that are at least 90 percent complete"
+description: "Number of countries that have birth registration data that is at least 90 percent complete"
+unit: dcs:Count
+
+Node: dcid:sdg_trafficking_forced_labour
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery"
+description: "Number of detected victims of human trafficking for forced labour, servitude and slavery"
+unit: dcs:Count
+
+Node: dcid:sdg_trafficking_forced_labour_by_age
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery, by Age group"
+description: "Number of detected victims of human trafficking by age group"
+unit: dcs:Count
+
+Node: dcid:sdg_trafficking_forced_labour_under18_by_sex
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery (under 18 years old), by Sex"
+description: "Number of detected victims under 18 by sex"
+unit: dcs:Count
+age: "Under 18 years"
+
+Node: dcid:sdg_trafficking_forced_labour_18plus_by_sex
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery (18 years old and over), by Sex"
+description: "Number of detected victims 18 and over by sex"
+unit: dcs:Count
+age: "18+ years"
+
+Node: dcid:sdg_trafficking_forced_labour_per100k
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population)"
+description: "Rate of detected trafficking victims per 100,000 population"
+unit: dcs:Per100000People
+
+Node: dcid:sdg_trafficking_forced_labour_per100k_by_age
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population), by Age group"
+description: "Rate of detected trafficking victims per 100,000 by age group"
+unit: dcs:Per100000People
+
+Node: dcid:sdg_trafficking_forced_labour_per100k_under18_by_sex
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population) (under 18 years old), by Sex"
+description: "Rate of detected trafficking victims under 18 per 100,000 by sex"
+unit: dcs:Per100000People
+age: "Under 18 years"
+
+Node: dcid:sdg_trafficking_forced_labour_per100k_18plus_by_sex
+typeOf: dcs:StatisticalVariable
+populationType: dcs:Person
+measuredProperty: dcs:trafficking
+statType: dcs:measuredValue
+name: "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population) (18 years old and over), by Sex"
+description: "Rate of detected trafficking victims 18+ per 100,000 by sex"
+unit: dcs:Per100000People
+age: "18+ years"
+
 Node: dcid:sdg_birth_reg_by_age_12to23m
 typeOf: dcs:StatisticalVariable
 populationType: dcs:Person
